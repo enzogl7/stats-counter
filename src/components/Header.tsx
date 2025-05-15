@@ -8,7 +8,7 @@ const Header: React.FC = () => (
       </h1>
     </div>
     <p className="text-center mt-2 max-w-md mx-auto">
-      Monitore mortes ou troféus e exiba-os diretamente em sua live
+      Contabilize mortes ou troféus e exiba-os diretamente em sua live
     </p>
   </header>
 );
