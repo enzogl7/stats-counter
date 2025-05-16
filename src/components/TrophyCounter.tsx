@@ -16,7 +16,11 @@ interface Props {
   themeName: string;
 }
 
-const TrophyCounter: React.FC<Props> = ({trophiesEarned,trophiesTotal,setTrophiesTotal,increase,
+const TrophyCounter: React.FC<Props> = ({
+  trophiesEarned,
+  trophiesTotal,
+  setTrophiesTotal,
+  increase,
   decrease,
   reset,
   type,

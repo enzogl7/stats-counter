@@ -66,13 +66,13 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
     setUrl(generatedUrl);
     await navigator.clipboard.writeText(generatedUrl);
     setUrlCopiada(true);
-    setMensagemCopiada('URL copiada!');
+    setMensagemCopiada(t('copy_url'));
     setTimeout(() => setMensagemCopiada(''), 3000);
   };
 const copiarNovamente = async () => {
   if (url) {
     await navigator.clipboard.writeText(url);
-    setMensagemCopiada('URL copiada!');
+    setMensagemCopiada(t('copy_url'));
     setTimeout(() => setMensagemCopiada(''), 3000);
   }
 };
