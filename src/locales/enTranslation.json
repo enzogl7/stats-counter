@@ -12,6 +12,7 @@
   "theme": "Theme",
   "language": "Language",
   "default_option": "Default",
-  "minimal_option": "Minimal"
+  "minimal_option": "Minimal",
+  "generate_url": "Generate widget URL"
 
 }
