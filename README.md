@@ -1,4 +1,4 @@
-# 🧮 StatsCounter
+# 🧮 StatsCounter [Em produção/In production]
 
 ## 🇧🇷 Português
 
