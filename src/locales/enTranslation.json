@@ -1,0 +1,17 @@
+{
+  "description": "Count deaths or trophies and display them on your livestream",
+  "deaths": "Deaths",
+  "custom_total_deaths": "Custom total deaths: ",
+  "reset_deaths": "Reset deaths",
+  "trophies": "Trophies",
+  "total_trophies_to_earn": "Total trophies to be earned: ",
+  "reset_trophies": "Reset trophies",
+  "alert_total_trophies": "You must define the total trophies to be earned first",
+  "alert_all_trophies": "You already have conquisted all trophies",
+  "type": "Type",
+  "theme": "Theme",
+  "language": "Language",
+  "default_option": "Default",
+    "minimal_option": "Minimal"
+
+}

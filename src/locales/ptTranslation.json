@@ -1,0 +1,17 @@
+{
+  "description": "Contabilize mortes e troféus para exibi-los em sua livestream",
+  "deaths": "Mortes",
+  "custom_total_deaths": "Total de mortes customizado: ",
+  "reset_deaths": "Resetar mortes",
+  "trophies": "Troféus",
+  "total_trophies_to_earn": "Total de troféus a serem conquistados: ",
+  "reset_trophies": "Resetar troféus",
+  "alert_total_trophies": "Você deve definir o total de troféus a serem conquistados primeiro",
+  "alert_all_trophies": "Você já conquistou todos os troféus",
+  "theme": "Tema",
+  "type": "Tipo",
+  "language": "Idioma",
+  "default_option": "Padrão",
+  "minimal_option": "Mínimo"
+
+}

@@ -1,81 +1,51 @@
 import React, { useState } from 'react';
+import ThemeSelector from './ThemeSelector';
+import DeathCounter from './DeathCounter';
+import TrophyCounter from './TrophyCounter';
+import themes from './ThemesDeath';
 
 const Card: React.FC = () => {
   const [deaths, setDeaths] = useState(0);
   const [type, setType] = useState('card');
   const [theme, setTheme] = useState('default');
+  const [trophiesEarned, setTrophiesEarned] = useState(0);
+  const [trophiesTotal, setTrophiesTotal] = useState(0);
 
-  const increase = () => setDeaths(prev => prev + 1);
-  const decrease = () => setDeaths(prev => (prev > 0 ? prev - 1 : 0));
+  const increaseDeaths = () => setDeaths((d) => d + 1);
+  const decreaseDeaths = () => setDeaths((d) => (d > 0 ? d - 1 : 0));
+  const resetDeaths = () => setDeaths(0);
 
-  const themes = {
-    default: {
-      bg: 'bg-zinc-800',
-      text: 'text-red-400'
-    },
-    elden: {
-      bg: 'bg-yellow-950',
-      text: 'text-yellow-300'
-    },
-    souls: {
-      bg: 'bg-slate-800',
-      text: 'text-sky-300'
+  const increaseTrophies = () => {
+    if (trophiesTotal === 0) return alert('Defina o total de troféus primeiro!');
+    if (trophiesEarned < trophiesTotal) {
+      setTrophiesEarned((t) => t + 1);
+    } else {
+      alert('Você já conquistou todos os troféus!');
     }
   };
+  const decreaseTrophies = () => setTrophiesEarned((t) => (t > 0 ? t - 1 : 0));
+  const resetTrophies = () => {
+    setTrophiesEarned(0);
+    setTrophiesTotal(0);
+  };
 
-  const currentTheme = themes[theme];
+  const currentTheme = themes[theme as keyof typeof themes];
 
   return (
-    <section className="flex flex-col md:flex-row justify-center gap-8 text-start">
-        <div className={`${type === 'card' ? `p-6 rounded-xl shadow-lg` : ''} ${currentTheme.bg} w-full max-w-sm text-center`}>
-        <h2 className="text-2xl font-semibold mb-4 text-white">Mortes</h2>
-        <div className={`border-zinc-700 border mb-4 rounded-lg p-4 mb-6`}>
-            <p className={`text-5xl font-bold ${currentTheme.text} mb-6 transition-transform duration-300`}>
-            {deaths}
-            </p>
-        </div>
+    <>
+      <div className="p-4">
+        <ThemeSelector type={type} setType={setType} theme={theme} setTheme={setTheme} />
+      </div>
 
-        <div className="flex gap-6 justify-center mb-6">
-            <button
-            onClick={decrease}
-            className="bg-red-600 hover:bg-red-700 active:bg-red-800 text-white text-2xl px-5 py-3 rounded-lg transition-all duration-200 flex items-center justify-center shadow-md hover:shadow-lg transform hover:-translate-y-1 active:translate-y-0"
-            aria-label="Diminuir contador/decrease counter"
-            >
-            -
-            </button>
-            <button
-            onClick={increase}
-            className="bg-green-600 hover:bg-green-700 active:bg-green-800 text-white text-2xl px-5 py-3 rounded-md transition-all duration-200 flex items-center justify-center shadow-md hover:shadow-lg transform hover:-translate-y-1 active:translate-y-0"
-            aria-label="Aumentar contador/increase counter"
-            >
-            +
-            </button>
-        </div>
-
-        <div className="text-start">
-            <label className="text-zinc-400 pr-2">Tipo:</label>
-            <select
-            className="bg-zinc-700 text-zinc-400 rounded-lg p-2"
-            value={type}
-            onChange={(e) => setType(e.target.value)}
-            >
-            <option value="card">Card</option>
-            <option value="minimal">Minimalista</option>
-            </select>
-
-            <label className="text-zinc-400 pr-2 pl-2">Tema:</label>
-            <select
-            className="bg-zinc-700 text-zinc-400 rounded-lg p-2"
-            value={theme}
-            onChange={(e) => setTheme(e.target.value)}
-            >
-            <option value="default">Padrão</option>
-            <option value="elden">Elden Ring</option>
-            <option value="souls">Dark Souls</option>
-            </select>
-        </div>
-        </div>
-    </section>
+      <section className="flex flex-col md:flex-row justify-center gap-8 text-start">
+        <DeathCounter deaths={deaths} increase={increaseDeaths} decrease={decreaseDeaths} type={type} theme={currentTheme} resetDeaths={resetDeaths} setDeaths={setDeaths}/>
+        <TrophyCounter trophiesEarned={trophiesEarned} trophiesTotal={trophiesTotal} setTrophiesTotal={setTrophiesTotal} increase={increaseTrophies} decrease={decreaseTrophies}
+          reset={resetTrophies}
+          type={type}
+          themeName={theme}
+        />
+      </section>
+    </>
   );
 };
 
