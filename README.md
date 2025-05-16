@@ -16,7 +16,7 @@ O projeto oferece:
 - Suporte a múltiplos idiomas (Português e Inglês)
 - Integração direta com o OBS Browser Source
 
-Desenvolvido com o objetivo de praticar conhecimentos em React e desenvolvimento web moderno.
+Desenvolvido com o objetivo de praticar conhecimentos em React.
 
 ---
 
@@ -51,7 +51,7 @@ Key Features:
 - Real-time updates
 - Language selection (Portuguese and English)
 
-This project was built as a way to put my React knowledge into practice and explore real-time web applications.
+This project was built as a way to put my React knowledge into practice.
 
 ---
 
