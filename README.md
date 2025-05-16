@@ -12,7 +12,7 @@ O projeto conta com a possibilidade de colocar cada widget específico como elem
 Construí esse projeto visando colocar em prática o que estou aprendendo sobre React.
 
 ## Acesse
-- Em breve
+[StatsCounter no Vercel](https://stats-counter-1zjj3adg4-enzogl7s-projects.vercel.app/)
 
 ## Tecnologias Utilizadas
 - [React](https://reactjs.org/)
@@ -20,12 +20,14 @@ Construí esse projeto visando colocar em prática o que estou aprendendo sobre 
 - [TailwindCSS](https://tailwindcss.com/)
 - [React i18next](https://react.i18next.com/)
 - [React Toastify](https://fkhadra.github.io/react-toastify/)
-- HTML
-  
+- [React Router](https://reactrouter.com/)
+- [Supabase](https://supabase.com/)
+- [Vercel](https://vercel.com/)
+- [HTML5]
 ---
 
 ## 🇺🇸 English
-StatsCounter was created to help streamers who broadcast their journey of completing or platinum-ing games and want to display on their livestream how many times they’ve died or how many trophies they’ve earned. To eliminate the need to manually update this count in OBS every time, StatsCounter allows the streamer to update the stats with a single click — and the live overlay is instantly updated in real time. It also comes with a minimalist layout that blends seamlessly into your stream without cluttering the screen.
+StatsCounter was created to help streamers who broadcast their journey of completing or platinum-ing games and want to display on their livestream how many times they’ve died or how many trophies they’ve earned. To eliminate the need to manually update this count in OBS every time, StatsCounter allows the streamer to update the stats with a single click, and the live overlay is instantly updated in real time. It also comes with a minimalist layout that blends seamlessly into your stream without cluttering the screen.
 <br>
 
 The project allows each specific widget to be added as a browser source in OBS and includes a language selector, currently supporting both Portuguese and English.
@@ -34,7 +36,7 @@ The project allows each specific widget to be added as a browser source in OBS a
 I built this project as a way to put into practice what I’m learning about React.
 
 ## Access
-- Coming soon
+[StatsCounter on Vercel](https://stats-counter-1zjj3adg4-enzogl7s-projects.vercel.app/)
 
 ## Technologies Used
 - [React](https://reactjs.org/)
@@ -42,4 +44,7 @@ I built this project as a way to put into practice what I’m learning about Rea
 - [TailwindCSS](https://tailwindcss.com/)
 - [React i18next](https://react.i18next.com/)
 - [React Toastify](https://fkhadra.github.io/react-toastify/)
-- HTML
+- [React Router](https://reactrouter.com/)
+- [Supabase](https://supabase.com/)
+- [Vercel](https://vercel.com/)
+- [HTML5]
