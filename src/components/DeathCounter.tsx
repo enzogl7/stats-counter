@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import DeathIcon from '../assets/death-icon.png';
 import { supabase } from '../supabaseClient';
+import themes from './ThemesDeath';
 
 interface Props {
   type: string;
@@ -16,6 +17,7 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
   const [url, setUrl] = useState('');
   const [urlCopiada, setUrlCopiada] = useState(false);
   const [mensagemCopiada, setMensagemCopiada] = useState('');
+  const selectedTheme = localStorage.getItem('selectedTheme') || 'default';
 
   const updateDeathsInDB = async (newDeaths: number) => {
     if (!widgetId) return;
@@ -62,7 +64,7 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
     }
 
     setWidgetId(data.id);
-    const generatedUrl = `${window.location.origin}/widget/${data.id}`;
+    const generatedUrl = `${window.location.origin}/widget/${data.id}?theme=${selectedTheme}`;  
     setUrl(generatedUrl);
     await navigator.clipboard.writeText(generatedUrl);
     setUrlCopiada(true);

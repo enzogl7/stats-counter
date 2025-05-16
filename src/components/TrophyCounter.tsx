@@ -22,8 +22,8 @@ const TrophyCounter: React.FC<Props> = ({
   const [mensagemCopiada, setMensagemCopiada] = useState('');
   const [trophiesEarned, setTrophiesEarned] = useState(0);
   const [trophiesTotal, setTrophiesTotal] = useState(0);
+  const selectedTheme = localStorage.getItem('selectedTheme') || 'default';
 
-  // Atualiza valores no Supabase se o widget já tiver sido criado
   const atualizarTrophiesNoBanco = async (earned: number, total: number) => {
     if (!widgetId) return;
 
@@ -82,7 +82,7 @@ const TrophyCounter: React.FC<Props> = ({
     }
 
     setWidgetId(data.id);
-    const generatedUrl = `${window.location.origin}/widget/${data.id}`;
+    const generatedUrl = `${window.location.origin}/widget/${data.id}?theme=${selectedTheme}`;  
     setUrl(generatedUrl);
     await navigator.clipboard.writeText(generatedUrl);
     setUrlCopiada(true);

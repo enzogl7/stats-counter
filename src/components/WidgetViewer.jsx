@@ -4,6 +4,7 @@ import { supabase } from '../supabaseClient';
 import DeathIcon from '../assets/death-icon.png';
 import themes from './ThemesDeath';
 import PlatIcon from '../assets/plat-icon.png';
+import { useSearchParams } from 'react-router-dom';
 
 const defaultTheme = {
   bg: 'bg-zinc-800',
@@ -16,9 +17,9 @@ export default function WidgetViewer() {
   const [type, setType] = useState('');
   const [trophiesEarned, setTrophiesEarned] = useState(0);
   const [trophiesTotal, setTrophiesTotal] = useState(0); 
-  const selectedTheme = localStorage.getItem('selectedTheme') || 'default';
-  const theme = themes[selectedTheme] || themes.default;
-  const exemplo = "vazio";
+  const [searchParams] = useSearchParams();
+  const themeParam = searchParams.get('theme') || 'default';
+  const theme = themes[themeParam] || themes.default;
 
   useEffect(() => {
     let ignore = false;
@@ -84,8 +85,8 @@ export default function WidgetViewer() {
 
       {type === 'trophies' && (
         <div className={`border-zinc-700 border mb-4 rounded-full ${theme.bg} p-4 w-75 h-24 flex items-center justify-center mx-auto`} >
-          <div className={`text-4xl font-bold ${theme.text} w-60 flex items-center justify-center gap-2 transition-transform duration-300`}>
-            <img src={PlatIcon} alt="Troféu de Platina/Platinum trophy PS" className="w-10 h-10 object-contain"/>
+          <div className={`text-4xl font-bold ${theme === themes.default ? 'text-white' : theme.text} w-60 flex items-center justify-center gap-2 transition-transform duration-300`}>
+            <img src={PlatIcon} alt="Troféu de Platina/Platinum trophy PS" className="w-10 h-15 object-contain"/>
             <span>{trophiesEarned} / {trophiesTotal}</span>
           </div>
         </div>
