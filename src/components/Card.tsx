@@ -6,8 +6,6 @@ import themes from './ThemesDeath';
 import { toast } from 'react-toastify';
 import { useTranslation } from 'react-i18next';
 
-const CARD_ID = '123';
-
 const Card: React.FC = () => {
   const [deaths, setDeaths] = useState(0);
   const [customDeathsInput, setCustomDeathsInput] = useState('');
@@ -44,17 +42,10 @@ const Card: React.FC = () => {
 
   const currentTheme = themes[theme as keyof typeof themes];
 
-  useEffect(() => {
-    localStorage.setItem(`stats-${CARD_ID}`, JSON.stringify({
-      deaths,
-      trophies: trophiesEarned,
-    }));
-  }, [deaths, trophiesEarned]);
-
   return (
     <>
       <div className="p-4">
-        <ThemeSelector type={type} setType={setType} theme={theme} setTheme={setTheme} />
+        <ThemeSelector theme={theme} setTheme={setTheme} />
       </div>
 
       <section className="flex flex-col md:flex-row justify-center gap-8 text-start">

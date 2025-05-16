@@ -1,6 +1,7 @@
 import React from 'react';
 import themesTrophies from './ThemesTrophies';
 import { useTranslation } from 'react-i18next';
+import PlatIcon from '../assets/plat-icon.png';
 
 interface Props {
   trophiesEarned: number;
@@ -10,7 +11,7 @@ interface Props {
   decrease: () => void;
   reset: () => void;
   type: string;
-  themeName: string; // <- agora usamos o nome do tema, não o objeto
+  themeName: string;
 }
 
 const TrophyCounter: React.FC<Props> = ({
@@ -27,7 +28,7 @@ const TrophyCounter: React.FC<Props> = ({
   const { t } = useTranslation();
 
   return (
-    <div className={`${type === 'card' ? `p-6 rounded-xl shadow-lg` : ''} ${theme.bg} w-full max-w-sm text-center`}>
+    <div className={`${type === 'card' ? `p-6 rounded-xl shadow-lg` : ''} bg-zinc-800 w-full max-w-sm text-center`}>
       <h2 className="text-2xl font-semibold mb-4 text-white">{t('trophies')}</h2>
       <div className="mb-4">
         <label htmlFor="totalTrophies" className="block text-zinc-400 mb-1 text-sm">
@@ -40,11 +41,13 @@ const TrophyCounter: React.FC<Props> = ({
           }}/>
       </div>
 
-      <div className="border-zinc-700 border mb-4 rounded-lg p-4 mb-6">
-        <p className={`text-4xl font-bold ${theme.text} mb-6 transition-transform duration-300`}>
-          {trophiesEarned} / {trophiesTotal}
-        </p>
+      <div className={`border-zinc-700 border mb-4 rounded-full ${theme.bg} p-4 w-50 h-24 flex items-center justify-center mx-auto`}>
+        <div className={`text-4xl font-bold ${theme.text} flex items-center justify-center gap-2 transition-transform duration-300`}>
+          <img src={PlatIcon} alt="Troféu de Platina/Platinum trophy PS" className="w-10 h-10 object-contain" />
+          <span>{trophiesEarned} / {trophiesTotal}</span>
+        </div>
       </div>
+
 
       <div className="flex gap-6 justify-center mb-6">
         <button onClick={decrease} className="bg-red-600 hover:bg-red-700 active:bg-red-800 text-white text-2xl px-5 py-3 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-1 active:translate-y-0">

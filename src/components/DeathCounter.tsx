@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import DeathIcon from '../assets/death-icon.png';
 
 interface Props {
   deaths: number;
@@ -17,7 +18,7 @@ const DeathCounter: React.FC<Props> = ({ deaths, setDeaths, increase, decrease, 
     const { t } = useTranslation();
   
   return (
-  <div className={`${type === 'card' ? `p-6 rounded-xl shadow-lg` : ''} ${theme.bg} w-full max-w-sm text-center`}>
+  <div className={`${type === 'card' ? `p-6 rounded-xl shadow-lg` : ''} bg-zinc-800 w-full max-w-sm text-center`}>
     <h2 className="text-2xl font-semibold mb-4 text-white">{t('deaths')}</h2>
 
     <div className="mb-4">
@@ -35,11 +36,12 @@ const DeathCounter: React.FC<Props> = ({ deaths, setDeaths, increase, decrease, 
         }}/>
     </div>
     
-    <div className="border-zinc-700 border mb-4 rounded-lg p-4 mb-6">
-      <p className={`text-5xl font-bold ${theme.text} mb-6 transition-transform duration-300`}>
-        {deaths}
-      </p>
-    </div>
+      <div className={`border-zinc-700 border mb-4 rounded-full ${theme.bg} p-4 w-30 h-24 flex items-center justify-center mx-auto`}>
+        <div className={`text-4xl font-bold ${theme.text} flex items-center justify-center gap-2 transition-transform duration-300`}>
+          <img src={DeathIcon} alt="Ícone mortes/Death icon" className="w-6 h-6 text-white object-contain" />
+          <span>{deaths}</span>
+        </div>
+      </div>
     
 
     <div className="flex gap-6 justify-center mb-6">
