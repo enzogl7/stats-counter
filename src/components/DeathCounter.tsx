@@ -7,11 +7,13 @@ interface Props {
   increase: () => void;
   decrease: () => void;
   resetDeaths: () => void;
+  customDeathsInput: string;
+  setCustomDeathsInput: (val: string) => void;
   type: string;
   theme: { bg: string; text: string };
 }
 
-const DeathCounter: React.FC<Props> = ({ deaths, setDeaths, increase, decrease, type, theme, resetDeaths }) => {
+const DeathCounter: React.FC<Props> = ({ deaths, setDeaths, increase, decrease, type, theme, resetDeaths, customDeathsInput, setCustomDeathsInput}) => {
     const { t } = useTranslation();
   
   return (
@@ -22,13 +24,17 @@ const DeathCounter: React.FC<Props> = ({ deaths, setDeaths, increase, decrease, 
       <label htmlFor="customDeaths" className="block text-zinc-400 mb-1 text-sm">
         {t('custom_total_deaths')}
       </label>
-      <input id="customDeaths" type="number" value={deaths} min={0} className="bg-zinc-700 text-white rounded-lg px-4 py-2 w-1/2"
+      <input id="customDeaths" type="number" inputMode="numeric" value={customDeathsInput} min={0} placeholder={deaths.toString()} className="bg-zinc-700 text-white rounded-lg px-4 py-2 w-1/2"
         onChange={(e) => {
-          const val = parseInt(e.target.value, 10);
-          setDeaths(isNaN(val) || val < 0 ? 0 : val);
+          const val = e.target.value;
+          if (/^\d*$/.test(val)) {
+            setCustomDeathsInput(val);
+            const numeric = parseInt(val, 10);
+            setDeaths(isNaN(numeric) ? 0 : numeric);
+          }
         }}/>
     </div>
-
+    
     <div className="border-zinc-700 border mb-4 rounded-lg p-4 mb-6">
       <p className={`text-5xl font-bold ${theme.text} mb-6 transition-transform duration-300`}>
         {deaths}
