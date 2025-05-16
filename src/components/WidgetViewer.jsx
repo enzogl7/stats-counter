@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { supabase } from '../supabaseClient';
 import DeathIcon from '../assets/death-icon.png';
 import themes from './ThemesDeath';
+import PlatIcon from '../assets/plat-icon.png';
 
 const defaultTheme = {
   bg: 'bg-zinc-800',
@@ -12,26 +13,34 @@ const defaultTheme = {
 export default function WidgetViewer() {
   const { id } = useParams();
   const [value, setValue] = useState(0);
+  const [type, setType] = useState('');
+  const [trophiesEarned, setTrophiesEarned] = useState(0);
+  const [trophiesTotal, setTrophiesTotal] = useState(0); 
   const selectedTheme = localStorage.getItem('selectedTheme') || 'default';
   const theme = themes[selectedTheme] || themes.default;
-  console.log("Tema selecionado:", selectedTheme);
+  const exemplo = "vazio";
 
   useEffect(() => {
     let ignore = false;
-
     const fetchWidget = async () => {
       const { data, error } = await supabase
         .from('widgets')
-        .select('value')
+        .select('value, type, total')
         .eq('id', id)
         .single();
 
-      if (!ignore && data?.value !== undefined) {
-        setValue(data.value);
-      }
+        if (!ignore && data?.value !== undefined) {
+          setValue(data.value);
+          setType(data.type);
+          if (data.type === 'trophies') {
+            setTrophiesEarned(data.value);
+            setTrophiesTotal(data.total || 0);
+          }
+        }
     };
 
     fetchWidget();
+
 
     const channel = supabase
       .channel(`realtime-widget-${id}`)
@@ -44,9 +53,14 @@ export default function WidgetViewer() {
           filter: `id=eq.${id}`,
         },
         (payload) => {
-          console.log('🔁 Atualização recebida via Realtime:', payload);
           const newValue = payload.new.value;
+          const newTotal = payload.new.total;
           setValue(newValue);
+          setType(payload.new.type);
+          if (payload.new.type === 'trophies') {
+            setTrophiesEarned(newValue);
+            setTrophiesTotal(newTotal);
+          }
         }
       )
       .subscribe();
@@ -54,18 +68,28 @@ export default function WidgetViewer() {
     return () => {
       ignore = true;
       supabase.removeChannel(channel);
-    };
+    };  
   }, [id]);
 
   return (
-    <div className={`border-zinc-700 border mb-4 rounded-full ${theme.bg} p-4 w-30 h-24 flex items-center justify-center mx-auto`}>
-      <div
-        key={value}
-        className={`text-4xl font-bold ${theme.text} flex items-center justify-center gap-2 transition-transform duration-300`}
-      >
-        <img src={DeathIcon} alt="Ícone mortes/Death icon" className="w-6 h-6 object-contain" />
-        <span>{value}</span>
-      </div>
+    <div>
+      {type === 'deaths' && (
+        <div className={`border-zinc-700 border mb-4 rounded-full ${theme.bg} p-4 w-30 h-24 flex items-center justify-center mx-auto`}>
+          <div key={value} className={`text-4xl font-bold ${theme.text} flex items-center justify-center gap-2 transition-transform duration-300`}>
+            <img src={DeathIcon} alt="Ícone mortes/Death icon" className="w-6 h-6 object-contain" />
+            <span>{value}</span>
+          </div>
+        </div>
+      )}
+
+      {type === 'trophies' && (
+        <div className={`border-zinc-700 border mb-4 rounded-full ${theme.bg} p-4 w-75 h-24 flex items-center justify-center mx-auto`} >
+          <div className={`text-4xl font-bold ${theme.text} w-60 flex items-center justify-center gap-2 transition-transform duration-300`}>
+            <img src={PlatIcon} alt="Troféu de Platina/Platinum trophy PS" className="w-10 h-10 object-contain"/>
+            <span>{trophiesEarned} / {trophiesTotal}</span>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

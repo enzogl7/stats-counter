@@ -80,6 +80,7 @@ const copiarNovamente = async () => {
   return (
     <div className={`p-6 rounded-xl shadow-lg bg-zinc-800 w-full max-w-sm text-center`}>
       <h2 className="text-2xl font-semibold mb-4 text-white">{t('deaths')}</h2>
+      <hr className='text-zinc-600 w-full mb-3'></hr>
 
       <div className="mb-4">
         <label htmlFor="customDeaths" className="block text-zinc-400 mb-1 text-sm">
