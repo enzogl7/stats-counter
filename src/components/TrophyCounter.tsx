@@ -63,6 +63,11 @@ const TrophyCounter: React.FC<Props> = ({
         {t('reset_trophies')}
         </button>
       </div>
+      <div className="mt-4">
+        <button className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-4 py-2 rounded-lg text-sm shadow hover:shadow-lg transition">
+          Gerar URL do Widget
+        </button>
+      </div>
     </div>
   );
 };

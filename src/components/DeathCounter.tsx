@@ -15,8 +15,8 @@ interface Props {
 }
 
 const DeathCounter: React.FC<Props> = ({ deaths, setDeaths, increase, decrease, type, theme, resetDeaths, customDeathsInput, setCustomDeathsInput}) => {
-    const { t } = useTranslation();
-  
+  const { t } = useTranslation();
+
   return (
   <div className={`${type === 'card' ? `p-6 rounded-xl shadow-lg` : ''} bg-zinc-800 w-full max-w-sm text-center`}>
     <h2 className="text-2xl font-semibold mb-4 text-white">{t('deaths')}</h2>
@@ -56,6 +56,11 @@ const DeathCounter: React.FC<Props> = ({ deaths, setDeaths, increase, decrease, 
     <div className="text-center">
       <button onClick={resetDeaths} className="bg-yellow-600 hover:bg-yellow-700 active:bg-yellow-800 text-white px-4 py-2 rounded-lg text-sm shadow hover:shadow-lg transition">
         {t('reset_deaths')}
+      </button>
+    </div>
+    <div className="mt-4">
+      <button className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-4 py-2 rounded-lg text-sm shadow hover:shadow-lg transition">
+        Gerar URL do Widget
       </button>
     </div>
   </div>
