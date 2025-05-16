@@ -5,7 +5,7 @@ import { ToastContainer } from 'react-toastify';
 function App() {
   return (
     <>
-      <main>
+    <main className="max-w-4xl mx-auto px-4 py-8">
         <ToastContainer position="top-right" autoClose={3000} />
         <Header />
         <Card />

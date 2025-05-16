@@ -16,7 +16,6 @@ const Header: React.FC = () => {
         {t('description')}
     </p>
     <LanguageSelector />
-
   </header>
   );
 };
