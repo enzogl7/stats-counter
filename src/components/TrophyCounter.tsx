@@ -2,6 +2,8 @@ import React from 'react';
 import themesTrophies from './ThemesTrophies';
 import { useTranslation } from 'react-i18next';
 import PlatIcon from '../assets/plat-icon.png';
+import { useState } from 'react';
+import { supabase } from '../supabaseClient';
 
 interface Props {
   trophiesEarned: number;
@@ -14,21 +16,48 @@ interface Props {
   themeName: string;
 }
 
-const TrophyCounter: React.FC<Props> = ({
-  trophiesEarned,
-  trophiesTotal,
-  setTrophiesTotal,
-  increase,
+const TrophyCounter: React.FC<Props> = ({trophiesEarned,trophiesTotal,setTrophiesTotal,increase,
   decrease,
   reset,
   type,
   themeName,
 }) => {
   const theme = themesTrophies[themeName as keyof typeof themesTrophies];
-  const { t } = useTranslation();
+    const { t } = useTranslation();
+    const [value, setValue] = useState(0);
+    const [widgetId, setWidgetId] = useState(null);
+  
+    const increment = () => updateValue(value + 1);
+    const decrement = () => updateValue(value - 1);
+  
+    const updateValue = async (newVal) => {
+      setValue(newVal);
+      if (widgetId) {
+        await supabase.from('widgets').update({ value: newVal }).eq('id', widgetId);
+      }
+    };
+  
+    const gerarURL = async () => {
+      const { data, error } = await supabase
+        .from('widgets')
+        .insert([{ type }])
+        .select()
+        .single();
+  
+      if (error) {
+        alert('Erro ao gerar widget');
+        console.error(error);
+        return;
+      }
+  
+      setWidgetId(data.id);
+      const url = `${window.location.origin}/widget/${data.id}`;
+      await navigator.clipboard.writeText(url);
+      console.log(`URL copiada para o OBS:\n\n${url}`);
+    };
 
   return (
-    <div className={`${type === 'card' ? `p-6 rounded-xl shadow-lg` : ''} bg-zinc-800 w-full max-w-sm text-center`}>
+    <div className={`p-6 rounded-xl shadow-lg bg-zinc-800 w-full max-w-sm text-center`}>
       <h2 className="text-2xl font-semibold mb-4 text-white">{t('trophies')}</h2>
       <div className="mb-4">
         <label htmlFor="totalTrophies" className="block text-zinc-400 mb-1 text-sm">
@@ -64,7 +93,7 @@ const TrophyCounter: React.FC<Props> = ({
         </button>
       </div>
       <div className="mt-4">
-        <button className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-4 py-2 rounded-lg text-sm shadow hover:shadow-lg transition">
+        <button onClick={gerarURL} className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-4 py-2 rounded-lg text-sm shadow hover:shadow-lg transition">
         {t('generate_url')}
         </button>
       </div>

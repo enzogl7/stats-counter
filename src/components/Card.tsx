@@ -15,13 +15,6 @@ const Card: React.FC = () => {
   const [trophiesTotal, setTrophiesTotal] = useState(0);
   const { t } = useTranslation();
 
-  const increaseDeaths = () => setDeaths((d) => d + 1);
-  const decreaseDeaths = () => setDeaths((d) => (d > 0 ? d - 1 : 0));
-  const resetDeaths = () => {
-    setDeaths(0);
-    setCustomDeathsInput('');
-  };
-
   const increaseTrophies = () => {
     if (trophiesTotal === 0) {
       toast.warn(t('alert_total_trophies'));
@@ -50,15 +43,8 @@ const Card: React.FC = () => {
 
       <section className="flex flex-col md:flex-row justify-center gap-8 text-start">
         <DeathCounter
-          deaths={deaths}
-          increase={increaseDeaths}
-          decrease={decreaseDeaths}
-          type={type}
+          type="deaths"
           theme={currentTheme}
-          resetDeaths={resetDeaths}
-          setDeaths={setDeaths}
-          customDeathsInput={customDeathsInput}
-          setCustomDeathsInput={setCustomDeathsInput}
         />
 
         <TrophyCounter
@@ -68,7 +54,7 @@ const Card: React.FC = () => {
           increase={increaseTrophies}
           decrease={decreaseTrophies}
           reset={resetTrophies}
-          type={type}
+          type="trophies"
           themeName={theme}
         />
       </section>
