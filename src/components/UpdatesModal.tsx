@@ -37,7 +37,10 @@ const UpdatesModal: React.FC<ModalProps> = ({ onClose }) => {
             <br /><br />
             <p>{t('modal.step_generate')}</p>
             <p>{t('modal.step_use_obs')}</p>
+            <hr className='text-zinc-600 mt-2 mb-2'></hr>
+            <p className='text-xl font-bold'>Novidades!</p>
             <p>{t('modal.step_storage')}</p>
+            <p>{t('modal.new_theme')}</p>
           </p>
           <button onClick={onClose} className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded transition shadow">
             {t('modal.cta')}

@@ -33,7 +33,9 @@
     "step_use_obs": "Este link pode ser usado no OBS como uma fonte de navegador para mostrar o contador ao vivo durante sua transmissão.",
     "update": "*NOVO!*",
     "step_storage": "Os widgets salvos ficam armazenados localmente no seu navegador, permitindo que você retorne e continue de onde parou adicionando o ID eles no campo no topo de cada widget.",
+    "new_theme": "Novo tema adicionado: \"Básico - remove as bordas\" para quem prefere apenas o texto.",
     "cta": "Entendi!"
-  }
+  },
+  "basic_option": "Básico - remove as bordas"
 
 }

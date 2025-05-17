@@ -3,6 +3,10 @@ const themes = {
     bg: 'bg-zinc-800',
     text: 'text-red-400',
   },
+  basic: {
+    bg: '',
+    text: 'text-red-400',
+  },
   elden: {
     bg: 'bg-yellow-950',
     text: 'text-yellow-300',

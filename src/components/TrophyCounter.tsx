@@ -192,8 +192,8 @@ useEffect(() => {
         />
       </div>
 
-      <div className={`border-zinc-700 border mb-4 rounded-full ${theme.bg} p-4 w-75 h-24 flex items-center justify-center mx-auto`} >
-        <div className={`text-4xl font-bold ${theme.text} flex items-center justify-center gap-2 transition-transform duration-300`}>
+      <div className={`mb-4 rounded-full ${theme.bg} p-4 w-75 h-24 flex items-center justify-center mx-auto ${selectedTheme !== 'basic' ? 'border border-zinc-700' : '' }`}> 
+       <div className={`text-4xl font-bold ${theme.text} flex items-center justify-center gap-2 transition-transform duration-300`}>
           <img src={PlatIcon} alt="Troféu de Platina/Platinum trophy PS" className="w-10 h-10 object-contain"/>
           <span>
             {trophiesEarned} / {trophiesTotal}

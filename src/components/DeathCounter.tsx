@@ -20,7 +20,6 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
   const [mensagemCopiada, setMensagemCopiada] = useState('');
   const [manualWidgetId, setManualWidgetId] = useState('');
   const [carregandoWidget, setCarregandoWidget] = useState(false);
-
   const selectedTheme = localStorage.getItem('selectedTheme') || 'default';
 
   useEffect(() => {
@@ -153,7 +152,7 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
 
       <hr className="text-zinc-600 w-full mb-4" />
 
-      <div className={`border-zinc-700 border mb-4 rounded-full ${theme.bg} p-4 w-64 h-24 flex items-center justify-center mx-auto`}>
+      <div className={`mb-4 rounded-full ${theme.bg} p-4 w-75 h-24 flex items-center justify-center mx-auto ${selectedTheme !== 'basic' ? 'border border-zinc-700' : '' }`}> 
         <div className={`text-4xl font-bold ${theme.text} flex items-center gap-2`}>
           <img src={DeathIcon} alt="Ícone de morte" className="w-10 h-10 object-contain" />
           <span>{deaths}</span>
