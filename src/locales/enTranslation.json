@@ -25,7 +25,16 @@
   "copy": "Copied to clipboard",
   "type_death": "Deaths",
   "type_trophy": "Trophies",
-  "invalid_widget_type": "Invalid widget for this input."
+  "invalid_widget_type": "Invalid widget for this input. Check if it really belongs to this widget.",
+    "modal": {
+    "welcome": "Welcome to StatsCounter!",
+    "intro": "With StatsCounter, you can create and display custom counters for deaths and trophies directly on your livestream.",
+    "step_generate": "After setting up a counter, click on \"Generate widget URL\" to create a unique link.",
+    "step_use_obs": "This link can be used in OBS as a browser source to show the counter live during your stream.",
+    "update": "*NEW!*",
+    "step_storage": "Saved widgets are stored locally in your browser so you can come back and pick up where you left off.",
+    "cta": "Got it!"
+  }
 
 
 

@@ -25,6 +25,15 @@
   "copy": "Copiado para a área de transferência",
   "type_death": "Mortes",
   "type_trophy": "Troféus",
-  "invalid_widget_type": "Tipo de widget inválido para esse campo"
+  "invalid_widget_type": "Tipo de widget inválido para esse campo. Verifique se realmente pertence a esse widget.",
+    "modal": {
+    "welcome": "Bem-vindo ao StatsCounter!",
+    "intro": "Com o StatsCounter você pode criar e exibir contadores personalizados de mortes e troféus diretamente na sua livestream.",
+    "step_generate": "Após configurar um contador, clique em \"Gerar URL do widget\" para criar um link único.",
+    "step_use_obs": "Este link pode ser usado no OBS como uma fonte de navegador para mostrar o contador ao vivo durante sua transmissão.",
+    "update": "*NOVO!*",
+    "step_storage": "Os widgets salvos ficam armazenados localmente no seu navegador, permitindo que você retorne e continue de onde parou adicionando o ID eles no campo no topo de cada widget.",
+    "cta": "Entendi!"
+  }
 
 }
