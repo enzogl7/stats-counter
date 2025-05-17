@@ -14,7 +14,14 @@
   "default_option": "Padrão",
   "minimal_option": "Mínimo",
   "generate_url": "Gerar URL do widget",
-  "copy_url": "URL copiada para a área de transferência"
-
+  "copy_url": "URL copiada para a área de transferência",
+  "saved_widgets": "Widgets salvos",
+  "not_found_widgets": "Nenhum widget encontrado",
+  "manual_id_widget": "Inserir ID de widget existente:",
+  "manual_widget_not_found": "Widget não encontrado",
+  "manual_widget_success": "Widget encontrado com sucesso",
+  "loading_widget": "Carregando widget",
+  "load_widget": "Carregar widget",
+  "copy": "Copiado para a área de transferência"
 
 }

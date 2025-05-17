@@ -14,6 +14,17 @@
   "default_option": "Default",
   "minimal_option": "Minimal",
   "generate_url": "Generate widget URL",
-  "copy_url": "URL copied to clipboard"
+  "copy_url": "URL copied to clipboard",
+  "saved_widgets": "Saved widgets",
+  "not_found_widgets": "No widgets found",
+  "manual_id_widget": "Insert existing widget ID:",
+  "manual_widget_not_found": "Widget not found",
+  "manual_widget_success": "Widget found successfully",
+  "loading_widget": "Loading widget",
+  "load_widget": "Load widget",
+  "copy": "Copied to clipboard"
+
+
+
 
 }

@@ -24,6 +24,8 @@ const TrophyCounter: React.FC<Props> = ({
   const [trophiesTotal, setTrophiesTotal] = useState(0);
   const selectedTheme = localStorage.getItem('selectedTheme') || 'default';
   const [widgetsSalvos, setWidgetsSalvos] = useState<{ id: string, url: string }[]>([]);
+  const [manualWidgetId, setManualWidgetId] = useState('');
+  const [carregandoWidget, setCarregandoWidget] = useState(false);
 
 useEffect(() => {
   const savedWidgetId = localStorage.getItem('trophyWidgetId');
@@ -49,7 +51,7 @@ useEffect(() => {
 
     if (error) {
       console.error('Erro ao atualizar widget:', error);
-      toast.error('Erro ao salvar progresso dos troféus.');
+      toast.error('Error');
     }
   };
 
@@ -126,7 +128,47 @@ useEffect(() => {
   return (
     <div className={`p-6 rounded-xl shadow-lg bg-zinc-800 w-full max-w-sm text-center`}>
       <h2 className="text-2xl font-semibold mb-4 text-white">{t('trophies')}</h2>
-      <hr className='text-zinc-600 w-full mb-3' />
+      <div className="mt-6 text-left">
+        <label htmlFor="manualWidgetId" className="text-sm text-zinc-400 block mb-1">
+          {t('manual_id_widget')}
+        </label>
+      <div className="flex gap-2">
+        <input type="text"id="manualWidgetId" value={manualWidgetId} onChange={(e) => setManualWidgetId(e.target.value)} className="bg-zinc-700 text-white rounded-lg px-3 py-2 w-full"
+          placeholder="ex: a1b2c3d4..."
+        />
+        <button
+          onClick={async () => {
+            if (!manualWidgetId.trim()) return;
+
+            setCarregandoWidget(true);
+            const { data, error } = await supabase
+              .from('widgets')
+              .select('id, value, total')
+              .eq('id', manualWidgetId.trim())
+              .single();
+
+            setCarregandoWidget(false);
+
+            if (error || !data) {
+              toast.error(t('manual_widget_not_found'));
+              return;
+            }
+
+            setWidgetId(data.id);
+            setTrophiesEarned(data.value || 0);
+            setTrophiesTotal(data.total || 0);
+            const generatedUrl = `${window.location.origin}/widget/${data.id}?theme=${selectedTheme}`;
+            setUrl(generatedUrl);
+            toast.success(t('manual_widget_success'));
+          }}
+          className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-3 py-2 rounded-lg text-sm shadow hover:shadow-lg transition whitespace-nowrap"
+          disabled={carregandoWidget}>
+          {carregandoWidget ? t('loading_widget') : t('load_widget')}
+        </button>
+      </div>
+    </div>
+
+      <hr className='text-zinc-600 w-full mb-3 mt-3' />
 
       <div className="mb-4">
         <label htmlFor="totalTrophies" className="block text-zinc-400 mb-1 text-sm">
@@ -181,9 +223,8 @@ useEffect(() => {
       </div>
 
       <div className="mt-4">
-        <button
-          onClick={gerarURL}
-          className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-4 py-2 rounded-lg text-sm shadow hover:shadow-lg transition">
+        <button onClick={gerarURL} className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-4 py-2 rounded-lg text-sm shadow hover:shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
+          disabled={manualWidgetId.trim() !== ''} >
           {t('generate_url')}
         </button>
 
