@@ -24,6 +24,7 @@
   "load_widget": "Carregar widget",
   "copy": "Copiado para a área de transferência",
   "type_death": "Mortes",
-  "type_trophy": "Troféus"
+  "type_trophy": "Troféus",
+  "invalid_widget_type": "Tipo de widget inválido para esse campo"
 
 }

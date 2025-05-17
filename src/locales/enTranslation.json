@@ -24,7 +24,8 @@
   "load_widget": "Load widget",
   "copy": "Copied to clipboard",
   "type_death": "Deaths",
-  "type_trophy": "Trophies"
+  "type_trophy": "Trophies",
+  "invalid_widget_type": "Invalid widget for this input."
 
 
 

@@ -46,7 +46,7 @@ const SavedWidgetList: React.FC = () => {
             <div className="flex-1 space-y-4">
                 <div className="flex items-center justify-between mb-1">
                 <span className="bg-indigo-500 text-white text-center text-xs font-semibold px-2.5 py-1 rounded-md tracking-wide">
-                    {widget.type === 'deaths' ? t('type_death') : widget.type === 'trophy' ? t('type_trophy') : widget.type.toUpperCase()}
+                    {widget.type === 'deaths' ? t('type_death') : widget.type === 'trophies' ? t('type_trophy') : widget.type.toUpperCase()}
                 </span>
                 </div>
                 <div className="flex gap-6 w-full">

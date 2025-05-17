@@ -143,14 +143,17 @@ useEffect(() => {
             setCarregandoWidget(true);
             const { data, error } = await supabase
               .from('widgets')
-              .select('id, value, total')
+              .select('id, value, total, type')
               .eq('id', manualWidgetId.trim())
               .single();
-
             setCarregandoWidget(false);
 
             if (error || !data) {
               toast.error(t('manual_widget_not_found'));
+              return;
+            }
+            if (data.type !== 'trophies') {
+              toast.error(t('invalid_widget_type'));
               return;
             }
 

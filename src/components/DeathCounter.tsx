@@ -108,13 +108,17 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
     setCarregandoWidget(true);
     const { data, error } = await supabase
       .from('widgets')
-      .select('id, value')
+      .select('id, value, type')
       .eq('id', manualWidgetId.trim())
       .single();
     setCarregandoWidget(false);
 
     if (error || !data) {
       toast.error(t('manual_widget_not_found'));
+      return;
+    }
+    if (data.type !== 'deaths') {
+      toast.error(t('invalid_widget_type'));
       return;
     }
 
