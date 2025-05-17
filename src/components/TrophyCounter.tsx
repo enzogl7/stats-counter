@@ -94,7 +94,7 @@ useEffect(() => {
       .single();
 
     if (error) {
-      alert('Erro ao gerar widget');
+      alert('Error');
       console.error(error);
       return;
     }
@@ -128,13 +128,13 @@ useEffect(() => {
   return (
     <div className={`p-6 rounded-xl shadow-lg bg-zinc-800 w-full max-w-sm text-center`}>
       <h2 className="text-2xl font-semibold mb-4 text-white">{t('trophies')}</h2>
-      <div className="mt-6 text-left">
+      <div className="mt-4 text-left">
         <label htmlFor="manualWidgetId" className="text-sm text-zinc-400 block mb-1">
           {t('manual_id_widget')}
         </label>
       <div className="flex gap-2">
-        <input type="text"id="manualWidgetId" value={manualWidgetId} onChange={(e) => setManualWidgetId(e.target.value)} className="bg-zinc-700 text-white rounded-lg px-3 py-2 w-full"
-          placeholder="ex: a1b2c3d4..."
+        <input type="text" id="manualWidgetId" value={manualWidgetId} onChange={(e) => setManualWidgetId(e.target.value)} className="bg-zinc-700 text-white rounded-lg px-3 py-2 w-full"
+            placeholder="ex: c5s29bf2-..."
         />
         <button
           onClick={async () => {
