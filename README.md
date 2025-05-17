@@ -3,8 +3,8 @@
 ## Português
 
 <p align="center">
-  <img src="https://i.imgur.com/XDSO4Qu.png" width="45%" style="margin-right: 10px;" />
-  <img src="https://i.imgur.com/Smvalo9.png" width="45%" />
+  <img src="https://i.imgur.com/XDSO4Qu.png" width="50%" style="margin-right: 10px;" />
+  <img src="https://i.imgur.com/Smvalo9.png" width="65%" />
 </p>
 
 StatsCounter foi criado para ajudar streamers que transmitem suas jornadas platinando ou zerando jogos e querem exibir em tempo real em suas livestreams quantas vezes morreram ou quantos troféus conquistaram.
@@ -38,8 +38,8 @@ Desenvolvido com o objetivo de praticar conhecimentos em React.
 ## English
 
 <p align="center">
-  <img src="https://i.imgur.com/nsCK9BG.png" width="45%" style="margin-right: 10px;" />
-  <img src="https://i.imgur.com/Smvalo9.png" width="45%" />
+  <img src="https://i.imgur.com/XDSO4Qu.png" width="50%" style="margin-right: 10px;" />
+  <img src="https://i.imgur.com/Smvalo9.png" width="65%" />
 </p>
 
 StatsCounter was built to help streamers track how many times they’ve died or how many trophies they've earned while broadcasting their journey through games.
