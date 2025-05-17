@@ -21,7 +21,7 @@ Desenvolvido com o objetivo de praticar conhecimentos em React.
 ---
 
 ### Acesse
-[StatsCounter no Vercel](https://stats-counter-1zjj3adg4-enzogl7s-projects.vercel.app/)
+[StatsCounter no Vercel](https://stats-counter-alpha.vercel.app/)
 
 ### Tecnologias Utilizadas
 - [React](https://reactjs.org/)
@@ -56,7 +56,7 @@ This project was built as a way to put my React knowledge into practice.
 ---
 
 ### Access
-[StatsCounter on Vercel](https://stats-counter-1zjj3adg4-enzogl7s-projects.vercel.app/)
+[StatsCounter on Vercel](https://stats-counter-alpha.vercel.app/)
 
 ### Technologies Used
 - [React](https://reactjs.org/)
