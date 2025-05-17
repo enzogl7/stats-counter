@@ -14,6 +14,35 @@
   "default_option": "Default",
   "minimal_option": "Minimal",
   "generate_url": "Generate widget URL",
-  "copy_url": "URL copied to clipboard"
+  "copy_url": "URL copied to clipboard",
+  "saved_widgets": "Saved widgets",
+  "not_found_widgets": "No widgets found",
+  "manual_id_widget": "Insert existing widget ID:",
+  "manual_widget_not_found": "Widget not found",
+  "manual_widget_success": "Widget found successfully",
+  "loading_widget": "Loading widget",
+  "load_widget": "Load widget",
+  "copy": "Copied to clipboard",
+  "type_death": "Deaths",
+  "type_trophy": "Trophies",
+  "invalid_widget_type": "Invalid widget for this input. Check if it really belongs to this widget.",
+    "modal": {
+    "welcome": "Welcome to StatsCounter!",
+    "intro": "With StatsCounter, you can create and display custom counters for deaths and trophies directly on your livestream.",
+    "step_generate": "After setting up a counter, click on \"Generate widget URL\" to create a unique link.",
+    "step_use_obs": "This link can be used in OBS as a browser source to show the counter live during your stream.",
+    "update": "*NEW!*",
+    "step_storage": "Saved widgets are stored locally in your browser so you can come back and pick up where you left off.",
+    "new_theme": "New theme added: \"Basic - remove borders and background\" for those who prefer just the text.",
+    "cta": "Got it!"
+  },
+  "basic_option": "Basic - remove borders and background",
+  "copyright": "All rights reserved",
+  "contact": "Contact: ",
+  "feedback": "Feedbacks, suggestions, reports: "
+
+
+
+
 
 }

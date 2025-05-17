@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import DeathIcon from '../assets/death-icon.png';
 import { supabase } from '../supabaseClient';
 import themes from './ThemesDeath';
+import { toast } from 'react-toastify';
 
 interface Props {
   type: string;
@@ -17,7 +18,18 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
   const [url, setUrl] = useState('');
   const [urlCopiada, setUrlCopiada] = useState(false);
   const [mensagemCopiada, setMensagemCopiada] = useState('');
+  const [manualWidgetId, setManualWidgetId] = useState('');
+  const [carregandoWidget, setCarregandoWidget] = useState(false);
   const selectedTheme = localStorage.getItem('selectedTheme') || 'default';
+
+  useEffect(() => {
+    const savedWidgetId = localStorage.getItem('deathWidgetId');
+    if (savedWidgetId) {
+      setWidgetId(savedWidgetId);
+      const generatedUrl = `${window.location.origin}/widget/${savedWidgetId}?theme=${selectedTheme}`;
+      setUrl(generatedUrl);
+    }
+  }, [selectedTheme]);
 
   const updateDeathsInDB = async (newDeaths: number) => {
     if (!widgetId) return;
@@ -25,7 +37,10 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
       .from('widgets')
       .update({ value: newDeaths })
       .eq('id', widgetId);
-    if (error) console.error('Erro ao atualizar mortes no banco:', error);
+    if (error) {
+      console.error('Erro ao atualizar mortes no banco:', error);
+      toast.error('Erro ao atualizar contador');
+    }
   };
 
   const increaseDeaths = () => {
@@ -53,7 +68,7 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
   const gerarURL = async () => {
     const { data, error } = await supabase
       .from('widgets')
-      .insert([{ type }])
+      .insert([{ type, value: deaths }])
       .select()
       .single();
 
@@ -64,54 +79,82 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
     }
 
     setWidgetId(data.id);
-    const generatedUrl = `${window.location.origin}/widget/${data.id}?theme=${selectedTheme}`;  
+    const generatedUrl = `${window.location.origin}/widget/${data.id}?theme=${selectedTheme}`;
     setUrl(generatedUrl);
+
+    const existingWidgets = JSON.parse(localStorage.getItem('savedWidgets') || '[]');
+    const updatedWidgets = [...existingWidgets, { id: data.id, type, url: generatedUrl }];
+    localStorage.setItem('savedWidgets', JSON.stringify(updatedWidgets));
+
     await navigator.clipboard.writeText(generatedUrl);
     setUrlCopiada(true);
     setMensagemCopiada(t('copy_url'));
+
     setTimeout(() => setMensagemCopiada(''), 3000);
   };
-const copiarNovamente = async () => {
-  if (url) {
-    await navigator.clipboard.writeText(url);
-    setMensagemCopiada(t('copy_url'));
-    setTimeout(() => setMensagemCopiada(''), 3000);
-  }
-};
+
+  const copiarNovamente = async () => {
+    if (url) {
+      await navigator.clipboard.writeText(url);
+      setMensagemCopiada(t('copy_url'));
+      setTimeout(() => setMensagemCopiada(''), 3000);
+    }
+  };
+
+  const carregarWidgetManual = async () => {
+    if (!manualWidgetId.trim()) return;
+
+    setCarregandoWidget(true);
+    const { data, error } = await supabase
+      .from('widgets')
+      .select('id, value, type')
+      .eq('id', manualWidgetId.trim())
+      .single();
+    setCarregandoWidget(false);
+
+    if (error || !data) {
+      toast.error(t('manual_widget_not_found'));
+      return;
+    }
+    if (data.type !== 'deaths') {
+      toast.error(t('invalid_widget_type'));
+      return;
+    }
+
+    setWidgetId(data.id);
+    setDeaths(data.value || 0);
+    const generatedUrl = `${window.location.origin}/widget/${data.id}?theme=${selectedTheme}`;
+    setUrl(generatedUrl);
+    toast.success(t('manual_widget_success'));
+  };
 
   return (
-    <div className={`p-6 rounded-xl shadow-lg bg-zinc-800 w-full max-w-sm text-center`}>
+    <div className="p-6 rounded-xl shadow-lg bg-zinc-800 w-full max-w-sm text-center">
       <h2 className="text-2xl font-semibold mb-4 text-white">{t('deaths')}</h2>
-      <hr className='text-zinc-600 w-full mb-3'></hr>
 
-      <div className="mb-4">
-        <label htmlFor="customDeaths" className="block text-zinc-400 mb-1 text-sm">
-          {t('custom_total_deaths')}
+      <div className="text-left mb-4">
+        <label htmlFor="manualWidgetId" className="text-sm mt-4 text-zinc-400 block mb-1">
+          {t('manual_id_widget')}
         </label>
-        <input
-          id="customDeaths"
-          type="number"
-          inputMode="numeric"
-          value={customDeathsInput}
-          min={0}
-          placeholder={deaths.toString()}
-          className="bg-zinc-700 text-white rounded-lg px-4 py-2 w-1/2"
-          onChange={(e) => {
-            const val = e.target.value;
-            if (/^\d*$/.test(val)) {
-              setCustomDeathsInput(val);
-              const numeric = parseInt(val, 10);
-              const newDeaths = isNaN(numeric) ? 0 : numeric;
-              setDeaths(newDeaths);
-              updateDeathsInDB(newDeaths);
-            }
-          }}
-        />
+        <div className="flex gap-2">
+          <input id="manualWidgetId" value={manualWidgetId} onChange={(e) => setManualWidgetId(e.target.value)} placeholder="ex: c5s29bf2-..."
+          className="bg-zinc-700 text-white rounded-lg px-3 py-1.5 w-full h-10 leading-tight"
+          />
+          <button
+            onClick={carregarWidgetManual}
+            disabled={carregandoWidget}
+                      className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-3 py-2 rounded-lg text-sm shadow hover:shadow-lg transition whitespace-nowrap"
+>
+            {carregandoWidget ? t('loading_widget') : t('load_widget')}
+          </button>
+        </div>
       </div>
 
-      <div className={`border-zinc-700 border mb-4 rounded-full ${theme.bg} p-4 w-30 h-24 flex items-center justify-center mx-auto`}>
-        <div className={`text-4xl font-bold ${theme.text} flex items-center justify-center gap-2 transition-transform duration-300`}>
-          <img src={DeathIcon} alt="Ícone mortes/Death icon" className="w-6 h-6 text-white object-contain" />
+      <hr className="text-zinc-600 w-full mb-4" />
+
+      <div className={`mb-4 rounded-full ${theme.bg} p-4 w-75 h-24 flex items-center justify-center mx-auto ${selectedTheme !== 'basic' ? 'border border-zinc-700' : '' }`}> 
+        <div className={`text-4xl font-bold ${theme.text} flex items-center gap-2`}>
+          <img src={DeathIcon} alt="Ícone de morte" className="w-10 h-10 object-contain" />
           <span>{deaths}</span>
         </div>
       </div>
@@ -119,31 +162,30 @@ const copiarNovamente = async () => {
       <div className="flex gap-6 justify-center mb-6">
         <button
           onClick={decreaseDeaths}
-          className="bg-red-600 hover:bg-red-700 active:bg-red-800 text-white text-2xl px-5 py-3 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-1 active:translate-y-0"
+          className="bg-red-600 hover:bg-red-700 text-white text-2xl px-5 py-3 rounded-lg shadow-md hover:shadow-lg transition-transform hover:-translate-y-1"
         >
           -
         </button>
         <button
           onClick={increaseDeaths}
-          className="bg-green-600 hover:bg-green-700 active:bg-green-800 text-white text-2xl px-5 py-3 rounded-md transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-1 active:translate-y-0"
+          className="bg-green-600 hover:bg-green-700 text-white text-2xl px-5 py-3 rounded-lg shadow-md hover:shadow-lg transition-transform hover:-translate-y-1"
         >
           +
         </button>
       </div>
 
-      <div className="text-center">
-        <button
-          onClick={resetDeaths}
-          className="bg-yellow-600 hover:bg-yellow-700 active:bg-yellow-800 text-white px-4 py-2 rounded-lg text-sm shadow hover:shadow-lg transition"
-        >
-          {t('reset_deaths')}
-        </button>
-      </div>
+      <button
+        onClick={resetDeaths}
+        className="bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-lg text-sm shadow hover:shadow-lg transition mb-4"
+      >
+        {t('reset_deaths')}
+      </button>
 
-      <div className="mt-4">
+      <div>
         <button
           onClick={gerarURL}
-          className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-4 py-2 rounded-lg text-sm shadow hover:shadow-lg transition"
+          disabled={manualWidgetId.trim() !== ''}
+          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm shadow hover:shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {t('generate_url')}
         </button>
@@ -154,13 +196,12 @@ const copiarNovamente = async () => {
             value={url}
             readOnly
             onClick={copiarNovamente}
-            className="mt-2 w-50 text-sm text-zinc-400 bg-zinc-700 px-3 py-2 rounded cursor-pointer select-all transition hover:bg-gray-600"
-            title="Clique para copiar novamente"/>
+            className="mt-2 w-full text-sm text-zinc-400 bg-zinc-700 px-3 py-2 rounded cursor-pointer select-all hover:bg-gray-600"
+            title="Clique para copiar novamente"
+          />
         )}
         {mensagemCopiada && (
-          <p className="text-green-400 text-xs mt-1 transition-opacity duration-300">
-            {mensagemCopiada}
-          </p>
+          <p className="text-green-400 text-xs mt-1 transition-opacity duration-300">{mensagemCopiada}</p>
         )}
       </div>
     </div>

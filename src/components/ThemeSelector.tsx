@@ -27,6 +27,7 @@ const ThemeSelector: React.FC<Props> = ({ theme, setTheme }) => {
         localStorage.setItem('selectedTheme', selectedTheme);
       }}>
       <option value="default">{t('default_option')}</option>
+      <option value="basic">{t('basic_option')}</option>
       <option value="elden">Elden Ring</option>
       <option value="souls">Dark Souls</option>
     </select>
