@@ -3,6 +3,7 @@ import Card from './components/Card';
 import { ToastContainer } from 'react-toastify';
 import { Routes, Route } from 'react-router-dom';
 import WidgetViewer from './components/WidgetViewer';
+import SavedWidgetList from './components/SavedWidgetList.tsx';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <main className="max-w-4xl mx-auto px-4 py-8">
               <ToastContainer position="top-right" autoClose={3000} />
               <Header />
+              <SavedWidgetList />
               <Card />
             </main>
           </>

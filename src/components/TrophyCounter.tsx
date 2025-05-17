@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import themesTrophies from './ThemesTrophies';
 import { useTranslation } from 'react-i18next';
 import PlatIcon from '../assets/plat-icon.png';
@@ -23,6 +23,21 @@ const TrophyCounter: React.FC<Props> = ({
   const [trophiesEarned, setTrophiesEarned] = useState(0);
   const [trophiesTotal, setTrophiesTotal] = useState(0);
   const selectedTheme = localStorage.getItem('selectedTheme') || 'default';
+  const [widgetsSalvos, setWidgetsSalvos] = useState<{ id: string, url: string }[]>([]);
+
+useEffect(() => {
+  const savedWidgetId = localStorage.getItem('trophyWidgetId');
+  const allWidgets = JSON.parse(localStorage.getItem('trophyWidgets') || '[]');
+
+  if (savedWidgetId) {
+    setWidgetId(savedWidgetId);
+    const generatedUrl = `${window.location.origin}/widget/${savedWidgetId}?theme=${selectedTheme}`;
+    setUrl(generatedUrl);
+  }
+
+  setWidgetsSalvos(allWidgets);
+}, [selectedTheme]);
+
 
   const atualizarTrophiesNoBanco = async (earned: number, total: number) => {
     if (!widgetId) return;
@@ -68,10 +83,11 @@ const TrophyCounter: React.FC<Props> = ({
     if (trophiesTotal <= 0) {
       toast.warning(t('alert_total_trophies'));
       return;
-  }
+    }
+
     const { data, error } = await supabase
       .from('widgets')
-      .insert([{ type, value: trophiesEarned, total: trophiesTotal }])
+      .insert([{ type, value: trophiesEarned, total: trophiesTotal}])
       .select()
       .single();
 
@@ -82,8 +98,13 @@ const TrophyCounter: React.FC<Props> = ({
     }
 
     setWidgetId(data.id);
-    const generatedUrl = `${window.location.origin}/widget/${data.id}?theme=${selectedTheme}`;  
+    const generatedUrl = `${window.location.origin}/widget/${data.id}?theme=${selectedTheme}`;
     setUrl(generatedUrl);
+
+    const existingWidgets = JSON.parse(localStorage.getItem('savedWidgets') || '[]');
+    const updatedWidgets = [...existingWidgets, { id: data.id, type, url: generatedUrl }];
+    localStorage.setItem('savedWidgets', JSON.stringify(updatedWidgets));
+
     await navigator.clipboard.writeText(generatedUrl);
     setUrlCopiada(true);
     setMensagemCopiada(t('copy_url'));
@@ -92,6 +113,7 @@ const TrophyCounter: React.FC<Props> = ({
       setMensagemCopiada('');
     }, 3000);
   };
+
 
   const copiarNovamente = async () => {
     if (url) {
@@ -175,7 +197,6 @@ const TrophyCounter: React.FC<Props> = ({
             title="Clique para copiar novamente"
           />
         )}
-
         {mensagemCopiada && (
           <p className="text-green-400 text-xs mt-1 transition-opacity duration-300">{mensagemCopiada}</p>
         )}
