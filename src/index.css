@@ -6,3 +6,9 @@ html {
 body {
     @apply bg-zinc-900 text-zinc-50 h-[200vh];
 }
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

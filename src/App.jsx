@@ -6,6 +6,7 @@ import WidgetViewer from './components/WidgetViewer';
 import SavedWidgetList from './components/SavedWidgetList.tsx';
 import UpdateModal from './components/UpdatesModal';
 import { useEffect, useState } from 'react';
+import Footer from './components/Footer';
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -29,6 +30,7 @@ function App() {
               <Header />
               <SavedWidgetList />
               <Card />
+              <Footer />
             </main>
           </>
         }
