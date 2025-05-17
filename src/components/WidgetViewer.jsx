@@ -76,9 +76,9 @@ export default function WidgetViewer() {
   return (
     <div>
       {type === 'deaths' && (
-      <div className={`mb-4 rounded-full ${theme.bg} p-4 w-75 h-24 flex items-center justify-center mx-auto ${themeParam !== 'basic' ? 'border border-zinc-700' : '' }`}> 
+      <div className={`mb-4 rounded-full ${theme.bg} p-4 w-35 h-24 flex items-center justify-center mx-auto ${themeParam !== 'basic' ? 'border border-zinc-700' : '' }`}> 
           <div key={value} className={`text-4xl font-bold ${theme.text} flex items-center justify-center gap-2 transition-transform duration-300`}>
-            <img src={DeathIcon} alt="Ícone mortes/Death icon" className="w-6 h-6 object-contain" />
+            <img src={DeathIcon} alt="Ícone mortes/Death icon" className={`w-10 h-10 object-contain {theme.iconFilter}`} />
             <span>{value}</span>
           </div>
         </div>
@@ -88,7 +88,7 @@ export default function WidgetViewer() {
       <div className={`mb-4 rounded-full ${theme.bg} p-4 w-75 h-24 flex items-center justify-center mx-auto ${themeParam !== 'basic' ? 'border border-zinc-700' : '' }`}> 
           <div className={`text-4xl font-bold ${theme === themes.default ? 'text-white' : theme.text}
           ${theme === themes.basic ? 'text-white' : theme.text} w-60 flex items-center justify-center gap-2 transition-transform duration-300`}>
-            <img src={PlatIcon} alt="Troféu de Platina/Platinum trophy PS" className="w-10 h-15 object-contain"/>
+            <img src={PlatIcon} alt="Troféu de Platina/Platinum trophy PS" className={`w-10 h-10 object-contain {theme.iconFilter}`}/>
             <span>{trophiesEarned} / {trophiesTotal}</span>
           </div>
         </div>

@@ -30,6 +30,12 @@ const ThemeSelector: React.FC<Props> = ({ theme, setTheme }) => {
       <option value="basic">{t('basic_option')}</option>
       <option value="elden">Elden Ring</option>
       <option value="souls">Dark Souls</option>
+      <option value="ninja">Ninja Gaiden</option>
+      <option value="godofwar">God of War</option>
+      <option value="bloodborne">Bloodborne</option>
+      <option value="ghost">Ghost of Tsushima</option>
+      <option value="hollowknight">Hollow Knight</option>
+      <option value="persona">Persona</option>
     </select>
   </div>
   )

@@ -38,7 +38,7 @@ const UpdatesModal: React.FC<ModalProps> = ({ onClose }) => {
             <p>{t('modal.step_generate')}</p>
             <p>{t('modal.step_use_obs')}</p>
             <hr className='text-zinc-600 mt-2 mb-2'></hr>
-            <p className='text-xl font-bold'>Novidades!</p>
+            <p className="text-2xl font-bold mb-2 text-zinc-900 dark:text-white">Novidades!</p>
             <p>{t('modal.step_storage')}</p>
             <p>{t('modal.new_theme')}</p>
           </p>
