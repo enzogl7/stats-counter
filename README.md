@@ -15,6 +15,7 @@ O projeto oferece:
 - Layout minimalista para o widget
 - Suporte a múltiplos idiomas (Português e Inglês)
 - Integração direta com o OBS Browser Source
+- Diversos temas p/ widgets
 
 Desenvolvido com o objetivo de praticar conhecimentos em React.
 
@@ -50,6 +51,7 @@ Key Features:
 - Minimalist widget layout that doesn’t clutter the stream
 - Real-time updates
 - Language selection (Portuguese and English)
+- Multiple themes for widget
 
 This project was built as a way to put my React knowledge into practice.
 
