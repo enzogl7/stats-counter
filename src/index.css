@@ -1,4 +1,18 @@
 @import "tailwindcss";
+
+.font-roboto { font-family: 'Roboto', sans-serif; }
+.font-inter { font-family: 'Inter', sans-serif; }
+.font-cinzel { font-family: 'Cinzel', serif; }
+.font-unifraktur { font-family: 'UnifrakturCook', cursive; }
+.font-jura { font-family: 'Jura', sans-serif; }
+.font-tinos { font-family: 'Tinos', serif; }
+.font-cormorant { font-family: 'Cormorant Garamond', serif; }
+.font-zen { font-family: 'Zen Antique', serif; }
+.font-zeyada { font-family: 'Zeyada', cursive; }
+.font-bebas { font-family: 'Bebas Neue', cursive; }
+.font-pressstart { font-family: 'Press Start 2P', monospace; }
+.font-poppins { font-family: "Poppins", sans-serif; font-weight: 400; font-style: normal;}
+
 html {
     scroll-behavior: smooth;
 }

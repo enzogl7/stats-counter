@@ -4,6 +4,8 @@ import DeathIcon from '../assets/death-icon.png';
 import { supabase } from '../supabaseClient';
 import themes from './ThemesDeath';
 import { toast } from 'react-toastify';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 
 interface Props {
   type: string;
@@ -155,7 +157,7 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
       <div className={`mb-4 rounded-full ${theme.bg} p-4 w-35 h-24 flex items-center justify-center mx-auto ${selectedTheme !== 'basic' ? 'border border-zinc-700' : '' }`}> 
         <div className={`text-4xl font-bold ${theme.text} flex items-center gap-2`}>
           <img src={DeathIcon} alt="Ícone de morte" className={`w-10 h-10 object-contain {theme.iconFilter}`}/>
-          <span>{deaths}</span>
+          <span className={`${theme.font || ''}`}>{deaths}</span>
         </div>
       </div>
 
@@ -185,7 +187,7 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
         <button
           onClick={gerarURL}
           disabled={manualWidgetId.trim() !== ''}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm shadow hover:shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
+          className="pt-3 mb-3 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm shadow hover:shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {t('generate_url')}
         </button>
@@ -196,13 +198,22 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
             value={url}
             readOnly
             onClick={copiarNovamente}
-            className="mt-2 w-full text-sm text-zinc-400 bg-zinc-700 px-3 py-2 rounded cursor-pointer select-all hover:bg-gray-600"
+            className="mt-2 w-full text-sm text-zinc-400 bg-zinc-700 px-3 py-2 rounded cursor-pointer select-all hover:bg-gray-600 pt-3 mb-3"
             title="Clique para copiar novamente"
           />
         )}
         {mensagemCopiada && (
           <p className="text-green-400 text-xs mt-1 transition-opacity duration-300">{mensagemCopiada}</p>
         )}
+        <br></br>
+        <span className='text-sm text-zinc-400 mt-4 pt-4'>
+            <FontAwesomeIcon className='pr-2' icon={faCircleInfo}/>
+            {t('recommended_size_title')}
+            <br></br>
+            {t('recommended_size_borderless_deaths')}
+            <br></br>
+            {t('recommended_size_bordered_deaths')}
+        </span>
       </div>
     </div>
   );

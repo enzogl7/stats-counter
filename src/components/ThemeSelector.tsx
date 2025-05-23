@@ -36,6 +36,7 @@ const ThemeSelector: React.FC<Props> = ({ theme, setTheme }) => {
       <option value="ghost">Ghost of Tsushima</option>
       <option value="hollowknight">Hollow Knight</option>
       <option value="persona">Persona</option>
+      <option value="minecraft">Minecraft</option>
     </select>
   </div>
   )

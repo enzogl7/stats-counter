@@ -4,6 +4,8 @@ import { useTranslation } from 'react-i18next';
 import PlatIcon from '../assets/plat-icon.png';
 import { supabase } from '../supabaseClient';
 import { toast } from 'react-toastify';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 
 interface Props {
   type: string;
@@ -195,7 +197,7 @@ useEffect(() => {
       <div className={`mb-4 rounded-full ${theme.bg} p-4 w-75 h-24 flex items-center justify-center mx-auto ${selectedTheme !== 'basic' ? 'border border-zinc-700' : '' }`}> 
        <div className={`text-4xl font-bold ${theme.text} flex items-center justify-center gap-2 transition-transform duration-300`}>
           <img src={PlatIcon} alt="Troféu de Platina/Platinum trophy PS" className={`w-10 h-10 object-contain {theme.iconFilter}`}/>
-          <span>
+          <span className={`${theme.font || ''} tracking-tighter drop-shadow-[0_0_2px_black] text-shadow-2xl text-3xl`}>
             {trophiesEarned} / {trophiesTotal}
           </span>
         </div>
@@ -226,7 +228,7 @@ useEffect(() => {
       </div>
 
       <div className="mt-4">
-        <button onClick={gerarURL} className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-4 py-2 rounded-lg text-sm shadow hover:shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
+        <button onClick={gerarURL} className="mb-3 pb-3 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-4 py-2 rounded-lg text-sm shadow hover:shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
           disabled={manualWidgetId.trim() !== ''} >
           {t('generate_url')}
         </button>
@@ -237,13 +239,22 @@ useEffect(() => {
             value={url}
             readOnly
             onClick={copiarNovamente}
-            className="mt-2 w-50 text-sm text-zinc-400 bg-zinc-700 px-3 py-2 rounded cursor-pointer select-all transition hover:bg-gray-600"
+            className="mt-2 w-50 text-sm text-zinc-400 bg-zinc-700 px-3 py-2 rounded cursor-pointer select-all transition hover:bg-gray-600 pt-3 mb-3"
             title="Clique para copiar novamente"
           />
         )}
         {mensagemCopiada && (
           <p className="text-green-400 text-xs mt-1 transition-opacity duration-300">{mensagemCopiada}</p>
         )}
+        <br></br>
+        <span className='text-sm text-zinc-400 mt-4 pt-4'>
+            <FontAwesomeIcon className='pr-2' icon={faCircleInfo}/>
+            {t('recommended_size_title')}
+            <br></br>
+            {t('recommended_size_borderless')}
+            <br></br>
+            {t('recommended_size_bordered')}
+        </span>
       </div>
     </div>
   );

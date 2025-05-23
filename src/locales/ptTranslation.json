@@ -39,6 +39,10 @@
   "basic_option": "Básico - remove bordas e fundo",
   "copyright": "Todos os direitos reservados",
   "contact": "Contato: ",
-  "feedback": "Feedbacks, sugestões, erros: "
-
+  "feedback": "Feedbacks, sugestões, erros: ",
+  "recommended_size_title": "Tamanho recomendado para o OBS: ",
+  "recommended_size_borderless": "400px (largura) x 200px (altura) - sem bordas",
+  "recommended_size_bordered": "540px (largura) x 300px (altura) - com bordas",
+  "recommended_size_borderless_deaths": "300px (largura) x 200px (altura) - sem bordas",
+  "recommended_size_bordered_deaths": "250px (largura) x 300px (altura) - com bordas"
 }
