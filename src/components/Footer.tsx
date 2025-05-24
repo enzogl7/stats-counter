@@ -9,6 +9,7 @@ const Footer: React.FC = () => {
         <p>{t('contact')} <a href="mailto:enzolima527@gmail.com" className="underline hover:text-white">enzolima527@gmail.com</a></p>
         <p>{t('feedback')} <a href="https://forms.gle/RkcfsdbdWv2tNT2Z9" className="underline hover:text-white">Google Forms</a></p>
         <p className="mt-2">&copy; {new Date().getFullYear()} StatsCounter. {t('copyright')}</p>
+        <a href="https://github.com/enzogl7/stats-counter" target='_blank' className='text-3xl' title='Github project'><i className="fa fa-github mt-2"></i></a>
       </div>
     </footer>
   );

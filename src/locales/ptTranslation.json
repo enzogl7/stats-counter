@@ -31,9 +31,11 @@
     "intro": "Com o StatsCounter você pode criar e exibir contadores personalizados de mortes e troféus diretamente na sua livestream.",
     "step_generate": "Após configurar um contador, clique em \"Gerar URL do widget\" para criar um link único.",
     "step_use_obs": "Este link pode ser usado no OBS como uma fonte de navegador para mostrar o contador ao vivo durante sua transmissão.",
-    "update": "*NOVO!*",
+    "update": "Novidades!",
     "step_storage": "Os widgets salvos ficam armazenados localmente no seu navegador, permitindo que você retorne e continue de onde parou adicionando o ID deles no campo localizado ao topo de cada widget.",
-    "new_theme": "Novos temas adicionados! confira agora mesmo no seletor de temas!",
+    "new_theme": "Novos temas adicionados com fontes customizadas! confira agora mesmo no seletor de temas!",
+    "support_us_title": "Apoie o projeto!",
+    "support_us_update": "Caso goste e use o projeto e queira ajudar com qualquer quantia, sinta-se à vontade para apoiar o projeto através do link no topo da página. Isso ajuda a manter o projeto ativo e em constante evolução.",
     "cta": "Entendi!"
   },
   "basic_option": "Básico - remove bordas e fundo",

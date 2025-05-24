@@ -31,9 +31,11 @@
     "intro": "With StatsCounter, you can create and display custom counters for deaths and trophies directly on your livestream.",
     "step_generate": "After setting up a counter, click on \"Generate widget URL\" to create a unique link.",
     "step_use_obs": "This link can be used in OBS as a browser source to show the counter live during your stream.",
-    "update": "*NEW!*",
+    "update": "New!",
     "step_storage": "Saved widgets are stored locally in your browser so you can come back and pick up where you left off.",
-    "new_theme": "New themes added! go check it out in the theme selector!",
+    "new_theme": "New themes added with custom fonts! go check it out in the theme selector!",
+    "support_us_title": "Support the project!",
+    "support_us_update": "If you like and use the project and want to help with any amount, feel free to support the project through the link at the top of the page. This helps keep the project active and constantly evolving.",
     "cta": "Got it!"
   },
   "basic_option": "Basic - remove borders and background",
