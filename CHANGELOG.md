@@ -5,7 +5,9 @@
 All the future and actual notable changes in this project will be documented in this file.</em>
 
 ## Roadmap
-
+<em> Mudanças que serão implementadas em versões futuras do StatsCounter.
+<br>
+Changes that will be implemented in future versions of StatsCounter.</em>
 ### Português
 - Seleção de fontes customizadas para o tema "básico (sem bordas)".
 
@@ -13,7 +15,7 @@ All the future and actual notable changes in this project will be documented in 
 - Custom fonts selection for "basic (no borders)" theme.
 
 ---
-
+## Updates
 ## [1.1.0] - 2025-05-24 | 24/05/2025
 
 ### Português
