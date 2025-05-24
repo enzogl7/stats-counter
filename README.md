@@ -3,7 +3,8 @@
 [![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=stats-counter-alpha)](https://stats-counter-alpha.vercel.app/)
 [![Último Commit](https://img.shields.io/github/last-commit/enzogl7/stats-counter)](https://github.com/enzogl7/stats-counter/commits/main)
 [![Licença](https://img.shields.io/github/license/enzogl7/stats-counter)](https://github.com/enzogl7/stats-counter/blob/main/LICENSE)
-[![Tamanho do Repositório](https://img.shields.io/github/repo-size/enzogl7/stats-counter)](https://github.com/enzogl7/stats-counter)
+<br>
+[![Changelog](https://img.shields.io/badge/📜-Updates-blue)](CHANGELOG.md)
 
 <p align="center">
   <em>Contador de estatísticas em tempo real para streamers, com foco em mortes e troféus.</em>
