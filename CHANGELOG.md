@@ -10,10 +10,11 @@ All the future and actual notable changes in this project will be documented in 
 Changes that will be implemented in future versions of StatsCounter.</em>
 ### Português
 - Seleção de fontes customizadas para o tema "básico (sem bordas)".
+- Possibilidade de atribuir uma tecla para aumentar ou diminuir automaticamente a quantidade de troféus ou mortes.
 
 ### English
 - Custom fonts selection for "basic (no borders)" theme.
-
+- Ability to assign a keyboard key (hotkey) to automatically increment or decrement the trophy and death counts.
 ---
 ## Updates
 <em>Mudanças já implementadas na versão atual do StatsCounter.
