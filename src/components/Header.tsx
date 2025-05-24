@@ -1,6 +1,7 @@
 import React from 'react';
 import LanguageSelector from './LanguageSelector';
 import { useTranslation } from 'react-i18next';
+import SupportUs from './SupportUs';
 
 const Header: React.FC = () => {
   const { t } = useTranslation();
@@ -16,6 +17,7 @@ const Header: React.FC = () => {
         {t('description')}
     </p>
     <LanguageSelector />
+    <SupportUs />
   </header>
   );
 };
