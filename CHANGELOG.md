@@ -16,6 +16,9 @@ Changes that will be implemented in future versions of StatsCounter.</em>
 
 ---
 ## Updates
+<em>Mudanças já implementadas na versão atual do StatsCounter.
+<br>
+Changes that are already implemented in the actual version of StatsCounter.</em>
 ## [1.1.0] - 2025-05-24 | 24/05/2025
 
 ### Português
