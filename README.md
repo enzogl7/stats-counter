@@ -43,7 +43,7 @@ Este projeto foi criado como uma forma de aplicar e aprimorar conhecimentos em R
 
 Veja alguns dos criadores de conteúdo que já estão elevando o nível de suas transmissões com o StatsCounter!
 
-* [GPiason](https://www.youtube.com/@GPiason)
+* [GPiason](https://youtube.com/clip/Ugkxmuszwd7ViRY38J6jfoLtxOwboMrNdzLD?si=ejlP4eYl7onOrWce)
 <br>
 <img src="https://i.imgur.com/fhrCQjd.png" width="30%"></img>
 
@@ -104,7 +104,7 @@ This project was developed as a way to practice and enhance React skills.
 
 Check out some of the content creators already leveling up their streams with StatsCounter!
 
-* [GPiason](https://www.youtube.com/@GPiason)
+* [GPiason](https://youtube.com/clip/Ugkxmuszwd7ViRY38J6jfoLtxOwboMrNdzLD?si=ejlP4eYl7onOrWce)
 <br>
 <img src="https://i.imgur.com/fhrCQjd.png" width="30%"></img>
 
