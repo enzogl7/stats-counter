@@ -39,6 +39,20 @@ Este projeto foi criado como uma forma de aplicar e aprimorar conhecimentos em R
 * **Temas Variados:** Diversas opções de temas para personalizar a aparência dos widgets.
 * **Sem Necessidade de Login:** Comece a usar imediatamente.
 
+### Streamers que Usam o StatsCounter
+
+Veja alguns dos criadores de conteúdo que já estão elevando o nível de suas transmissões com o StatsCounter!
+
+* [GPiason](https://www.youtube.com/@GPiason)
+<br>
+<img src="https://i.imgur.com/fhrCQjd.png" width="30%"></img>
+
+* [PlateusGaming](https://www.youtube.com/@Plateus.Gaming)
+<br>
+<img src="https://i.imgur.com/TF49VYE.png" width="30%">
+
+*Se você usa o StatsCounter e gostaria de aparecer aqui, entre em contato: enzolima527@gmail.com*
+
 ### Acesse
 
 Experimente o StatsCounter agora mesmo:
@@ -85,6 +99,20 @@ This project was developed as a way to practice and enhance React skills.
 * **OBS Integration:** Easily addable as a Browser Source.
 * **Multiple Themes:** Various theme options to customize widget appearance.
 * **No Login Required:** Start using it right away.
+
+### Streamers Using StatsCounter
+
+Check out some of the content creators already leveling up their streams with StatsCounter!
+
+* [GPiason](https://www.youtube.com/@GPiason)
+<br>
+<img src="https://i.imgur.com/fhrCQjd.png" width="30%"></img>
+
+* [PlateusGaming](https://www.youtube.com/@Plateus.Gaming)
+<br>
+<img src="https://i.imgur.com/TF49VYE.png" width="30%">
+
+*If you use StatsCounter and would like to be featured here, please get in touch: enzolima527@gmail.com*
 
 ### Access
 
