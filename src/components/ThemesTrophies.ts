@@ -9,6 +9,11 @@ const themesTrophies = {
     text: 'text-white',
     iconFilter: '',
   },
+  noTrophy: {
+    bg: '',
+    text: 'text-white',
+    iconFilter: 'hidden',
+  },
   elden: {
     bg: 'bg-gradient-to-br from-yellow-900 via-yellow-950 to-zinc-900',
     text: 'text-yellow-300',

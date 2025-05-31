@@ -28,6 +28,7 @@ const ThemeSelector: React.FC<Props> = ({ theme, setTheme }) => {
       }}>
       <option value="default">{t('default_option')}</option>
       <option value="basic">{t('basic_option')}</option>
+      <option value="noTrophy">{t('no_trophy')}</option>
       <option value="elden">Elden Ring</option>
       <option value="souls">Dark Souls</option>
       <option value="ninja">Ninja Gaiden</option>

@@ -47,5 +47,6 @@
   "recommended_size_bordered": "540px (largura) x 300px (altura) - com bordas",
   "recommended_size_borderless_deaths": "300px (largura) x 200px (altura) - sem bordas",
   "recommended_size_bordered_deaths": "250px (largura) x 300px (altura) - com bordas",
-  "support_us": "Curtiu o projeto? Considere apoiar com qualquer quantia"
+  "support_us": "Curtiu o projeto? Considere apoiar com qualquer quantia",
+  "no_trophy": "Básico 2 - sem ícone de troféu e bordas"
 }
