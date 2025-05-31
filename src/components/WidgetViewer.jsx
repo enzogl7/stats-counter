@@ -99,7 +99,14 @@ return (
       <div className={`mb-4 rounded-full ${theme.bg} p-4 w-35 h-24 flex items-center justify-center mx-auto ${themeParam !== 'basic' ? 'border border-zinc-700' : ''}`}>
         <div key={value} className={`text-4xl font-bold ${theme.text} flex items-center justify-center gap-2 transition-transform duration-300`}>
           <img src={DeathIcon} alt="Ícone mortes/Death icon" className={`w-10 h-10 object-contain ${theme.iconFilter || ''}`} />
-          <span className={`${theme.font || ''}`}>
+          <span className={`${theme.font || ''}`} style={{
+              textShadow: `
+                2px 2px 4px rgba(0, 0, 0, 0.9),
+                -2px -2px 4px rgba(0, 0, 0, 0.9),
+                2px -2px 4px rgba(0, 0, 0, 0.9),
+                -2px 2px 4px rgba(0, 0, 0, 0.9)
+              `,
+            }}>
             {value}
           </span>
         </div>
@@ -111,9 +118,18 @@ return (
         <div className={`text-4xl font-bold ${theme === themes.default ? 'text-white' : theme.text}
           ${theme === themes.basic ? 'text-white' : theme.text} w-60 flex items-center justify-center gap-0 transition-transform duration-300`}>
           <img src={PlatIcon} alt="Troféu de Platina/Platinum trophy PS" className={`w-10 h-10 object-contain ${theme.iconFilter || ''}`} style={{ filter: 'drop-shadow(0 0 2px #ffffff)',}}></img>
-            <span className={`${theme.font || ''} tracking-[ -0.05em ] leading-none drop-shadow-[0_0_2px_black] text-shadow-2xl text-3xl`}>
-              {trophiesEarned}/{trophiesTotal}
-            </span>
+          <span className={`${theme.font || ''} tracking-[ -0.05em ] leading-none`}
+            style={{
+              textShadow: `
+                2px 2px 4px rgba(0, 0, 0, 0.9),
+                -2px -2px 4px rgba(0, 0, 0, 0.9),
+                2px -2px 4px rgba(0, 0, 0, 0.9),
+                -2px 2px 4px rgba(0, 0, 0, 0.9)
+              `,
+            }}>
+            {trophiesEarned}/{trophiesTotal}
+          </span>
+
         </div>
       </div>
     )}
