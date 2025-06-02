@@ -41,7 +41,7 @@ Este projeto foi criado como uma forma de aplicar e aprimorar conhecimentos em R
 
 ### Streamers que Usam o StatsCounter
 
-Veja alguns dos criadores de conteúdo que já estão elevando o nível de suas transmissões com o StatsCounter!
+Veja alguns dos criadores de conteúdo que já estão usando o StatsCounter!
 
 * [GPiason](https://youtube.com/clip/Ugkxmuszwd7ViRY38J6jfoLtxOwboMrNdzLD?si=ejlP4eYl7onOrWce)
 <br>
@@ -106,7 +106,7 @@ This project was developed as a way to practice and enhance React skills.
 
 ### Streamers Using StatsCounter
 
-Check out some of the content creators already leveling up their streams with StatsCounter!
+Check out some of the content creators already using StatsCounter!
 
 * [GPiason](https://youtube.com/clip/Ugkxmuszwd7ViRY38J6jfoLtxOwboMrNdzLD?si=ejlP4eYl7onOrWce)
 <br>
