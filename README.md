@@ -43,6 +43,10 @@ Este projeto foi criado como uma forma de aplicar e aprimorar conhecimentos em R
 
 Veja alguns dos criadores de conteúdo que já estão usando o StatsCounter!
 
+* [Nick AR](https://youtube.com/clip/Ugkx-8595MmIAwEZ6nObxiMf-dbX3LDXxZks?si=lvkT_Gj46YmWXltF)
+<br>
+<img src="https://i.imgur.com/K7Rbhvf.png" width="30%"></img>
+
 * [GPiason](https://youtube.com/clip/Ugkxmuszwd7ViRY38J6jfoLtxOwboMrNdzLD?si=ejlP4eYl7onOrWce)
 <br>
 <img src="https://i.imgur.com/fhrCQjd.png" width="30%"></img>
@@ -107,6 +111,10 @@ This project was developed as a way to practice and enhance React skills.
 ### Streamers Using StatsCounter
 
 Check out some of the content creators already using StatsCounter!
+
+* [Nick AR](https://youtube.com/clip/Ugkx-8595MmIAwEZ6nObxiMf-dbX3LDXxZks?si=lvkT_Gj46YmWXltF)
+<br>
+<img src="https://i.imgur.com/K7Rbhvf.png" width="30%"></img>
 
 * [GPiason](https://youtube.com/clip/Ugkxmuszwd7ViRY38J6jfoLtxOwboMrNdzLD?si=ejlP4eYl7onOrWce)
 <br>
