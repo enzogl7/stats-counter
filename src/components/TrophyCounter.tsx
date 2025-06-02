@@ -6,6 +6,7 @@ import { supabase } from '../supabaseClient';
 import { toast } from 'react-toastify';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
+import { motion } from 'framer-motion';
 
 interface Props {
   type: string;
@@ -197,9 +198,10 @@ useEffect(() => {
       <div className={`mb-4 rounded-full ${theme.bg} p-4 w-75 h-24 flex items-center justify-center mx-auto ${selectedTheme !== 'basic' && selectedTheme !== 'noTrophy' ? 'border border-zinc-700' : '' }`}> 
        <div className={`text-4xl font-bold ${theme.text} flex items-center justify-center gap-2 transition-transform duration-300`}>
           <img src={PlatIcon} alt="Troféu de Platina/Platinum trophy PS" className={`w-10 h-10 object-contain ${theme.iconFilter}`}/>
-          <span className={`${theme.font || ''} tracking-[ -0.05em ] leading-none drop-shadow-[0_0_2px_black] text-shadow-2xl text-3xl`}>
+          <motion.span key={trophiesEarned} initial={{ scale: 1 }} animate={{ scale: [1.05, 0.95, 1] }} transition={{ duration: 0.3, ease: 'easeOut' }}
+            className={`${theme.font || ''} tracking-[ -0.05em ] leading-none drop-shadow-[0_0_2px_black] text-shadow-2xl text-3xl`}>
             {trophiesEarned} / {trophiesTotal}
-          </span>
+          </motion.span>
         </div>
       </div>
 

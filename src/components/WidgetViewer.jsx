@@ -5,6 +5,8 @@ import DeathIcon from '../assets/death-icon.png';
 import themes from './ThemesDeath';
 import PlatIcon from '../assets/plat-icon.png';
 import { useSearchParams } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
 
 const defaultTheme = {
   bg: 'bg-zinc-800',
@@ -99,7 +101,8 @@ return (
       <div className={`mb-4 rounded-full ${theme.bg} p-4 w-35 h-24 flex items-center justify-center mx-auto ${themeParam !== 'basic' ? 'border border-zinc-700' : ''}`}>
         <div key={value} className={`text-4xl font-bold ${theme.text} flex items-center justify-center gap-2 transition-transform duration-300`}>
           <img src={DeathIcon} alt="Ícone mortes/Death icon" className={`w-10 h-10 object-contain ${theme.iconFilter || ''}`} />
-          <span className={`${theme.font || ''}`} style={{
+          <motion.span key={value} initial={{ scale: 1 }} animate={{ scale: [1.05, 0.95, 1] }} transition={{ duration: 0.3, ease: 'easeOut' }}
+           className={`${theme.font || ''}`} style={{
               textShadow: `
                 2px 2px 4px rgba(0, 0, 0, 0.9),
                 -2px -2px 4px rgba(0, 0, 0, 0.9),
@@ -108,7 +111,7 @@ return (
               `,
             }}>
             {value}
-          </span>
+          </motion.span>
         </div>
       </div>
     )}
@@ -118,7 +121,8 @@ return (
         <div className={`text-4xl font-bold ${theme === themes.default ? 'text-white' : theme.text}
           ${theme === themes.basic ? 'text-white' : theme.text} w-60 flex items-center justify-center gap-0 transition-transform duration-300`}>
           <img src={PlatIcon} alt="Troféu de Platina/Platinum trophy PS" className={`w-10 h-10 object-contain ${theme.iconFilter || ''}`} style={{ filter: 'drop-shadow(0 0 2px #ffffff)',}}></img>
-          <span className={`${theme.font || ''} tracking-[ -0.05em ] leading-none`}
+          <motion.span key={trophiesEarned} initial={{ scale: 1 }} animate={{ scale: [1.05, 0.95, 1] }} transition={{ duration: 0.3, ease: 'easeOut' }}
+           className={`${theme.font || ''} tracking-[ -0.05em ] leading-none`}
             style={{
               textShadow: `
                 2px 2px 4px rgba(0, 0, 0, 0.9),
@@ -128,7 +132,7 @@ return (
               `,
             }}>
             {trophiesEarned}/{trophiesTotal}
-          </span>
+          </motion.span>
 
         </div>
       </div>
