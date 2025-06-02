@@ -47,6 +47,10 @@ Veja alguns dos criadores de conteúdo que já estão elevando o nível de suas 
 <br>
 <img src="https://i.imgur.com/fhrCQjd.png" width="30%"></img>
 
+* [ViniPimenta](https://youtube.com/clip/UgkxywcOtK0pKl2bFFgCRHrtcKQonpS1Qrmj?si=2RwR7kGd5Wj2isuj)
+<br>
+<img src="https://i.imgur.com/sf1T4QT.png" width="30%"></img>
+
 * [PlateusGaming](https://www.youtube.com/@Plateus.Gaming)
 <br>
 <img src="https://i.imgur.com/TF49VYE.png" width="30%">
@@ -107,6 +111,10 @@ Check out some of the content creators already leveling up their streams with St
 * [GPiason](https://youtube.com/clip/Ugkxmuszwd7ViRY38J6jfoLtxOwboMrNdzLD?si=ejlP4eYl7onOrWce)
 <br>
 <img src="https://i.imgur.com/fhrCQjd.png" width="30%"></img>
+
+* [ViniPimenta](https://youtube.com/clip/UgkxywcOtK0pKl2bFFgCRHrtcKQonpS1Qrmj?si=2RwR7kGd5Wj2isuj)
+<br>
+<img src="https://i.imgur.com/sf1T4QT.png" width="30%"></img>
 
 * [PlateusGaming](https://www.youtube.com/@Plateus.Gaming)
 <br>
