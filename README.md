@@ -55,6 +55,10 @@ Veja alguns dos criadores de conteúdo que já estão usando o StatsCounter!
 <br>
 <img src="https://i.imgur.com/sf1T4QT.png" width="30%"></img>
 
+* [Showza](https://www.youtube.com/watch?v=MEs11aIwjQc&t=7514s&ab_channel=Showza)
+<br>
+<img src="https://i.imgur.com/MoBXvkK.png" width="30%"></img>
+
 * [PlateusGaming](https://www.youtube.com/@Plateus.Gaming)
 <br>
 <img src="https://i.imgur.com/TF49VYE.png" width="30%">
@@ -123,6 +127,10 @@ Check out some of the content creators already using StatsCounter!
 * [ViniPimenta](https://youtube.com/clip/UgkxywcOtK0pKl2bFFgCRHrtcKQonpS1Qrmj?si=2RwR7kGd5Wj2isuj)
 <br>
 <img src="https://i.imgur.com/sf1T4QT.png" width="30%"></img>
+
+* [Showza](https://www.youtube.com/watch?v=MEs11aIwjQc&t=7514s&ab_channel=Showza)
+<br>
+<img src="https://i.imgur.com/MoBXvkK.png" width="30%"></img>
 
 * [PlateusGaming](https://www.youtube.com/@Plateus.Gaming)
 <br>
