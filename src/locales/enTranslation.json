@@ -63,12 +63,13 @@
     "step3Description": "Paste the URL into OBS as a browser source. Make sure to follow the recommended size according to your chosen theme.",
     "step4Title": "4. Returning to existing widgets",
     "step4Description": "Copy the ID of your previous widget, paste it into the corresponding field to control the counter again, and if you haven't added it yet, copy the existing URL and add it to OBS again.",
-    "step5Title": "Come back here always you need to",
+    "step5Title": "Come back here always you need",
     "step5Description": "Still have questions? You can come back here through the menu at the top of the site.",
     "next": "Next",
     "back": "Back",
     "finish": "Finish"
-  }
+  },
+  "give_star_github": "Leave a star on the repository :)"
 
 
 }
