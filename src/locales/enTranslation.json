@@ -72,6 +72,7 @@
   "give_star_github": "Leave a star on the repository :)",
   "hotkeys": {
     "title": "Hotkeys [BETA]",
+    "browser_advice": "The browser have to be opened to work.",
     "advice": "Some shortcuts are already assigned by the browser and therefore may not work in the widget, but instead trigger browser actions.",
     "reload_advice": "Make sure to reload the page to assign correctly the hotkeys.",
     "increaseDeaths": "Increase Deaths",

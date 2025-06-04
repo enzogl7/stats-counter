@@ -60,6 +60,9 @@ const KeyboardShortcuts: React.FC = () => {
           {t('hotkeys.title')}
         </h2>
         <p className="text-zinc-400 text-sm leading-relaxed italic">
+          *{t('hotkeys.browser_advice')}
+        </p>
+        <p className="text-zinc-400 text-sm leading-relaxed italic">
           *{t('hotkeys.advice')}
         </p>
         <p className="text-zinc-400 text-sm leading-relaxed italic">
@@ -70,7 +73,7 @@ const KeyboardShortcuts: React.FC = () => {
         <div key={action} className="flex items-center space-x-2">
           <label className="capitalize w-48">{t(`hotkeys.${action}`)}</label>
           <input type="text" value={key} onKeyDown={(e) => handleKeyDown(e, action as ShortcutAction)} readOnly className="border px-2 py-1 rounded w-40 text-center cursor-pointer bg-zinc-800 text-white"/>
-          <button type="button" onClick={() => clearShortcut(action as ShortcutAction)} className="ml-2 px-2 py-1 bg-red-600 hover:bg-red-700 text-white rounded">
+          <button type="button" onClick={() => clearShortcut(action as ShortcutAction)} className="ml-2 px-2 py-1 bg-red-500 hover:bg-red-900 text-white rounded">
             X
           </button>
         </div>
