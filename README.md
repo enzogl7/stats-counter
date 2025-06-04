@@ -63,6 +63,10 @@ Veja alguns dos criadores de conteúdo que já estão usando o StatsCounter!
 <br>
 <img src="https://i.imgur.com/TF49VYE.png" width="30%">
 
+* [Treco Player](https://www.youtube.com/@trecoplayer)
+<br>
+<img src="https://i.imgur.com/OpR700T.png" width="30%">
+
 *Se você usa o StatsCounter e gostaria de aparecer aqui, entre em contato: enzolima527@gmail.com*
 
 ### Acesse
@@ -135,6 +139,10 @@ Check out some of the content creators already using StatsCounter!
 * [PlateusGaming](https://www.youtube.com/@Plateus.Gaming)
 <br>
 <img src="https://i.imgur.com/TF49VYE.png" width="30%">
+
+* [Treco Player](https://www.youtube.com/@trecoplayer)
+<br>
+<img src="https://i.imgur.com/OpR700T.png" width="30%">
 
 *If you use StatsCounter and would like to be featured here, please get in touch: enzolima527@gmail.com*
 
