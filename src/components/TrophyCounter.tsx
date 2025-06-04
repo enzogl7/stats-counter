@@ -141,7 +141,10 @@ useEffect(() => {
         />
         <button
           onClick={async () => {
-            if (!manualWidgetId.trim()) return;
+            if (!manualWidgetId.trim()) {
+              toast.warn(t('null_id'))
+              return;
+            }
 
             setCarregandoWidget(true);
             const { data, error } = await supabase
@@ -180,18 +183,13 @@ useEffect(() => {
         <label htmlFor="totalTrophies" className="block text-zinc-400 mb-1 text-sm">
           {t('total_trophies_to_earn')}
         </label>
-        <input
-          type="number"
-          id="totalTrophies"
-          value={trophiesTotal}
-          min={0}
+        <input type="number" id="totalTrophies" value={trophiesTotal} min={0} className="bg-zinc-700 text-white rounded-lg px-4 py-2 w-1/2"
           onChange={(e) => {
             const value = parseInt(e.target.value, 10);
             const novoTotal = isNaN(value) ? 0 : value;
             setTrophiesTotal(novoTotal);
             atualizarTrophiesNoBanco(trophiesEarned, novoTotal);
           }}
-          className="bg-zinc-700 text-white rounded-lg px-4 py-2 w-1/2"
         />
       </div>
 
@@ -236,12 +234,7 @@ useEffect(() => {
         </button>
 
         {urlCopiada && (
-          <input
-            type="text"
-            value={url}
-            readOnly
-            onClick={copiarNovamente}
-            className="mt-2 w-50 text-sm text-zinc-400 bg-zinc-700 px-3 py-2 rounded cursor-pointer select-all transition hover:bg-gray-600 pt-3 mb-3"
+          <input type="text" value={url} readOnly onClick={copiarNovamente} className="mt-2 w-50 text-sm text-zinc-400 bg-zinc-700 px-3 py-2 rounded cursor-pointer select-all transition hover:bg-gray-600 pt-3 mb-3"
             title="Clique para copiar novamente"
           />
         )}

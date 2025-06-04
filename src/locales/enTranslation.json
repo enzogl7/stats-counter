@@ -48,6 +48,9 @@
   "recommended_size_borderless_deaths": "300px (width) x 200px (height) - no borders",
   "recommended_size_bordered_deaths": "250px (width) x 300px (height) - with bordas",
   "support_us": "Liked the project? Consider supporting with any amount",
-  "no_trophy": "Basic 2 - no trophy icon and no borders"
+  "no_trophy": "Basic 2 - no icons and no borders",
+  "null_id": "You must input an ID first.",
+  "settings": "Settings",
+  "tutorial": "How to use"
 
 }

@@ -105,8 +105,10 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
   };
 
   const carregarWidgetManual = async () => {
-    if (!manualWidgetId.trim()) return;
-
+    if (!manualWidgetId.trim()) {
+      toast.warn(t('null_id'))
+      return;
+    }
     setCarregandoWidget(true);
     const { data, error } = await supabase
       .from('widgets')
@@ -143,11 +145,7 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
           <input id="manualWidgetId" value={manualWidgetId} onChange={(e) => setManualWidgetId(e.target.value)} placeholder="ex: c5s29bf2-..."
           className="bg-zinc-700 text-white rounded-lg px-3 py-1.5 w-full h-10 leading-tight"
           />
-          <button
-            onClick={carregarWidgetManual}
-            disabled={carregandoWidget}
-                      className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-3 py-2 rounded-lg text-sm shadow hover:shadow-lg transition whitespace-nowrap"
->
+          <button onClick={carregarWidgetManual} disabled={carregandoWidget} className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-3 py-2 rounded-lg text-sm shadow hover:shadow-lg transition whitespace-nowrap">
             {carregandoWidget ? t('loading_widget') : t('load_widget')}
           </button>
         </div>
@@ -164,45 +162,30 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
       </div>
 
       <div className="flex gap-6 justify-center mb-6">
-        <button
-          onClick={decreaseDeaths}
+        <button onClick={decreaseDeaths}
           className="bg-red-600 hover:bg-red-700 text-white text-2xl px-5 py-3 rounded-lg shadow-md hover:shadow-lg transition-transform hover:-translate-y-1"
         >
           -
         </button>
-        <button
-          onClick={increaseDeaths}
+        <button onClick={increaseDeaths}
           className="bg-green-600 hover:bg-green-700 text-white text-2xl px-5 py-3 rounded-lg shadow-md hover:shadow-lg transition-transform hover:-translate-y-1"
         >
           +
         </button>
       </div>
 
-      <button
-        onClick={resetDeaths}
-        className="bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-lg text-sm shadow hover:shadow-lg transition mb-4"
-      >
+      <button onClick={resetDeaths} className="bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-lg text-sm shadow hover:shadow-lg transition mb-4">
         {t('reset_deaths')}
       </button>
 
       <div>
-        <button
-          onClick={gerarURL}
-          disabled={manualWidgetId.trim() !== ''}
-          className="pt-3 mb-3 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm shadow hover:shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
-        >
+        <button onClick={gerarURL} disabled={manualWidgetId.trim() !== ''} className="pt-3 mb-3 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm shadow hover:shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed">
           {t('generate_url')}
         </button>
 
         {urlCopiada && (
-          <input
-            type="text"
-            value={url}
-            readOnly
-            onClick={copiarNovamente}
-            className="mt-2 w-full text-sm text-zinc-400 bg-zinc-700 px-3 py-2 rounded cursor-pointer select-all hover:bg-gray-600 pt-3 mb-3"
-            title="Clique para copiar novamente"
-          />
+          <input type="text" value={url} readOnly onClick={copiarNovamente} className="mt-2 w-full text-sm text-zinc-400 bg-zinc-700 px-3 py-2 rounded cursor-pointer select-all hover:bg-gray-600 pt-3 mb-3"
+            title="Clique para copiar novamente"/>
         )}
         {mensagemCopiada && (
           <p className="text-green-400 text-xs mt-1 transition-opacity duration-300">{mensagemCopiada}</p>

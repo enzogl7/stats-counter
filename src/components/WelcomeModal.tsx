@@ -37,10 +37,6 @@ const UpdatesModal: React.FC<ModalProps> = ({ onClose }) => {
             <p>{t('modal.step_generate')}</p>
             <p>{t('modal.step_use_obs')}</p>
             <hr className='text-zinc-600 mt-2 mb-2'></hr>
-            <p className="text-2xl font-bold mb-2 text-zinc-900 dark:text-white">{t('modal.update')}</p>
-            <p>{t('modal.step_storage')}</p>
-            <p>{t('modal.new_theme')}</p>
-            <hr className='text-zinc-600 mt-2 mb-2'></hr>
             <p className="text-2xl font-bold mb-2 text-zinc-900 dark:text-white">{t('modal.support_us_title')}</p>
             <p>{t('modal.support_us_update')}</p>
           </p>

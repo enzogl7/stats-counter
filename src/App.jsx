@@ -4,7 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import { Routes, Route } from 'react-router-dom';
 import WidgetViewer from './components/WidgetViewer';
 import SavedWidgetList from './components/SavedWidgetList.tsx';
-import UpdateModal from './components/UpdatesModal';
+import WelcomeModal from './components/WelcomeModal.tsx';
 import { useEffect, useState } from 'react';
 import Footer from './components/Footer';
 
@@ -26,7 +26,7 @@ function App() {
           <>
             <main className="max-w-4xl mx-auto px-4 py-8">
               <ToastContainer position="top-right" autoClose={3000} />
-              {showModal && <UpdateModal onClose={() => setShowModal(false)} />}
+              {showModal && <WelcomeModal onClose={() => setShowModal(false)} />}
               <Header />
               <SavedWidgetList />
               <Card />
