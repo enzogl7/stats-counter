@@ -29,6 +29,24 @@ const TrophyCounter: React.FC<Props> = ({
   const [widgetsSalvos, setWidgetsSalvos] = useState<{ id: string, url: string }[]>([]);
   const [manualWidgetId, setManualWidgetId] = useState('');
   const [carregandoWidget, setCarregandoWidget] = useState(false);
+  const [shortcuts, setShortcuts] = useState(() => {
+    try {
+      const saved = localStorage.getItem('stats-shortcuts');
+      return saved ? JSON.parse(saved) : {
+        increaseDeaths: 'ArrowUp',
+        decreaseDeaths: 'ArrowDown',
+        increaseTrophies: 'ArrowRight',
+        decreaseTrophies: 'ArrowLeft',
+      };
+    } catch {
+      return {
+        increaseDeaths: 'ArrowUp',
+        decreaseDeaths: 'ArrowDown',
+        increaseTrophies: 'ArrowRight',
+        decreaseTrophies: 'ArrowLeft',
+      };
+    }
+  });
 
 useEffect(() => {
   const savedWidgetId = localStorage.getItem('trophyWidgetId');
@@ -128,6 +146,34 @@ useEffect(() => {
     }
   };
 
+      useEffect(() => {
+      const handleKeyDown = (e: KeyboardEvent) => {
+        const keys: string[] = [];
+        if (e.ctrlKey) keys.push('Ctrl');
+        if (e.altKey) keys.push('Alt');
+        if (e.shiftKey) keys.push('Shift');
+        if (e.metaKey) keys.push('Meta');
+  
+        const keyName = e.key.length === 1 ? e.key.toUpperCase() : e.key;
+        keys.push(keyName);
+        const pressedKey = keys.join('+');
+  
+        if (pressedKey === shortcuts.increaseTrophies) {
+          e.preventDefault();
+          increaseTrophies();
+        } else if (pressedKey === shortcuts.decreaseTrophies) {
+          e.preventDefault();
+          decreaseTrophies();
+        }
+      };
+  
+      window.addEventListener('keydown', handleKeyDown);
+  
+      return () => {
+        window.removeEventListener('keydown', handleKeyDown);
+      };
+    }, [shortcuts, increaseTrophies, decreaseTrophies]);
+
   return (
     <div className={`p-6 rounded-xl shadow-lg bg-zinc-800 w-full max-w-sm text-center`}>
       <h2 className="text-2xl font-semibold mb-4 text-white">{t('trophies')}</h2>
@@ -184,7 +230,7 @@ useEffect(() => {
           {t('total_trophies_to_earn')}
         </label>
         <input type="number" id="totalTrophies" value={trophiesTotal} min={0} className="bg-zinc-700 text-white rounded-lg px-4 py-2 w-1/2"
-          onChange={(e) => {
+         onChange={(e) => {
             const value = parseInt(e.target.value, 10);
             const novoTotal = isNaN(value) ? 0 : value;
             setTrophiesTotal(novoTotal);
@@ -204,25 +250,16 @@ useEffect(() => {
       </div>
 
       <div className="flex gap-6 justify-center mb-6">
-        <button
-          onClick={decreaseTrophies}
-          className="bg-red-600 hover:bg-red-700 active:bg-red-800 text-white text-2xl px-5 py-3 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-1 active:translate-y-0"
-        >
+        <button onClick={decreaseTrophies} className="bg-red-600 hover:bg-red-700 active:bg-red-800 text-white text-2xl px-5 py-3 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-1 active:translate-y-0">
           -
         </button>
-        <button
-          onClick={increaseTrophies}
-          className="bg-green-600 hover:bg-green-700 active:bg-green-800 text-white text-2xl px-5 py-3 rounded-md transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-1 active:translate-y-0"
-        >
+        <button onClick={increaseTrophies} className="bg-green-600 hover:bg-green-700 active:bg-green-800 text-white text-2xl px-5 py-3 rounded-md transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-1 active:translate-y-0">
           +
         </button>
       </div>
 
       <div className="text-center">
-        <button
-          onClick={resetTrophies}
-          className="bg-yellow-600 hover:bg-yellow-700 active:bg-yellow-800 text-white px-4 py-2 rounded-lg text-sm shadow hover:shadow-lg transition"
-        >
+        <button onClick={resetTrophies} className="bg-yellow-600 hover:bg-yellow-700 active:bg-yellow-800 text-white px-4 py-2 rounded-lg text-sm shadow hover:shadow-lg transition">
           {t('reset_trophies')}
         </button>
       </div>

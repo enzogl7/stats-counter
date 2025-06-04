@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import DeathIcon from '../assets/death-icon.png';
 import { supabase } from '../supabaseClient';
@@ -24,6 +24,24 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
   const [manualWidgetId, setManualWidgetId] = useState('');
   const [carregandoWidget, setCarregandoWidget] = useState(false);
   const selectedTheme = localStorage.getItem('selectedTheme') || 'default';
+  const [shortcuts, setShortcuts] = useState(() => {
+    try {
+      const saved = localStorage.getItem('stats-shortcuts');
+      return saved ? JSON.parse(saved) : {
+        increaseDeaths: 'ArrowUp',
+        decreaseDeaths: 'ArrowDown',
+        increaseTrophies: 'ArrowRight',
+        decreaseTrophies: 'ArrowLeft',
+      };
+    } catch {
+      return {
+        increaseDeaths: 'ArrowUp',
+        decreaseDeaths: 'ArrowDown',
+        increaseTrophies: 'ArrowRight',
+        decreaseTrophies: 'ArrowLeft',
+      };
+    }
+  });
 
   useEffect(() => {
     const savedWidgetId = localStorage.getItem('deathWidgetId');
@@ -46,21 +64,21 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
     }
   };
 
-  const increaseDeaths = () => {
+  const increaseDeaths = useCallback(() => {
     setDeaths((d) => {
       const newVal = d + 1;
       updateDeathsInDB(newVal);
       return newVal;
     });
-  };
+  }, [widgetId]);
 
-  const decreaseDeaths = () => {
+  const decreaseDeaths = useCallback(() => {
     setDeaths((d) => {
       const newVal = d > 0 ? d - 1 : 0;
       updateDeathsInDB(newVal);
       return newVal;
     });
-  };
+  }, [widgetId]);
 
   const resetDeaths = () => {
     setDeaths(0);
@@ -132,6 +150,34 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
     setUrl(generatedUrl);
     toast.success(t('manual_widget_success'));
   };
+
+    useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const keys: string[] = [];
+      if (e.ctrlKey) keys.push('Ctrl');
+      if (e.altKey) keys.push('Alt');
+      if (e.shiftKey) keys.push('Shift');
+      if (e.metaKey) keys.push('Meta');
+
+      const keyName = e.key.length === 1 ? e.key.toUpperCase() : e.key;
+      keys.push(keyName);
+      const pressedKey = keys.join('+');
+
+      if (pressedKey === shortcuts.increaseDeaths) {
+        e.preventDefault();
+        increaseDeaths();
+      } else if (pressedKey === shortcuts.decreaseDeaths) {
+        e.preventDefault();
+        decreaseDeaths();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [shortcuts, increaseDeaths, decreaseDeaths]);
 
   return (
     <div className="p-6 rounded-xl shadow-lg bg-zinc-800 w-full max-w-sm text-center">
