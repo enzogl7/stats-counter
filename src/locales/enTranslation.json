@@ -51,6 +51,24 @@
   "no_trophy": "Basic 2 - no icons and no borders",
   "null_id": "You must input an ID first.",
   "settings": "Settings",
-  "tutorial": "How to use"
+  "tutorial": "How to use",
+  "close": "Close",
+  "tutorialModal": {
+    "mainTitle": "How to use StatsCounter",
+    "step1Title": "1. Generate your counter",
+    "step1Description": "Choose the counter type and its theme.",
+    "step2Title": "2. Copy the widget link",
+    "step2Description": "Use the 'Generate URL' button and copy the unique link.",
+    "step3Title": "3. Add it to OBS",
+    "step3Description": "Paste the URL into OBS as a browser source. Make sure to follow the recommended size according to your chosen theme.",
+    "step4Title": "4. Returning to existing widgets",
+    "step4Description": "Copy the ID of your previous widget, paste it into the corresponding field to control the counter again, and if you haven't added it yet, copy the existing URL and add it to OBS again.",
+    "step5Title": "Come back here always you need to",
+    "step5Description": "Still have questions? You can come back here through the menu at the top of the site.",
+    "next": "Next",
+    "back": "Back",
+    "finish": "Finish"
+  }
+
 
 }

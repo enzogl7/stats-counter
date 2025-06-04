@@ -11,7 +11,7 @@ const LanguageSelector: React.FC = () => {
   };
 
   return (
-    <div className="mb-4 text-sm text-center pt-5 text-white">
+    <div className="mb-4 text-sm text-start pt-5 text-white">
       <label htmlFor="language" className="mr-2">
        🌐 {t('language')}:
       </label>

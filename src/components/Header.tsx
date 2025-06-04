@@ -18,14 +18,10 @@ const Header: React.FC = () => {
       <p className="text-center mt-2 max-w-md mx-auto">
         {t('description')}
       </p>
-      <LanguageSelector />
       <SupportUs />
     </header>
   );
 
 };
-
-
-
 
 export default Header;
