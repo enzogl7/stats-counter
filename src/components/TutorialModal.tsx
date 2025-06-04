@@ -26,31 +26,31 @@ const TutorialModal: React.FC<TutorialModalProps> = ({ onClose }) => {
     {
       title: t('tutorialModal.step1Title'),
       description: t('tutorialModal.step1Description'),
-      gif: '/src/assets/step1.gif',
+      gif: '/assets/step1.gif',
       video: ''
     },
     {
       title: t('tutorialModal.step2Title'),
       description: t('tutorialModal.step2Description'),
-      gif: '/src/assets/step2.gif',
+      gif: '/assets/step2.gif',
       video: ''
     },
     {
       title: t('tutorialModal.step3Title'),
       description: t('tutorialModal.step3Description'),
       gif: '',
-      video: '/src/assets/step3.mp4'
+      video: '/assets/step3.mp4'
     },
     {
       title: t('tutorialModal.step4Title'),
       description: t('tutorialModal.step4Description'),
       gif: '',
-      video: '/src/assets/step4.mp4'
+      video: '/assets/step4.mp4'
     },
     {
       title: t('tutorialModal.step5Title'),
       description: t('tutorialModal.step5Description'),
-      gif: '/src/assets/step5.gif',
+      gif: '/assets/step5.gif',
       video: ''
     },
   ];
