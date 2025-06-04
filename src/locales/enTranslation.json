@@ -69,7 +69,20 @@
     "back": "Back",
     "finish": "Finish"
   },
-  "give_star_github": "Leave a star on the repository :)"
+  "give_star_github": "Leave a star on the repository :)",
+  "hotkeys": {
+    "title": "Hotkeys [BETA]",
+    "advice": "Some shortcuts are already assigned by the browser and therefore may not work in the widget, but instead trigger browser actions.",
+    "reload_advice": "Make sure to reload the page to assign correctly the hotkeys.",
+    "increaseDeaths": "Increase Deaths",
+    "decreaseDeaths": "Decrease Deaths",
+    "increaseTrophies": "Increase Trophies",
+    "decreaseTrophies": "Decrease Trophies"
+  },
+  "notice_update": "[NEW!] It is now possible, within the settings section (accessible via the icon next to the StatsCounter title), to set hotkeys for increasing/decreasing the widget counters!"
+
+
+
 
 
 }

@@ -69,7 +69,17 @@
     "back": "Anterior",
     "finish": "Concluir"
   },
-  "give_star_github": "Deixe uma estrela no repositório :)"
+  "give_star_github": "Deixe uma estrela no repositório :)",
+  "hotkeys": {
+    "title": "Teclas de atalho [BETA]",
+    "advice": "Existem alguns atalhos que já são atribuídos ao navegador e por conta disso podem não funcionar no widget, e sim no navegador.",
+    "reload_advice": "Certifique-se de atualizar a página para ter certeza de que os atalhos foram definidos corretamente.",
+    "increaseDeaths": "Aumentar mortes",
+    "decreaseDeaths": "Diminuir mortes",
+    "increaseTrophies": "Aumentar troféus",
+    "decreaseTrophies": "Diminuir troféus"
+  }, 
+  "notice_update": "[NOVIDADE!] Agora é possível dentro da seção de configurações (acessível no ícone ao lado do título StatsCounter) definir teclas de atalho para aumentar/diminuir o contador dos widgets!"
 
 
 }

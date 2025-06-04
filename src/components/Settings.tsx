@@ -5,6 +5,7 @@ import { faCaretDown, faGear, faQuestion } from '@fortawesome/free-solid-svg-ico
 import { motion, AnimatePresence } from 'framer-motion';
 import LanguageSelector from './LanguageSelector';
 import TutorialModal from './TutorialModal';
+import KeyboardShortcuts from './KeyboardShortcuts';
 
 const Settings: React.FC = () => {
   const { t } = useTranslation();
@@ -64,9 +65,10 @@ const Settings: React.FC = () => {
               <h2 className="text-xl text-center font-bold mb-4 text-zinc-900 dark:text-white">{t('settings')}</h2>
               <hr className="border-zinc-600 my-1" />
                 <LanguageSelector />
+                <KeyboardShortcuts />
               <div className="flex justify-end">
                 <button onClick={closeModal} className="px-4 py-2 bg-zinc-700 hover:bg-zinc-600 rounded-lg text-white transition cursor-pointer">
-                  {t('close') || 'Fechar'}
+                  {t('close')}
                 </button>
               </div>
             </motion.div>
@@ -74,7 +76,7 @@ const Settings: React.FC = () => {
         )}
       </AnimatePresence>
     {/* MODAL SETTINGS END */}
-        {showTutorial && <TutorialModal onClose={() => setShowTutorial(false)} />}
+      {showTutorial && <TutorialModal onClose={() => setShowTutorial(false)} />}
     </>
   );
 };

@@ -8,6 +8,7 @@ import WelcomeModal from './components/WelcomeModal.tsx';
 import TutorialModal from './components/TutorialModal';
 import Footer from './components/Footer';
 import { useEffect, useState } from 'react';
+import NoticeUpdate from './components/NoticeUpdate.tsx';
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -50,6 +51,7 @@ function App() {
               <ToastContainer position="top-right" autoClose={3000} />
               {showModal && <WelcomeModal onClose={handleCloseWelcome} />}
               {showTutorial && !showModal && <TutorialModal onClose={handleCloseTutorial} />}
+              <NoticeUpdate />
               <Header />
               <SavedWidgetList />
               <Card />
