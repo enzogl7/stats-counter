@@ -55,7 +55,7 @@
   "close": "Close",
   "tutorialModal": {
     "mainTitle": "How to use StatsCounter",
-    "step1Title": "1. Generate your counter",
+    "step1Title": "1. Choose your counter",
     "step1Description": "Choose the counter type and its theme.",
     "step2Title": "2. Copy the widget link",
     "step2Description": "Use the 'Generate URL' button and copy the unique link.",

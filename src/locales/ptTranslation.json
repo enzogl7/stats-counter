@@ -55,7 +55,7 @@
   "close": "Fechar",
   "tutorialModal": {
     "mainTitle": "Como usar o StatsCounter",
-    "step1Title": "1. Gere seu contador",
+    "step1Title": "1. Escolha seu contador",
     "step1Description": "Escolha o tipo de contador e seu tema.",
     "step2Title": "2. Copie o link do widget",
     "step2Description": "Use o botão 'Gerar URL' e copie o link único.",
