@@ -4,19 +4,41 @@ import { ToastContainer } from 'react-toastify';
 import { Routes, Route } from 'react-router-dom';
 import WidgetViewer from './components/WidgetViewer';
 import SavedWidgetList from './components/SavedWidgetList.tsx';
-import UpdateModal from './components/UpdatesModal';
-import { useEffect, useState } from 'react';
+import WelcomeModal from './components/WelcomeModal.tsx';
+import TutorialModal from './components/TutorialModal';
 import Footer from './components/Footer';
+import { useEffect, useState } from 'react';
 
 function App() {
   const [showModal, setShowModal] = useState(false);
+  const [showTutorial, setShowTutorial] = useState(false);
+  const [shouldShowTutorialAfterWelcome, setShouldShowTutorialAfterWelcome] = useState(false);
+
   useEffect(() => {
-    const seenModal = localStorage.getItem('seenModalUpdates');
+    const seenModal = localStorage.getItem('seenModalWelcome');
+    const hasSeenTutorial = localStorage.getItem('hasSeenTutorial');
+
     if (!seenModal) {
       setShowModal(true);
-      localStorage.setItem('seenModalUpdates', 'true');
+      localStorage.setItem('seenModalWelcome', 'true');
+    } else if (!hasSeenTutorial) {
+      setShowTutorial(true);
     }
   }, []);
+
+  const handleCloseWelcome = () => {
+    setShowModal(false);
+
+    const hasSeenTutorial = localStorage.getItem('hasSeenTutorial');
+    if (!hasSeenTutorial) {
+      setShowTutorial(true);
+    }
+  };
+
+  const handleCloseTutorial = () => {
+    localStorage.setItem('hasSeenTutorial', 'true');
+    setShowTutorial(false);
+  };
 
   return (
     <Routes>
@@ -26,7 +48,8 @@ function App() {
           <>
             <main className="max-w-4xl mx-auto px-4 py-8">
               <ToastContainer position="top-right" autoClose={3000} />
-              {showModal && <UpdateModal onClose={() => setShowModal(false)} />}
+              {showModal && <WelcomeModal onClose={handleCloseWelcome} />}
+              {showTutorial && !showModal && <TutorialModal onClose={handleCloseTutorial} />}
               <Header />
               <SavedWidgetList />
               <Card />
@@ -35,7 +58,6 @@ function App() {
           </>
         }
       />
-
       <Route path="/widget/:id" element={<WidgetViewer />} />
     </Routes>
   );

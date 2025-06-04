@@ -26,7 +26,7 @@
   "type_death": "Mortes",
   "type_trophy": "Troféus",
   "invalid_widget_type": "Tipo de widget inválido para esse campo. Verifique se realmente pertence a esse widget.",
-    "modal": {
+  "modal": {
     "welcome": "Bem-vindo ao StatsCounter!",
     "intro": "Com o StatsCounter você pode criar e exibir contadores personalizados de mortes e troféus diretamente na sua livestream.",
     "step_generate": "Após configurar um contador, clique em \"Gerar URL do widget\" para criar um link único.",
@@ -48,5 +48,28 @@
   "recommended_size_borderless_deaths": "300px (largura) x 200px (altura) - sem bordas",
   "recommended_size_bordered_deaths": "250px (largura) x 300px (altura) - com bordas",
   "support_us": "Curtiu o projeto? Considere apoiar com qualquer quantia",
-  "no_trophy": "Básico 2 - sem ícone de troféu e bordas"
+  "no_trophy": "Básico 2 - sem ícones e bordas",
+  "null_id": "Você deve inserir um ID primeiro.",
+  "settings": "Configurações",
+  "tutorial": "Como usar",
+  "close": "Fechar",
+  "tutorialModal": {
+    "mainTitle": "Como usar o StatsCounter",
+    "step1Title": "1. Escolha seu contador",
+    "step1Description": "Escolha o tipo de contador e seu tema.",
+    "step2Title": "2. Copie o link do widget",
+    "step2Description": "Use o botão 'Gerar URL' e copie o link único.",
+    "step3Title": "3. Adicione no OBS",
+    "step3Description": "Cole a URL no OBS como fonte de navegador. Lembre-se de seguir as recomendações de tamanho de acordo com seu tema escolhido.",
+    "step4Title": "4. Retornando para widgets existentes",
+    "step4Description": "Copie o ID de seu antigo widget, cole no respectivo campo para conseguir controlar o contador novamente e, caso não tenha adicionado, copie a URL existente e adicione ao OBS novamente.",
+    "step5Title": "Volte aqui sempre que precisar",
+    "step5Description": "Ficou com dúvidas? você consegue voltar aqui através do menu no topo do site.",
+    "next": "Próximo",
+    "back": "Anterior",
+    "finish": "Concluir"
+  },
+  "give_star_github": "Deixe uma estrela no repositório :)"
+
+
 }
