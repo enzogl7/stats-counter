@@ -42,11 +42,11 @@ const Settings: React.FC = () => {
   return (
     <>
       <div className="relative inline-block text-left" ref={dropdownRef}>
-        <button onClick={toggleDropdown} className="w-8 h-8 bg-zinc-800 hover:bg-zinc-600 transition-all rounded-lg flex items-center justify-center text-xl border border-zinc-600 cursor-pointer">
+        <button onClick={toggleDropdown} className="w-8 h-8 bg-zinc-800 hover:bg-zinc-700 transition-all rounded-lg flex items-center justify-center text-xl border border-zinc-600 cursor-pointer">
           <FontAwesomeIcon className="text-center text-zinc-400" icon={faCaretDown} />
         </button>
         {isOpen && (
-          <div className="absolute right-0 mt-2 w-40 bg-zinc-800 border border-zinc-600 rounded-lg shadow-lg z-50">
+          <div className="absolute right-0 mt-2 w-40 bg-gradient-to-r from-zinc-800/80 to-zinc-900/80 backdrop-blur-xl border border-zinc-600 rounded shadow-lg z-50">
             <button onClick={openModal} className="block w-full text-left px-4 py-2 text-sm text-white hover:bg-zinc-700">
               <FontAwesomeIcon className="pr-1 text-zinc-400" icon={faGear} /> {t('settings')}
             </button>
