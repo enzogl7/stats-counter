@@ -1,26 +1,30 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDollarSign} from '@fortawesome/free-solid-svg-icons';
 
 const SupportUs: React.FC = () => {
   const { t, i18n } = useTranslation();
   const isPortuguese = i18n.language.startsWith('pt');
 
   return (
-    <div className="text-center mt-4">
-      <p className="text-sm text-gray-300 mb-2">
-        {t('support_us')}
-      </p>
+    <>
 
-      {isPortuguese ? (
-        <a href="https://nubank.com.br/cobrar/1h7ozc/68311061-d59d-4d4a-bee6-814f62eef197 " target="_blank" rel="noopener noreferrer" className="inline-block bg-green-600 text-white font-semibold px-4 py-2 rounded hover:bg-green-500 transition">
-          Apoie via PIX
-        </a>
-      ) : (
-        <a href="https://buymeacoffee.com/ogl7" target="_blank" rel="noopener noreferrer" className="inline-block bg-yellow-500 text-black font-semibold px-4 py-2 rounded hover:bg-yellow-400 transition">
-          Buy me a coffee
-        </a>
-      )}
-    </div>
+{isPortuguese ? (
+  <a href="https://nubank.com.br/cobrar/1h7ozc/68311061-d59d-4d4a-bee6-814f62eef197" target="_blank" rel="noopener noreferrer" className="relative inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-medium text-white bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 shadow-md hover:shadow-lg transition-all duration-300 ease-out group overflow-hidden">
+    <FontAwesomeIcon icon={faDollarSign} className="block sm:hidden pr-1" />
+    <span className="hidden sm:block">Apoie via PIX</span>
+    <span className="absolute inset-0 bg-white opacity-10 group-hover:opacity-20 transition duration-300 rounded-xl"></span>
+  </a>
+) : (
+  <a href="https://buymeacoffee.com/ogl7" target="_blank" rel="noopener noreferrer" className="relative inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-medium text-black bg-gradient-to-r from-yellow-400 to-yellow-300 hover:from-yellow-500 hover:to-yellow-400 shadow-md hover:shadow-lg transition-all duration-300 ease-out group overflow-hidden">
+    <FontAwesomeIcon icon={faDollarSign} className="block sm:hidden pr-1" />
+    <span className="hidden sm:block">Support with Buy Me a Coffee</span>
+    <span className="absolute inset-0 bg-white opacity-10 group-hover:opacity-20 transition duration-300 rounded-xl"></span>
+  </a>
+)}
+
+    </>
   );
 };
 

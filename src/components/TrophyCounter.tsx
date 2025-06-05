@@ -5,7 +5,7 @@ import PlatIcon from '../assets/plat-icon.png';
 import { supabase } from '../supabaseClient';
 import { toast } from 'react-toastify';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
+import { faCircleInfo, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 
 interface Props {
@@ -175,7 +175,7 @@ useEffect(() => {
     }, [shortcuts, increaseTrophies, decreaseTrophies]);
 
   return (
-    <div className={`p-6 rounded-xl shadow-lg bg-zinc-800 w-full max-w-sm text-center`}>
+    <div className="rounded-xl mb-8 p-6 bg-gradient-to-r from-zinc-800/80 to-zinc-900/80 shadow-2xl relative mt-5 backdrop-blur-md border border-zinc-700/50 transition-all duration-200 text-center transform hover:-translate-y-1 active:translate-y-0">
       <h2 className="text-2xl font-semibold mb-4 text-white">{t('trophies')}</h2>
       <div className="mt-4 text-left">
         <label htmlFor="manualWidgetId" className="text-sm text-zinc-400 block mb-1">
@@ -216,9 +216,9 @@ useEffect(() => {
             setUrl(generatedUrl);
             toast.success(t('manual_widget_success'));
           }}
-          className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-3 py-2 rounded-lg text-sm shadow hover:shadow-lg transition whitespace-nowrap"
+          className="font-medium bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-3 py-2 rounded-lg text-sm shadow hover:shadow-lg transition whitespace-nowrap"
           disabled={carregandoWidget}>
-          {carregandoWidget ? t('loading_widget') : t('load_widget')}
+            {carregandoWidget ? (<FontAwesomeIcon icon={faSpinner} spin className="h-4 w-4" />) : (t('load_widget'))}
         </button>
       </div>
     </div>
@@ -259,27 +259,28 @@ useEffect(() => {
       </div>
 
       <div className="text-center">
-        <button onClick={resetTrophies} className="bg-yellow-600 hover:bg-yellow-700 active:bg-yellow-800 text-white px-4 py-2 rounded-lg text-sm shadow hover:shadow-lg transition">
-          {t('reset_trophies')}
-        </button>
+      <button onClick={resetTrophies} className="relative inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-medium text-white  bg-gradient-to-r from-yellow-600 to-yellow-500 hover:from-yellow-700 hover:to-yellow-600  shadow-md hover:shadow-lg transition-all duration-300 ease-out group overflow-hidden">
+        <span className="z-10">{t('reset_deaths')}</span>
+          <span className="absolute inset-0 bg-white opacity-10 group-hover:opacity-20 transition duration-300 rounded-xl"></span>
+      </button>
       </div>
 
       <div className="mt-4">
-        <button onClick={gerarURL} className="mb-3 pb-3 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-4 py-2 rounded-lg text-sm shadow hover:shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
+        <button onClick={gerarURL} className="relative inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-600 shadow-md hover:shadow-lg transition-all duration-300 ease-out disabled:opacity-50 disabled:cursor-not-allowed group overflow-hidden"
           disabled={manualWidgetId.trim() !== ''} >
           {t('generate_url')}
         </button>
-
+          
+      <div className="mt-2 flex flex-col ">
         {urlCopiada && (
-          <input type="text" value={url} readOnly onClick={copiarNovamente} className="mt-2 w-50 text-sm text-zinc-400 bg-zinc-700 px-3 py-2 rounded cursor-pointer select-all transition hover:bg-gray-600 pt-3 mb-3"
-            title="Clique para copiar novamente"
-          />
+          <input type="text" value={url} readOnly onClick={copiarNovamente} className="text-sm text-zinc-400 bg-zinc-700 px-3 py-2 rounded cursor-pointer select-all transition hover:bg-gray-600 mb-2"title="Clique para copiar novamente"/>
         )}
+
         {mensagemCopiada && (
-          <p className="text-green-400 text-xs mt-1 transition-opacity duration-300">{mensagemCopiada}</p>
+          <p className="text-green-400 text-xs transition-opacity duration-300">{mensagemCopiada}</p>
         )}
-        <br></br>
-        <span className='text-sm text-zinc-400 mt-4 pt-4'>
+      </div>
+        <span className='text-sm text-zinc-400'>
             <FontAwesomeIcon className='pr-2' icon={faCircleInfo}/>
             {t('recommended_size_title')}
             <br></br>

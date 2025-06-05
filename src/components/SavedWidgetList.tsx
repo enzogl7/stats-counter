@@ -34,18 +34,18 @@ const SavedWidgetList: React.FC = () => {
   };
 
   return (
-    <div className="rounded-xl mb-8 p-6 bg-gradient-to-r from-zinc-800 to-zinc-900 shadow-lg">
+    <div className="rounded-xl mb-8 p-6 bg-gradient-to-r from-zinc-800/80 to-zinc-900/80 shadow-xl relative mt-5 backdrop-blur-md border border-zinc-700/50">
         <div className=" text-white text-center">
         <h3 className="text-xl font-bold mb-4">{(t('saved_widgets'))}</h3>
         {savedWidgets.length === 0 ? (
             <p className="text-zinc-400 text-sm">{(t('not_found_widgets'))}</p>) : (
         <ul className="space-y-4">
         {savedWidgets.map((widget) => (
-            <li key={widget.id} className="bg-zinc-800/60 rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg hover:bg-zinc-800/80 border border-zinc-700/30 p-5 flex justify-between items-start"
+            <li key={widget.id} className="bg-gradient-to-r from-zinc-800/80 to-zinc-900/80 rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg hover:bg-zinc-800/80 border border-zinc-700/30 p-5 flex justify-between items-start"
             >
             <div className="flex-1 space-y-4">
                 <div className="flex items-center justify-between mb-1">
-                <span className="bg-indigo-500 text-white text-center text-xs font-semibold px-2.5 py-1 rounded-md tracking-wide">
+                <span className="bg-blue-600 text-white text-center text-xs font-semibold px-2.5 py-1 rounded-md tracking-wide">
                     {widget.type === 'deaths' ? t('type_death') : widget.type === 'trophies' ? t('type_trophy') : widget.type.toUpperCase()}
                 </span>
                 </div>

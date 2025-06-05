@@ -17,12 +17,13 @@ const Footer: React.FC = () => {
 
   const showTooltip = showOnce || hovering;
   return (
-    <footer className="bg-zinc-900 text-zinc-300 text-sm py-6 mt-10">
+    <footer className=" text-zinc-300 text-sm py-6 mt-10">
       <div className="container mx-auto px-4 text-center">
         <p>{t('contact')} <a href="mailto:enzolima527@gmail.com" className="underline hover:text-white">enzolima527@gmail.com</a></p>
         <p>{t('feedback')} <a href="https://forms.gle/RkcfsdbdWv2tNT2Z9" className="underline hover:text-white">Google Forms</a></p>
         <p className="mt-2">&copy; {new Date().getFullYear()} StatsCounter. {t('copyright')}</p>
-      <div className="relative inline-block mt-4" onMouseEnter={() => setHovering(true)} onMouseLeave={() => setHovering(false)}>
+        <p>v1.1.0</p>
+      <div className="relative inline-block mt-1" onMouseEnter={() => setHovering(true)} onMouseLeave={() => setHovering(false)}>
       <a href="https://github.com/enzogl7/stats-counter" target="_blank" className="text-3xl text-white hover:text-zinc-300" title="GitHub project">
         <i className="fa fa-github"></i>
       </a>

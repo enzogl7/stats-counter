@@ -72,7 +72,7 @@ const TutorialModal: React.FC<TutorialModalProps> = ({ onClose }) => {
   return (
     <AnimatePresence>
       <motion.div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-        <motion.div key={stepIndex} className="bg-white dark:bg-zinc-800 p-6 rounded-lg shadow-lg max-w-lg w-full text-center relative" initial={{ x: 100, opacity: 0 }}
+        <motion.div key={stepIndex} className="bg-gradient-to-r from-zinc-800/80 to-zinc-900/80 shadow-2xl relative mt-5 backdrop-blur-md border border-zinc-700/50 p-6 rounded-lg max-w-lg w-full text-center" initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: -100, opacity: 0 }}
           transition={{ duration: 0.3 }}>
