@@ -92,18 +92,11 @@ const TutorialModal: React.FC<TutorialModalProps> = ({ onClose }) => {
             </div>)}
 
           <div className="flex justify-between">
-            <button onClick={prevStep} disabled={stepIndex === 0} className="px-4 py-2 bg-zinc-600 text-white rounded disabled:opacity-30">
-              ← {t('tutorialModal.back')}
-            </button>
-
+            <button onClick={prevStep} disabled={stepIndex === 0} className="px-5 py-2.5 rounded-md text-sm font-semibold bg-zinc-700 text-white shadow-md transition-colors duration-200 disabled:opacity-40 disabled:cursor-not-allowed hover:bg-zinc-600">← {t('tutorialModal.back')}</button>
             {stepIndex < steps.length - 1 ? (
-              <button onClick={nextStep} className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
-                {t('tutorialModal.next')} →
-              </button>
+              <button onClick={nextStep} className="px-5 py-2.5 rounded-md text-sm font-semibold bg-blue-600 text-white shadow-md transition-colors duration-200 hover:bg-blue-700 hover:shadow-lg">{t('tutorialModal.next')} →</button>
             ) : (
-              <button onClick={onClose} className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
-                {t('tutorialModal.finish')}
-              </button>
+              <button onClick={onClose} className="px-5 py-2.5 rounded-md text-sm font-semibold bg-green-600 text-white shadow-md transition-colors duration-200 hover:bg-green-700 hover:shadow-lg">{t('tutorialModal.finish')}</button>
             )}
           </div>
         </motion.div>

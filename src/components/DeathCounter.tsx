@@ -220,10 +220,11 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
         </button>
       </div>
 
-      <button onClick={resetDeaths} className="relative inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-medium text-white  bg-gradient-to-r from-yellow-600 to-yellow-500 hover:from-yellow-700 hover:to-yellow-600  shadow-md hover:shadow-lg transition-all duration-300 ease-out group overflow-hidden mb-4">
+      <button onClick={resetDeaths} className="relative inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-medium text-white border border-yellow-400 hover:border-yellow-500 bg-transparent shadow-none transition-all duration-300 ease-out group overflow-hidden mb-4">
         <span className="z-10">{t('reset_deaths')}</span>
-          <span className="absolute inset-0 bg-white opacity-10 group-hover:opacity-20 transition duration-300 rounded-xl"></span>
+        <span className="absolute inset-0 bg-white opacity-10 group-hover:opacity-20 transition duration-300 rounded-xl"></span>
       </button>
+
 
 
       <div>
