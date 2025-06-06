@@ -5,37 +5,28 @@
 All the future and actual notable changes in this project will be documented in this file.</em>
 
 ## Roadmap
-<em> Mudanças que serão implementadas em versões futuras do StatsCounter.
+<em> O que está por vir na versão 1.1.0 e como funcionará novas versões no StatsCounter.</em>
 <br>
-Changes that will be implemented in future versions of StatsCounter.</em>
+What’s coming in version 1.1.0 and how future updates will work on StatsCounter.
 ### Português
-- Seleção de fontes customizadas para o tema "básico (sem bordas)".
-- Possibilidade de atribuir uma tecla para aumentar ou diminuir automaticamente a quantidade de troféus ou mortes.
+<em>Pelo menos no começo do projeto, essas mudanças de versão implementarão alguns recursos que foram testadas em versões anteriores de forma definitiva juntamente com alguma grande mudança, seja visual, funcional, qualquer coisa do tipo.</em>
+<br>
+
+Mudanças que virão juntamente com a versão 1.1.0:
+- [NOVO!] Repaginada **completa** no visual de tudo no **site** do StatsCounter (os widgets continuarão com a mesma cara por enquanto);
+- Será implementado de forma **definitiva** a função de "Teclas de atalho", que hoje em dia está no BETA para todos testarem.
 
 ### English
-- Custom fonts selection for "basic (no borders)" theme.
-- Ability to assign a keyboard key (hotkey) to automatically increment or decrement the trophy and death counts.
+<em>Early in the project, these updates will finalize features that were added in previous versions, with major improvements in visuals, functionality, and usability.</em>
+<br>
+
+Changes that are coming in v1.1.0:
+- [NEW!] Complete new look for the entire StatsCounter site (widgets will remain unchanged for now);
+- The Hotkeys feature currently in public BETA will be marked as official.
 ---
+
 ## Updates
-<em>Mudanças já implementadas na versão atual do StatsCounter.
+<em>O lançamento da versão 1.1.0 está prevista para lançamento no dia 11/06, dando um tempo para testes da função de teclas de atalho antes de lançar ela de forma definitiva juntamente com as novas atualizações.</em>
 <br>
-Changes that are already implemented in the actual version of StatsCounter.</em>
-## [1.1.0] - 2025-05-24 | 24/05/2025
 
-### Português
-
-#### Adicionado
-- **Resolução melhor**: Agora os widgets ficam em uma resolução melhor quando adicionados ao OBS.
-- **Reutilização de Widgets por ID:** Agora é possível visualizar os widgets que você criou. Copiando o ID de um widget, você pode colá-lo no campo apropriado para carregá-lo e utilizá-lo novamente.
-- **Novos Temas com Fontes Personalizadas:** Foram adicionados novos temas aos widgets, que incluem fontes customizadas para maior personalização visual.
-- **Seção de Apoio ao Projeto:** Implementada uma seção de "Apoie o Projeto" no topo da página principal. Como o StatsCounter é 100% gratuito, esta seção oferece uma forma para os usuários que desejarem contribuírem financeiramente com qualquer quantia para a manutenção e desenvolvimento do projeto.
-
-### English
-
-#### Added
-- **Better resolution**: Widgets now have a better resolution when added to OBS.
-- **Widget Reuse via ID:** It's now possible to view the widgets you've created. By copying a widget's ID, you can paste it into the corresponding field to load and reuse it.
-- **New Themes with Custom Fonts:** New themes have been added for widgets, including custom fonts for greater visual customization.
-- **"Support the Project" Section:** Implemented a "Support the Project" section at the top of the main page. As StatsCounter is 100% free, this section provides a way for users who wish to contribute financially with any amount towards the project's maintenance and development.
-
----
+<em>The release of version 1.1.0 is scheduled for June 11th, allowing time to test the hotkeys feature before officially launching it alongside the new updates.</em>
