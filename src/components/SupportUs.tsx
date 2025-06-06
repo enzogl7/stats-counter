@@ -11,7 +11,7 @@ const SupportUs: React.FC = () => {
     <>
 
 {isPortuguese ? (
-  <a href="https://nubank.com.br/cobrar/1h7ozc/68311061-d59d-4d4a-bee6-814f62eef197" target="_blank" rel="noopener noreferrer" className="relative inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-medium text-white bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 shadow-md hover:shadow-lg transition-all duration-300 ease-out group overflow-hidden">
+  <a href="https://nubank.com.br/cobrar/1h7ozc/6842eb05-279a-454b-b02a-e155a8f30bbe" target="_blank" rel="noopener noreferrer" className="relative inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-medium text-white bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 shadow-md hover:shadow-lg transition-all duration-300 ease-out group overflow-hidden">
     <FontAwesomeIcon icon={faDollarSign} className="block sm:hidden pr-1" />
     <span className="hidden sm:block">Apoie via PIX</span>
     <span className="absolute inset-0 bg-white opacity-10 group-hover:opacity-20 transition duration-300 rounded-xl"></span>

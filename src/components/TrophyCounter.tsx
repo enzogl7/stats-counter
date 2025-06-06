@@ -284,9 +284,9 @@ useEffect(() => {
             <FontAwesomeIcon className='pr-2' icon={faCircleInfo}/>
             {t('recommended_size_title')}
             <br></br>
-            {t('recommended_size_borderless')}
-            <br></br>
             {t('recommended_size_bordered')}
+            <br></br>
+            {t('recommended_size_borderless')}
         </span>
       </div>
     </div>

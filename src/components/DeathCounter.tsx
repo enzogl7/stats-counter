@@ -245,9 +245,9 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
             <FontAwesomeIcon className='pr-2' icon={faCircleInfo}/>
             {t('recommended_size_title')}
             <br></br>
-            {t('recommended_size_borderless_deaths')}
-            <br></br>
             {t('recommended_size_bordered_deaths')}
+            <br></br>
+            {t('recommended_size_borderless_deaths')}
         </span>
       </div>
     </div>
