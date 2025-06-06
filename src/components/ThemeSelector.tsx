@@ -38,6 +38,7 @@ const ThemeSelector: React.FC<Props> = ({ theme, setTheme }) => {
           <option value="hollowknight">Hollow Knight</option>
           <option value="persona">Persona</option>
           <option value="minecraft">Minecraft</option>
+          <option value="deathStranding2">Death Stranding 2</option>
         </select>
 
         <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
