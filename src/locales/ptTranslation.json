@@ -71,7 +71,7 @@
   },
   "give_star_github": "Deixe uma estrela no repositório :)",
   "hotkeys": {
-    "title": "Teclas de atalho [BETA]",
+    "title": "Teclas de atalho",
     "browser_advice": "O navegador deve estar aberto para funcionar.",
     "advice": "Existem alguns atalhos que já são atribuídos ao navegador e por conta disso podem não funcionar no widget, e sim no navegador.",
     "reload_advice": "Certifique-se de atualizar a página para ter certeza de que os atalhos foram definidos corretamente.",
