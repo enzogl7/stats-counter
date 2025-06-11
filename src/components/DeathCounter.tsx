@@ -5,7 +5,7 @@ import { supabase } from '../supabaseClient';
 import themes from './ThemesDeath';
 import { toast } from 'react-toastify';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
+import { faCircleInfo, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 
 interface Props {
@@ -180,7 +180,7 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
   }, [shortcuts, increaseDeaths, decreaseDeaths]);
 
   return (
-    <div className="p-6 rounded-xl shadow-lg bg-zinc-800 w-full max-w-sm text-center">
+    <div className="rounded-xl mb-8 p-6 bg-gradient-to-r from-zinc-800/80 to-zinc-900/80 shadow-2xl relative mt-5 backdrop-blur-md border border-zinc-700/50 transition-all duration-200 text-center transform hover:-translate-y-1 active:translate-y-0">
       <h2 className="text-2xl font-semibold mb-4 text-white">{t('deaths')}</h2>
 
       <div className="text-left mb-4">
@@ -191,8 +191,8 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
           <input id="manualWidgetId" value={manualWidgetId} onChange={(e) => setManualWidgetId(e.target.value)} placeholder="ex: c5s29bf2-..."
           className="bg-zinc-700 text-white rounded-lg px-3 py-1.5 w-full h-10 leading-tight"
           />
-          <button onClick={carregarWidgetManual} disabled={carregandoWidget} className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-3 py-2 rounded-lg text-sm shadow hover:shadow-lg transition whitespace-nowrap">
-            {carregandoWidget ? t('loading_widget') : t('load_widget')}
+          <button onClick={carregarWidgetManual} disabled={carregandoWidget} className="font-medium bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-3 py-2 rounded-lg text-sm shadow hover:shadow-lg transition whitespace-nowrap">
+            {carregandoWidget ? (<FontAwesomeIcon icon={faSpinner} spin className="h-4 w-4" />) : (t('load_widget'))}
           </button>
         </div>
       </div>
@@ -220,14 +220,18 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
         </button>
       </div>
 
-      <button onClick={resetDeaths} className="bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-lg text-sm shadow hover:shadow-lg transition mb-4">
-        {t('reset_deaths')}
+      <button onClick={resetDeaths} className="relative inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-medium text-white border border-yellow-400 hover:border-yellow-500 bg-transparent shadow-none transition-all duration-300 ease-out group overflow-hidden mb-4">
+        <span className="z-10">{t('reset_deaths')}</span>
+        <span className="absolute inset-0 bg-white opacity-10 group-hover:opacity-20 transition duration-300 rounded-xl"></span>
       </button>
 
+
+
       <div>
-        <button onClick={gerarURL} disabled={manualWidgetId.trim() !== ''} className="pt-3 mb-3 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm shadow hover:shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed">
-          {t('generate_url')}
-        </button>
+      <button onClick={gerarURL} disabled={manualWidgetId.trim() !== ''} className="mb-2 relative inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-medium text-white  bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-600 shadow-md hover:shadow-lg transition-all duration-300 ease-out disabled:opacity-50 disabled:cursor-not-allowed group overflow-hidden">
+        <span className="z-10">{t('generate_url')}</span>
+        <span className="absolute inset-0 bg-white opacity-10 group-hover:opacity-20 transition duration-300 rounded-xl"></span>
+      </button>
 
         {urlCopiada && (
           <input type="text" value={url} readOnly onClick={copiarNovamente} className="mt-2 w-full text-sm text-zinc-400 bg-zinc-700 px-3 py-2 rounded cursor-pointer select-all hover:bg-gray-600 pt-3 mb-3"
@@ -237,13 +241,13 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
           <p className="text-green-400 text-xs mt-1 transition-opacity duration-300">{mensagemCopiada}</p>
         )}
         <br></br>
-        <span className='text-sm text-zinc-400 mt-4 pt-4'>
+        <span className='text-sm text-zinc-400 mt-5 pt-5'>
             <FontAwesomeIcon className='pr-2' icon={faCircleInfo}/>
             {t('recommended_size_title')}
             <br></br>
-            {t('recommended_size_borderless_deaths')}
-            <br></br>
             {t('recommended_size_bordered_deaths')}
+            <br></br>
+            {t('recommended_size_borderless_deaths')}
         </span>
       </div>
     </div>

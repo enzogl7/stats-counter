@@ -1,5 +1,5 @@
 {
-  "description": "Count deaths or trophies and display them on your livestream",
+  "description": "StatsCounter has a new look! Along with features now permanently released such as Shortcut Keys. Thank you very much for your support!",
   "deaths": "Deaths",
   "custom_total_deaths": "Custom total deaths: ",
   "reset_deaths": "Reset deaths",
@@ -43,10 +43,10 @@
   "contact": "Contact: ",
   "feedback": "Feedbacks, suggestions, reports: ",
   "recommended_size_title": "Recommended size for OBS: ",
-  "recommended_size_borderless": "400px (width) x 200px (height) - no borders",
-  "recommended_size_bordered": "540px (width) x 300px (height) - with borders",
-  "recommended_size_borderless_deaths": "300px (width) x 200px (height) - no borders",
-  "recommended_size_bordered_deaths": "250px (width) x 300px (height) - with bordas",
+  "recommended_size_borderless": "NO BORDERS: 400px (width) x 200px (height)",
+  "recommended_size_bordered": "WITH BORDERS: 540px (width) x 300px (height)",
+  "recommended_size_borderless_deaths": "NO BORDERS: 300px (width) x 200px (height)",
+  "recommended_size_bordered_deaths": "WITH BORDERS: 250px (width) x 300px (height)",
   "support_us": "Liked the project? Consider supporting with any amount",
   "no_trophy": "Basic 2 - no icons and no borders",
   "null_id": "You must input an ID first.",
@@ -71,7 +71,7 @@
   },
   "give_star_github": "Leave a star on the repository :)",
   "hotkeys": {
-    "title": "Hotkeys [BETA]",
+    "title": "Hotkeys",
     "browser_advice": "The browser have to be opened to work.",
     "advice": "Some shortcuts are already assigned by the browser and therefore may not work in the widget, but instead trigger browser actions.",
     "reload_advice": "Make sure to reload the page to assign correctly the hotkeys.",
@@ -80,8 +80,13 @@
     "increaseTrophies": "Increase Trophies",
     "decreaseTrophies": "Decrease Trophies"
   },
-  "notice_update": "[NEW!] It is now possible, within the settings section (accessible via the icon next to the StatsCounter title), to set hotkeys for increasing/decreasing the widget counters!"
-
+  "notice_update": "[NEW!] It is now possible, within the settings section (accessible via the icon next to the StatsCounter title), to set hotkeys for increasing/decreasing the widget counters!",
+  "new_version": {
+    "title": "New version 1.1.0 arrived!",
+    "description": "StatsCounter has a new look! Along with features now permanently released such as Shortcut Keys.",
+    "thanks": "Thank you very much for your support!",
+    "cta": "Let's go!"
+  }
 
 
 

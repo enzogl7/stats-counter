@@ -43,10 +43,10 @@
   "contact": "Contato: ",
   "feedback": "Feedbacks, sugestões, erros: ",
   "recommended_size_title": "Tamanho recomendado para o OBS: ",
-  "recommended_size_borderless": "400px (largura) x 200px (altura) - sem bordas",
-  "recommended_size_bordered": "540px (largura) x 300px (altura) - com bordas",
-  "recommended_size_borderless_deaths": "300px (largura) x 200px (altura) - sem bordas",
-  "recommended_size_bordered_deaths": "250px (largura) x 300px (altura) - com bordas",
+  "recommended_size_borderless": "SEM BORDAS: 400px (largura) x 200px (altura)",
+  "recommended_size_bordered": "COM BORDAS: 540px (largura) x 300px (altura)",
+  "recommended_size_borderless_deaths": "SEM BORDAS: 300px (largura) x 200px (altura)",
+  "recommended_size_bordered_deaths": "COM BORDAS: 250px (largura) x 300px (altura)",
   "support_us": "Curtiu o projeto? Considere apoiar com qualquer quantia",
   "no_trophy": "Básico 2 - sem ícones e bordas",
   "null_id": "Você deve inserir um ID primeiro.",
@@ -71,7 +71,7 @@
   },
   "give_star_github": "Deixe uma estrela no repositório :)",
   "hotkeys": {
-    "title": "Teclas de atalho [BETA]",
+    "title": "Teclas de atalho",
     "browser_advice": "O navegador deve estar aberto para funcionar.",
     "advice": "Existem alguns atalhos que já são atribuídos ao navegador e por conta disso podem não funcionar no widget, e sim no navegador.",
     "reload_advice": "Certifique-se de atualizar a página para ter certeza de que os atalhos foram definidos corretamente.",
@@ -80,7 +80,14 @@
     "increaseTrophies": "Aumentar troféus",
     "decreaseTrophies": "Diminuir troféus"
   }, 
-  "notice_update": "[NOVIDADE!] Agora é possível dentro da seção de configurações (acessível no ícone ao lado do título StatsCounter) definir teclas de atalho para aumentar/diminuir o contador dos widgets!"
+  "notice_update": "[NOVIDADE!] Agora é possível dentro da seção de configurações (acessível no ícone ao lado do título StatsCounter) definir teclas de atalho para aumentar/diminuir o contador dos widgets!",
+  "new_version": {
+    "title": "A versão 1.1.0 chegou!",
+    "description": "O StatsCounter tem um novo visual! Além de novas funcionalidades que já estão disponíveis de forma definitiva como as teclas de atalho.",
+    "thanks": "Obrigado pelo seu apoio!",
+    "cta": "Vamos lá!"
+  }
+
 
 
 }

@@ -64,6 +64,12 @@ const themes = {
     text: 'text-lime-200',
     iconFilter: 'brightness-110 contrast-125 saturate-150',
     font: 'font-pressstart',
+  },
+  deathStranding2: {
+    bg: 'bg-gradient-to-b from-black via-zinc-900 to-gray-800',
+    text: 'text-yellow-200',
+    iconFilter: 'grayscale contrast-125 brightness-90',
+    font: 'font-sharetechmono',
   }
 };
 

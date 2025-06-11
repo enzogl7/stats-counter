@@ -16,19 +16,10 @@ const UpdatesModal: React.FC<ModalProps> = ({ onClose }) => {
 
   return (
     <AnimatePresence>
-      <motion.div
-        className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
-        <motion.div
-          className="bg-white dark:bg-zinc-800 p-6 rounded-lg shadow-lg max-w-lg w-full text-center"
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
+      <motion.div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+        <motion.div className="bg-gradient-to-r from-zinc-800/80 to-zinc-900/80 p-6 rounded-lg shadow-lg max-w-lg w-full text-center" initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.8, opacity: 0 }}
-          transition={{ duration: 0.3 }}
-        >
+          transition={{ duration: 0.3 }}>
           <h2 className="text-2xl font-bold mb-4 text-zinc-900 dark:text-white">
             {t('modal.welcome')}
           </h2>

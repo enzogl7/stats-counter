@@ -54,27 +54,19 @@ const KeyboardShortcuts: React.FC = () => {
   };
 
   return (
-    <div className="space-y-4 pb-4">
+    <div className="space-y-8 pb-8 max-w-md mx-auto">
       <div>
-        <h2 className="text-lg font-semibold text-white leading-tight mb-1">
-          {t('hotkeys.title')}
-        </h2>
-        <p className="text-zinc-400 text-sm leading-relaxed italic">
-          *{t('hotkeys.browser_advice')}
-        </p>
-        <p className="text-zinc-400 text-sm leading-relaxed italic">
-          *{t('hotkeys.advice')}
-        </p>
-        <p className="text-zinc-400 text-sm leading-relaxed italic">
-          *{t('hotkeys.reload_advice')}
-        </p>
+        <h2 className="text-2xl font-bold text-white mb-4 border-b border-zinc-700 pb-3 tracking-wide">{t('hotkeys.title')}</h2>
+        {[ 'browser_advice', 'advice', 'reload_advice' ].map((key) => (
+          <p key={key} className="text-zinc-400 text-sm italic mb-2 select-text leading-relaxed">{`*${t(`hotkeys.${key}`)}`}</p>
+        ))}
       </div>
       {Object.entries(shortcuts).map(([action, key]) => (
-        <div key={action} className="flex items-center space-x-2">
-          <label className="capitalize w-48">{t(`hotkeys.${action}`)}</label>
-          <input type="text" value={key} onKeyDown={(e) => handleKeyDown(e, action as ShortcutAction)} readOnly className="border px-2 py-1 rounded w-40 text-center cursor-pointer bg-zinc-800 text-white"/>
-          <button type="button" onClick={() => clearShortcut(action as ShortcutAction)} className="ml-2 px-2 py-1 bg-red-500 hover:bg-red-900 text-white rounded">
-            X
+        <div key={action} className="flex items-center space-x-4">
+          <label className="capitalize w-44 text-zinc-300 font-semibold">{t(`hotkeys.${action}`)}</label>
+          <input type="text" value={key} onKeyDown={(e) => handleKeyDown(e, action as ShortcutAction)} readOnly title={t(`hotkeys.${action}_description`) || ''} className="flex-1 bg-zinc-900 text-white rounded border border-zinc-600 px-4 py-2 text-center cursor-pointer transition focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-1"/>
+          <button type="button" onClick={() => clearShortcut(action as ShortcutAction)} aria-label={t('hotkeys.clear_shortcut')} className="text-white bg-red-600 hover:bg-red-700 rounded px-4 py-2 font-semibold transition focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-1">
+            ×
           </button>
         </div>
       ))}
