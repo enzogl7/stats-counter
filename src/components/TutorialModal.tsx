@@ -72,31 +72,51 @@ const TutorialModal: React.FC<TutorialModalProps> = ({ onClose }) => {
   return (
     <AnimatePresence>
       <motion.div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-        <motion.div key={stepIndex} className="bg-gradient-to-r from-zinc-800/80 to-zinc-900/80 shadow-2xl relative mt-5 backdrop-blur-md border border-zinc-700/50 p-6 rounded-lg max-w-lg w-full text-center" initial={{ x: 100, opacity: 0 }}
+        <motion.div key={stepIndex} className="relative bg-gradient-to-r from-zinc-800/80 to-zinc-900/80 shadow-2xl mt-5 backdrop-blur-md border border-zinc-700/50 p-6 rounded-lg max-w-lg w-full text-center"
+          initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: -100, opacity: 0 }}
-          transition={{ duration: 0.3 }}>
+          transition={{ duration: 0.3 }}
+        >
+          <button onClick={onClose} className="absolute top-3 right-3 text-zinc-400 cursor-pointer hover:text-white text-xl font-bold transition-colors" aria-label="Fechar tutorial">
+            ×
+          </button>
+
           {stepIndex === 0 && (
-          <h1 className="text-2xl font-extrabold text-zinc-900 dark:text-white mb-2">
-            {t('tutorialModal.mainTitle')}
-            <hr className="border-zinc-600 my-1" />
-          </h1> )}
+            <h1 className="text-2xl font-extrabold text-zinc-900 dark:text-white mb-2">
+              {t('tutorialModal.mainTitle')}
+              <hr className="border-zinc-600 my-1" />
+            </h1>
+          )}
+
           <h3 className="text-xl font-bold mb-4 text-zinc-900 dark:text-white">{current.title}</h3>
           <p className="text-zinc-700 dark:text-zinc-300 text-sm mb-6">{current.description}</p>
 
-        {(current.gif || current.video) && (
+          {(current.gif || current.video) && (
             <div className="mb-4">
-                {current.gif && (<img src={current.gif} alt="Tutorial passo" className="w-full h-64 object-contain rounded border border-zinc-600"/>)}
-                {current.video && (<video src={current.video} autoPlay loop muted playsInline className="rounded-lg w-full max-h-80 object-contain shadow"/>
-            )}
-            </div>)}
+              {current.gif && (
+                <img src={current.gif} alt="Tutorial passo" className="w-full h-64 object-contain rounded border border-zinc-600"
+                />
+              )}
+              {current.video && (
+                <video src={current.video} autoPlay loop muted playsInline className="rounded-lg w-full max-h-80 object-contain shadow"/>
+              )}
+            </div>
+          )}
 
           <div className="flex justify-between">
-            <button onClick={prevStep} disabled={stepIndex === 0} className="px-5 py-2.5 rounded-md text-sm font-semibold bg-zinc-700 text-white shadow-md transition-colors duration-200 disabled:opacity-40 disabled:cursor-not-allowed hover:bg-zinc-600">← {t('tutorialModal.back')}</button>
+            <button onClick={prevStep} disabled={stepIndex === 0} className="px-5 py-2.5 rounded-md text-sm font-semibold bg-zinc-700 text-white shadow-md transition-colors duration-200 disabled:opacity-40 disabled:cursor-not-allowed hover:bg-zinc-600">
+              ← {t('tutorialModal.back')}
+            </button>
+
             {stepIndex < steps.length - 1 ? (
-              <button onClick={nextStep} className="px-5 py-2.5 rounded-md text-sm font-semibold bg-blue-600 text-white shadow-md transition-colors duration-200 hover:bg-blue-700 hover:shadow-lg">{t('tutorialModal.next')} →</button>
+              <button onClick={nextStep} className="px-5 py-2.5 rounded-md text-sm font-semibold bg-blue-600 text-white shadow-md transition-colors duration-200 hover:bg-blue-700 hover:shadow-lg">
+                {t('tutorialModal.next')} →
+              </button>
             ) : (
-              <button onClick={onClose} className="px-5 py-2.5 rounded-md text-sm font-semibold bg-green-600 text-white shadow-md transition-colors duration-200 hover:bg-green-700 hover:shadow-lg">{t('tutorialModal.finish')}</button>
+              <button onClick={onClose} className="px-5 py-2.5 rounded-md text-sm font-semibold bg-green-600 text-white shadow-md transition-colors duration-200 hover:bg-green-700 hover:shadow-lg">
+                {t('tutorialModal.finish')}
+              </button>
             )}
           </div>
         </motion.div>

@@ -1,5 +1,5 @@
 {
-  "description": "Count deaths or trophies and display them on your livestream",
+  "description": "StatsCounter has a new look! Along with features now permanently released such as Shortcut Keys. Thank you very much for your support!",
   "deaths": "Deaths",
   "custom_total_deaths": "Custom total deaths: ",
   "reset_deaths": "Reset deaths",
@@ -80,8 +80,13 @@
     "increaseTrophies": "Increase Trophies",
     "decreaseTrophies": "Decrease Trophies"
   },
-  "notice_update": "[NEW!] It is now possible, within the settings section (accessible via the icon next to the StatsCounter title), to set hotkeys for increasing/decreasing the widget counters!"
-
+  "notice_update": "[NEW!] It is now possible, within the settings section (accessible via the icon next to the StatsCounter title), to set hotkeys for increasing/decreasing the widget counters!",
+  "new_version": {
+    "title": "New version 1.1.0 arrived!",
+    "description": "StatsCounter has a new look! Along with features now permanently released such as Shortcut Keys.",
+    "thanks": "Thank you very much for your support!",
+    "cta": "Let's go!"
+  }
 
 
 
