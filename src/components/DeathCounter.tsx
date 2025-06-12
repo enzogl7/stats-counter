@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleInfo, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
+import { useWidgetLoader } from '../hooks/useWidgetLoader';
 
 interface Props {
   type: string;
@@ -22,7 +23,6 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
   const [urlCopiada, setUrlCopiada] = useState(false);
   const [mensagemCopiada, setMensagemCopiada] = useState('');
   const [manualWidgetId, setManualWidgetId] = useState('');
-  const [carregandoWidget, setCarregandoWidget] = useState(false);
   const selectedTheme = localStorage.getItem('selectedTheme') || 'default';
   const [shortcuts, setShortcuts] = useState(() => {
     try {
@@ -42,6 +42,8 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
       };
     }
   });
+
+  const { carregando, carregarWidgetPorId } = useWidgetLoader();
 
   useEffect(() => {
     const savedWidgetId = localStorage.getItem('deathWidgetId');
@@ -122,36 +124,17 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
     }
   };
 
-  const carregarWidgetManual = async () => {
-    if (!manualWidgetId.trim()) {
-      toast.warn(t('null_id'))
-      return;
+  const handleLoadWidget = async () => {
+    const widgetData = await carregarWidgetPorId(manualWidgetId, 'deaths');
+    if (widgetData) {
+      setWidgetId(widgetData.id);
+      setDeaths(widgetData.value || 0);
+      const generatedUrl = `${window.location.origin}/widget/${widgetData.id}?theme=${selectedTheme}`;
+      setUrl(generatedUrl);
     }
-    setCarregandoWidget(true);
-    const { data, error } = await supabase
-      .from('widgets')
-      .select('id, value, type')
-      .eq('id', manualWidgetId.trim())
-      .single();
-    setCarregandoWidget(false);
-
-    if (error || !data) {
-      toast.error(t('manual_widget_not_found'));
-      return;
-    }
-    if (data.type !== 'deaths') {
-      toast.error(t('invalid_widget_type'));
-      return;
-    }
-
-    setWidgetId(data.id);
-    setDeaths(data.value || 0);
-    const generatedUrl = `${window.location.origin}/widget/${data.id}?theme=${selectedTheme}`;
-    setUrl(generatedUrl);
-    toast.success(t('manual_widget_success'));
   };
 
-    useEffect(() => {
+  useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       const keys: string[] = [];
       if (e.ctrlKey) keys.push('Ctrl');
@@ -191,8 +174,8 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
           <input id="manualWidgetId" value={manualWidgetId} onChange={(e) => setManualWidgetId(e.target.value)} placeholder="ex: c5s29bf2-..."
           className="bg-zinc-700 text-white rounded-lg px-3 py-1.5 w-full h-10 leading-tight"
           />
-          <button onClick={carregarWidgetManual} disabled={carregandoWidget} className="font-medium bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-3 py-2 rounded-lg text-sm shadow hover:shadow-lg transition whitespace-nowrap">
-            {carregandoWidget ? (<FontAwesomeIcon icon={faSpinner} spin className="h-4 w-4" />) : (t('load_widget'))}
+          <button onClick={handleLoadWidget} disabled={carregando} className="font-medium bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-3 py-2 rounded-lg text-sm shadow hover:shadow-lg transition whitespace-nowrap">
+            {carregando ? (<FontAwesomeIcon icon={faSpinner} spin className="h-4 w-4" />) : (t('load_widget'))}
           </button>
         </div>
       </div>
@@ -224,8 +207,6 @@ const DeathCounter: React.FC<Props> = ({ type, theme }) => {
         <span className="z-10">{t('reset_deaths')}</span>
         <span className="absolute inset-0 bg-white opacity-10 group-hover:opacity-20 transition duration-300 rounded-xl"></span>
       </button>
-
-
 
       <div>
       <button onClick={gerarURL} disabled={manualWidgetId.trim() !== ''} className="mb-2 relative inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-medium text-white  bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-600 shadow-md hover:shadow-lg transition-all duration-300 ease-out disabled:opacity-50 disabled:cursor-not-allowed group overflow-hidden">

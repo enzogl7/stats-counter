@@ -3,6 +3,7 @@ import ThemeSelector from './ThemeSelector';
 import DeathCounter from './DeathCounter';
 import TrophyCounter from './TrophyCounter';
 import themes from './ThemesDeath';
+import CustomTextCounter from './CustomTextCounter';
 import { useTranslation } from 'react-i18next';
 
 const Card: React.FC = () => {
@@ -18,8 +19,8 @@ const Card: React.FC = () => {
         <ThemeSelector theme={theme} setTheme={setTheme} />
       </div>
 
-      <section className="flex flex-col md:flex-row justify-center gap-8 text-start">
-        <DeathCounter
+      <section className="flex flex-col md:flex-row justify-center items-stretch gap-8 text-start">
+      <DeathCounter
           type="deaths"
           theme={currentTheme}
         />
@@ -28,6 +29,8 @@ const Card: React.FC = () => {
           type="trophies"
           themeName={theme}
         />
+
+        <CustomTextCounter />
       </section>
     </>
   );

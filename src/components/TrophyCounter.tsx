@@ -175,7 +175,7 @@ useEffect(() => {
     }, [shortcuts, increaseTrophies, decreaseTrophies]);
 
   return (
-    <div className="rounded-xl mb-8 p-6 bg-gradient-to-r from-zinc-800/80 to-zinc-900/80 shadow-2xl relative mt-5 backdrop-blur-md border border-zinc-700/50 transition-all duration-200 text-center transform hover:-translate-y-1 active:translate-y-0">
+    <div className="flex-1 rounded-xl mb-8 p-6 bg-gradient-to-r from-zinc-800/80 to-zinc-900/80 shadow-2xl relative mt-5 backdrop-blur-md border border-zinc-700/50 transition-all duration-200 text-center transform hover:-translate-y-1 active:translate-y-0">
       <h2 className="text-2xl font-semibold mb-4 text-white">{t('trophies')}</h2>
       <div className="mt-4 text-left">
         <label htmlFor="manualWidgetId" className="text-sm text-zinc-400 block mb-1">

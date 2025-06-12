@@ -86,6 +86,9 @@
     "description": "StatsCounter has a new look! Along with features now permanently released such as Shortcut Keys.",
     "thanks": "Thank you very much for your support!",
     "cta": "Let's go!"
+  },
+  "customCounter": {
+    "title": "Custom counter"
   }
 
 
