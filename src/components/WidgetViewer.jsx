@@ -6,6 +6,8 @@ import themes from './ThemesDeath';
 import PlatIcon from '../assets/plat-icon.png';
 import { useSearchParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import "../WidgetViewer.css";
+
 
 
 const defaultTheme = {
@@ -22,6 +24,13 @@ export default function WidgetViewer() {
   const [searchParams] = useSearchParams();
   const themeParam = searchParams.get('theme') || 'default';
   const theme = themes[themeParam] || themes.default;
+
+  useEffect(() => {
+    document.body.classList.add('widget-viewer');
+    return () => {
+      document.body.classList.remove('widget-viewer');
+    };
+  }, []);
 
   useEffect(() => {
     console.log("teme text: ", theme.text);

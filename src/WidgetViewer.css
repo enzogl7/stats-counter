@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+body.widget-viewer {
+  background-image: none !important;
+}
+
+body.widget-viewer::before {
+  content: none !important;
+}
