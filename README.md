@@ -21,7 +21,7 @@
 ## Português
 
 <p align="center">
-  <img src="https://i.imgur.com/QR9pYuu.png" alt="StatsCounter Interface - Português" width="48%" style="margin-right: 2%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  <img src="https://i.imgur.com/qqQBEgE.png" alt="StatsCounter Interface - Português" width="48%" style="margin-right: 2%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
   <img src="https://i.imgur.com/lTyfeaE.png" alt="Exemplo de Widget do StatsCounter" width="48%" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
 </p>
 
@@ -98,7 +98,7 @@ Qualquer valor ajuda a manter o projeto ativo e com novas funcionalidades!
 ## English
 
 <p align="center">
-  <img src="https://i.imgur.com/ipPrQzQ.png" alt="StatsCounter Interface - English" width="48%" style="margin-right: 2%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  <img src="https://i.imgur.com/fMzPQFo.png" alt="StatsCounter Interface - English" width="48%" style="margin-right: 2%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
   <img src="https://i.imgur.com/lTyfeaE.png" alt="StatsCounter Widget Example" width="48%" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
 </p>
 
