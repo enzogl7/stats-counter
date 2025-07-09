@@ -24,8 +24,8 @@
 ## Português
 
 <p align="center">
-  <img src="https://i.imgur.com/qqQBEgE.png" alt="StatsCounter Interface - Português" width="48%" style="margin-right: 2%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-  <img src="https://i.imgur.com/lTyfeaE.png" alt="Exemplo de Widget do StatsCounter" width="48%" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  <img src="/src/assets/home-pt.png" alt="StatsCounter Interface - Português" width="48%" style="margin-right: 2%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  <img src="/src/assets/stream.png" alt="Exemplo de Widget do StatsCounter" width="48%" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
 </p>
 
 O **StatsCounter** foi desenvolvido para auxiliar streamers que desejam exibir, em tempo real durante suas transmissões ao vivo, estatísticas como o número de mortes ou troféus conquistados em seus jogos. Com apenas um clique, o contador é atualizado e refletido automaticamente na transmissão via OBS (ou software similar), eliminando a necessidade de edições manuais de texto.
@@ -101,8 +101,8 @@ Qualquer valor ajuda a manter o projeto ativo e com novas funcionalidades!
 ## English
 
 <p align="center">
-  <img src="https://i.imgur.com/fMzPQFo.png" alt="StatsCounter Interface - English" width="48%" style="margin-right: 2%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-  <img src="https://i.imgur.com/lTyfeaE.png" alt="StatsCounter Widget Example" width="48%" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  <img src="src/assets/home-en.png" alt="StatsCounter Interface - English" width="48%" style="margin-right: 2%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  <img src="src/assets/stream.png" alt="StatsCounter Widget Example" width="48%" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
 </p>
 
 **StatsCounter** was built to help streamers track and display real-time statistics, such as death counts or trophies earned, during their live gameplay broadcasts. With just a single click, the counter updates and is automatically reflected in the stream via OBS (or similar software), eliminating the need for manual text edits.
