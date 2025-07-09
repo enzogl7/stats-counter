@@ -4,6 +4,9 @@
 [![Último Commit](https://img.shields.io/github/last-commit/enzogl7/stats-counter)](https://github.com/enzogl7/stats-counter/commits/main)
 [![Licença](https://img.shields.io/github/license/enzogl7/stats-counter)](https://github.com/enzogl7/stats-counter/blob/main/LICENSE)
 <br>
+[![YouTube](https://img.shields.io/badge/▶️-Tutorial%20PT%20-red)](https://youtu.be/xzesY-6yVeE)
+[![YouTube](https://img.shields.io/badge/▶️-Tutorial%20EN%20-red)](https://youtu.be/pY4cV-czUMk)
+<br>
 [![Changelog](https://img.shields.io/badge/📜-Updates/roadmap-blue)](CHANGELOG.md)
 
 <p align="center">
