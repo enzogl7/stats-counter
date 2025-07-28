@@ -3,10 +3,8 @@
 [![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=stats-counter-alpha)](https://stats-counter-alpha.vercel.app/)
 [![Último Commit](https://img.shields.io/github/last-commit/enzogl7/stats-counter)](https://github.com/enzogl7/stats-counter/commits/main)
 [![Licença](https://img.shields.io/github/license/enzogl7/stats-counter)](https://github.com/enzogl7/stats-counter/blob/main/LICENSE)
-<br>
 [![YouTube](https://img.shields.io/badge/▶️-Tutorial%20PT%20-red)](https://youtu.be/xzesY-6yVeE)
 [![YouTube](https://img.shields.io/badge/▶️-Tutorial%20EN%20-red)](https://youtu.be/pY4cV-czUMk)
-<br>
 [![Changelog](https://img.shields.io/badge/📜-Updates/roadmap-blue)](CHANGELOG.md)
 
 <p align="center">
@@ -86,6 +84,11 @@ Se você gostou deste projeto e quer apoiar seu desenvolvimento e manutenção, 
 
 Qualquer valor ajuda a manter o projeto ativo e com novas funcionalidades!
 
+### Apoiadores:
+Aos apoiadores, meu muitíssimo obrigado!
+<br>
+**Plateus Gaming (BR), Mark Alston (USA)**
+
 ### Tecnologias Utilizadas
 
 <p align="left">
@@ -162,6 +165,11 @@ If you like this project and want to support its development and maintenance, co
 <a href="https://www.buymeacoffee.com/ogl7" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 50px !important;width: 210px !important;" ></a>
 
 Any amount helps keep the project alive and develop new features!
+
+### Supporters:
+To the supporters, my sincere thanks!!
+<br>
+**Plateus Gaming (BR), Mark Alston (USA)**
 
 ### Technologies Used
 
