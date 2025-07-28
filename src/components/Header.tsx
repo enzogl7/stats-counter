@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import SupportUs from './SupportUs';
 import Settings from './Settings';
+import Supporters from './Supporters'
 
 const Header: React.FC = () => {
   const { t } = useTranslation();
@@ -21,6 +22,7 @@ const Header: React.FC = () => {
 
       <div className="flex items-center space-x-5">
         <SupportUs />
+        <Supporters />
         <Settings />
       </div>
     </header>
