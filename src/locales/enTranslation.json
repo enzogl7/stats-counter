@@ -87,7 +87,11 @@
     "thanks": "Thank you very much for your support!",
     "cta": "Let's go!"
   },
-  "supporters": "Supporters"
+  "supporters": {
+    "title": "Supporters",
+    "desc": "To the supporters, my sincere thanks: ",
+    "warn": "*If your channel is not here, get in touch by email"
+  }
 
 
 

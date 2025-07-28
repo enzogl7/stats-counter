@@ -46,7 +46,7 @@ const Settings: React.FC = () => {
           <FontAwesomeIcon className="text-center text-zinc-400" icon={faCaretDown} />
         </button>
         {isOpen && (
-          <div className="absolute right-0 mt-2 w-40 bg-gradient-to-r from-zinc-800/80 to-zinc-900/80 backdrop-blur-xl border border-zinc-600 rounded shadow-lg z-50">
+<div className="absolute left-0 mt-2 w-40 bg-gradient-to-r from-zinc-800/80 to-zinc-900/80 backdrop-blur-xl border border-zinc-600 rounded shadow-lg z-50">
             <button onClick={openModal} className="block w-full text-left px-4 py-2 text-sm text-white hover:bg-zinc-700">
               <FontAwesomeIcon className="pr-1 text-zinc-400" icon={faGear} /> {t('settings')}
             </button>

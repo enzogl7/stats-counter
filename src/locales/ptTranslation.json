@@ -87,8 +87,11 @@
     "thanks": "Obrigado pelo seu apoio!",
     "cta": "Vamos lá!"
   },
-  "supporters": "Apoiadores"
-
+  "supporters": {
+    "title": "Apoiadores",
+    "desc": "Aos apoiadores, meu muitíssimo obrigado: ",
+    "warn": "*Se o seu nome/canal não está aqui, entre em contato via email"
+  }
 
 
 }
