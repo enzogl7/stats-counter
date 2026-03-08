@@ -10,6 +10,7 @@ const Supporters: React.FC = () => {
   const supportersList = [
     { name: 'Plateus Gaming - BR', url: 'https://www.youtube.com/@Plateus.Gaming' },
     { name: 'Mark Alston - USA', url: 'https://www.youtube.com' },
+    { name: 'SpicyEGTaco - USA', url: 'https://www.youtube.com' },
   ];
 
   const modalContent = (

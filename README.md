@@ -87,7 +87,7 @@ Qualquer valor ajuda a manter o projeto ativo e com novas funcionalidades!
 ### Apoiadores:
 Aos apoiadores, meu muitíssimo obrigado!
 <br>
-**Plateus Gaming (BR), Mark Alston (USA)**
+**Plateus Gaming (BR), Mark Alston (USA), SpicyEGTaco (USA)**
 
 ### Tecnologias Utilizadas
 
@@ -169,7 +169,7 @@ Any amount helps keep the project alive and develop new features!
 ### Supporters:
 To the supporters, my sincere thanks!!
 <br>
-**Plateus Gaming (BR), Mark Alston (USA)**
+**Plateus Gaming (BR), Mark Alston (USA), SpicyEGTaco (USA)**
 
 ### Technologies Used
 
