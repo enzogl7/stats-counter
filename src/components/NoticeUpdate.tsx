@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDesktop, faKeyboard, faWandMagicSparkles } from '@fortawesome/free-solid-svg-icons';
 
 interface NoticeUpdateProps {
   onClose: () => void;
@@ -16,36 +18,73 @@ const NoticeUpdate: React.FC<NoticeUpdateProps> = ({ onClose }) => {
     };
   }, []);
 
+  const highlights = [
+    {
+      icon: faKeyboard,
+      text: t('desktop_app_notice.highlight_hotkeys')
+    },
+    {
+      icon: faDesktop,
+      text: t('desktop_app_notice.highlight_focus')
+    },
+    {
+      icon: faWandMagicSparkles,
+      text: t('desktop_app_notice.highlight_features')
+    }
+  ];
+
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70"
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 px-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <motion.div className="bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 p-6 rounded-xl shadow-2xl text-white max-w-md w-full text-center"
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          exit={{ scale: 0.8, opacity: 0 }}
+        <motion.div
+          className="w-full max-w-xl rounded-2xl border border-zinc-700/50 bg-gradient-to-br from-zinc-800/90 to-zinc-900/90 p-6 text-white shadow-2xl backdrop-blur-md"
+          initial={{ scale: 0.92, opacity: 0, y: 18 }}
+          animate={{ scale: 1, opacity: 1, y: 0 }}
+          exit={{ scale: 0.92, opacity: 0, y: 18 }}
           transition={{ duration: 0.3 }}
         >
-          <motion.div
-            initial={{ y: -10, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="mb-4"
-          >
-            <div className="text-4xl mb-2 animate-bounce">✨</div>
-            <h2 className="text-2xl font-bold">{t('new_version.title')}</h2>
-            <p className="mt-2 text-sm opacity-90">
-              {t('new_version.description')} <br />
-              {t('new_version.thanks')}
-            </p>
-          </motion.div>
+          <div className="mb-4 inline-flex items-center rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-blue-300">
+            {t('desktop_app_notice.badge')}
+          </div>
 
-          <motion.button onClick={onClose} className="mt-6 bg-white cursor-pointer text-black font-bold px-4 py-2 rounded-full shadow-3xl hover:bg-zinc-100 transition" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            {t('new_version.cta')}
+          <h2 className="mb-3 text-2xl font-bold text-white">
+            {t('desktop_app_notice.title')}
+          </h2>
+
+          <p className="mb-3 text-sm leading-relaxed text-zinc-200">
+            {t('desktop_app_notice.description')}
+          </p>
+
+          <p className="mb-5 text-sm leading-relaxed text-zinc-300">
+            {t('desktop_app_notice.complement')}
+          </p>
+
+          <div className="mb-6 grid gap-3">
+            {highlights.map((item) => (
+              <div
+                key={item.text}
+                className="flex items-center gap-3 rounded-xl border border-zinc-700/60 bg-zinc-900/60 px-4 py-3 text-left"
+              >
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/15 text-blue-300">
+                  <FontAwesomeIcon icon={item.icon} />
+                </div>
+                <p className="text-sm text-zinc-100">{item.text}</p>
+              </div>
+            ))}
+          </div>
+
+          <motion.button
+            onClick={onClose}
+            className="w-full cursor-pointer rounded-xl bg-blue-600 px-4 py-3 font-semibold text-white transition hover:bg-blue-700"
+            whileHover={{ scale: 1.01 }}
+            whileTap={{ scale: 0.99 }}
+          >
+            {t('desktop_app_notice.cta')}
           </motion.button>
         </motion.div>
       </motion.div>

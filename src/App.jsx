@@ -5,37 +5,62 @@ import { Routes, Route } from 'react-router-dom';
 import WidgetViewer from './components/WidgetViewer';
 import SavedWidgetList from './components/SavedWidgetList.tsx';
 import WelcomeModal from './components/WelcomeModal.tsx';
+import NoticeUpdate from './components/NoticeUpdate.tsx';
 import TutorialModal from './components/TutorialModal';
 import Footer from './components/Footer';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+
+const getInitialModal = () => {
+  const seenWelcome = localStorage.getItem('seenModalWelcome');
+  const seenDesktopNotice = localStorage.getItem('seenDesktopAppNotice');
+  const seenTutorial = localStorage.getItem('hasSeenTutorial');
+
+  if (!seenWelcome) {
+    return 'welcome';
+  }
+
+  if (!seenDesktopNotice) {
+    return 'desktop';
+  }
+
+  if (!seenTutorial) {
+    return 'tutorial';
+  }
+
+  return null;
+};
 
 function App() {
-  const [showModal, setShowModal] = useState(false);
-  const [showTutorial, setShowTutorial] = useState(false);
-
-  useEffect(() => {
-    const seenWelcome = localStorage.getItem('seenModalWelcome');
-    const seenTutorial = localStorage.getItem('hasSeenTutorial');
-
-    if (!seenWelcome) {
-      setShowModal(true);
-      localStorage.setItem('seenModalWelcome', 'true');
-    } else if (!seenTutorial) {
-      setShowTutorial(true);
-    }
-  }, []);
+  const [activeModal, setActiveModal] = useState(getInitialModal);
 
   const handleCloseWelcome = () => {
-    setShowModal(false);
+    localStorage.setItem('seenModalWelcome', 'true');
+    const hasSeenDesktopNotice = localStorage.getItem('seenDesktopAppNotice');
+    const hasSeenTutorial = localStorage.getItem('hasSeenTutorial');
+
+    if (!hasSeenDesktopNotice) {
+      setActiveModal('desktop');
+    } else if (!hasSeenTutorial) {
+      setActiveModal('tutorial');
+    } else {
+      setActiveModal(null);
+    }
+  };
+
+  const handleCloseNoticeUpdate = () => {
+    localStorage.setItem('seenDesktopAppNotice', 'true');
+
     const hasSeenTutorial = localStorage.getItem('hasSeenTutorial');
     if (!hasSeenTutorial) {
-      setShowTutorial(true);
+      setActiveModal('tutorial');
+    } else {
+      setActiveModal(null);
     }
   };
 
   const handleCloseTutorial = () => {
     localStorage.setItem('hasSeenTutorial', 'true');
-    setShowTutorial(false);
+    setActiveModal(null);
   };
 
   return (
@@ -47,8 +72,9 @@ function App() {
             <main className="max-w-4xl mx-auto px-4 py-8">
               <ToastContainer position="top-right" autoClose={3000} />
 
-              {showModal && <WelcomeModal onClose={handleCloseWelcome} />}
-              {showTutorial && !showModal && <TutorialModal onClose={handleCloseTutorial} />}
+              {activeModal === 'welcome' && <WelcomeModal onClose={handleCloseWelcome} />}
+              {activeModal === 'desktop' && <NoticeUpdate onClose={handleCloseNoticeUpdate} />}
+              {activeModal === 'tutorial' && <TutorialModal onClose={handleCloseTutorial} />}
 
               <Header />
               <SavedWidgetList />

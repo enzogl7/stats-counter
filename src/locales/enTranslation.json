@@ -87,6 +87,16 @@
     "thanks": "Thank you very much for your support!",
     "cta": "Let's go!"
   },
+  "desktop_app_notice": {
+    "badge": "Coming soon",
+    "title": "The Stats Counter desktop app is on the way",
+    "description": "If you currently rely on keeping the browser open to use hotkeys, this update is being built to solve exactly that.",
+    "complement": "Soon, you will be able to use Stats Counter outside the browser, with more freedom during your stream and room for many more dedicated features.",
+    "highlight_hotkeys": "Hotkeys working even when Stats Counter is closed or outside the browser.",
+    "highlight_focus": "More practical control without depending on a browser tab staying open.",
+    "highlight_features": "A desktop foundation designed to unlock even more features for daily use.",
+    "cta": "Nice, I'll keep an eye on it"
+  },
   "supporters": {
     "title": "Supporters",
     "desc": "To the supporters, my sincere thanks: ",
