@@ -6,6 +6,7 @@ import WidgetViewer from './components/WidgetViewer';
 import SavedWidgetList from './components/SavedWidgetList.tsx';
 import WelcomeModal from './components/WelcomeModal.tsx';
 import NoticeUpdate from './components/NoticeUpdate.tsx';
+import DesktopAppBanner from './components/DesktopAppBanner.tsx';
 import TutorialModal from './components/TutorialModal';
 import Footer from './components/Footer';
 import { useState } from 'react';
@@ -70,6 +71,7 @@ function App() {
         element={
           <>
             <main className="max-w-4xl mx-auto px-4 py-8">
+              <DesktopAppBanner />
               <ToastContainer position="top-right" autoClose={3000} />
 
               {activeModal === 'welcome' && <WelcomeModal onClose={handleCloseWelcome} />}
