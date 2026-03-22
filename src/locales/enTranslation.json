@@ -117,7 +117,7 @@
     "support_global_description": "Global desktop app access through Buy Me a Coffee.",
     "support_global_cta": "Support through Buy Me a Coffee",
     "email_title": "Already supported but still missing your key?",
-    "email_description": "If you have already supported the project and still have not received your activation key and download link, please send an email with proof of payment to the address below.",
+    "email_description": "If you have already supported the project before the desktop app with any amount and still have not received your activation key and download link, please send an email with proof of payment to the address below.",
     "features": {
       "hotkeys_title": "Real global hotkeys",
       "hotkeys_description": "Use hotkeys even while the app is minimized and you're in another window, without relying on the browser staying open.",
