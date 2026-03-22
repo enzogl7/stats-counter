@@ -7,6 +7,7 @@ import SavedWidgetList from './components/SavedWidgetList.tsx';
 import WelcomeModal from './components/WelcomeModal.tsx';
 import NoticeUpdate from './components/NoticeUpdate.tsx';
 import DesktopAppBanner from './components/DesktopAppBanner.tsx';
+import DesktopAppLanding from './components/DesktopAppLanding.tsx';
 import TutorialModal from './components/TutorialModal';
 import Footer from './components/Footer';
 import { useState } from 'react';
@@ -86,6 +87,7 @@ function App() {
           </>
         }
       />
+      <Route path="/desktop-app" element={<DesktopAppLanding />} />
       <Route path="/widget/:id" element={<WidgetViewer />} />
     </Routes>
   );

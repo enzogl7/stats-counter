@@ -88,15 +88,44 @@
     "cta": "Vamos lá!"
   },
   "desktop_app_notice": {
-    "badge": "Em breve",
-    "title": "O app desktop do Stats Counter está a caminho",
-    "description": "Se hoje você depende do navegador aberto para usar as hotkeys, essa novidade foi pensada exatamente para resolver esse ponto.",
-    "complement": "Em breve, você poderá usar o Stats Counter fora do navegador, com mais liberdade no controle da live e com espaço para ainda mais recursos dedicados.",
-    "banner_text": "App desktop a caminho: hotkeys fora do navegador e muito mais recursos dedicados para a sua live.",
-    "highlight_hotkeys": "Hotkeys funcionando mesmo com o Stats Counter fechado ou fora do navegador.",
-    "highlight_focus": "Mais praticidade para controlar tudo sem depender da aba aberta no browser.",
-    "highlight_features": "Uma base desktop preparada para receber novos recursos pensados para quem usa o projeto no dia a dia.",
-    "cta": "Perfeito, vou acompanhar"
+    "badge": "Já disponível",
+    "title": "O app desktop do Stats Counter chegou",
+    "description": "Agora você pode levar o Stats Counter para o desktop e usar hotkeys mesmo com o app minimizado ou enquanto estiver em outra janela.",
+    "complement": "Além da praticidade no controle da live, essa nova versão também abre espaço para recursos avançados como personalização total do widget e muitas outras novidades.",
+    "banner_text": "O app desktop chegou: hotkeys globais, mais liberdade na live e novas possibilidades de customização.",
+    "highlight_hotkeys": "Hotkeys funcionando mesmo com o app minimizado e com você em outra janela.",
+    "highlight_focus": "Mais praticidade para controlar tudo sem depender do navegador aberto.",
+    "highlight_features": "Uma base desktop pronta para receber customização completa do widget e diversos novos recursos.",
+    "learn_more": "Saiba mais",
+    "cta": "Saiba mais"
+  },
+  "desktop_app_landing": {
+    "back_home": "Voltar para a página inicial",
+    "badge": "Desktop App disponível",
+    "title": "O app desktop do Stats Counter chegou para dar mais liberdade no controle da sua live.",
+    "description": "Com ele, você pode usar as hotkeys mesmo com o app minimizado e enquanto estiver em outra janela, além de abrir caminho para uma nova fase de recursos e customizações no Stats Counter.",
+    "beta_badge": "Beta em evolução",
+    "beta_description": "O app desktop ainda está em beta e em constante evolução. Novas melhorias, ajustes e recursos serão adicionados continuamente com base no uso e no feedback dos apoiadores.",
+    "access_title": "Como funciona o acesso",
+    "access_description": "O acesso ao app desktop está disponível exclusivamente para apoiadores que contribuírem com os valores abaixo.",
+    "support_br_label": "Brasil",
+    "support_br_value": "R$ 15 ou mais",
+    "support_br_description": "Liberação do app desktop para apoiadores no Brasil.",
+    "support_br_cta": "Apoiar via Mercado Pago",
+    "support_global_label": "Global",
+    "support_global_value": "US$ 10 ou mais no Buy Me a Coffee",
+    "support_global_description": "Liberação global do app desktop via Buy Me a Coffee.",
+    "support_global_cta": "Apoiar via Buy Me a Coffee",
+    "email_title": "Já apoiou e ainda não recebeu a chave?",
+    "email_description": "Se você já apoiou e ainda não recebeu sua chave de ativação e o link de download, envie um email com a comprovação do pagamento para o endereço abaixo.",
+    "features": {
+      "hotkeys_title": "Hotkeys globais de verdade",
+      "hotkeys_description": "Use as hotkeys mesmo com o app minimizado e em outra janela, sem depender do navegador aberto.",
+      "customization_title": "Customização total do widget",
+      "customization_description": "A versão desktop foi pensada para evoluir com possibilidades de personalização 100% completas, desde fonte e estilo até cores e detalhes visuais.",
+      "future_title": "Mais espaço para novas features",
+      "future_description": "O app desktop cria a base ideal para receber diversas novas funcionalidades dedicadas a quem usa o Stats Counter no dia a dia."
+    }
   },
   "supporters": {
     "title": "Apoiadores",

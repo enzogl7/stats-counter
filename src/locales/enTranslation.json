@@ -88,15 +88,44 @@
     "cta": "Let's go!"
   },
   "desktop_app_notice": {
-    "badge": "Coming soon",
-    "title": "The Stats Counter desktop app is on the way",
-    "description": "If you currently rely on keeping the browser open to use hotkeys, this update is being built to solve exactly that.",
-    "complement": "Soon, you will be able to use Stats Counter outside the browser, with more freedom during your stream and room for many more dedicated features.",
-    "banner_text": "Desktop app on the way: hotkeys outside the browser and many more dedicated features for your stream.",
-    "highlight_hotkeys": "Hotkeys working even when Stats Counter is closed or outside the browser.",
-    "highlight_focus": "More practical control without depending on a browser tab staying open.",
-    "highlight_features": "A desktop foundation designed to unlock even more features for daily use.",
-    "cta": "Nice, I'll keep an eye on it"
+    "badge": "Now available",
+    "title": "The Stats Counter desktop app has arrived",
+    "description": "You can now bring Stats Counter to the desktop and use hotkeys even while the app is minimized or while you're working in another window.",
+    "complement": "Alongside more practical stream control, this release also opens the door for advanced features like full widget customization and many more additions.",
+    "banner_text": "The desktop app is here: global hotkeys, more freedom during your stream, and new customization possibilities.",
+    "highlight_hotkeys": "Hotkeys working even while the app is minimized and you're in another window.",
+    "highlight_focus": "More practical control without depending on the browser staying open.",
+    "highlight_features": "A desktop foundation ready for full widget customization and many more features.",
+    "learn_more": "Learn more",
+    "cta": "Learn more"
+  },
+  "desktop_app_landing": {
+    "back_home": "Back to home",
+    "badge": "Desktop app available",
+    "title": "The Stats Counter desktop app is here to give you more freedom while controlling your stream.",
+    "description": "With it, you can use hotkeys even while the app is minimized and while you're in another window, while also unlocking a new phase of features and customization for Stats Counter.",
+    "beta_badge": "Beta and evolving",
+    "beta_description": "The desktop app is still in beta and constantly evolving. New improvements, adjustments, and features will continue to be added based on supporter usage and feedback.",
+    "access_title": "How access works",
+    "access_description": "Access to the desktop app is available exclusively to supporters who contribute at the levels below.",
+    "support_br_label": "Brazil",
+    "support_br_value": "R$15 or more",
+    "support_br_description": "Desktop app access for supporters in Brazil.",
+    "support_br_cta": "Support through Mercado Pago",
+    "support_global_label": "Global",
+    "support_global_value": "US$10 or more on Buy Me a Coffee",
+    "support_global_description": "Global desktop app access through Buy Me a Coffee.",
+    "support_global_cta": "Support through Buy Me a Coffee",
+    "email_title": "Already supported but still missing your key?",
+    "email_description": "If you have already supported the project and still have not received your activation key and download link, please send an email with proof of payment to the address below.",
+    "features": {
+      "hotkeys_title": "Real global hotkeys",
+      "hotkeys_description": "Use hotkeys even while the app is minimized and you're in another window, without relying on the browser staying open.",
+      "customization_title": "Full widget customization",
+      "customization_description": "The desktop version is built to evolve with complete personalization options, from font and styling to colors and visual details.",
+      "future_title": "Room for many new features",
+      "future_description": "The desktop app creates the ideal foundation for many new features designed for people who use Stats Counter every day."
+    }
   },
   "supporters": {
     "title": "Supporters",

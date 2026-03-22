@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDesktop, faKeyboard, faWandMagicSparkles } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 interface NoticeUpdateProps {
   onClose: () => void;
@@ -10,6 +11,7 @@ interface NoticeUpdateProps {
 
 const NoticeUpdate: React.FC<NoticeUpdateProps> = ({ onClose }) => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -33,6 +35,11 @@ const NoticeUpdate: React.FC<NoticeUpdateProps> = ({ onClose }) => {
     }
   ];
 
+  const handleLearnMore = () => {
+    onClose();
+    navigate('/desktop-app');
+  };
+
   return (
     <AnimatePresence>
       <motion.div
@@ -48,7 +55,7 @@ const NoticeUpdate: React.FC<NoticeUpdateProps> = ({ onClose }) => {
           exit={{ scale: 0.92, opacity: 0, y: 18 }}
           transition={{ duration: 0.3 }}
         >
-          <div className="mb-4 inline-flex items-center rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-blue-300">
+          <div className="mb-4 inline-flex items-center rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-300">
             {t('desktop_app_notice.badge')}
           </div>
 
@@ -79,7 +86,7 @@ const NoticeUpdate: React.FC<NoticeUpdateProps> = ({ onClose }) => {
           </div>
 
           <motion.button
-            onClick={onClose}
+            onClick={handleLearnMore}
             className="w-full cursor-pointer rounded-xl bg-blue-600 px-4 py-3 font-semibold text-white transition hover:bg-blue-700"
             whileHover={{ scale: 1.01 }}
             whileTap={{ scale: 0.99 }}
