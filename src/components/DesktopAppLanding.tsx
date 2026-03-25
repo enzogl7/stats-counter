@@ -39,25 +39,25 @@ const DesktopAppLanding: React.FC = () => {
     ? 'https://link.mercadopago.com.br/statscounter'
     : 'https://buymeacoffee.com/ogl7';
 
-  const supportCardClassName = isPortuguese
-    ? 'rounded-2xl border border-green-500/20 bg-green-500/[0.08] p-5 transition hover:border-green-400/35 hover:bg-green-500/[0.12]'
-    : 'rounded-2xl border border-yellow-400/20 bg-yellow-400/[0.08] p-5 transition hover:border-yellow-300/35 hover:bg-yellow-400/[0.12]';
-
   return (
     <main className="max-w-5xl mx-auto px-4 py-8">
       <Header />
 
-      <section className="mt-6 overflow-hidden rounded-[2rem] border border-zinc-700/60 bg-gradient-to-br from-zinc-800/90 via-zinc-900/92 to-zinc-950/95 shadow-2xl backdrop-blur-xl">
-        <div className="border-b border-zinc-700/40 bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.18),_transparent_32%),radial-gradient(circle_at_bottom_right,_rgba(16,185,129,0.14),_transparent_30%)] px-6 py-10 sm:px-10">
+      <section className="relative mt-6 overflow-hidden rounded-[2rem] border border-amber-300/15 bg-gradient-to-br from-zinc-900/94 via-[#161108]/96 to-zinc-950 shadow-2xl backdrop-blur-xl">
+        <div className="pointer-events-none absolute inset-y-0 left-[-12%] w-56 bg-gradient-to-r from-transparent via-amber-200/12 to-transparent blur-3xl" />
+        <div className="pointer-events-none absolute right-[-6%] top-[-10%] h-44 w-44 rounded-full bg-amber-300/10 blur-3xl" />
+        <div className="pointer-events-none absolute inset-x-14 top-0 h-px bg-gradient-to-r from-transparent via-amber-100/55 to-transparent" />
+
+        <div className="relative border-b border-amber-200/10 bg-[radial-gradient(circle_at_top_left,_rgba(255,224,138,0.16),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(217,119,6,0.12),_transparent_32%)] px-6 py-10 sm:px-10">
           <Link
             to="/"
-            className="mb-6 inline-flex items-center gap-2 text-sm text-zinc-300 transition hover:text-white"
+            className="mb-6 inline-flex items-center gap-2 text-sm text-zinc-300 transition hover:text-amber-100"
           >
             <FontAwesomeIcon icon={faArrowLeft} />
             {t('desktop_app_landing.back_home')}
           </Link>
 
-          <h1 className="mt-5 max-w-3xl text-4xl font-black leading-tight text-white sm:text-5xl">
+          <h1 className="mt-5 max-w-3xl bg-gradient-to-r from-[#fff8d6] via-[#ffe27a] via-[42%] to-[#b97b16] bg-clip-text text-4xl font-black leading-tight text-transparent sm:text-5xl">
             {t('desktop_app_landing.title')}
           </h1>
 
@@ -65,7 +65,7 @@ const DesktopAppLanding: React.FC = () => {
             {t('desktop_app_landing.description')}
           </p>
 
-          <div className="mt-6 max-w-2xl rounded-2xl border border-amber-400/25 bg-amber-400/[0.08] px-5 py-4">
+          <div className="mt-6 max-w-2xl rounded-2xl border border-amber-300/20 bg-gradient-to-r from-amber-200/[0.08] via-amber-100/[0.04] to-amber-500/[0.08] px-5 py-4 shadow-[0_0_40px_rgba(251,191,36,0.06)]">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-300">
               {t('desktop_app_landing.beta_badge')}
             </p>
@@ -78,9 +78,9 @@ const DesktopAppLanding: React.FC = () => {
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="rounded-2xl border border-zinc-700/60 bg-zinc-900/65 p-5 shadow-lg"
+                className="rounded-2xl border border-amber-200/10 bg-white/[0.04] p-5 shadow-lg transition hover:border-amber-200/18 hover:bg-white/[0.06]"
               >
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-500/15 text-blue-300">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-amber-200/12 bg-gradient-to-br from-amber-200/14 to-amber-500/10 text-amber-200">
                   <FontAwesomeIcon icon={feature.icon} />
                 </div>
                 <h2 className="mt-4 text-lg font-bold text-white">{feature.title}</h2>
@@ -90,20 +90,20 @@ const DesktopAppLanding: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid gap-5 px-6 py-8 sm:px-10 lg:grid-cols-[1.2fr_0.8fr]">
-          <div className="rounded-2xl border border-zinc-700/60 bg-zinc-900/65 p-6">
+        <div className="relative grid gap-5 px-6 py-8 sm:px-10 lg:grid-cols-[1.2fr_0.8fr]">
+          <div className="rounded-2xl border border-amber-200/10 bg-white/[0.04] p-6">
             <h2 className="text-xl font-bold text-white">{t('desktop_app_landing.access_title')}</h2>
             <p className="mt-3 text-sm leading-7 text-zinc-300">
               {t('desktop_app_landing.access_description')}
             </p>
 
-            <div className={`mt-5 ${supportCardClassName}`}>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-zinc-400">
+            <div className="mt-5 rounded-2xl border border-amber-300/18 bg-gradient-to-br from-[#221809]/80 via-[#1c160d]/75 to-zinc-900/80 p-5 shadow-[0_0_45px_rgba(251,191,36,0.05)]">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-amber-200/70">
                 {isPortuguese
                   ? t('desktop_app_landing.support_br_label')
                   : t('desktop_app_landing.support_global_label')}
               </p>
-              <p className="mt-2 text-lg font-bold text-white">
+              <p className="mt-2 bg-gradient-to-r from-[#fff6cf] via-[#f4d46b] to-[#c78c1f] bg-clip-text text-lg font-bold text-transparent">
                 {isPortuguese
                   ? t('desktop_app_landing.support_br_value')
                   : t('desktop_app_landing.support_global_value')}
@@ -118,11 +118,7 @@ const DesktopAppLanding: React.FC = () => {
                 href={supportLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`mt-4 inline-flex w-full items-center justify-center rounded-xl px-4 py-3 text-sm font-semibold transition ${
-                  isPortuguese
-                    ? 'bg-green-600 text-white hover:bg-green-700'
-                    : 'bg-yellow-400 text-black hover:bg-yellow-300'
-                }`}
+                className="mt-4 inline-flex w-full items-center justify-center rounded-xl border border-amber-200/25 bg-gradient-to-r from-[#f6d66c] via-[#f2c94d] to-[#d69a1b] px-4 py-3 text-sm font-semibold text-[#241706] transition hover:brightness-105"
               >
                 {isPortuguese
                   ? t('desktop_app_landing.support_br_cta')
@@ -131,12 +127,12 @@ const DesktopAppLanding: React.FC = () => {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-blue-500/20 bg-blue-500/[0.08] p-6">
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-500/15 text-blue-300">
+          <div className="rounded-2xl border border-amber-200/10 bg-white/[0.04] p-6">
+            <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-amber-200/12 bg-gradient-to-br from-amber-100/14 to-amber-400/10 text-amber-200">
               <FontAwesomeIcon icon={faEnvelope} />
             </div>
 
-            <h2 className="mt-4 text-xl font-bold text-white">
+            <h2 className="mt-4 bg-gradient-to-r from-[#fff6cf] via-[#f4d46b] to-[#c78c1f] bg-clip-text text-xl font-bold text-transparent">
               {t('desktop_app_landing.email_title')}
             </h2>
 
@@ -146,7 +142,7 @@ const DesktopAppLanding: React.FC = () => {
 
             <a
               href="mailto:enzolima527@gmail.com?subject=StatsCounter%20Desktop%20App"
-              className="mt-5 inline-flex items-center justify-center rounded-xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+              className="mt-5 inline-flex items-center justify-center rounded-xl border border-amber-200/18 bg-white/5 px-4 py-3 text-sm font-semibold text-amber-100 transition hover:border-amber-100/35 hover:bg-white/8 hover:text-white"
             >
               enzolima527@gmail.com
             </a>
