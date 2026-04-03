@@ -7,7 +7,7 @@
   "total_trophies_to_earn": "Total trophies to be earned: ",
   "reset_trophies": "Reset trophies",
   "alert_total_trophies": "You must define the total trophies to be earned first",
-  "alert_all_trophies": "You already have conquisted all trophies",
+  "alert_all_trophies": "You already have earned all trophies",
   "type": "Type",
   "theme": "Theme",
   "language": "Language",
@@ -26,14 +26,14 @@
   "type_death": "Deaths",
   "type_trophy": "Trophies",
   "invalid_widget_type": "Invalid widget for this input. Check if it really belongs to this widget.",
-    "modal": {
+  "modal": {
     "welcome": "Welcome to StatsCounter!",
     "intro": "With StatsCounter, you can create and display custom counters for deaths and trophies directly on your livestream.",
     "step_generate": "After setting up a counter, click on \"Generate widget URL\" to create a unique link.",
     "step_use_obs": "This link can be used in OBS as a browser source to show the counter live during your stream.",
     "update": "New!",
     "step_storage": "Saved widgets are stored locally in your browser so you can come back and pick up where you left off.",
-    "new_theme": "New themes added with custom fonts! go check it out in the theme selector!",
+    "new_theme": "New themes added with custom fonts! Go check them out in the theme selector!",
     "support_us_title": "Support the project!",
     "support_us_update": "If you like and use the project and want to help with any amount, feel free to support the project through the link at the top of the page. This helps keep the project active and constantly evolving.",
     "cta": "Got it!"
@@ -41,7 +41,7 @@
   "basic_option": "Basic - remove borders and background",
   "copyright": "All rights reserved",
   "contact": "Contact: ",
-  "feedback": "Feedbacks, suggestions, reports: ",
+  "feedback": "Feedback, suggestions, reports: ",
   "recommended_size_title": "Recommended size for OBS: ",
   "recommended_size_borderless": "NO BORDERS: 400px (width) x 200px (height)",
   "recommended_size_bordered": "WITH BORDERS: 540px (width) x 300px (height)",
@@ -62,8 +62,8 @@
     "step3Title": "3. Add it to OBS",
     "step3Description": "Paste the URL into OBS as a browser source. Make sure to follow the recommended size according to your chosen theme.",
     "step4Title": "4. Returning to existing widgets",
-    "step4Description": "Copy the ID of your previous widget, paste it into the corresponding field to control the counter again, and if you haven't added it yet, copy the existing URL and add it to OBS again.",
-    "step5Title": "Come back here always you need",
+    "step4Description": "Copy the ID of your previous widget, paste it into the corresponding field to control the counter again, and if you have not added it yet, copy the existing URL and add it to OBS again.",
+    "step5Title": "Come back here whenever you need",
     "step5Description": "Still have questions? You can come back here through the menu at the top of the site.",
     "next": "Next",
     "back": "Back",
@@ -72,28 +72,28 @@
   "give_star_github": "Leave a star on the repository :)",
   "hotkeys": {
     "title": "Hotkeys",
-    "browser_advice": "The browser have to be opened to work.",
+    "browser_advice": "The browser must stay open for this to work.",
     "advice": "Some shortcuts are already assigned by the browser and therefore may not work in the widget, but instead trigger browser actions.",
-    "reload_advice": "Make sure to reload the page to assign correctly the hotkeys.",
-    "increaseDeaths": "Increase Deaths",
-    "decreaseDeaths": "Decrease Deaths",
-    "increaseTrophies": "Increase Trophies",
-    "decreaseTrophies": "Decrease Trophies"
+    "reload_advice": "Make sure to reload the page so the hotkeys are assigned correctly.",
+    "increaseDeaths": "Increase deaths",
+    "decreaseDeaths": "Decrease deaths",
+    "increaseTrophies": "Increase trophies",
+    "decreaseTrophies": "Decrease trophies"
   },
   "notice_update": "[NEW!] It is now possible, within the settings section (accessible via the icon next to the StatsCounter title), to set hotkeys for increasing/decreasing the widget counters!",
   "new_version": {
     "title": "New version 1.1.0 arrived!",
-    "description": "StatsCounter has a new look! Along with features now permanently released such as Shortcut Keys.",
+    "description": "StatsCounter has a new look, along with features now permanently released such as hotkeys.",
     "thanks": "Thank you very much for your support!",
     "cta": "Let's go!"
   },
   "desktop_app_notice": {
     "badge": "Now available",
     "title": "The Stats Counter desktop app has arrived",
-    "description": "You can now bring Stats Counter to the desktop and use hotkeys even while the app is minimized or while you're working in another window.",
+    "description": "You can now bring Stats Counter to the desktop and use hotkeys even while the app is minimized or while you are working in another window.",
     "complement": "Alongside more practical stream control, this release also opens the door for advanced features like full widget customization and many more additions.",
     "banner_text": "The desktop app is here: global hotkeys, more freedom during your stream, and new customization possibilities.",
-    "highlight_hotkeys": "Hotkeys working even while the app is minimized and you're in another window.",
+    "highlight_hotkeys": "Hotkeys working even while the app is minimized and you are in another window.",
     "highlight_focus": "More practical control without depending on the browser staying open.",
     "highlight_features": "A desktop foundation ready for full widget customization and many more features.",
     "learn_more": "Learn more",
@@ -102,29 +102,40 @@
   "desktop_app_landing": {
     "back_home": "Back to home",
     "badge": "Desktop app available",
-    "title": "The Stats Counter desktop app is here to give you more freedom while controlling your stream.",
-    "description": "With it, you can use hotkeys even while the app is minimized and while you're in another window, while also unlocking a new phase of features and customization for Stats Counter.",
+    "title": "Less browser limitation. More real control over your stream.",
+    "description": "Stats Counter Desktop is built for people who actually use the counter and want a more practical, more reliable experience that can grow far beyond the web version.",
     "beta_badge": "Beta and evolving",
-    "beta_description": "The desktop app is still in beta and constantly evolving. New improvements, adjustments, and features will continue to be added based on supporter usage and feedback.",
+    "beta_description": "The desktop app is still in beta, but it already delivers clear day-to-day advantages. And because it runs on desktop, it opens the door to many more features and much deeper widget customization.",
     "access_title": "How access works",
-    "access_description": "Access to the desktop app is available exclusively to supporters who contribute at the levels below.",
+    "access_description": "Desktop app access is unlocked for supporters who contribute at one of the levels below.",
     "support_br_label": "Brazil",
     "support_br_value": "R$15 or more",
-    "support_br_description": "Desktop app access for supporters in Brazil.",
+    "support_br_description": "Unlocks the desktop app, activation key, and download link.",
     "support_br_cta": "Support through Mercado Pago",
     "support_global_label": "Global",
     "support_global_value": "US$10 or more on Buy Me a Coffee",
-    "support_global_description": "Global desktop app access through Buy Me a Coffee.",
+    "support_global_description": "Unlocks the desktop app, activation key, and download link.",
     "support_global_cta": "Support through Buy Me a Coffee",
     "email_title": "Already supported but still missing your key?",
-    "email_description": "If you have already supported the project before the desktop app with any amount and still have not received your activation key and download link, please send an email with proof of payment to the address below.",
-    "features": {
-      "hotkeys_title": "Real global hotkeys",
-      "hotkeys_description": "Use hotkeys even while the app is minimized and you're in another window, without relying on the browser staying open.",
-      "customization_title": "Full widget customization",
-      "customization_description": "The desktop version is built to evolve with complete personalization options, from font and styling to colors and visual details.",
-      "future_title": "Room for many new features",
-      "future_description": "The desktop app creates the ideal foundation for many new features designed for people who use Stats Counter every day."
+    "email_description": "If you supported the project before the desktop app launched and still have not received your activation key and download link, send an email with proof of payment to the address below.",
+    "current_features": {
+      "badge": "What already exists in beta",
+      "title": "Right now it already gives you two clear advantages.",
+      "description": "No vague promises: these are the features that already make the desktop app worth considering today.",
+        "hotkeys_title": "True global hotkeys",
+        "hotkeys_description": "Your hotkeys keep working even while the app is minimized, without relying on the browser tab staying open.",
+        "timer_title": "Trophy widget timer",
+        "timer_description": "Track how long it took you to move from one trophy to the next and display the date of the latest trophy directly on the widget.",
+        "screenshot_alt": "Desktop app screenshot showing the trophy widget timer"
+      },
+    "future": {
+      "badge": "More room to evolve",
+      "title": "Desktop is not just a new version. It is the foundation for the next phase of the product.",
+      "description": "Because it is no longer constrained by the browser, the desktop app makes room for a more complete, more flexible, and much more customizable experience.",
+      "foundation_title": "More technical freedom",
+      "foundation_description": "The desktop environment makes it possible to build features that would be limited or less comfortable in the web version.",
+      "customization_title": "More widget customization",
+      "customization_description": "The goal is to expand both the visual and functional possibilities of the widgets with much more freedom than the browser allows."
     }
   },
   "supporters": {
@@ -132,8 +143,4 @@
     "desc": "To the supporters, my sincere thanks: ",
     "warn": "*If your channel is not here, get in touch by email"
   }
-
-
-
-
 }

@@ -33,7 +33,7 @@
     "step_use_obs": "Este link pode ser usado no OBS como uma fonte de navegador para mostrar o contador ao vivo durante sua transmissão.",
     "update": "Novidades!",
     "step_storage": "Os widgets salvos ficam armazenados localmente no seu navegador, permitindo que você retorne e continue de onde parou adicionando o ID deles no campo localizado ao topo de cada widget.",
-    "new_theme": "Novos temas adicionados com fontes customizadas! confira agora mesmo no seletor de temas!",
+    "new_theme": "Novos temas adicionados com fontes customizadas! Confira agora mesmo no seletor de temas!",
     "support_us_title": "Apoie o projeto!",
     "support_us_update": "Caso goste e use o projeto e queira ajudar com qualquer quantia, sinta-se à vontade para apoiar o projeto através do link no topo da página. Isso ajuda a manter o projeto ativo e em constante evolução.",
     "cta": "Entendi!"
@@ -64,7 +64,7 @@
     "step4Title": "4. Retornando para widgets existentes",
     "step4Description": "Copie o ID de seu antigo widget, cole no respectivo campo para conseguir controlar o contador novamente e, caso não tenha adicionado, copie a URL existente e adicione ao OBS novamente.",
     "step5Title": "Volte aqui sempre que precisar",
-    "step5Description": "Ficou com dúvidas? você consegue voltar aqui através do menu no topo do site.",
+    "step5Description": "Ficou com dúvidas? Você consegue voltar aqui através do menu no topo do site.",
     "next": "Próximo",
     "back": "Anterior",
     "finish": "Concluir"
@@ -79,7 +79,7 @@
     "decreaseDeaths": "Diminuir mortes",
     "increaseTrophies": "Aumentar troféus",
     "decreaseTrophies": "Diminuir troféus"
-  }, 
+  },
   "notice_update": "[NOVIDADE!] Agora é possível dentro da seção de configurações (acessível no ícone ao lado do título StatsCounter) definir teclas de atalho para aumentar/diminuir o contador dos widgets!",
   "new_version": {
     "title": "A versão 1.1.0 chegou!",
@@ -102,29 +102,37 @@
   "desktop_app_landing": {
     "back_home": "Voltar para a página inicial",
     "badge": "Desktop App disponível",
-    "title": "O app desktop do Stats Counter chegou para dar mais liberdade no controle da sua live.",
-    "description": "Com ele, você pode usar as hotkeys mesmo com o app minimizado e enquanto estiver em outra janela, além de abrir caminho para uma nova fase de recursos e customizações no Stats Counter.",
+    "title": "Menos limitações do navegador. Mais controle real da sua live.",
+    "description": "O Stats Counter Desktop foi feito para quem usa o contador de verdade e quer uma experiência mais prática, mais confiável e pronta para evoluir muito além da versão web.",
     "beta_badge": "Beta em evolução",
-    "beta_description": "O app desktop ainda está em beta e em constante evolução. Novas melhorias, ajustes e recursos serão adicionados continuamente com base no uso e no feedback dos apoiadores.",
+    "beta_description": "O app desktop ainda está em beta, mas já entrega vantagens reais. E por ser uma base desktop, ele abre espaço para receber novas features e muito mais personalização nos widgets.",
     "access_title": "Como funciona o acesso",
-    "access_description": "O acesso ao app desktop está disponível exclusivamente para apoiadores que contribuírem com os valores abaixo.",
+    "access_description": "O acesso ao app desktop é liberado para apoiadores que contribuírem com um dos valores abaixo.",
     "support_br_label": "Brasil",
     "support_br_value": "R$ 15 ou mais",
-    "support_br_description": "Liberação do app desktop para apoiadores no Brasil.",
+    "support_br_description": "Libera o app desktop, a chave de ativação e o link de download.",
     "support_br_cta": "Apoiar via Mercado Pago",
     "support_global_label": "Global",
     "support_global_value": "US$ 10 ou mais no Buy Me a Coffee",
-    "support_global_description": "Liberação global do app desktop via Buy Me a Coffee.",
+    "support_global_description": "Libera o app desktop, a chave de ativação e o link de download.",
     "support_global_cta": "Apoiar via Buy Me a Coffee",
     "email_title": "Já apoiou e ainda não recebeu a chave?",
-    "email_description": "Se você já apoiou antes do app desktop com qualquer quantia e ainda não recebeu sua chave de ativação e o link de download, envie um email com a comprovação do pagamento para o endereço abaixo.",
-    "features": {
-      "hotkeys_title": "Hotkeys globais de verdade",
-      "hotkeys_description": "Use as hotkeys mesmo com o app minimizado e em outra janela, sem depender do navegador aberto.",
-      "customization_title": "Customização total do widget",
-      "customization_description": "A versão desktop foi pensada para evoluir com possibilidades de personalização 100% completas, desde fonte e estilo até cores e detalhes visuais.",
-      "future_title": "Mais espaço para novas features",
-      "future_description": "O app desktop cria a base ideal para receber diversas novas funcionalidades dedicadas a quem usa o Stats Counter no dia a dia."
+    "email_description": "Se você já apoiou o projeto antes do lançamento do app desktop e ainda não recebeu a sua chave de ativação e o link de download, envie um e-mail com o comprovante para o endereço abaixo.",
+    "current_features": {
+      "badge": "O que já existe no beta",
+        "hotkeys_title": "Hotkeys globais de verdade",
+        "hotkeys_description": "As hotkeys continuam funcionando mesmo com o app minimizado e sem depender da aba do navegador ficar aberta.",
+        "timer_title": "Cronômetro no widget de troféus",
+        "timer_description": "Veja quanto tempo você levou entre um troféu e outro e ainda exiba a data da última conquista direto no widget.",
+        "screenshot_alt": "Captura do app desktop mostrando o cronômetro no widget de troféus"
+      },
+    "future": {
+      "badge": "Mais espaço para evoluir",
+      "description": "Por estar fora das limitações do navegador, o app desktop permite pensar em uma experiência mais completa, mais flexível e muito mais personalizável.",
+      "foundation_title": "Mais liberdade técnica",
+      "foundation_description": "O ambiente desktop permite construir recursos que seriam limitados ou menos confortáveis na versão web.",
+      "customization_title": "Mais personalização de widgets",
+      "customization_description": "A ideia é expandir as possibilidades visuais e funcionais dos widgets com muito mais liberdade do que no navegador."
     }
   },
   "supporters": {
@@ -132,6 +140,4 @@
     "desc": "Aos apoiadores, meu muitíssimo obrigado: ",
     "warn": "*Se o seu nome/canal não está aqui, entre em contato via email"
   }
-
-
 }
