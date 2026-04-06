@@ -120,12 +120,15 @@
     "email_description": "Se você já apoiou o projeto antes do lançamento do app desktop e ainda não recebeu a sua chave de ativação e o link de download, envie um e-mail com o comprovante para o endereço abaixo.",
     "current_features": {
       "badge": "O que já existe no beta",
-        "hotkeys_title": "Hotkeys globais de verdade",
-        "hotkeys_description": "As hotkeys continuam funcionando mesmo com o app minimizado e sem depender da aba do navegador ficar aberta.",
-        "timer_title": "Cronômetro no widget de troféus",
-        "timer_description": "Veja quanto tempo você levou entre um troféu e outro e ainda exiba a data da última conquista direto no widget.",
-        "screenshot_alt": "Captura do app desktop mostrando o cronômetro no widget de troféus"
-      },
+      "hotkeys_title": "Hotkeys globais de verdade",
+      "hotkeys_description": "As hotkeys continuam funcionando mesmo com o app minimizado e sem depender da aba do navegador ficar aberta.",
+      "timer_title": "Cronômetro no widget de troféus",
+      "timer_description": "Veja quanto tempo você levou entre um troféu e outro e ainda exiba a data da última conquista direto no widget.",
+      "timer_screenshot_alt": "Captura do app desktop mostrando o cronômetro no widget de troféus",
+      "customization_title": "Personalização total do contador",
+      "customization_description": "Agora você pode personalizar 100% o contador, com fonte, sombra, cor, tamanho da fonte, posicionamento do contador, tamanho do ícone, posicionamento e muito mais.",
+      "customization_screenshot_alt": "Captura do app desktop mostrando as opções de personalização completa do contador"
+    },
     "future": {
       "badge": "Mais espaço para evoluir",
       "description": "Por estar fora das limitações do navegador, o app desktop permite pensar em uma experiência mais completa, mais flexível e muito mais personalizável.",

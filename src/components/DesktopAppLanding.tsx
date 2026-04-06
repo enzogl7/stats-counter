@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,12 +12,34 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import desktopPrintEn from '../assets/print-desktop-en.png';
 import desktopPrintPt from '../assets/print-desktop-pt.png';
+import personalizationEn from '../assets/personalizacao-en.jpg';
+import personalizationPt from '../assets/personalizacao-pt.jpg';
 import Header from './Header';
 import Footer from './Footer';
 
 const DesktopAppLanding: React.FC = () => {
   const { t, i18n } = useTranslation();
   const isPortuguese = i18n.language.startsWith('pt');
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
+  const [zoomLevel, setZoomLevel] = useState(1);
+
+  const openImagePreview = (src: string, alt: string) => {
+    setSelectedImage({ src, alt });
+    setZoomLevel(1);
+  };
+
+  const closeImagePreview = () => {
+    setSelectedImage(null);
+    setZoomLevel(1);
+  };
+
+  const increaseZoom = () => {
+    setZoomLevel((currentZoom) => Math.min(currentZoom + 0.25, 3));
+  };
+
+  const decreaseZoom = () => {
+    setZoomLevel((currentZoom) => Math.max(currentZoom - 0.25, 1));
+  };
 
   const currentFeatures = [
     {
@@ -29,7 +51,15 @@ const DesktopAppLanding: React.FC = () => {
       icon: faClock,
       title: t('desktop_app_landing.current_features.timer_title'),
       description: t('desktop_app_landing.current_features.timer_description'),
-      image: isPortuguese ? desktopPrintPt : desktopPrintEn
+      image: isPortuguese ? desktopPrintPt : desktopPrintEn,
+      alt: t('desktop_app_landing.current_features.timer_screenshot_alt')
+    },
+    {
+      icon: faWandMagicSparkles,
+      title: t('desktop_app_landing.current_features.customization_title'),
+      description: t('desktop_app_landing.current_features.customization_description'),
+      image: isPortuguese ? personalizationPt : personalizationEn,
+      alt: t('desktop_app_landing.current_features.customization_screenshot_alt')
     }
   ];
 
@@ -96,11 +126,17 @@ const DesktopAppLanding: React.FC = () => {
                   <p className="mt-2 text-sm leading-6 text-zinc-300">{feature.description}</p>
                   {feature.image && (
                     <div className="mt-4 overflow-hidden rounded-2xl border border-amber-200/10 bg-zinc-900/70 p-2">
-                      <img
-                        src={feature.image}
-                        alt={t('desktop_app_landing.current_features.screenshot_alt')}
-                        className="w-full rounded-xl object-cover"
-                      />
+                      <button
+                        type="button"
+                        onClick={() => openImagePreview(feature.image!, feature.alt!)}
+                        className="block w-full overflow-hidden rounded-xl transition hover:brightness-110"
+                      >
+                        <img
+                          src={feature.image}
+                          alt={feature.alt}
+                          className="w-full rounded-xl object-cover"
+                        />
+                      </button>
                     </div>
                   )}
                 </div>
@@ -205,6 +241,54 @@ const DesktopAppLanding: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/88 px-4 py-6 backdrop-blur-sm"
+          onClick={closeImagePreview}
+        >
+          <div
+            className="w-full max-w-6xl"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="mb-4 flex flex-wrap items-center justify-end gap-3">
+              <button
+                type="button"
+                onClick={decreaseZoom}
+                className="inline-flex items-center justify-center rounded-xl border border-amber-200/20 bg-white/5 px-4 py-2 text-sm font-semibold text-amber-100 transition hover:border-amber-100/35 hover:bg-white/8 hover:text-white"
+              >
+                {isPortuguese ? 'Zoom -' : 'Zoom -'}
+              </button>
+
+              <button
+                type="button"
+                onClick={increaseZoom}
+                className="inline-flex items-center justify-center rounded-xl border border-amber-200/20 bg-white/5 px-4 py-2 text-sm font-semibold text-amber-100 transition hover:border-amber-100/35 hover:bg-white/8 hover:text-white"
+              >
+                {isPortuguese ? 'Zoom +' : 'Zoom +'}
+              </button>
+
+              <button
+                type="button"
+                onClick={closeImagePreview}
+                className="inline-flex items-center justify-center rounded-xl border border-amber-200/20 bg-white/5 px-4 py-2 text-sm font-semibold text-amber-100 transition hover:border-amber-100/35 hover:bg-white/8 hover:text-white"
+              >
+                {t('close')}
+              </button>
+            </div>
+
+            <div className="overflow-auto rounded-[1.75rem] border border-amber-200/15 bg-zinc-950/95 p-3 shadow-2xl">
+              <img
+                src={selectedImage.src}
+                alt={selectedImage.alt}
+                onClick={increaseZoom}
+                className="mx-auto max-h-none cursor-zoom-in rounded-2xl object-contain transition-transform duration-200"
+                style={{ transform: `scale(${zoomLevel})`, transformOrigin: 'center center' }}
+              />
+            </div>
+          </div>
+        </div>
+      )}
 
       <Footer />
     </main>

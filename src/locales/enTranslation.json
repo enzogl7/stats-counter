@@ -122,12 +122,15 @@
       "badge": "What already exists in beta",
       "title": "Right now it already gives you two clear advantages.",
       "description": "No vague promises: these are the features that already make the desktop app worth considering today.",
-        "hotkeys_title": "True global hotkeys",
-        "hotkeys_description": "Your hotkeys keep working even while the app is minimized, without relying on the browser tab staying open.",
-        "timer_title": "Trophy widget timer",
-        "timer_description": "Track how long it took you to move from one trophy to the next and display the date of the latest trophy directly on the widget.",
-        "screenshot_alt": "Desktop app screenshot showing the trophy widget timer"
-      },
+      "hotkeys_title": "True global hotkeys",
+      "hotkeys_description": "Your hotkeys keep working even while the app is minimized, without relying on the browser tab staying open.",
+      "timer_title": "Trophy widget timer",
+      "timer_description": "Track how long it took you to move from one trophy to the next and display the date of the latest trophy directly on the widget.",
+      "timer_screenshot_alt": "Desktop app screenshot showing the trophy widget timer",
+      "customization_title": "Full counter customization",
+      "customization_description": "You can now customize the counter completely, including font, shadow, color, font size, counter position, icon size, icon placement, and much more.",
+      "customization_screenshot_alt": "Desktop app screenshot showing the full counter customization options"
+    },
     "future": {
       "badge": "More room to evolve",
       "title": "Desktop is not just a new version. It is the foundation for the next phase of the product.",
