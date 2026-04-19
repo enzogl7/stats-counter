@@ -116,6 +116,7 @@
     "support_global_value": "US$10 or more on Buy Me a Coffee",
     "support_global_description": "Unlocks the desktop app, activation key, and download link.",
     "support_global_cta": "Support through Buy Me a Coffee",
+    "support_global_email_notice": "Use a valid email address on your Buy Me a Coffee account, because the access license will be sent to that email. If the email cannot be found to send the license, the amount will be refunded.",
     "email_title": "Already supported but still missing your key?",
     "email_description": "If you supported the project before the desktop app launched and still have not received your activation key and download link, send an email with proof of payment to the address below.",
     "current_features": {

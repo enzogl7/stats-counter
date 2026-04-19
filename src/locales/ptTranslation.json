@@ -112,6 +112,7 @@
     "support_br_value": "R$ 15 ou mais",
     "support_br_description": "Libera o app desktop, a chave de ativação e o link de download.",
     "support_br_cta": "Apoiar via Mercado Pago",
+    "support_br_email_notice": "Use um e-mail válido no pagamento e/ou na sua conta do Mercado Pago, pois a licença de acesso será enviada para esse e-mail. Caso o e-mail não seja encontrado para o envio da licença, o valor será reembolsado.",
     "support_global_label": "Global",
     "support_global_value": "US$ 10 ou mais no Buy Me a Coffee",
     "support_global_description": "Libera o app desktop, a chave de ativação e o link de download.",

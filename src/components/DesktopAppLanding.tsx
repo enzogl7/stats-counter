@@ -215,6 +215,12 @@ const DesktopAppLanding: React.FC = () => {
                     ? t('desktop_app_landing.support_br_cta')
                     : t('desktop_app_landing.support_global_cta')}
                 </a>
+
+                <p className="mt-3 text-xs leading-5 text-amber-100/80">
+                  {isPortuguese
+                    ? t('desktop_app_landing.support_br_email_notice')
+                    : t('desktop_app_landing.support_global_email_notice')}
+                </p>
               </div>
 
               <div className="rounded-2xl border border-amber-200/10 bg-zinc-950/35 p-5">
