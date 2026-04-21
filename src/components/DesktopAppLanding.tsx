@@ -8,6 +8,7 @@ import {
   faDesktop,
   faEnvelope,
   faKeyboard,
+  faTrophy,
   faWandMagicSparkles
 } from '@fortawesome/free-solid-svg-icons';
 import desktopPrintEn from '../assets/print-desktop-en.png';
@@ -48,6 +49,11 @@ const DesktopAppLanding: React.FC = () => {
       description: t('desktop_app_landing.current_features.hotkeys_description')
     },
     {
+      icon: faTrophy,
+      title: t('desktop_app_landing.current_features.psn_sync_title'),
+      description: t('desktop_app_landing.current_features.psn_sync_description')
+    },
+    {
       icon: faClock,
       title: t('desktop_app_landing.current_features.timer_title'),
       description: t('desktop_app_landing.current_features.timer_description'),
@@ -84,21 +90,21 @@ const DesktopAppLanding: React.FC = () => {
     <main className="mx-auto max-w-5xl px-4 py-8">
       <Header />
 
-      <section className="relative mt-6 overflow-hidden rounded-[2rem] border border-amber-300/15 bg-gradient-to-br from-zinc-900/94 via-[#161108]/96 to-zinc-950 shadow-2xl backdrop-blur-xl">
-        <div className="pointer-events-none absolute inset-y-0 left-[-12%] w-56 bg-gradient-to-r from-transparent via-amber-200/10 to-transparent blur-3xl" />
-        <div className="pointer-events-none absolute right-[-6%] top-[-10%] h-44 w-44 rounded-full bg-amber-300/8 blur-3xl" />
-        <div className="pointer-events-none absolute inset-x-14 top-0 h-px bg-gradient-to-r from-transparent via-amber-100/55 to-transparent" />
+      <section className="relative mt-6 overflow-hidden rounded-[2rem] border border-blue-400/15 bg-gradient-to-br from-zinc-900/94 via-[#071827]/96 to-zinc-950 shadow-2xl backdrop-blur-xl">
+        <div className="pointer-events-none absolute inset-y-0 left-[-12%] w-56 bg-gradient-to-r from-transparent via-sky-300/10 to-transparent blur-3xl" />
+        <div className="pointer-events-none absolute inset-y-0 right-[-10%] w-60 bg-gradient-to-l from-blue-500/10 via-cyan-300/5 to-transparent blur-3xl" />
+        <div className="pointer-events-none absolute inset-x-14 top-0 h-px bg-gradient-to-r from-transparent via-sky-200/55 to-transparent" />
 
-        <div className="relative border-b border-amber-200/10 bg-[radial-gradient(circle_at_top_left,_rgba(255,224,138,0.14),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(217,119,6,0.1),_transparent_32%)] px-6 py-10 sm:px-10">
+        <div className="relative border-b border-blue-300/10 bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.16),_transparent_30%),linear-gradient(135deg,_rgba(37,99,235,0.1),_transparent_44%)] px-6 py-10 sm:px-10">
           <Link
             to="/"
-            className="mb-6 inline-flex items-center gap-2 text-sm text-zinc-300 transition hover:text-amber-100"
+            className="mb-6 inline-flex items-center gap-2 text-sm text-zinc-300 transition hover:text-sky-100"
           >
             <FontAwesomeIcon icon={faArrowLeft} />
             {t('desktop_app_landing.back_home')}
           </Link>
 
-          <h1 className="mt-5 max-w-3xl bg-gradient-to-r from-[#fff8d6] via-[#ffe27a] via-[42%] to-[#b97b16] bg-clip-text text-4xl font-black leading-tight text-transparent sm:text-5xl">
+          <h1 className="mt-5 max-w-3xl bg-gradient-to-r from-white via-sky-200 via-[42%] to-blue-500 bg-clip-text text-4xl font-black leading-tight text-transparent sm:text-5xl">
             {t('desktop_app_landing.title')}
           </h1>
 
@@ -108,8 +114,8 @@ const DesktopAppLanding: React.FC = () => {
         </div>
 
         <div className="relative px-6 py-8 sm:px-10">
-          <div className="rounded-2xl border border-amber-200/10 bg-white/[0.04] p-6">
-            <p className="text-lg font-semibold uppercase tracking-[0.16em] text-amber-300">
+          <div className="rounded-2xl border border-blue-300/10 bg-white/[0.04] p-6">
+            <p className="text-lg font-semibold uppercase tracking-[0.16em] text-sky-300">
               {t('desktop_app_landing.current_features.badge')}
             </p>
 
@@ -117,15 +123,15 @@ const DesktopAppLanding: React.FC = () => {
               {currentFeatures.map((feature) => (
                 <div
                   key={feature.title}
-                  className="rounded-2xl border border-amber-200/10 bg-zinc-950/35 p-5"
+                  className="rounded-2xl border border-blue-300/10 bg-zinc-950/35 p-5"
                 >
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-amber-200/12 bg-gradient-to-br from-amber-200/14 to-amber-500/10 text-amber-200">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-blue-300/15 bg-gradient-to-br from-sky-300/14 to-blue-500/10 text-sky-200">
                     <FontAwesomeIcon icon={feature.icon} />
                   </div>
                   <h3 className="mt-4 text-lg font-bold text-white">{feature.title}</h3>
                   <p className="mt-2 text-sm leading-6 text-zinc-300">{feature.description}</p>
                   {feature.image && (
-                    <div className="mt-4 overflow-hidden rounded-2xl border border-amber-200/10 bg-zinc-900/70 p-2">
+                    <div className="mt-4 overflow-hidden rounded-2xl border border-blue-300/10 bg-zinc-900/70 p-2">
                       <button
                         type="button"
                         onClick={() => openImagePreview(feature.image!, feature.alt!)}
@@ -143,8 +149,8 @@ const DesktopAppLanding: React.FC = () => {
               ))}
             </div>
 
-            <div className="mt-6 rounded-2xl border border-amber-300/20 bg-gradient-to-r from-amber-200/[0.08] via-amber-100/[0.04] to-amber-500/[0.08] px-5 py-4 shadow-[0_0_40px_rgba(251,191,36,0.05)]">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-300">
+            <div className="mt-6 rounded-2xl border border-blue-400/20 bg-gradient-to-r from-blue-500/[0.10] via-cyan-300/[0.04] to-sky-400/[0.08] px-5 py-4 shadow-[0_0_40px_rgba(59,130,246,0.08)]">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-300">
                 {t('desktop_app_landing.beta_badge')}
               </p>
               <p className="mt-2 text-sm leading-6 text-zinc-200">
@@ -154,9 +160,9 @@ const DesktopAppLanding: React.FC = () => {
           </div>
         </div>
 
-        <div className="relative border-t border-amber-200/10 px-6 py-8 sm:px-10">
-          <div className="rounded-2xl border border-amber-200/10 bg-white/[0.04] p-6">
-            <p className="text-lg font-semibold uppercase tracking-[0.16em] text-amber-300">
+        <div className="relative border-t border-blue-300/10 px-6 py-8 sm:px-10">
+          <div className="rounded-2xl border border-blue-300/10 bg-white/[0.04] p-6">
+            <p className="text-lg font-semibold uppercase tracking-[0.16em] text-sky-300">
               {t('desktop_app_landing.future.badge')}
             </p>
             <p className="mt-3 text-sm leading-7 text-zinc-300">
@@ -167,9 +173,9 @@ const DesktopAppLanding: React.FC = () => {
               {futurePillars.map((item) => (
                 <div
                   key={item.title}
-                  className="rounded-2xl border border-amber-200/10 bg-zinc-950/35 p-5"
+                  className="rounded-2xl border border-blue-300/10 bg-zinc-950/35 p-5"
                 >
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-amber-200/12 bg-gradient-to-br from-amber-200/14 to-amber-500/10 text-amber-200">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-blue-300/15 bg-gradient-to-br from-sky-300/14 to-blue-500/10 text-sky-200">
                     <FontAwesomeIcon icon={item.icon} />
                   </div>
                   <h3 className="mt-4 text-lg font-bold text-white">{item.title}</h3>
@@ -180,21 +186,21 @@ const DesktopAppLanding: React.FC = () => {
           </div>
         </div>
 
-        <div className="relative border-t border-amber-200/10 px-6 py-8 sm:px-10">
-          <div className="rounded-2xl border border-amber-200/10 bg-white/[0.04] p-6">
+        <div className="relative border-t border-blue-300/10 px-6 py-8 sm:px-10">
+          <div className="rounded-2xl border border-blue-300/10 bg-white/[0.04] p-6">
             <h2 className="text-xl font-bold text-white">{t('desktop_app_landing.access_title')}</h2>
             <p className="mt-3 text-sm leading-7 text-zinc-300">
               {t('desktop_app_landing.access_description')}
             </p>
 
             <div className="mt-5 grid gap-5 lg:grid-cols-2">
-              <div className="rounded-2xl border border-amber-300/18 bg-gradient-to-br from-[#221809]/80 via-[#1c160d]/75 to-zinc-900/80 p-5 shadow-[0_0_45px_rgba(251,191,36,0.05)]">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-amber-200/70">
+              <div className="rounded-2xl border border-blue-400/20 bg-gradient-to-br from-[#071a2d]/85 via-[#0d1b2a]/80 to-zinc-900/80 p-5 shadow-[0_0_45px_rgba(59,130,246,0.08)]">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-200/75">
                   {isPortuguese
                     ? t('desktop_app_landing.support_br_label')
                     : t('desktop_app_landing.support_global_label')}
                 </p>
-                <p className="mt-2 bg-gradient-to-r from-[#fff6cf] via-[#f4d46b] to-[#c78c1f] bg-clip-text text-lg font-bold text-transparent">
+                <p className="mt-2 bg-gradient-to-r from-white via-sky-200 to-blue-400 bg-clip-text text-lg font-bold text-transparent">
                   {isPortuguese
                     ? t('desktop_app_landing.support_br_value')
                     : t('desktop_app_landing.support_global_value')}
@@ -209,26 +215,26 @@ const DesktopAppLanding: React.FC = () => {
                   href={supportLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 inline-flex w-full items-center justify-center rounded-xl border border-amber-200/25 bg-gradient-to-r from-[#f6d66c] via-[#f2c94d] to-[#d69a1b] px-4 py-3 text-sm font-semibold text-[#241706] transition hover:brightness-105"
+                  className="mt-4 inline-flex w-full items-center justify-center rounded-xl border border-blue-300/35 bg-gradient-to-r from-blue-600 via-sky-500 to-cyan-400 px-4 py-3 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(37,99,235,0.20)] transition hover:brightness-110"
                 >
                   {isPortuguese
                     ? t('desktop_app_landing.support_br_cta')
                     : t('desktop_app_landing.support_global_cta')}
                 </a>
 
-                <p className="mt-3 text-xs leading-5 text-amber-100/80">
+                <p className="mt-3 text-xs leading-5 text-sky-100/80">
                   {isPortuguese
                     ? t('desktop_app_landing.support_br_email_notice')
                     : t('desktop_app_landing.support_global_email_notice')}
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-amber-200/10 bg-zinc-950/35 p-5">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-amber-200/12 bg-gradient-to-br from-amber-100/14 to-amber-400/10 text-amber-200">
+              <div className="rounded-2xl border border-blue-300/10 bg-zinc-950/35 p-5">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-blue-300/15 bg-gradient-to-br from-sky-300/14 to-blue-500/10 text-sky-200">
                   <FontAwesomeIcon icon={faEnvelope} />
                 </div>
 
-                <h3 className="mt-4 bg-gradient-to-r from-[#fff6cf] via-[#f4d46b] to-[#c78c1f] bg-clip-text text-xl font-bold text-transparent">
+                <h3 className="mt-4 bg-gradient-to-r from-white via-sky-200 to-blue-400 bg-clip-text text-xl font-bold text-transparent">
                   {t('desktop_app_landing.email_title')}
                 </h3>
 
@@ -238,7 +244,7 @@ const DesktopAppLanding: React.FC = () => {
 
                 <a
                   href="mailto:enzolima527@gmail.com?subject=StatsCounter%20Desktop%20App"
-                  className="mt-5 inline-flex items-center justify-center rounded-xl border border-amber-200/18 bg-white/5 px-4 py-3 text-sm font-semibold text-amber-100 transition hover:border-amber-100/35 hover:bg-white/8 hover:text-white"
+                  className="mt-5 inline-flex items-center justify-center rounded-xl border border-blue-300/20 bg-white/5 px-4 py-3 text-sm font-semibold text-blue-100 transition hover:border-sky-200/45 hover:bg-blue-500/10 hover:text-white"
                 >
                   enzolima527@gmail.com
                 </a>
@@ -261,7 +267,7 @@ const DesktopAppLanding: React.FC = () => {
               <button
                 type="button"
                 onClick={decreaseZoom}
-                className="inline-flex items-center justify-center rounded-xl border border-amber-200/20 bg-white/5 px-4 py-2 text-sm font-semibold text-amber-100 transition hover:border-amber-100/35 hover:bg-white/8 hover:text-white"
+                className="inline-flex items-center justify-center rounded-xl border border-blue-300/20 bg-white/5 px-4 py-2 text-sm font-semibold text-blue-100 transition hover:border-sky-200/45 hover:bg-blue-500/10 hover:text-white"
               >
                 {isPortuguese ? 'Zoom -' : 'Zoom -'}
               </button>
@@ -269,7 +275,7 @@ const DesktopAppLanding: React.FC = () => {
               <button
                 type="button"
                 onClick={increaseZoom}
-                className="inline-flex items-center justify-center rounded-xl border border-amber-200/20 bg-white/5 px-4 py-2 text-sm font-semibold text-amber-100 transition hover:border-amber-100/35 hover:bg-white/8 hover:text-white"
+                className="inline-flex items-center justify-center rounded-xl border border-blue-300/20 bg-white/5 px-4 py-2 text-sm font-semibold text-blue-100 transition hover:border-sky-200/45 hover:bg-blue-500/10 hover:text-white"
               >
                 {isPortuguese ? 'Zoom +' : 'Zoom +'}
               </button>
@@ -277,13 +283,13 @@ const DesktopAppLanding: React.FC = () => {
               <button
                 type="button"
                 onClick={closeImagePreview}
-                className="inline-flex items-center justify-center rounded-xl border border-amber-200/20 bg-white/5 px-4 py-2 text-sm font-semibold text-amber-100 transition hover:border-amber-100/35 hover:bg-white/8 hover:text-white"
+                className="inline-flex items-center justify-center rounded-xl border border-blue-300/20 bg-white/5 px-4 py-2 text-sm font-semibold text-blue-100 transition hover:border-sky-200/45 hover:bg-blue-500/10 hover:text-white"
               >
                 {t('close')}
               </button>
             </div>
 
-            <div className="overflow-auto rounded-[1.75rem] border border-amber-200/15 bg-zinc-950/95 p-3 shadow-2xl">
+            <div className="overflow-auto rounded-[1.75rem] border border-blue-300/15 bg-zinc-950/95 p-3 shadow-2xl">
               <img
                 src={selectedImage.src}
                 alt={selectedImage.alt}
