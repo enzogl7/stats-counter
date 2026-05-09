@@ -1,5 +1,23 @@
 @import "tailwindcss";
 
+:root {
+  --bg-0: #05070d;
+  --bg-1: #0a0d16;
+  --bg-2: #11151f;
+  --bg-3: #181d2b;
+  --line: rgba(200, 215, 255, 0.07);
+  --line-2: rgba(200, 215, 255, 0.14);
+  --ink: #eef2fb;
+  --ink-2: #b7c0d4;
+  --ink-3: #7a8499;
+  --ink-4: #4a5266;
+  --coral: #5b8dff;
+  --coral-2: #3a6bdc;
+  --lime: #7fb6ff;
+  --plat: #9bd1ff;
+  --rose: #ff6b6b;
+}
+
 .font-roboto { font-family: 'Roboto', sans-serif; }
 .font-inter { font-family: 'Inter', sans-serif; }
 .font-cinzel { font-family: 'Cinzel', serif; }
