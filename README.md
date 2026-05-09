@@ -1,184 +1,201 @@
 # StatsCounter
 
-[![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=stats-counter-alpha)](https://stats-counter-alpha.vercel.app/)
+https://github.com/user-attachments/assets/7e910fb2-8c15-4ea1-9caf-0161f14d7c89
+
 [![Último Commit](https://img.shields.io/github/last-commit/enzogl7/stats-counter)](https://github.com/enzogl7/stats-counter/commits/main)
 [![Licença](https://img.shields.io/github/license/enzogl7/stats-counter)](https://github.com/enzogl7/stats-counter/blob/main/LICENSE)
 [![YouTube](https://img.shields.io/badge/▶️-Tutorial%20PT%20-red)](https://youtu.be/xzesY-6yVeE)
 [![YouTube](https://img.shields.io/badge/▶️-Tutorial%20EN%20-red)](https://youtu.be/pY4cV-czUMk)
-[![Changelog](https://img.shields.io/badge/📜-Updates/roadmap-blue)](CHANGELOG.md)
 
 <p align="center">
-  <em>Contador de estatísticas em tempo real para streamers, com foco em mortes e troféus.</em>
+  <strong>Real-time widgets for streamers.</strong>
   <br>
-  <em>Real time widgets for trophies and deaths counter for streamers.</em>
+  Death counters, trophy counters and OBS integrations.
 </p>
 
 <p align="center">
-  <a href="#português">Português</a> • <a href="#english">English</a>
+  <a href="#português">Português</a> •
+  <a href="#english">English</a>
 </p>
 
 ---
 
-## Português
+# Português
 
 <p align="center">
-  <img src="/src/assets/home-pt.png" alt="StatsCounter Interface - Português" width="48%" style="margin-right: 2%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-  <img src="/src/assets/stream.png" alt="Exemplo de Widget do StatsCounter" width="48%" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  <img src="/src/assets/home-pt.png" width="48%">
+  <img src="/src/assets/stream.png" width="48%">
 </p>
 
-O **StatsCounter** foi desenvolvido para auxiliar streamers que desejam exibir, em tempo real durante suas transmissões ao vivo, estatísticas como o número de mortes ou troféus conquistados em seus jogos. Com apenas um clique, o contador é atualizado e refletido automaticamente na transmissão via OBS (ou software similar), eliminando a necessidade de edições manuais de texto.
+O **StatsCounter** é uma ferramenta desenvolvida para streamers exibirem estatísticas em tempo real durante transmissões ao vivo utilizando OBS ou softwares similares.
 
-Este projeto foi criado como uma forma de aplicar e aprimorar conhecimentos em React.
+Com apenas um clique, o contador é atualizado automaticamente na live, eliminando a necessidade de editar textos manualmente durante gameplay.
 
-### Funcionalidades Principais
+---
 
-* **100% Grátis:** O StatsCounter surgiu com a ideia de colocar em prática os meus estudos, então funciona de forma 100% gratuita.
-* **Layout Minimalista:** Widgets com design limpo para não sobrecarregar a tela da transmissão.
-* **Atualizações em Tempo Real:** As contagens são refletidas instantaneamente.
-* **Suporte Multilíngue:** Disponível em Português e Inglês.
-* **Integração com OBS:** Facilmente adicionável como uma Fonte de Navegador (Browser Source).
-* **Temas Variados:** Diversas opções de temas para personalizar a aparência dos widgets.
-* **Sem Necessidade de Login:** Comece a usar imediatamente.
+## Funcionalidades
 
-### Streamers que Usam o StatsCounter
+- Contador de mortes
+- Contador de troféus
+- Atualizações em tempo real
+- Integração com OBS Browser Source
+- Temas customizados
+- Layout minimalista
+- Multilíngue (PT-BR / EN)
+- Sem necessidade de login
+- 100% gratuito
 
-Veja alguns dos criadores de conteúdo que já estão usando o StatsCounter!
+---
 
-* [Nick AR](https://youtube.com/clip/Ugkx-8595MmIAwEZ6nObxiMf-dbX3LDXxZks?si=lvkT_Gj46YmWXltF)
-<br>
-<img src="https://i.imgur.com/K7Rbhvf.png" width="30%"></img>
+## Comparativo
 
-* [GPiason](https://youtube.com/clip/Ugkxmuszwd7ViRY38J6jfoLtxOwboMrNdzLD?si=ejlP4eYl7onOrWce)
-<br>
-<img src="https://i.imgur.com/fhrCQjd.png" width="30%"></img>
+| Recurso | Web | Desktop |
+|---|---|---|
+| Widgets OBS | ✅ | ✅ |
+| Atualização em tempo real | ✅ | ✅ |
+| Temas personalizados | ✅ | ✅ |
+| Trophy Timer | ❌ | ✅ |
+| Hotkeys globais | ❌ | ✅ |
+| Runtime local | ❌ | ✅ |
+| Atualizações automáticas | ❌ | ✅ |
+| Sincronização PSN | ❌ | ✅ (beta) |
 
-* [ViniPimenta](https://youtube.com/clip/UgkxywcOtK0pKl2bFFgCRHrtcKQonpS1Qrmj?si=2RwR7kGd5Wj2isuj)
-<br>
-<img src="https://i.imgur.com/sf1T4QT.png" width="30%"></img>
+---
 
-* [Showza](https://www.youtube.com/watch?v=MEs11aIwjQc&t=7514s&ab_channel=Showza)
-<br>
-<img src="https://i.imgur.com/MoBXvkK.png" width="30%"></img>
+# StatsCounter Desktop
 
-* [PlateusGaming](https://www.youtube.com/@Plateus.Gaming)
-<br>
-<img src="https://i.imgur.com/TF49VYE.png" width="30%">
+O **StatsCounter Desktop** é a versão avançada do projeto, desenvolvida como aplicação desktop para streamers que precisam de mais estabilidade, desempenho e recursos profissionais.
 
-* [Treco Player](https://www.youtube.com/@trecoplayer)
-<br>
-<img src="https://i.imgur.com/OpR700T.png" width="30%">
+## Recursos do Desktop
 
-*Se você usa o StatsCounter e gostaria de aparecer aqui, entre em contato: enzolima527@gmail.com*
+- Runtime local
+- Widgets ultra rápidos
+- Hotkeys globais
+- Trophy Timer
+- Temas avançados
+- Atualizações automáticas
+- Sistema de licenças
+- Melhor integração com OBS
+- Sincronização com PSN (beta)
 
-### Acesse
+## Download
 
-Experimente o StatsCounter agora mesmo:
+🌐 https://statscounter.pro/desktop-app
 
-[**StatsCounter no Vercel**](https://stats-counter-alpha.vercel.app/)
+---
 
-### Apoie o Projeto
+## Demonstração
 
-Se você gostou deste projeto e quer apoiar seu desenvolvimento e manutenção, considere fazer uma contribuição:
+🌐 https://statscounter.pro
 
-[![Apoie com PIX](https://img.shields.io/badge/Apoie%20com-PIX-32BCAD?style=for-the-badge&logo=pix&logoColor=black)](https://nubank.com.br/cobrar/1h7ozc/68311061-d59d-4d4a-bee6-814f62eef197)
+---
 
-Qualquer valor ajuda a manter o projeto ativo e com novas funcionalidades!
+## Apoie o Projeto
 
-### Apoiadores:
-Aos apoiadores, meu muitíssimo obrigado!
-<br>
-**Plateus Gaming (BR), Mark Alston (USA), SpicyEGTaco (USA)**
+Se quiser apoiar o desenvolvimento do projeto:
 
-### Tecnologias Utilizadas
+[![Apoie com PIX](https://img.shields.io/badge/Apoie%20com-PIX-32BCAD?style=for-the-badge&logo=pix&logoColor=black)](https://link.mercadopago.com.br/statscounter)
+
+---
+
+## Tecnologias Utilizadas
 
 <p align="left">
-  <a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" width="40" height="40"/></a>
-  <a href="https://vitejs.dev/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vitejs/vitejs-original.svg" alt="Vite" width="40" height="40"/></a>
-  <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"><img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind CSS" width="40" height="40"/></a>
-  <a href="https://supabase.com/" target="_blank" rel="noreferrer"><img src="https://www.vectorlogo.zone/logos/supabase/supabase-icon.svg" alt="Supabase" width="40" height="40"/></a>
-  <a href="https://vercel.com/" target="_blank" rel="noreferrer"><img src="https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg" alt="Vercel" width="40" height="40"/></a>
+  <a href="https://reactjs.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" width="40" height="40"/></a>
+  <a href="https://vitejs.dev/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vitejs/vitejs-original.svg" width="40" height="40"/></a>
+  <a href="https://tailwindcss.com/" target="_blank"><img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" width="40" height="40"/></a>
+  <a href="https://supabase.com/" target="_blank"><img src="https://www.vectorlogo.zone/logos/supabase/supabase-icon.svg" width="40" height="40"/></a>
+  <a href="https://vercel.com/" target="_blank"><img src="https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg" width="40" height="40"/></a>
 </p>
 
 ---
 
-## English
+# English
 
 <p align="center">
-  <img src="src/assets/home-en.png" alt="StatsCounter Interface - English" width="48%" style="margin-right: 2%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-  <img src="src/assets/stream.png" alt="StatsCounter Widget Example" width="48%" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  <img src="/src/assets/home-en.png" width="48%">
+  <img src="/src/assets/stream.png" width="48%">
 </p>
 
-**StatsCounter** was built to help streamers track and display real-time statistics, such as death counts or trophies earned, during their live gameplay broadcasts. With just a single click, the counter updates and is automatically reflected in the stream via OBS (or similar software), eliminating the need for manual text edits.
+**StatsCounter** is a real-time widget platform designed for streamers who want to display live gameplay statistics directly on OBS streams.
 
-This project was developed as a way to practice and enhance React skills.
-
-### Key Features
-
-* **100% Free:** StatsCounter was created to put into practice my skills with React. So its 100% available for free.
-* **Minimalist Widget Layout:** Cleanly designed widgets that don't clutter the stream.
-* **Real-Time Updates:** Counts are reflected instantly.
-* **Multi-Language Support:** Available in Portuguese and English.
-* **OBS Integration:** Easily addable as a Browser Source.
-* **Multiple Themes:** Various theme options to customize widget appearance.
-* **No Login Required:** Start using it right away.
-
-### Streamers Using StatsCounter
-
-Check out some of the content creators already using StatsCounter!
-
-* [Nick AR](https://youtube.com/clip/Ugkx-8595MmIAwEZ6nObxiMf-dbX3LDXxZks?si=lvkT_Gj46YmWXltF)
-<br>
-<img src="https://i.imgur.com/K7Rbhvf.png" width="30%"></img>
-
-* [GPiason](https://youtube.com/clip/Ugkxmuszwd7ViRY38J6jfoLtxOwboMrNdzLD?si=ejlP4eYl7onOrWce)
-<br>
-<img src="https://i.imgur.com/fhrCQjd.png" width="30%"></img>
-
-* [ViniPimenta](https://youtube.com/clip/UgkxywcOtK0pKl2bFFgCRHrtcKQonpS1Qrmj?si=2RwR7kGd5Wj2isuj)
-<br>
-<img src="https://i.imgur.com/sf1T4QT.png" width="30%"></img>
-
-* [Showza](https://www.youtube.com/watch?v=MEs11aIwjQc&t=7514s&ab_channel=Showza)
-<br>
-<img src="https://i.imgur.com/MoBXvkK.png" width="30%"></img>
-
-* [PlateusGaming](https://www.youtube.com/@Plateus.Gaming)
-<br>
-<img src="https://i.imgur.com/TF49VYE.png" width="30%">
-
-* [Treco Player](https://www.youtube.com/@trecoplayer)
-<br>
-<img src="https://i.imgur.com/OpR700T.png" width="30%">
-
-*If you use StatsCounter and would like to be featured here, please get in touch: enzolima527@gmail.com*
-
-### Access
-
-Try StatsCounter now:
-
-[**StatsCounter on Vercel**](https://stats-counter-alpha.vercel.app/)
-
-### Support the Project
-
-If you like this project and want to support its development and maintenance, consider making a contribution:
-
-<a href="https://www.buymeacoffee.com/ogl7" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 50px !important;width: 210px !important;" ></a>
-
-Any amount helps keep the project alive and develop new features!
-
-### Supporters:
-To the supporters, my sincere thanks!!
-<br>
-**Plateus Gaming (BR), Mark Alston (USA), SpicyEGTaco (USA)**
-
-### Technologies Used
-
-<p align="left">
-  <a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" width="40" height="40"/></a>
-  <a href="https://vitejs.dev/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vitejs/vitejs-original.svg" alt="Vite" width="40" height="40"/></a>
-  <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"><img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind CSS" width="40" height="40"/></a>
-  <a href="https://supabase.com/" target="_blank" rel="noreferrer"><img src="https://www.vectorlogo.zone/logos/supabase/supabase-icon.svg" alt="Supabase" width="40" height="40"/></a>
-  <a href="https://vercel.com/" target="_blank" rel="noreferrer"><img src="https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg" alt="Vercel" width="40" height="40"/></a>
-</p>
+With a single click, counters update instantly during live broadcasts.
 
 ---
+
+## Features
+
+- Death counter
+- Trophy counter
+- Real-time updates
+- OBS Browser Source integration
+- Custom themes
+- Minimalist layout
+- Multi-language support
+- No login required
+- 100% free
+
+---
+
+## Comparison
+
+| Feature | Web | Desktop |
+|---|---|---|
+| OBS Widgets | ✅ | ✅ |
+| Real-time updates | ✅ | ✅ |
+| Custom themes | ✅ | ✅ |
+| Trophy Timer | ❌ | ✅ |
+| Global hotkeys | ❌ | ✅ |
+| Local runtime | ❌ | ✅ |
+| Auto updates | ❌ | ✅ |
+| PSN Sync | ❌ | ✅ (beta) |
+
+---
+
+# StatsCounter Desktop
+
+**StatsCounter Desktop** is the advanced desktop version of the project, focused on performance, reliability and professional streaming workflows.
+
+## Desktop Features
+
+- Local runtime
+- Ultra-fast widgets
+- Global hotkeys
+- Trophy Timer
+- Advanced themes
+- Automatic updates
+- License system
+- Better OBS integration
+- PSN synchronization (beta)
+
+## Download
+
+🌐 https://statscounter.pro/desktop-app
+
+---
+
+## Live Demo
+
+🌐 https://statscounter.pro
+
+---
+
+## Support the Project
+
+If you want to support the project:
+
+<a href="https://www.buymeacoffee.com/ogl7" target="_blank">
+  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" style="height: 50px !important;width: 210px !important;">
+</a>
+
+---
+
+## Technologies Used
+
+<p align="left">
+  <a href="https://reactjs.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" width="40" height="40"/></a>
+  <a href="https://vitejs.dev/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vitejs/vitejs-original.svg" width="40" height="40"/></a>
+  <a href="https://tailwindcss.com/" target="_blank"><img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" width="40" height="40"/></a>
+  <a href="https://supabase.com/" target="_blank"><img src="https://www.vectorlogo.zone/logos/supabase/supabase-icon.svg" width="40" height="40"/></a>
+  <a href="https://vercel.com/" target="_blank"><img src="https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg" width="40" height="40"/></a>
+</p>
