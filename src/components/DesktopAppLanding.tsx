@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faArrowLeft,
+  faChevronLeft,
+  faChevronRight,
   faClock,
-  faDesktop,
   faEnvelope,
   faKeyboard,
   faTrophy,
@@ -19,9 +20,73 @@ import desktopPrintPt from '../assets/print-desktop-pt.png';
 import desktopPrintFrame from '../assets/print-desktop-frame.jpg';
 import personalizationEn from '../assets/personalizacao-en.jpg';
 import personalizationPt from '../assets/personalizacao-pt.jpg';
+import trophiesText2 from '../assets/trophies-text-2.png';
 import Footer from './Footer';
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
+const FeatureCardImages: React.FC<{
+  images: string[];
+  alts: string[];
+  onPreview: (src: string, alt: string) => void;
+}> = ({ images, alts, onPreview }) => {
+  const [idx, setIdx] = useState(0);
+  const prev = () => setIdx((i) => (i - 1 + images.length) % images.length);
+  const next = () => setIdx((i) => (i + 1) % images.length);
+
+  return (
+    <div
+      className="mt-5 overflow-hidden rounded-xl p-1.5"
+      style={{ background: 'var(--bg-0)', border: '1px solid var(--line)' }}
+    >
+      <div className="relative">
+        <button
+          type="button"
+          onClick={() => onPreview(images[idx], alts[idx])}
+          className="dal-preview-btn block w-full overflow-hidden rounded-lg"
+        >
+          <img src={images[idx]} alt={alts[idx]} className="w-full rounded-lg object-cover" />
+        </button>
+
+        {images.length > 1 && (
+          <>
+            <button
+              type="button"
+              onClick={(e) => { e.stopPropagation(); prev(); }}
+              className="absolute left-2 top-1/2 -translate-y-1/2 flex h-7 w-7 items-center justify-center rounded-full text-xs"
+              style={{ background: 'rgba(10,13,22,0.72)', border: '1px solid var(--line-2)', color: 'var(--ink-3)', backdropFilter: 'blur(6px)' }}
+            >
+              <FontAwesomeIcon icon={faChevronLeft} />
+            </button>
+            <button
+              type="button"
+              onClick={(e) => { e.stopPropagation(); next(); }}
+              className="absolute right-2 top-1/2 -translate-y-1/2 flex h-7 w-7 items-center justify-center rounded-full text-xs"
+              style={{ background: 'rgba(10,13,22,0.72)', border: '1px solid var(--line-2)', color: 'var(--ink-3)', backdropFilter: 'blur(6px)' }}
+            >
+              <FontAwesomeIcon icon={faChevronRight} />
+            </button>
+            <div className="mt-2 flex justify-center gap-1.5 pb-0.5">
+              {images.map((_, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => setIdx(i)}
+                  className="rounded-full transition-all duration-200"
+                  style={{
+                    height: '5px',
+                    width: i === idx ? '1.25rem' : '5px',
+                    background: i === idx ? 'var(--coral)' : 'var(--line-2)',
+                  }}
+                />
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  );
+};
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 22 },
@@ -169,21 +234,13 @@ const DesktopAppLanding: React.FC = () => {
       description: t('desktop_app_landing.current_features.customization_description'),
       chip: undefined as string | undefined,
       chipColor: 'var(--lime)' as string,
-      image: isPortuguese ? personalizationPt : personalizationEn,
-      alt: t('desktop_app_landing.current_features.customization_screenshot_alt')
-    }
-  ];
-
-  const futurePillars = [
-    {
-      icon: faDesktop,
-      title: t('desktop_app_landing.future.foundation_title'),
-      description: t('desktop_app_landing.future.foundation_description')
-    },
-    {
-      icon: faWandMagicSparkles,
-      title: t('desktop_app_landing.future.customization_title'),
-      description: t('desktop_app_landing.future.customization_description')
+      image: undefined as string | undefined,
+      alt: undefined as string | undefined,
+      images: [isPortuguese ? personalizationPt : personalizationEn, trophiesText2],
+      alts: [
+        t('desktop_app_landing.current_features.customization_screenshot_alt'),
+        t('desktop_app_landing.current_features.customization_screenshot_alt_2'),
+      ],
     }
   ];
 
@@ -415,7 +472,13 @@ const DesktopAppLanding: React.FC = () => {
                   {feature.description}
                 </p>
 
-                {feature.image && (
+                {feature.images ? (
+                  <FeatureCardImages
+                    images={feature.images}
+                    alts={feature.alts!}
+                    onPreview={openImagePreview}
+                  />
+                ) : feature.image && (
                   <div
                     className="mt-5 overflow-hidden rounded-xl p-1.5"
                     style={{ background: 'var(--bg-0)', border: '1px solid var(--line)' }}
@@ -433,56 +496,6 @@ const DesktopAppLanding: React.FC = () => {
             ))}
           </div>
 
-        </motion.section>
-
-        {/* ── Future ── */}
-        <motion.section className="mt-5" {...fadeUpView(0)}>
-          <div
-            className="dal-section-card rounded-2xl p-7 sm:p-10"
-            style={{ border: '1px solid var(--line)' }}
-          >
-            <p
-              className="font-mono text-[10px] font-semibold uppercase tracking-[0.28em]"
-              style={{ color: 'var(--lime)' }}
-            >
-              · {t('desktop_app_landing.future.badge')} ·
-            </p>
-            <p className="mt-4 text-sm" style={{ color: 'var(--ink-3)', lineHeight: 1.8, maxWidth: '52ch' }}>
-              {t('desktop_app_landing.future.description')}
-            </p>
-
-            <div className="mt-7 grid gap-4 lg:grid-cols-2">
-              {futurePillars.map((item, i) => (
-                <motion.div
-                  key={item.title}
-                  className="dal-pillar-card rounded-xl p-6"
-                  style={{ background: 'var(--bg-3)', border: '1px solid var(--line)' }}
-                  {...fadeUpView(i * 0.09)}
-                  whileHover={{ y: -3, transition: { duration: 0.22, ease: EASE } }}
-                >
-                  <div
-                    className="dal-icon-wrap flex h-10 w-10 items-center justify-center rounded-xl text-sm"
-                    style={{
-                      background: 'var(--bg-2)',
-                      border: '1px solid var(--line-2)',
-                      color: 'var(--lime)'
-                    }}
-                  >
-                    <FontAwesomeIcon icon={item.icon} />
-                  </div>
-                  <h3
-                    className="mt-4 font-semibold leading-snug"
-                    style={{ color: 'var(--ink)', fontSize: '0.9375rem' }}
-                  >
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-sm" style={{ color: 'var(--ink-2)', lineHeight: 1.75 }}>
-                    {item.description}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
         </motion.section>
 
         {/* ── Access ── */}

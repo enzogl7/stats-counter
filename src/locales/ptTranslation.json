@@ -139,7 +139,8 @@
       "timer_screenshot_alt": "Captura do app desktop mostrando o cronômetro no widget de troféus",
       "customization_title": "Personalização total do contador",
       "customization_description": "Agora você pode personalizar 100% o contador, com fonte, sombra, cor, tamanho da fonte, posicionamento do contador, tamanho do ícone, posicionamento e muito mais.",
-      "customization_screenshot_alt": "Captura do app desktop mostrando as opções de personalização completa do contador"
+      "customization_screenshot_alt": "Captura do app desktop mostrando as opções de personalização completa do contador",
+      "customization_screenshot_alt_2": "Captura do app desktop mostrando o texto do contador de troféus em formato de fração"
     },
     "future": {
       "badge": "Mais espaço para evoluir",

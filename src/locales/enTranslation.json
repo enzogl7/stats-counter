@@ -141,7 +141,8 @@
       "timer_screenshot_alt": "Desktop app screenshot showing the trophy widget timer",
       "customization_title": "Full counter customization",
       "customization_description": "You can now customize the counter completely, including font, shadow, color, font size, counter position, icon size, icon placement, and much more.",
-      "customization_screenshot_alt": "Desktop app screenshot showing the full counter customization options"
+      "customization_screenshot_alt": "Desktop app screenshot showing the full counter customization options",
+      "customization_screenshot_alt_2": "Desktop app screenshot showing the trophy counter text in fraction format"
     },
     "future": {
       "badge": "More room to evolve",
