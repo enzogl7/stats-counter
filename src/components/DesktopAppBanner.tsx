@@ -56,14 +56,28 @@ const DesktopAppBanner: React.FC = () => {
               />
             </div>
 
-            <motion.p
-              className="max-w-xl text-xs leading-relaxed text-zinc-200 sm:text-sm"
+            <motion.div
+              className="flex flex-wrap items-center gap-1.5"
               initial={{ opacity: 0, y: 6 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.12, duration: 0.35, ease: 'easeOut' }}
             >
-              {t('desktop_app_notice.banner_text')}
-            </motion.p>
+              <span
+                className="inline-flex items-center rounded-full px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-[0.14em]"
+                style={{ background: 'rgba(0,112,209,0.15)', border: '1px solid rgba(0,112,209,0.4)', color: '#93c5fd' }}
+              >
+                PSN
+              </span>
+              <span
+                className="inline-flex items-center rounded-full px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-[0.14em]"
+                style={{ background: 'rgba(102,192,244,0.12)', border: '1px solid rgba(102,192,244,0.35)', color: '#66c0f4' }}
+              >
+                STEAM
+              </span>
+              <span className="text-xs leading-relaxed text-zinc-300 sm:text-sm">
+                {t('desktop_app_notice.banner_text')}
+              </span>
+            </motion.div>
           </div>
 
           <div className="relative z-10">

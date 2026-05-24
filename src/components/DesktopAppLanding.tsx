@@ -8,6 +8,7 @@ import {
   faChevronRight,
   faClock,
   faEnvelope,
+  faGamepad,
   faKeyboard,
   faTrophy,
   faWandMagicSparkles
@@ -198,22 +199,12 @@ const DesktopAppLanding: React.FC = () => {
 
   const currentFeatures = [
     {
-      index: '01',
+      index: '02',
       icon: faKeyboard,
       title: t('desktop_app_landing.current_features.hotkeys_title'),
       description: t('desktop_app_landing.current_features.hotkeys_description'),
       chip: 'GLOBAL',
       chipColor: 'var(--lime)' as string,
-      image: undefined as string | undefined,
-      alt: undefined as string | undefined
-    },
-    {
-      index: '02',
-      icon: faTrophy,
-      title: t('desktop_app_landing.current_features.psn_sync_title'),
-      description: t('desktop_app_landing.current_features.psn_sync_description'),
-      chip: undefined as string | undefined,
-      chipColor: 'var(--plat)' as string,
       image: undefined as string | undefined,
       alt: undefined as string | undefined
     },
@@ -423,13 +414,72 @@ const DesktopAppLanding: React.FC = () => {
             {t('desktop_app_landing.current_features.section_title_2')}
           </motion.h2>
 
-          <div className="mt-8 grid gap-4 lg:grid-cols-2">
+          <div className="mt-8 grid gap-4 lg:grid-cols-2 lg:items-start">
+
+            {/* Platform Sync — full width, first card */}
+            <motion.div
+              className="dal-feature-card rounded-xl p-6 lg:col-span-2"
+              style={{ background: 'var(--bg-3)', border: '1px solid var(--line)' }}
+              {...fadeUpView(0)}
+              whileHover={{ y: -3, transition: { duration: 0.22, ease: EASE } }}
+            >
+              <div className="flex items-center justify-between gap-2">
+                <span className="font-mono text-[11px] font-medium" style={{ color: 'var(--ink-4)' }}>01</span>
+                <div className="flex gap-1.5">
+                  <span
+                    className="rounded-full px-2.5 py-0.5 font-mono text-[9px] font-bold uppercase tracking-[0.16em]"
+                    style={{ background: 'var(--bg-2)', border: '1px solid var(--line-2)', color: 'var(--plat)' }}
+                  >
+                    PSN
+                  </span>
+                  <span
+                    className="rounded-full px-2.5 py-0.5 font-mono text-[9px] font-bold uppercase tracking-[0.16em]"
+                    style={{ background: 'var(--bg-2)', border: '1px solid var(--line-2)', color: '#66c0f4' }}
+                  >
+                    STEAM
+                  </span>
+                </div>
+              </div>
+
+              <div className="mt-4 flex items-center gap-2.5">
+                <FontAwesomeIcon icon={faTrophy} style={{ color: 'var(--plat)', fontSize: '1rem', flexShrink: 0 }} />
+                <h3 className="font-semibold leading-snug" style={{ color: 'var(--ink)', fontSize: '0.9375rem' }}>
+                  {t('desktop_app_landing.current_features.platform_sync_title')}
+                </h3>
+              </div>
+
+              <p className="mt-3 text-sm" style={{ color: 'var(--ink-2)', lineHeight: 1.75 }}>
+                {t('desktop_app_landing.current_features.platform_sync_description')}
+              </p>
+
+              <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                <div className="rounded-lg p-4" style={{ background: 'var(--bg-2)', border: '1px solid var(--line-2)' }}>
+                  <div className="flex items-center gap-2">
+                    <FontAwesomeIcon icon={faTrophy} style={{ color: 'var(--plat)', fontSize: '0.875rem' }} />
+                    <span className="font-mono text-[10px] font-bold uppercase tracking-[0.14em]" style={{ color: 'var(--plat)' }}>PSN</span>
+                  </div>
+                  <p className="mt-2 text-sm" style={{ color: 'var(--ink-3)', lineHeight: 1.7 }}>
+                    {t('desktop_app_landing.current_features.psn_sync_description')}
+                  </p>
+                </div>
+                <div className="rounded-lg p-4" style={{ background: 'var(--bg-2)', border: '1px solid var(--line-2)' }}>
+                  <div className="flex items-center gap-2">
+                    <FontAwesomeIcon icon={faGamepad} style={{ color: '#66c0f4', fontSize: '0.875rem' }} />
+                    <span className="font-mono text-[10px] font-bold uppercase tracking-[0.14em]" style={{ color: '#66c0f4' }}>STEAM</span>
+                  </div>
+                  <p className="mt-2 text-sm" style={{ color: 'var(--ink-3)', lineHeight: 1.7 }}>
+                    {t('desktop_app_landing.current_features.steam_sync_description')}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
             {currentFeatures.map((feature, i) => (
               <motion.div
                 key={feature.title}
-                className="dal-feature-card rounded-xl p-6"
+                className={`dal-feature-card rounded-xl p-6${i === currentFeatures.length - 1 ? ' lg:col-span-2' : ''}`}
                 style={{ background: 'var(--bg-3)', border: '1px solid var(--line)' }}
-                {...fadeUpView(i * 0.08)}
+                {...fadeUpView((i + 1) * 0.08)}
                 whileHover={{ y: -3, transition: { duration: 0.22, ease: EASE } }}
               >
                 {/* Index + chip row */}
