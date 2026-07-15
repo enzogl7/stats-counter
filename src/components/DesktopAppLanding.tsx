@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faArrowLeft,
+  faCheck,
   faChevronLeft,
   faChevronRight,
   faClock,
@@ -23,6 +24,7 @@ import personalizationEn from '../assets/personalizacao-en.jpg';
 import personalizationPt from '../assets/personalizacao-pt.jpg';
 import trophiesText2 from '../assets/trophies-text-2.png';
 import Footer from './Footer';
+import TwitchChatDemoCard from './TwitchChatDemoCard';
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
@@ -199,7 +201,7 @@ const DesktopAppLanding: React.FC = () => {
 
   const currentFeatures = [
     {
-      index: '02',
+      index: '03',
       icon: faKeyboard,
       title: t('desktop_app_landing.current_features.hotkeys_title'),
       description: t('desktop_app_landing.current_features.hotkeys_description'),
@@ -209,7 +211,7 @@ const DesktopAppLanding: React.FC = () => {
       alt: undefined as string | undefined
     },
     {
-      index: '03',
+      index: '04',
       icon: faClock,
       title: t('desktop_app_landing.current_features.timer_title'),
       description: t('desktop_app_landing.current_features.timer_description'),
@@ -219,7 +221,7 @@ const DesktopAppLanding: React.FC = () => {
       alt: t('desktop_app_landing.current_features.timer_screenshot_alt')
     },
     {
-      index: '04',
+      index: '05',
       icon: faWandMagicSparkles,
       title: t('desktop_app_landing.current_features.customization_title'),
       description: t('desktop_app_landing.current_features.customization_description'),
@@ -414,11 +416,11 @@ const DesktopAppLanding: React.FC = () => {
             {t('desktop_app_landing.current_features.section_title_2')}
           </motion.h2>
 
-          <div className="mt-8 grid gap-4 lg:grid-cols-2 lg:items-start">
+          <div className="mt-8 flex flex-col gap-4">
 
             {/* Platform Sync — full width, first card */}
             <motion.div
-              className="dal-feature-card rounded-xl p-6 lg:col-span-2"
+              className="dal-feature-card rounded-xl p-6"
               style={{ background: 'var(--bg-3)', border: '1px solid var(--line)' }}
               {...fadeUpView(0)}
               whileHover={{ y: -3, transition: { duration: 0.22, ease: EASE } }}
@@ -474,10 +476,12 @@ const DesktopAppLanding: React.FC = () => {
               </div>
             </motion.div>
 
+            <TwitchChatDemoCard />
+
             {currentFeatures.map((feature, i) => (
               <motion.div
                 key={feature.title}
-                className={`dal-feature-card rounded-xl p-6${i === currentFeatures.length - 1 ? ' lg:col-span-2' : ''}`}
+                className="dal-feature-card rounded-xl p-6"
                 style={{ background: 'var(--bg-3)', border: '1px solid var(--line)' }}
                 {...fadeUpView((i + 1) * 0.08)}
                 whileHover={{ y: -3, transition: { duration: 0.22, ease: EASE } }}
@@ -591,6 +595,18 @@ const DesktopAppLanding: React.FC = () => {
                     ? t('desktop_app_landing.support_br_description')
                     : t('desktop_app_landing.support_global_description')}
                 </p>
+
+                <ul className="mt-4 flex flex-col gap-2">
+                  {[
+                    t('desktop_app_landing.support_check_lifetime'),
+                    t('desktop_app_landing.support_check_email'),
+                  ].map((check) => (
+                    <li key={check} className="flex items-start gap-2 text-sm" style={{ color: 'var(--ink-2)' }}>
+                      <FontAwesomeIcon icon={faCheck} className="mt-0.5" style={{ color: 'var(--lime)', fontSize: '0.75rem', flexShrink: 0 }} />
+                      {check}
+                    </li>
+                  ))}
+                </ul>
 
                 <a
                   href={supportLink}

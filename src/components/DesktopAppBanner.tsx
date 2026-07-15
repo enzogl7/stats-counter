@@ -74,6 +74,12 @@ const DesktopAppBanner: React.FC = () => {
               >
                 STEAM
               </span>
+              <span
+                className="inline-flex items-center rounded-full px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-[0.14em]"
+                style={{ background: 'rgba(145,70,255,0.12)', border: '1px solid rgba(145,70,255,0.35)', color: '#a970ff' }}
+              >
+                TWITCH
+              </span>
               <span className="text-xs leading-relaxed text-zinc-300 sm:text-sm">
                 {t('desktop_app_notice.banner_text')}
               </span>
