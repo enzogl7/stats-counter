@@ -163,6 +163,13 @@
       "foundation_description": "O ambiente desktop permite construir recursos que seriam limitados ou menos confortáveis na versão web.",
       "customization_title": "Mais personalização de widgets",
       "customization_description": "A ideia é expandir as possibilidades visuais e funcionais dos widgets com muito mais liberdade do que no navegador."
+    },
+    "streamers": {
+      "section_title_1": "Streamers que ",
+      "section_title_accent": "já",
+      "section_title_2": " usam o Stats Counter.",
+      "section_description": "Alguns dos criadores que usam o contador ao vivo nas suas lives.",
+      "contact_note": "Quer ter seu canal aqui? Entre em contato pelo"
     }
   },
   "supporters": {

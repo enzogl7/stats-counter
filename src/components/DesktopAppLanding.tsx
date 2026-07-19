@@ -7,6 +7,7 @@ import {
   faCheck,
   faChevronLeft,
   faChevronRight,
+  faCircleInfo,
   faClock,
   faEnvelope,
   faGamepad,
@@ -25,6 +26,8 @@ import personalizationPt from '../assets/personalizacao-pt.jpg';
 import trophiesText2 from '../assets/trophies-text-2.png';
 import Footer from './Footer';
 import TwitchChatDemoCard from './TwitchChatDemoCard';
+import StreamersCarousel from './StreamersCarousel';
+import { streamers } from './streamersData';
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
@@ -177,6 +180,25 @@ const PAGE_STYLES = `
   }
   .dal-lang-btn {
     transition: color 0.18s ease, background 0.18s ease;
+  }
+  .dal-streamers-track {
+    scrollbar-width: none;
+  }
+  .dal-streamers-track::-webkit-scrollbar {
+    display: none;
+  }
+  .dal-streamer-card img {
+    transition: box-shadow 0.28s ease, transform 0.18s ease;
+  }
+  .dal-streamer-card:hover img {
+    box-shadow: 0 10px 40px -12px rgba(58,107,220,0.4);
+    transform: translateY(-3px);
+  }
+  .dal-streamer-name {
+    transition: color 0.2s ease;
+  }
+  .dal-streamer-card:hover .dal-streamer-name {
+    color: var(--coral);
   }
 `;
 
@@ -552,6 +574,54 @@ const DesktopAppLanding: React.FC = () => {
 
         </motion.section>
 
+        {/* ── Streamers ── */}
+        <motion.section className="mt-16 mb-16" {...fadeUpView(0)}>
+          <motion.h2
+            className="font-cormorant font-bold tracking-tight"
+            style={{
+              color: 'var(--ink)',
+              fontSize: 'clamp(2rem, 4vw, 3rem)',
+              lineHeight: 1.08,
+              letterSpacing: '-0.01em',
+            }}
+            {...fadeUpView(0.08)}
+          >
+            {t('desktop_app_landing.streamers.section_title_1')}
+            <em style={{ color: 'var(--coral)', fontStyle: 'italic' }}>
+              {t('desktop_app_landing.streamers.section_title_accent')}
+            </em>
+            {t('desktop_app_landing.streamers.section_title_2')}
+          </motion.h2>
+
+          <motion.p
+            className="mt-3 max-w-[52ch] text-sm"
+            style={{ color: 'var(--ink-3)', lineHeight: 1.8 }}
+            {...fadeUpView(0.12)}
+          >
+            {t('desktop_app_landing.streamers.section_description')}
+          </motion.p>
+
+          <motion.div className="mt-8" {...fadeUpView(0.16)}>
+            <StreamersCarousel streamers={streamers} />
+          </motion.div>
+
+          <motion.p
+            className="mt-6 flex items-center justify-center gap-1.5 text-center text-xs"
+            style={{ color: 'var(--ink-3)' }}
+            {...fadeUpView(0.2)}
+          >
+            <FontAwesomeIcon icon={faCircleInfo} />
+            {t('desktop_app_landing.streamers.contact_note')}{' '}
+            <a
+              href="mailto:statscountersup@gmail.com?subject=StatsCounter%20-%20Streamer%20Carousel"
+              className="font-semibold underline-offset-2 hover:underline"
+              style={{ color: 'var(--lime)' }}
+            >
+              statscountersup@gmail.com
+            </a>
+          </motion.p>
+        </motion.section>
+
         {/* ── Access ── */}
         <motion.section className="mt-5 mb-12" {...fadeUpView(0)}>
           <div
@@ -655,7 +725,7 @@ const DesktopAppLanding: React.FC = () => {
                 </p>
 
                 <a
-                  href="mailto:enzolima527@gmail.com?subject=StatsCounter%20Desktop%20App"
+                  href="mailto:statscountersup@gmail.com?subject=StatsCounter%20Desktop%20App"
                   className="dal-btn-secondary mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 text-sm font-semibold"
                   style={{
                     background: 'var(--bg-2)',
@@ -663,7 +733,7 @@ const DesktopAppLanding: React.FC = () => {
                     color: 'var(--lime)'
                   }}
                 >
-                  enzolima527@gmail.com
+                  statscountersup@gmail.com
                 </a>
               </motion.div>
             </div>

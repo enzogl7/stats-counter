@@ -166,6 +166,13 @@
       "foundation_description": "The desktop environment makes it possible to build features that would be limited or less comfortable in the web version.",
       "customization_title": "More widget customization",
       "customization_description": "The goal is to expand both the visual and functional possibilities of the widgets with much more freedom than the browser allows."
+    },
+    "streamers": {
+      "section_title_1": "Streamers who ",
+      "section_title_accent": "already",
+      "section_title_2": " use Stats Counter.",
+      "section_description": "A few of the creators using the counter live on their streams.",
+      "contact_note": "Want your channel featured here? Get in touch at"
     }
   },
   "supporters": {
