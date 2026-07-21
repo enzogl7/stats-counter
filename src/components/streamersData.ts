@@ -21,4 +21,9 @@ export const streamers: Streamer[] = [
     url: 'https://www.twitch.tv/katr4k4',
     avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/a026eca8-08b2-4b24-b675-1da783784aff-profile_image-70x70.png',
   },
+  {
+    name: 'EuPadilha',
+    url: 'https://www.youtube.com/@eupadilhabr',
+    avatar: 'https://yt3.googleusercontent.com/ASwZY6ICCGeiMNpTbrbsLdOJexslfkocCWJgaJB6RTgMbVMWpgBSExgPRJ7dsT6HV7xHZwWF=s160-c-k-c0x00ffffff-no-rj',
+  },
 ];
