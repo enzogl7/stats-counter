@@ -156,7 +156,13 @@
       "twitch_demo_trophy_label": "Trophies",
       "twitch_demo_chat_title": "twitch chat",
       "twitch_demo_death_message": "💀 Death #{{count}} registered",
-      "twitch_demo_trophy_message": "🏆 Trophy unlocked — {{earned}}/{{total}}"
+      "twitch_demo_trophy_message": "🏆 Trophy unlocked — {{earned}}/{{total}}",
+      "twitch_demo_viewer_name": "viewer42",
+      "twitch_demo_chat_placeholder": "Type !deaths or !trophies…",
+      "twitch_demo_chat_send": "Send",
+      "twitch_demo_command_hint": "Chat commands are fully customizable in the app — try !deaths or !trophies here.",
+      "twitch_demo_command_deaths_response": "💀 Current deaths: {{count}}",
+      "twitch_demo_command_trophies_response": "🏆 Current trophies: {{earned}}/{{total}}"
     },
     "future": {
       "badge": "More room to evolve",

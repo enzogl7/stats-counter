@@ -8,12 +8,18 @@ import PlatIcon from '../assets/plat-icon.png';
 
 const CHAT_SENDER = 'StatsCounter';
 const CHAT_SENDER_COLOR = '#a970ff';
+const VIEWER_COLOR = '#2f9cff';
 const TROPHY_TOTAL = 5;
 const MAX_DEATHS = 5;
 const CLICK_COOLDOWN_MS = 350;
 
+const DEATH_COMMANDS = ['!mortes', '!deaths'];
+const TROPHY_COMMANDS = ['!trofeus', '!trofeús', '!trophies'];
+
 interface ChatMessage {
   id: number;
+  sender: string;
+  color: string;
   text: string;
 }
 
@@ -34,9 +40,9 @@ const TwitchChatDemoCard: React.FC = () => {
 
   useEffect(() => () => clearTimeout(cooldownTimeout.current), []);
 
-  const postMessage = (text: string) => {
+  const postMessage = (sender: string, color: string, text: string) => {
     nextId.current += 1;
-    setMessages((prev) => [...prev.slice(-19), { id: nextId.current, text }]);
+    setMessages((prev) => [...prev.slice(-19), { id: nextId.current, sender, color, text }]);
   };
 
   // ponytail: throttles clicks so spamming the demo can't flood the chat list or thrash layout
@@ -51,14 +57,32 @@ const TwitchChatDemoCard: React.FC = () => {
     if (deaths >= MAX_DEATHS) return;
     const newVal = deaths + 1;
     setDeaths(newVal);
-    postMessage(t('desktop_app_landing.current_features.twitch_demo_death_message', { count: newVal }));
+    postMessage(CHAT_SENDER, CHAT_SENDER_COLOR, t('desktop_app_landing.current_features.twitch_demo_death_message', { count: newVal }));
   });
 
   const increaseTrophies = () => withCooldown(() => {
     if (trophies >= TROPHY_TOTAL) return;
     const newVal = trophies + 1;
     setTrophies(newVal);
-    postMessage(t('desktop_app_landing.current_features.twitch_demo_trophy_message', { earned: newVal, total: TROPHY_TOTAL }));
+    postMessage(CHAT_SENDER, CHAT_SENDER_COLOR, t('desktop_app_landing.current_features.twitch_demo_trophy_message', { earned: newVal, total: TROPHY_TOTAL }));
+  });
+
+  const [chatInput, setChatInput] = useState('');
+
+  const handleSendCommand = () => withCooldown(() => {
+    const raw = chatInput.trim();
+    if (!raw) return;
+    setChatInput('');
+
+    const viewerName = t('desktop_app_landing.current_features.twitch_demo_viewer_name');
+    postMessage(viewerName, VIEWER_COLOR, raw);
+
+    const command = raw.toLowerCase();
+    if (DEATH_COMMANDS.includes(command)) {
+      postMessage(CHAT_SENDER, CHAT_SENDER_COLOR, t('desktop_app_landing.current_features.twitch_demo_command_deaths_response', { count: deaths }));
+    } else if (TROPHY_COMMANDS.includes(command)) {
+      postMessage(CHAT_SENDER, CHAT_SENDER_COLOR, t('desktop_app_landing.current_features.twitch_demo_command_trophies_response', { earned: trophies, total: TROPHY_TOTAL }));
+    }
   });
 
   return (
@@ -153,14 +177,17 @@ const TwitchChatDemoCard: React.FC = () => {
         </div>
 
         {/* Twitch chat mock */}
-        <div className="flex h-full min-h-72 flex-col overflow-hidden rounded-lg" style={{ border: '1px solid var(--line-2)' }}>
+        <div
+          className="flex h-full min-h-72 flex-col overflow-hidden rounded-lg"
+          style={{ border: '1px solid var(--line-2)', contain: 'size' }}
+        >
           <div className="flex items-center gap-2 px-3 py-2" style={{ background: '#18181b' }}>
             <span className="h-2 w-2 rounded-full" style={{ background: '#a970ff' }} />
             <span className="font-mono text-[11px] font-semibold uppercase tracking-wider text-zinc-300">
               {t('desktop_app_landing.current_features.twitch_demo_chat_title')}
             </span>
           </div>
-          <div ref={chatBoxRef} className="flex flex-1 flex-col gap-1.5 overflow-y-auto p-3" style={{ background: '#0e0e10' }}>
+          <div ref={chatBoxRef} className="flex min-h-0 flex-1 flex-col gap-1.5 overflow-y-auto p-3" style={{ background: '#0e0e10' }}>
             {messages.length === 0 && (
               <p className="m-auto text-center text-xs text-zinc-500">
                 {t('desktop_app_landing.current_features.twitch_demo_hint')}
@@ -175,20 +202,45 @@ const TwitchChatDemoCard: React.FC = () => {
                   transition={{ duration: 0.25 }}
                   className="text-sm leading-snug wrap-break-word"
                 >
-                  <span className="font-semibold" style={{ color: CHAT_SENDER_COLOR }}>
-                    {CHAT_SENDER}
+                  <span className="font-semibold" style={{ color: m.color }}>
+                    {m.sender}
                   </span>
                   <span className="text-zinc-300">: {m.text}</span>
                 </motion.div>
               ))}
             </AnimatePresence>
           </div>
+          <form
+            className="flex gap-2 border-t p-2"
+            style={{ borderColor: 'var(--line-2)', background: '#18181b' }}
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleSendCommand();
+            }}
+          >
+            <input
+              type="text"
+              value={chatInput}
+              onChange={(e) => setChatInput(e.target.value)}
+              disabled={onCooldown}
+              placeholder={t('desktop_app_landing.current_features.twitch_demo_chat_placeholder')}
+              className="min-w-0 flex-1 rounded-md bg-zinc-800 px-2.5 py-1.5 text-xs text-zinc-200 placeholder:text-zinc-500 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+            />
+            <button
+              type="submit"
+              disabled={onCooldown}
+              className="shrink-0 rounded-md px-3 py-1.5 text-xs font-semibold text-white transition disabled:cursor-not-allowed disabled:opacity-50"
+              style={{ background: CHAT_SENDER_COLOR }}
+            >
+              {t('desktop_app_landing.current_features.twitch_demo_chat_send')}
+            </button>
+          </form>
         </div>
       </div>
 
       <p className="mt-4 flex items-center gap-1.5 text-xs" style={{ color: 'var(--ink-3)' }}>
         <FontAwesomeIcon icon={faCircleInfo} />
-        {t('desktop_app_landing.current_features.twitch_demo_hint')}
+        {t('desktop_app_landing.current_features.twitch_demo_command_hint')}
       </p>
     </motion.div>
   );
