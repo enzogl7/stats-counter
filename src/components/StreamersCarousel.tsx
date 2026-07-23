@@ -20,6 +20,27 @@ const StreamersCarousel: React.FC<StreamersCarouselProps> = ({ streamers }) => {
 
   useEffect(() => {
     const track = trackRef.current;
+    if (!track || streamers.length <= 3) return;
+
+    const id = setInterval(() => {
+      // ponytail: back to start when the last card is in view; bump interval/step if cadence needs tuning
+      if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 4) {
+        track.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        track.scrollBy({ left: SCROLL_AMOUNT, behavior: 'smooth' });
+      }
+    }, 3000);
+
+    const pause = () => clearInterval(id);
+    track.addEventListener('pointerenter', pause);
+    return () => {
+      clearInterval(id);
+      track.removeEventListener('pointerenter', pause);
+    };
+  }, [streamers]);
+
+  useEffect(() => {
+    const track = trackRef.current;
     if (!track) return;
 
     let frame = 0;
