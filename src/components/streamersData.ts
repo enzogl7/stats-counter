@@ -41,4 +41,9 @@ export const streamers: Streamer[] = [
     url: 'https://www.youtube.com/@liahfmz',
     avatar: 'https://yt3.googleusercontent.com/W5M2BiR0h50FzKbNvCut2ba9Y4x9fchAQxpdsMVScYTulR2uXoqOwGUNLrI8qirOR58EtjAE=s160-c-k-c0x00ffffff-no-rj',
   },
+  {
+    name: 'Dash',
+    url: 'https://www.youtube.com/@odash1',
+    avatar: 'https://yt3.googleusercontent.com/dpLvantFcFN4bmi4i_hkwkG0RjDIQcUTbp_vV6fgdqFcLgqKnDcswXs4pN8IX1tWUd2az_Nt=s160-c-k-c0x00ffffff-no-rj',
+  },
 ];
