@@ -12,6 +12,10 @@ const VIEWER_COLOR = '#2f9cff';
 const TROPHY_TOTAL = 5;
 const MAX_DEATHS = 5;
 const CLICK_COOLDOWN_MS = 350;
+const AMBIENT_COLORS = ['#2f9cff', '#ff6b6b', '#ffb703', '#06d6a0', '#f72585', '#8ecae6'];
+const AMBIENT_MIN_DELAY_MS = 2800;
+const AMBIENT_MAX_DELAY_MS = 6000;
+const AMBIENT_MESSAGE_LIMIT = 10;
 
 const DEATH_COMMANDS = ['!mortes', '!deaths'];
 const TROPHY_COMMANDS = ['!trofeus', '!trofeús', '!trophies'];
@@ -44,6 +48,30 @@ const TwitchChatDemoCard: React.FC = () => {
     nextId.current += 1;
     setMessages((prev) => [...prev.slice(-19), { id: nextId.current, sender, color, text }]);
   };
+
+  // Ambient viewer chatter, independent of the command/counter flow above — purely decorative.
+  useEffect(() => {
+    const names = t('desktop_app_landing.current_features.twitch_demo_ambient_names', { returnObjects: true }) as string[];
+    const texts = t('desktop_app_landing.current_features.twitch_demo_ambient_messages', { returnObjects: true }) as string[];
+    let timeoutId: ReturnType<typeof setTimeout>;
+    let sentCount = 0;
+
+    const scheduleNext = () => {
+      if (sentCount >= AMBIENT_MESSAGE_LIMIT) return;
+      const delay = AMBIENT_MIN_DELAY_MS + Math.random() * (AMBIENT_MAX_DELAY_MS - AMBIENT_MIN_DELAY_MS);
+      timeoutId = setTimeout(() => {
+        const name = names[Math.floor(Math.random() * names.length)];
+        const color = AMBIENT_COLORS[Math.floor(Math.random() * AMBIENT_COLORS.length)];
+        const text = texts[Math.floor(Math.random() * texts.length)];
+        postMessage(name, color, text);
+        sentCount += 1;
+        scheduleNext();
+      }, delay);
+    };
+
+    scheduleNext();
+    return () => clearTimeout(timeoutId);
+  }, [t]);
 
   // ponytail: throttles clicks so spamming the demo can't flood the chat list or thrash layout
   const withCooldown = (action: () => void) => {
@@ -97,7 +125,7 @@ const TwitchChatDemoCard: React.FC = () => {
           className="rounded-full px-2.5 py-0.5 font-mono text-[9px] font-bold uppercase tracking-[0.16em]"
           style={{ background: 'rgba(145,70,255,0.12)', border: '1px solid rgba(145,70,255,0.35)', color: '#a970ff' }}
         >
-          TWITCH
+          TWITCH & KICK
         </span>
       </div>
 
@@ -194,20 +222,24 @@ const TwitchChatDemoCard: React.FC = () => {
               </p>
             )}
             <AnimatePresence initial={false}>
-              {messages.map((m) => (
-                <motion.div
-                  key={m.id}
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.25 }}
-                  className="text-sm leading-snug wrap-break-word"
-                >
-                  <span className="font-semibold" style={{ color: m.color }}>
-                    {m.sender}
-                  </span>
-                  <span className="text-zinc-300">: {m.text}</span>
-                </motion.div>
-              ))}
+              {messages.map((m) => {
+                const isBot = m.sender === CHAT_SENDER;
+                return (
+                  <motion.div
+                    key={m.id}
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.25 }}
+                    className="rounded-md px-1.5 py-1 text-sm leading-snug wrap-break-word"
+                    style={isBot ? { background: 'rgba(169,112,255,0.12)', border: '1px solid rgba(169,112,255,0.3)' } : undefined}
+                  >
+                    <span className="font-semibold" style={{ color: m.color }}>
+                      {m.sender}
+                    </span>
+                    <span className={isBot ? 'font-medium text-zinc-100' : 'text-zinc-300'}>: {m.text}</span>
+                  </motion.div>
+                );
+              })}
             </AnimatePresence>
           </div>
           <form

@@ -147,12 +147,12 @@
       "customization_description": "Agora você pode personalizar 100% o contador, com fonte, sombra, cor, tamanho da fonte, posicionamento do contador, tamanho do ícone, posicionamento e muito mais.",
       "customization_screenshot_alt": "Captura do app desktop mostrando as opções de personalização completa do contador",
       "customization_screenshot_alt_2": "Captura do app desktop mostrando o texto do contador de troféus em formato de fração",
-      "twitch_title": "Reações do chat da Twitch em tempo real",
-      "twitch_description": "Conecte sua conta da Twitch ao bot do StatsCounter e ele envia uma mensagem no chat toda vez que seu contador de morte ou troféu aumentar. Escolha quais widgets disparam o aviso e personalize as mensagens do jeito que quiser.",
+      "twitch_title": "Reações do chat da Twitch e Kick em tempo real",
+      "twitch_description": "Conecte sua conta da Twitch ou da Kick ao bot do StatsCounter e ele envia uma mensagem no chat toda vez que seu contador de morte ou troféu aumentar. Escolha quais widgets disparam o aviso e personalize as mensagens do jeito que quiser. As mesmas funcionalidades nas duas plataformas.",
       "twitch_demo_hint": "Apenas uma prévia interativa — nada aqui é salvo ou enviado para a Twitch. Clique no + de qualquer contador para ver a mensagem aparecer no chat.",
       "twitch_demo_death_label": "Mortes",
       "twitch_demo_trophy_label": "Troféus",
-      "twitch_demo_chat_title": "chat da twitch",
+      "twitch_demo_chat_title": "chat",
       "twitch_demo_death_message": "💀 Morte #{{count}} registrada",
       "twitch_demo_trophy_message": "🏆 Troféu desbloqueado — {{earned}}/{{total}}",
       "twitch_demo_viewer_name": "viewer42",
@@ -160,7 +160,9 @@
       "twitch_demo_chat_send": "Enviar",
       "twitch_demo_command_hint": "Os comandos do chat são 100% personalizáveis no app — tente !mortes ou !trofeus aqui.",
       "twitch_demo_command_deaths_response": "💀 Mortes atuais: {{count}}",
-      "twitch_demo_command_trophies_response": "🏆 Troféus atuais: {{earned}}/{{total}}"
+      "twitch_demo_command_trophies_response": "🏆 Troféus atuais: {{earned}}/{{total}}",
+      "twitch_demo_ambient_names": ["xX_Sombra_Xx", "pixelqueen", "gg_facil", "sniper_do_mal", "retrofan", "LurkerBob", "cor_da_noite", "ChaosGremlin", "musgo_e_pixels", "tempestade_quieta"],
+      "twitch_demo_ambient_messages": ["VAMOOOO", "pog", "clipa isso", "gg", "jogada insana", "W stream", "quantas mortes já foram?", "kkkkkk", "primeira vez aqui, setup top", "W", "e ai chat", "não acredito", "clutch"]
     },
     "future": {
       "badge": "Mais espaço para evoluir",

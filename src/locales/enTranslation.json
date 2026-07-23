@@ -149,12 +149,12 @@
       "customization_description": "You can now customize the counter completely, including font, shadow, color, font size, counter position, icon size, icon placement, and much more.",
       "customization_screenshot_alt": "Desktop app screenshot showing the full counter customization options",
       "customization_screenshot_alt_2": "Desktop app screenshot showing the trophy counter text in fraction format",
-      "twitch_title": "Live Twitch chat reactions",
-      "twitch_description": "Connect your Twitch account to the StatsCounter bot, and it posts a chat message every time your death or trophy counter goes up. Choose which widgets trigger it and write your own custom messages.",
+      "twitch_title": "Live Twitch & Kick chat reactions",
+      "twitch_description": "Connect your Twitch or Kick account to the StatsCounter bot, and it posts a chat message every time your death or trophy counter goes up. Choose which widgets trigger it and write your own custom messages. Same features on both platforms.",
       "twitch_demo_hint": "Interactive preview only — nothing here is saved or sent to Twitch. Click + on either counter to see it show up in chat.",
       "twitch_demo_death_label": "Deaths",
       "twitch_demo_trophy_label": "Trophies",
-      "twitch_demo_chat_title": "twitch chat",
+      "twitch_demo_chat_title": "chat",
       "twitch_demo_death_message": "💀 Death #{{count}} registered",
       "twitch_demo_trophy_message": "🏆 Trophy unlocked — {{earned}}/{{total}}",
       "twitch_demo_viewer_name": "viewer42",
@@ -162,7 +162,9 @@
       "twitch_demo_chat_send": "Send",
       "twitch_demo_command_hint": "Chat commands are fully customizable in the app — try !deaths or !trophies here.",
       "twitch_demo_command_deaths_response": "💀 Current deaths: {{count}}",
-      "twitch_demo_command_trophies_response": "🏆 Current trophies: {{earned}}/{{total}}"
+      "twitch_demo_command_trophies_response": "🏆 Current trophies: {{earned}}/{{total}}",
+      "twitch_demo_ambient_names": ["xX_Shadow_Xx", "pixelqueen", "gg_easy", "noscope99", "retrofan", "LurkerBob", "nightowl22", "ChaosGremlin", "moss_and_pixels", "quietstorm"],
+      "twitch_demo_ambient_messages": ["LETS GOOOO", "pog", "clip that", "gg", "insane play", "W stream", "how many deaths so far?", "lmaooo", "first time here, nice setup", "W", "hi chat", "no way", "clutch"]
     },
     "future": {
       "badge": "More room to evolve",
