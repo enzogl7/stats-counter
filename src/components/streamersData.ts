@@ -36,4 +36,9 @@ export const streamers: Streamer[] = [
     url: 'https://www.twitch.tv/hossvl',
     avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/011af683-db67-4ec1-a27f-6151323b7053-profile_image-70x70.png',
   },
+  {
+    name: 'Liah',
+    url: 'https://www.youtube.com/@liahfmz',
+    avatar: 'https://yt3.googleusercontent.com/W5M2BiR0h50FzKbNvCut2ba9Y4x9fchAQxpdsMVScYTulR2uXoqOwGUNLrI8qirOR58EtjAE=s160-c-k-c0x00ffffff-no-rj',
+  },
 ];
