@@ -58,7 +58,10 @@ Com apenas um clique, o contador é atualizado automaticamente na live, eliminan
 | Hotkeys globais | ❌ | ✅ |
 | Runtime local | ❌ | ✅ |
 | Atualizações automáticas | ❌ | ✅ |
-| Sincronização PSN | ❌ | ✅ (beta) |
+| Sincronização PSN | ❌ | ✅ |
+| Integração Steam | ❌ | ✅ |
+| Integração Twitch | ❌ | ✅ |
+| Integração Kick | ❌ | ✅ |
 
 ---
 
@@ -76,7 +79,10 @@ O **StatsCounter Desktop** é a versão avançada do projeto, desenvolvida como 
 - Atualizações automáticas
 - Sistema de licenças
 - Melhor integração com OBS
-- Sincronização com PSN (beta)
+- Sincronização com PSN
+- Integração com Steam
+- Integração com Twitch
+- Integração com Kick
 
 ## Download
 
@@ -148,7 +154,10 @@ With a single click, counters update instantly during live broadcasts.
 | Global hotkeys | ❌ | ✅ |
 | Local runtime | ❌ | ✅ |
 | Auto updates | ❌ | ✅ |
-| PSN Sync | ❌ | ✅ (beta) |
+| PSN Sync | ❌ | ✅ |
+| Steam Integration | ❌ | ✅ |
+| Twitch Integration | ❌ | ✅ |
+| Kick Integration | ❌ | ✅ |
 
 ---
 
@@ -166,7 +175,10 @@ With a single click, counters update instantly during live broadcasts.
 - Automatic updates
 - License system
 - Better OBS integration
-- PSN synchronization (beta)
+- PSN synchronization
+- Steam integration
+- Twitch integration
+- Kick integration
 
 ## Download
 
