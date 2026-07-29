@@ -10,6 +10,14 @@ const CHAT_SENDER = 'StatsCounter';
 const CHAT_SENDER_COLOR = '#a970ff';
 const VIEWER_COLOR = '#2f9cff';
 const TROPHY_TOTAL = 5;
+// ponytail: fixed demo trophies, mirrors real RetroAchievements-style name + rarity% messages
+const DEMO_TROPHIES = [
+  { name: 'First Steps', rarity: '42.1' },
+  { name: 'Shadow of the Colossus', rarity: '18.7' },
+  { name: 'No Hit Run', rarity: '3.2' },
+  { name: 'Speedrunner', rarity: '1.1' },
+  { name: 'Elden Lord', rarity: '0.4' }
+];
 const MAX_DEATHS = 5;
 const CLICK_COOLDOWN_MS = 350;
 const AMBIENT_COLORS = ['#2f9cff', '#ff6b6b', '#ffb703', '#06d6a0', '#f72585', '#8ecae6'];
@@ -92,7 +100,8 @@ const TwitchChatDemoCard: React.FC = () => {
     if (trophies >= TROPHY_TOTAL) return;
     const newVal = trophies + 1;
     setTrophies(newVal);
-    postMessage(CHAT_SENDER, CHAT_SENDER_COLOR, t('desktop_app_landing.current_features.twitch_demo_trophy_message', { earned: newVal, total: TROPHY_TOTAL }));
+    const trophy = DEMO_TROPHIES[newVal - 1];
+    postMessage(CHAT_SENDER, CHAT_SENDER_COLOR, t('desktop_app_landing.current_features.twitch_demo_trophy_message', { earned: newVal, total: TROPHY_TOTAL, name: trophy.name, rarity: trophy.rarity }));
   });
 
   const [chatInput, setChatInput] = useState('');

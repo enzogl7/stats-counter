@@ -12,6 +12,7 @@ import {
   faEnvelope,
   faGamepad,
   faKeyboard,
+  faMedal,
   faTrophy,
   faWandMagicSparkles
 } from '@fortawesome/free-solid-svg-icons';
@@ -462,6 +463,12 @@ const DesktopAppLanding: React.FC = () => {
                   >
                     STEAM
                   </span>
+                  <span
+                    className="rounded-full px-2.5 py-0.5 font-mono text-[9px] font-bold uppercase tracking-[0.16em]"
+                    style={{ background: 'var(--bg-2)', border: '1px solid var(--line-2)', color: '#ffcc00' }}
+                  >
+                    RETROACHIEVEMENTS
+                  </span>
                 </div>
               </div>
 
@@ -476,7 +483,7 @@ const DesktopAppLanding: React.FC = () => {
                 {t('desktop_app_landing.current_features.platform_sync_description')}
               </p>
 
-              <div className="mt-5 grid gap-3 sm:grid-cols-2">
+              <div className="mt-5 grid gap-3 sm:grid-cols-3">
                 <div className="rounded-lg p-4" style={{ background: 'var(--bg-2)', border: '1px solid var(--line-2)' }}>
                   <div className="flex items-center gap-2">
                     <FontAwesomeIcon icon={faTrophy} style={{ color: 'var(--plat)', fontSize: '0.875rem' }} />
@@ -493,6 +500,15 @@ const DesktopAppLanding: React.FC = () => {
                   </div>
                   <p className="mt-2 text-sm" style={{ color: 'var(--ink-3)', lineHeight: 1.7 }}>
                     {t('desktop_app_landing.current_features.steam_sync_description')}
+                  </p>
+                </div>
+                <div className="rounded-lg p-4" style={{ background: 'var(--bg-2)', border: '1px solid var(--line-2)' }}>
+                  <div className="flex items-center gap-2">
+                    <FontAwesomeIcon icon={faMedal} style={{ color: '#ffcc00', fontSize: '0.875rem' }} />
+                    <span className="font-mono text-[10px] font-bold uppercase tracking-[0.14em]" style={{ color: '#ffcc00' }}>RETROACHIEVEMENTS</span>
+                  </div>
+                  <p className="mt-2 text-sm" style={{ color: 'var(--ink-3)', lineHeight: 1.7 }}>
+                    {t('desktop_app_landing.current_features.retroachievements_sync_description')}
                   </p>
                 </div>
               </div>

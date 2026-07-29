@@ -76,6 +76,12 @@ const DesktopAppBanner: React.FC = () => {
               </span>
               <span
                 className="inline-flex items-center rounded-full px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-[0.14em]"
+                style={{ background: 'rgba(255,204,0,0.12)', border: '1px solid rgba(255,204,0,0.4)', color: '#ffcc00' }}
+              >
+                RETROACHIEVEMENTS
+              </span>
+              <span
+                className="inline-flex items-center rounded-full px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-[0.14em]"
                 style={{ background: 'rgba(145,70,255,0.12)', border: '1px solid rgba(145,70,255,0.35)', color: '#a970ff' }}
               >
                 TWITCH
