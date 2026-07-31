@@ -12,9 +12,12 @@ const Footer: React.FC = () => {
         <p>{t('feedback')} <a href="https://forms.gle/RkcfsdbdWv2tNT2Z9" className="underline hover:text-white">Google Forms</a></p>
         <p className="mt-2">&copy; {new Date().getFullYear()} StatsCounter. {t('copyright')}</p>
         <p>v1.1.0</p>
-      <div className="relative inline-block mt-1">
+      <div className="relative inline-flex items-center gap-4 mt-1">
       <a href="https://github.com/enzogl7/stats-counter" target="_blank" className="text-3xl text-white hover:text-zinc-300" title="GitHub project">
         <i className="fa fa-github"></i>
+      </a>
+      <a href="https://www.instagram.com/statscounter.pro/" target="_blank" className="text-3xl text-white hover:text-zinc-300" title="Instagram">
+        <i className="fa fa-instagram"></i>
       </a>
     </div>
       </div>
