@@ -29,6 +29,7 @@ import Footer from './Footer';
 import TwitchChatDemoCard from './TwitchChatDemoCard';
 import StreamersCarousel from './StreamersCarousel';
 import { streamers } from './streamersData';
+import { GiveawayCard } from './GiveawayBanner';
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
@@ -339,6 +340,8 @@ const DesktopAppLanding: React.FC = () => {
       </motion.header>
 
       <main className="relative mx-auto max-w-5xl px-5 py-10">
+
+        <GiveawayCard />
 
         {/* ── Hero ── */}
         <section className="mt-6 grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
