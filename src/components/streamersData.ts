@@ -46,4 +46,9 @@ export const streamers: Streamer[] = [
     url: 'https://www.youtube.com/@odash1',
     avatar: 'https://yt3.googleusercontent.com/dpLvantFcFN4bmi4i_hkwkG0RjDIQcUTbp_vV6fgdqFcLgqKnDcswXs4pN8IX1tWUd2az_Nt=s160-c-k-c0x00ffffff-no-rj',
   },
+  {
+    name: 'shuunz',
+    url: 'https://www.twitch.tv/shuunz',
+    avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/36697a00-c5cf-4a0c-9c3c-b28619a965fd-profile_image-70x70.png',
+  },
 ];
