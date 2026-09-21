@@ -51,4 +51,9 @@ export const streamers: Streamer[] = [
     url: 'https://www.twitch.tv/shuunz',
     avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/36697a00-c5cf-4a0c-9c3c-b28619a965fd-profile_image-70x70.png',
   },
+  {
+    name: 'Alinho',
+    url: 'https://www.youtube.com/@alinho27rs',
+    avatar: 'https://yt3.googleusercontent.com/W3usz9jny3_g7oxTdaGe8Oo3shgiU2PNqD3gg19TPT73k_0LiCGKFCXZ4ZJ5Byb_HRwX2YsY7w=s160-c-k-c0x00ffffff-no-rj',
+  },
 ];
