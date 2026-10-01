@@ -103,7 +103,6 @@ const StreamersCarousel: React.FC<StreamersCarouselProps> = ({ streamers }) => {
               src={streamer.avatar}
               alt={streamer.name}
               className="h-24 w-24 rounded-full object-cover"
-              style={{ border: '1px solid var(--line-2)' }}
               loading="lazy"
             />
             <span
@@ -122,8 +121,7 @@ const StreamersCarousel: React.FC<StreamersCarouselProps> = ({ streamers }) => {
             type="button"
             onClick={() => scrollBy(-SCROLL_AMOUNT)}
             aria-label="Previous"
-            className="absolute -left-3 top-1/2 hidden -translate-y-1/2 h-8 w-8 items-center justify-center rounded-full text-xs sm:flex"
-            style={{ background: 'rgba(10,13,22,0.72)', border: '1px solid var(--line-2)', color: 'var(--ink-3)', backdropFilter: 'blur(6px)' }}
+            className="dal-nav-btn absolute -left-3 top-1/2 hidden -translate-y-1/2 h-8 w-8 items-center justify-center rounded-full text-xs sm:flex"
           >
             <FontAwesomeIcon icon={faChevronLeft} />
           </button>
@@ -131,8 +129,7 @@ const StreamersCarousel: React.FC<StreamersCarouselProps> = ({ streamers }) => {
             type="button"
             onClick={() => scrollBy(SCROLL_AMOUNT)}
             aria-label="Next"
-            className="absolute -right-3 top-1/2 hidden -translate-y-1/2 h-8 w-8 items-center justify-center rounded-full text-xs sm:flex"
-            style={{ background: 'rgba(10,13,22,0.72)', border: '1px solid var(--line-2)', color: 'var(--ink-3)', backdropFilter: 'blur(6px)' }}
+            className="dal-nav-btn absolute -right-3 top-1/2 hidden -translate-y-1/2 h-8 w-8 items-center justify-center rounded-full text-xs sm:flex"
           >
             <FontAwesomeIcon icon={faChevronRight} />
           </button>

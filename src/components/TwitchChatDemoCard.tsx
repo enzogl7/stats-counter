@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleInfo, faComment } from '@fortawesome/free-solid-svg-icons';
+import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 import { motion, AnimatePresence } from 'framer-motion';
 import DeathIcon from '../assets/death-icon.png';
 import PlatIcon from '../assets/plat-icon.png';
@@ -123,42 +123,38 @@ const TwitchChatDemoCard: React.FC = () => {
   });
 
   return (
-    <motion.div
-      className="dal-feature-card rounded-xl p-6"
-      style={{ background: 'var(--bg-3)', border: '1px solid var(--line)' }}
-      whileHover={{ y: -3, transition: { duration: 0.22, ease: [0.22, 1, 0.36, 1] } }}
-    >
+    <div className="dal-glass-card">
       <div className="flex items-center justify-between gap-2">
-        <span className="font-mono text-[11px] font-medium" style={{ color: 'var(--ink-4)' }}>02</span>
+        <span className="dal-mono text-[11px]" style={{ color: 'var(--ink-4)' }}>02</span>
         <span
-          className="rounded-full px-2.5 py-0.5 font-mono text-[9px] font-bold uppercase tracking-[0.16em]"
-          style={{ background: 'rgba(145,70,255,0.12)', border: '1px solid rgba(145,70,255,0.35)', color: '#a970ff' }}
+          className="dal-chip"
+          style={{ background: 'rgba(145,70,255,0.12)', borderColor: 'rgba(145,70,255,0.35)', color: '#a970ff' }}
         >
           TWITCH & KICK
         </span>
       </div>
 
-      <div className="mt-4 flex items-center gap-2.5">
-        <FontAwesomeIcon icon={faComment} style={{ color: '#a970ff', fontSize: '1rem', flexShrink: 0 }} />
-        <h3 className="font-semibold leading-snug" style={{ color: 'var(--ink)', fontSize: '0.9375rem' }}>
-          {t('desktop_app_landing.current_features.twitch_title')}
-        </h3>
-      </div>
+      <h3 className="dal-h3 mt-4">
+        {t('desktop_app_landing.current_features.twitch_title')}
+      </h3>
 
-      <p className="mt-3 text-sm" style={{ color: 'var(--ink-2)', lineHeight: 1.75 }}>
+      <p className="mt-2.5 text-sm" style={{ color: 'var(--ink-2)', lineHeight: 1.75 }}>
         {t('desktop_app_landing.current_features.twitch_description')}
       </p>
 
       <div className="mt-5 grid gap-4 sm:grid-cols-2">
         {/* Counter templates */}
         <div className="flex flex-col gap-3">
-          <div className="rounded-lg p-4 text-center" style={{ background: 'var(--bg-2)', border: '1px solid var(--line-2)' }}>
-            <p className="mb-2 text-xs font-medium" style={{ color: 'var(--ink-3)' }}>
+          <div className="dal-sub-card text-center">
+            <p className="dal-display mb-2.5 text-lg tracking-[0.08em]" style={{ color: 'var(--ink-3)' }}>
               {t('desktop_app_landing.current_features.twitch_demo_death_label')}
             </p>
-            <div className="mx-auto mb-3 flex h-16 w-32 items-center justify-center gap-2 rounded-full bg-zinc-800">
+            <div
+              className="mx-auto mb-3 flex h-16 w-[150px] items-center justify-center gap-2.5 rounded-full"
+              style={{ background: 'var(--field)', border: '1px solid var(--line-accent)', boxShadow: '0 0 26px var(--line-accent)' }}
+            >
               <img src={DeathIcon} alt="" className="h-7 w-7 object-contain" />
-              <motion.span key={deaths} initial={{ scale: 1 }} animate={{ scale: [1.05, 0.95, 1] }} transition={{ duration: 0.3 }} className="text-2xl font-bold text-red-400">
+              <motion.span key={deaths} initial={{ scale: 1 }} animate={{ scale: [1, 1.18, 1] }} transition={{ duration: 0.42, ease: [0.2, 0.9, 0.25, 1] }} className="dal-display inline-block text-[30px] leading-none tracking-[0.03em] text-white" style={{ textShadow: '0 0 14px var(--text-glow)' }}>
                 {deaths}
               </motion.span>
             </div>
@@ -167,7 +163,8 @@ const TwitchChatDemoCard: React.FC = () => {
                 type="button"
                 disabled={onCooldown}
                 onClick={() => withCooldown(() => setDeaths((d) => Math.max(0, d - 1)))}
-                className="rounded-lg bg-red-600 px-3 py-1.5 text-sm font-semibold text-white transition hover:bg-red-700 disabled:cursor-not-allowed disabled:opacity-50"
+                className="dal-counter-btn min-w-9.5 rounded-[10px] px-3 py-1.5 text-sm font-bold text-white disabled:cursor-not-allowed disabled:opacity-50"
+                style={{ background: 'var(--dec)' }}
               >
                 -
               </button>
@@ -175,20 +172,24 @@ const TwitchChatDemoCard: React.FC = () => {
                 type="button"
                 disabled={onCooldown}
                 onClick={increaseDeaths}
-                className="rounded-lg bg-green-600 px-3 py-1.5 text-sm font-semibold text-white transition hover:bg-green-700 disabled:cursor-not-allowed disabled:opacity-50"
+                className="dal-counter-btn min-w-9.5 rounded-[10px] px-3 py-1.5 text-sm font-bold disabled:cursor-not-allowed disabled:opacity-50"
+                style={{ background: 'var(--inc)', color: 'var(--inc-ink)' }}
               >
                 +
               </button>
             </div>
           </div>
 
-          <div className="rounded-lg p-4 text-center" style={{ background: 'var(--bg-2)', border: '1px solid var(--line-2)' }}>
-            <p className="mb-2 text-xs font-medium" style={{ color: 'var(--ink-3)' }}>
+          <div className="dal-sub-card text-center">
+            <p className="dal-display mb-2.5 text-lg tracking-[0.08em]" style={{ color: 'var(--ink-3)' }}>
               {t('desktop_app_landing.current_features.twitch_demo_trophy_label')}
             </p>
-            <div className="mx-auto mb-3 flex h-16 w-32 items-center justify-center gap-2 rounded-full bg-zinc-800">
+            <div
+              className="mx-auto mb-3 flex h-16 w-[150px] items-center justify-center gap-2.5 rounded-full"
+              style={{ background: 'var(--field)', border: '1px solid var(--line-accent)', boxShadow: '0 0 26px var(--line-accent)' }}
+            >
               <img src={PlatIcon} alt="" className="h-7 w-7 object-contain" />
-              <motion.span key={trophies} initial={{ scale: 1 }} animate={{ scale: [1.05, 0.95, 1] }} transition={{ duration: 0.3 }} className="text-xl font-bold text-white">
+              <motion.span key={trophies} initial={{ scale: 1 }} animate={{ scale: [1, 1.18, 1] }} transition={{ duration: 0.42, ease: [0.2, 0.9, 0.25, 1] }} className="dal-display inline-block text-[30px] leading-none tracking-[0.03em] text-white" style={{ textShadow: '0 0 14px var(--text-glow)' }}>
                 {trophies} / {TROPHY_TOTAL}
               </motion.span>
             </div>
@@ -197,7 +198,8 @@ const TwitchChatDemoCard: React.FC = () => {
                 type="button"
                 disabled={onCooldown}
                 onClick={() => withCooldown(() => setTrophies((tr) => Math.max(0, tr - 1)))}
-                className="rounded-lg bg-red-600 px-3 py-1.5 text-sm font-semibold text-white transition hover:bg-red-700 disabled:cursor-not-allowed disabled:opacity-50"
+                className="dal-counter-btn min-w-9.5 rounded-[10px] px-3 py-1.5 text-sm font-bold text-white disabled:cursor-not-allowed disabled:opacity-50"
+                style={{ background: 'var(--dec)' }}
               >
                 -
               </button>
@@ -205,7 +207,8 @@ const TwitchChatDemoCard: React.FC = () => {
                 type="button"
                 disabled={onCooldown}
                 onClick={increaseTrophies}
-                className="rounded-lg bg-green-600 px-3 py-1.5 text-sm font-semibold text-white transition hover:bg-green-700 disabled:cursor-not-allowed disabled:opacity-50"
+                className="dal-counter-btn min-w-9.5 rounded-[10px] px-3 py-1.5 text-sm font-bold disabled:cursor-not-allowed disabled:opacity-50"
+                style={{ background: 'var(--inc)', color: 'var(--inc-ink)' }}
               >
                 +
               </button>
@@ -215,12 +218,12 @@ const TwitchChatDemoCard: React.FC = () => {
 
         {/* Twitch chat mock */}
         <div
-          className="flex h-full min-h-72 flex-col overflow-hidden rounded-lg"
+          className="flex h-full min-h-72 flex-col overflow-hidden rounded-2xl"
           style={{ border: '1px solid var(--line-2)', contain: 'size' }}
         >
           <div className="flex items-center gap-2 px-3 py-2" style={{ background: '#18181b' }}>
             <span className="h-2 w-2 rounded-full" style={{ background: '#a970ff' }} />
-            <span className="font-mono text-[11px] font-semibold uppercase tracking-wider text-zinc-300">
+            <span className="dal-mono text-[11px] font-semibold uppercase tracking-[0.06em] text-zinc-300">
               {t('desktop_app_landing.current_features.twitch_demo_chat_title')}
             </span>
           </div>
@@ -239,7 +242,7 @@ const TwitchChatDemoCard: React.FC = () => {
                     initial={{ opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.25 }}
-                    className="rounded-md px-1.5 py-1 text-sm leading-snug wrap-break-word"
+                    className="rounded-md px-1.5 py-1 text-sm leading-[1.4] wrap-break-word"
                     style={isBot ? { background: 'rgba(169,112,255,0.12)', border: '1px solid rgba(169,112,255,0.3)' } : undefined}
                   >
                     <span className="font-semibold" style={{ color: m.color }}>
@@ -283,7 +286,7 @@ const TwitchChatDemoCard: React.FC = () => {
         <FontAwesomeIcon icon={faCircleInfo} />
         {t('desktop_app_landing.current_features.twitch_demo_command_hint')}
       </p>
-    </motion.div>
+    </div>
   );
 };
 

@@ -177,6 +177,17 @@
       "customization_title": "More widget customization",
       "customization_description": "The goal is to expand both the visual and functional possibilities of the widgets with much more freedom than the browser allows."
     },
+    "gta_theme": {
+      "countdown_title": "See you in Vice City in:",
+      "title_1": "Going for the platinum in ",
+      "title_accent": "GTA 6?",
+      "description": "We're already in the mood.",
+      "screenshot_alt": "Screenshot of the app with the GTA VI theme",
+      "countdown_days": "days",
+      "countdown_hours": "hours",
+      "countdown_minutes": "min",
+      "countdown_seconds": "sec"
+    },
     "streamers": {
       "section_title_1": "Streamers who ",
       "section_title_accent": "already",
