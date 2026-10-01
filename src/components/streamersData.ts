@@ -12,6 +12,11 @@ export const streamers: Streamer[] = [
     avatar: 'https://yt3.googleusercontent.com/c_vXwaB8UbWvFgaE_z-6kwb-HJvNQv5SOeHuiXqYDXVHXaELAHpvWte9NPxLGRMwo1PzpgV4=s160-c-k-c0x00ffffff-no-rj',
   },
   {
+    name: 'O Platinas',
+    url: 'https://www.youtube.com/@oPlatinas',
+    avatar: 'https://yt3.googleusercontent.com/H4Xn51vzhgqRLM0SB6i0-x932jcNgWpgUIbExhC-Tdb8pcVfGuKi5eQptHDXHJdEGKG-410ucw=s160-c-k-c0x00ffffff-no-rj',
+  },
+  {
     name: 'Rutz',
     url: 'https://www.youtube.com/@mateus_rutz',
     avatar: 'https://yt3.googleusercontent.com/X0GEfUwJ2Ny9zxqQ_wR3KCA9PIXa3TSqJtA2_XhkpdpbSI573qLx1djcBru5xs7PiPrctB-CPvc=s160-c-k-c0x00ffffff-no-rj',
