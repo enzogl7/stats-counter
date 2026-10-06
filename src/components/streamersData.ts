@@ -61,4 +61,9 @@ export const streamers: Streamer[] = [
     url: 'https://www.youtube.com/@alinho27rs',
     avatar: 'https://yt3.googleusercontent.com/W3usz9jny3_g7oxTdaGe8Oo3shgiU2PNqD3gg19TPT73k_0LiCGKFCXZ4ZJ5Byb_HRwX2YsY7w=s160-c-k-c0x00ffffff-no-rj',
   },
+  {
+    name: 'vitão',
+    url: 'https://www.youtube.com/@vitao_platina',
+    avatar: 'https://yt3.googleusercontent.com/Tr0URv1QFv8_0-iB4V7uXEHYoyTwR2Emo2Kgl6fmjOFg_dbh5hu8v0kVDCdi_La7rJ9EkbDQ8A=s160-c-k-c0x00ffffff-no-rj',
+  },
 ];
