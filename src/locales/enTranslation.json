@@ -148,7 +148,7 @@
       "timer_description": "Track how long it took you to move from one trophy to the next and display the date of the latest trophy directly on the widget.",
       "timer_screenshot_alt": "Desktop app screenshot showing the trophy widget timer",
       "customization_title": "Full counter customization",
-      "customization_description": "You can now customize the counter completely, including font, shadow, color, font size, counter position, icon size, icon placement, and much more.",
+      "customization_description": "You can now customize the counter completely, including font, shadow, color, font size, counter position, icon size, icon placement, and much more. You can also upload your own images or GIFs as the trophy and death icons, and choose the trophy counter text style: inline (default), fraction, progress bar, or percentage.",
       "customization_screenshot_alt": "Desktop app screenshot showing the full counter customization options",
       "customization_screenshot_alt_2": "Desktop app screenshot showing the trophy counter text in fraction format",
       "twitch_title": "Live Twitch & Kick chat reactions",
