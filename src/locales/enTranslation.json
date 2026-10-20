@@ -99,6 +99,7 @@
     "learn_more": "Learn more",
     "cta": "Learn more"
   },
+  "new_badge": "NEW",
   "desktop_app_landing": {
     "back_home": "Back to home",
     "badge": "Desktop app available",
@@ -151,6 +152,9 @@
       "customization_description": "You can now customize the counter completely, including font, shadow, color, font size, counter position, icon size, icon placement, and much more. You can also upload your own images or GIFs as the trophy and death icons, and choose the trophy counter text style: inline (default), fraction, progress bar, or percentage.",
       "customization_screenshot_alt": "Desktop app screenshot showing the full counter customization options",
       "customization_screenshot_alt_2": "Desktop app screenshot showing the trophy counter text in fraction format",
+      "steam_banner_title": "Steam achievement banner",
+      "steam_banner_alt": "Desktop app GIF showing the Steam achievement banner appearing in OBS",
+      "steam_banner_description": "No more dull notifications. The banner is synced with your Steam account and works with any game in your library: every time you unlock an achievement, an animated banner slides into your stream to show chat what you just earned, with the sound and animation you choose.",
       "twitch_title": "Live Twitch & Kick chat reactions",
       "twitch_description": "Connect your Twitch or Kick account to the StatsCounter bot, and it posts a chat message every time your death or trophy counter goes up. Choose which widgets trigger it and write your own custom messages. Same features on both platforms.",
       "twitch_demo_hint": "Interactive preview only — nothing here is saved or sent to Twitch. Click + on either counter to see it show up in chat.",

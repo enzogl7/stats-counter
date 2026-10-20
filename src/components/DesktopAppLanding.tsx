@@ -19,10 +19,12 @@ import desktopPrintFrame from '../assets/print-desktop-frame.jpeg';
 import personalizationEn from '../assets/personalizacao-en.png';
 import personalizationPt from '../assets/personalizacao-pt.png';
 import trophiesText2 from '../assets/trophies-text-2.png';
+import steamBannerGif from '../assets/steam-banner.gif';
 import gtaviEn from '../assets/gtavi-en.jpeg';
 import gtaviPt from '../assets/gtavi-pt.jpeg';
 import Footer from './Footer';
 import TwitchChatDemoCard from './TwitchChatDemoCard';
+import NewBadge from './NewBadge';
 import StreamersCarousel from './StreamersCarousel';
 import { streamers } from './streamersData';
 import { GiveawayCard } from './GiveawayBanner';
@@ -375,6 +377,15 @@ const DesktopAppLanding: React.FC = () => {
         t('desktop_app_landing.current_features.customization_screenshot_alt'),
         t('desktop_app_landing.current_features.customization_screenshot_alt_2'),
       ],
+    },
+    {
+      index: '06',
+      title: t('desktop_app_landing.current_features.steam_banner_title'),
+      description: t('desktop_app_landing.current_features.steam_banner_description'),
+      chip: 'STEAM',
+      isNew: true,
+      image: steamBannerGif,
+      alt: t('desktop_app_landing.current_features.steam_banner_alt')
     }
   ];
 
@@ -593,10 +604,11 @@ const DesktopAppLanding: React.FC = () => {
             {currentFeatures.map((feature, i) => (
               <motion.div
                 key={feature.title}
-                className="dal-glass-card"
+                className="dal-glass-card relative"
                 {...fadeUpView((i + 1) * 0.08)}
                 whileHover={{ y: -3, transition: { duration: 0.22, ease: EASE } }}
               >
+                {feature.isNew && <NewBadge />}
                 <div className="flex items-center justify-between gap-2">
                   <span className="dal-mono text-[11px]" style={{ color: 'var(--ink-4)' }}>
                     {feature.index}
@@ -630,7 +642,7 @@ const DesktopAppLanding: React.FC = () => {
                       onClick={() => openImagePreview(feature.image!, feature.alt!)}
                       className="dal-preview-btn block w-full overflow-hidden rounded-[10px]"
                     >
-                      <img src={feature.image} alt={feature.alt} className="w-full rounded-[10px] object-cover" />
+                      <img src={feature.image} alt={feature.alt} loading="lazy" className="w-full rounded-[10px] object-cover" />
                     </button>
                   </div>
                 )}
