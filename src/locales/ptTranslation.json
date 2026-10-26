@@ -89,8 +89,8 @@
   },
   "desktop_app_notice": {
     "badge": "Já disponível",
-    "title": "O app desktop do Stats Counter chegou",
-    "description": "Agora você pode levar o Stats Counter para o desktop e usar hotkeys mesmo com o app minimizado ou enquanto estiver em outra janela.",
+    "title": "O app desktop do StatsCounter chegou",
+    "description": "Agora você pode levar o StatsCounter para o desktop e usar hotkeys mesmo com o app minimizado ou enquanto estiver em outra janela.",
     "complement": "Além da praticidade no controle da live, essa nova versão também abre espaço para recursos avançados como personalização total do widget e muitas outras novidades.",
     "banner_text": "O app desktop chegou: hotkeys globais, personalização total e sincronização direta com PSN, Steam, RetroAchievements, Twitch e Kick.",
     "highlight_hotkeys": "Hotkeys funcionando mesmo com o app minimizado e com você em outra janela.",
@@ -104,10 +104,57 @@
     "back_home": "Voltar para a página inicial",
     "badge": "Desktop App disponível",
     "title": "Menos limitações do navegador. Mais controle real da sua live.",
-    "title_1": "Menos limitações do navegador. Mais ",
-    "title_accent": "controle real",
-    "title_2": " da sua live.",
-    "description": "O Stats Counter Desktop foi feito para quem usa o contador de verdade e quer uma experiência mais prática, mais confiável e pronta para evoluir muito além da versão web.",
+    "title_1": "Contador de troféus ",
+    "title_accent": "automático",
+    "title_2": " para OBS.",
+    "description": "Conecte sua conta da PSN, Steam ou RetroAchievements e o StatsCounter Desktop atualiza o contador da sua live sozinho a cada troféu ou conquista, mesmo com o app minimizado.",
+    "seo": {
+      "title": "Contador de Troféus Automático para OBS | PSN, Steam e RetroAchievements",
+      "description": "App para Windows e Linux que sincroniza com PSN (PS5 e PS4), Steam e RetroAchievements e atualiza sozinho o contador de troféus e conquistas da sua live no OBS.",
+      "keywords": "contador de troféus automático, trophy tracker OBS, rastreador de troféus PS5, contador de troféus PSN OBS, contador de conquistas Steam OBS, banner de conquista Steam OBS, RetroAchievements OBS, contador de platina OBS, stats counter desktop"
+    },
+    "video": {
+      "title_1": "Veja ",
+      "title_accent": "funcionando",
+      "title_2": " na prática.",
+      "description": "Tutorial completo do contador de mortes e troféus automático no OBS, com integração com PlayStation, Steam, Twitch e Kick.",
+      "iframe_title": "Contador de morte e troféu automático no OBS com StatsCounter Desktop"
+    },
+    "faq": {
+      "title_1": "Perguntas ",
+      "title_accent": "frequentes",
+      "title_2": "",
+      "items": [
+        {
+          "q": "Como contar troféus da PS5 automaticamente no OBS?",
+          "a": "Conecte sua conta da PSN no StatsCounter Desktop, escolha o jogo e adicione o widget no OBS. Cada troféu de bronze, prata, ouro ou platina que você ganhar atualiza o contador sozinho, sem comandos no chat e sem precisar de placa de captura."
+        },
+        {
+          "q": "Funciona com conquistas da Steam?",
+          "a": "Sim. Conecte sua conta da Steam para acompanhar as conquistas de qualquer jogo da sua biblioteca. Você também pode exibir na live um banner animado e 100% editável toda vez que desbloquear uma conquista."
+        },
+        {
+          "q": "Funciona com PS4 e jogos retrô?",
+          "a": "Sim. A sincronização com a PSN acompanha os troféus da sua conta, de PS5 e PS4. Para jogos retrô e emuladores, conecte sua conta do RetroAchievements."
+        },
+        {
+          "q": "Como contar mortes na live sem tirar a mão do controle?",
+          "a": "Defina hotkeys globais no StatsCounter Desktop: elas funcionam mesmo com o jogo em tela cheia e o app minimizado, então cada morte entra no contador do OBS com um atalho, sem trocar de janela. Os espectadores conferem o total a qualquer momento com !mortes."
+        },
+        {
+          "q": "Preciso deixar o navegador aberto?",
+          "a": "Não. O app roda no Windows e no Linux e continua sincronizando e respondendo às hotkeys globais mesmo minimizado."
+        },
+        {
+          "q": "Funciona com o chat da Twitch e da Kick?",
+          "a": "Sim. O bot do StatsCounter envia uma mensagem no chat toda vez que o contador de mortes ou de troféus aumentar, e você personaliza as mensagens do seu jeito. Os espectadores também podem digitar comandos como !mortes ou !trofeus para o bot responder na hora com a contagem atual da live, e os comandos também são personalizáveis."
+        },
+        {
+          "q": "Quanto custa o app desktop?",
+          "a": "O acesso é liberado para quem apoia o projeto com R$ 20 ou mais (ou US$ 20 no Buy Me a Coffee). É vitalício: você paga uma vez e recebe todas as atualizações futuras."
+        }
+      ]
+    },
     "download_windows": "Baixar pra Windows",
     "download_linux": "Baixar pra Linux",
     "version_meta": "v0.4.2 · 12 ABR · ~28MB",
@@ -193,7 +240,7 @@
     "streamers": {
       "section_title_1": "Streamers que ",
       "section_title_accent": "já",
-      "section_title_2": " usam o Stats Counter.",
+      "section_title_2": " usam o StatsCounter.",
       "section_description": "Alguns dos criadores que usam o contador ao vivo nas suas lives.",
       "contact_note": "Quer ter seu canal aqui? Entre em contato pelo"
     }

@@ -89,8 +89,8 @@
   },
   "desktop_app_notice": {
     "badge": "Now available",
-    "title": "The Stats Counter desktop app has arrived",
-    "description": "You can now bring Stats Counter to the desktop and use hotkeys even while the app is minimized or while you are working in another window.",
+    "title": "The StatsCounter desktop app has arrived",
+    "description": "You can now bring StatsCounter to the desktop and use hotkeys even while the app is minimized or while you are working in another window.",
     "complement": "Alongside more practical stream control, this release also opens the door for advanced features like full widget customization and many more additions.",
     "banner_text": "The desktop app is here: global hotkeys, full customization, and direct sync with PSN, Steam, RetroAchievements, Twitch, and Kick.",
     "highlight_hotkeys": "Hotkeys working even while the app is minimized and you are in another window.",
@@ -104,10 +104,57 @@
     "back_home": "Back to home",
     "badge": "Desktop app available",
     "title": "Less browser limitation. More real control over your stream.",
-    "title_1": "Less browser limitation. More ",
-    "title_accent": "real control",
-    "title_2": " over your stream.",
-    "description": "Stats Counter Desktop is built for people who actually use the counter and want a more practical, more reliable experience that can grow far beyond the web version.",
+    "title_1": "The ",
+    "title_accent": "automatic",
+    "title_2": " trophy counter for OBS.",
+    "description": "Connect your PSN, Steam or RetroAchievements account and StatsCounter Desktop updates your stream's counter on its own with every trophy or achievement, even while minimized.",
+    "seo": {
+      "title": "Automatic Trophy Counter for OBS | PSN, Steam & RetroAchievements",
+      "description": "Windows and Linux app that syncs with PSN (PS5 and PS4), Steam and RetroAchievements and automatically updates the trophy and achievement counter on your OBS stream.",
+      "keywords": "automatic trophy counter, trophy tracker OBS, PS5 trophy tracker, PSN trophy counter OBS, Steam achievement counter OBS, Steam achievement banner OBS, RetroAchievements OBS, platinum tracker OBS, stats counter desktop"
+    },
+    "video": {
+      "title_1": "See it ",
+      "title_accent": "in action",
+      "title_2": "",
+      "description": "A full walkthrough of the automatic death and trophy counter in OBS, with PlayStation, Steam, Twitch and Kick integration. Video in Portuguese.",
+      "iframe_title": "Automatic death and trophy counter in OBS with StatsCounter Desktop"
+    },
+    "faq": {
+      "title_1": "Frequently asked ",
+      "title_accent": "questions",
+      "title_2": "",
+      "items": [
+        {
+          "q": "How do I count PS5 trophies automatically in OBS?",
+          "a": "Connect your PSN account in StatsCounter Desktop, pick the game and add the widget to OBS. Every bronze, silver, gold or platinum trophy you earn updates the counter on its own, with no chat commands and no capture card needed."
+        },
+        {
+          "q": "Does it work with Steam achievements?",
+          "a": "Yes. Connect your Steam account to track achievements for any game in your library. You can also show a fully editable animated banner on stream every time you unlock an achievement."
+        },
+        {
+          "q": "Does it work with PS4 and retro games?",
+          "a": "Yes. PSN sync tracks the trophies on your account, from both PS5 and PS4. For retro games and emulators, connect your RetroAchievements account."
+        },
+        {
+          "q": "How do I count deaths on stream without letting go of the controller?",
+          "a": "Set up global hotkeys in StatsCounter Desktop: they work even with your game in fullscreen and the app minimized, so every death hits your OBS counter with a single shortcut, without switching windows. Viewers can check the total anytime with !deaths."
+        },
+        {
+          "q": "Do I need to keep a browser open?",
+          "a": "No. The app runs on Windows and Linux and keeps syncing and responding to global hotkeys even while minimized."
+        },
+        {
+          "q": "Does it work with Twitch and Kick chat?",
+          "a": "Yes. The StatsCounter bot posts a chat message every time your death or trophy counter goes up, and you can write your own custom messages. Viewers can also type commands like !deaths or !trophies and the bot instantly replies with the stream's current count, and the commands are customizable too."
+        },
+        {
+          "q": "How much does the desktop app cost?",
+          "a": "Access is unlocked for supporters who contribute US$ 20 or more on Buy Me a Coffee (or R$ 20 in Brazil). It's lifetime: pay once and get every future update."
+        }
+      ]
+    },
     "download_windows": "Download for Windows",
     "download_linux": "Download for Linux",
     "version_meta": "v0.4.2 · APR 12 · ~28MB",
@@ -196,7 +243,7 @@
     "streamers": {
       "section_title_1": "Streamers who ",
       "section_title_accent": "already",
-      "section_title_2": " use Stats Counter.",
+      "section_title_2": " use StatsCounter.",
       "section_description": "A few of the creators using the counter live on their streams.",
       "contact_note": "Want your channel featured here? Get in touch at"
     }

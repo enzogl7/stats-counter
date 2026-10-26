@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faArrowLeft,
@@ -8,10 +8,10 @@ import {
   faChevronLeft,
   faChevronRight,
   faCircleInfo,
-  faEnvelope
+  faEnvelope,
+  faPlus
 } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
-import i18n from './i18n.ts';
 import logoNova from '../assets/logo-nova.png';
 import desktopPrintEn from '../assets/print-desktop-en.png';
 import desktopPrintPt from '../assets/print-desktop-pt.png';
@@ -89,6 +89,14 @@ const FeatureCardImages: React.FC<{
     </div>
   );
 };
+
+const PLATFORM_CHIPS = [
+  { label: 'PSN', color: '#9bd1ff' },
+  { label: 'STEAM', color: '#66c0f4' },
+  { label: 'RETROACHIEVEMENTS', color: '#ffcc00' },
+];
+
+const YOUTUBE_ID = 'TAJ6pQCgb74';
 
 // GTA VI launch — local midnight, same as the app's countdown.
 const GTA_LAUNCH = new Date(2026, 10, 19).getTime();
@@ -327,12 +335,47 @@ const PAGE_STYLES = `
     transform: translateY(-3px);
   }
   .dal-streamer-name { transition: color 0.2s ease; }
+  .dal-faq { padding: 0; }
+  .dal-faq summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 24px;
+  }
+  .dal-faq summary::-webkit-details-marker { display: none; }
+  .dal-faq summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; border-radius: var(--radius-panel); }
+  .dal-faq-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    font-size: 11px;
+    color: var(--accent-text);
+    background: var(--accent-soft);
+    border: 1px solid var(--line-accent);
+    transition: transform .3s var(--ease);
+  }
+  .dal-faq[open] .dal-faq-icon { transform: rotate(45deg); }
+  .dal-faq[open] { border-color: var(--line-2); }
   .dal-streamer-card:hover .dal-streamer-name { color: var(--accent-text); }
 `;
 
 const DesktopAppLanding: React.FC = () => {
   const { t, i18n } = useTranslation();
-  const isPortuguese = i18n.language.startsWith('pt');
+  // ponytail: language comes from the URL (/desktop-app = pt, /en/desktop-app = en) so each version is indexable on its own.
+  const routeLang = useLocation().pathname.startsWith('/en') ? 'en' : 'pt';
+  const isPortuguese = routeLang === 'pt';
+  // useEffect, not useLayoutEffect: it must run after useTranslation subscribes to languageChanged.
+  useEffect(() => {
+    if (!i18n.language.startsWith(routeLang)) i18n.changeLanguage(routeLang);
+  }, [i18n, routeLang]);
+  const faqItems = t('desktop_app_landing.faq.items', { returnObjects: true }) as { q: string; a: string }[];
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
   const [zoomLevel, setZoomLevel] = useState(1);
 
@@ -442,12 +485,13 @@ const DesktopAppLanding: React.FC = () => {
             style={{ border: '1px solid var(--line-2)', background: 'var(--field)' }}
           >
             {(['pt', 'en'] as const).map((lang) => {
-              const active = i18n.language.startsWith(lang);
+              const active = routeLang === lang;
               return (
-                <button
+                <Link
                   key={lang}
-                  type="button"
-                  onClick={() => i18n.changeLanguage(lang)}
+                  to={lang === 'en' ? '/en/desktop-app' : '/desktop-app'}
+                  hrefLang={lang === 'en' ? 'en' : 'pt-BR'}
+                  aria-current={active ? 'page' : undefined}
                   className="dal-lang-btn px-3 py-1.5"
                   style={{
                     color: active ? 'var(--ink)' : 'var(--ink-4)',
@@ -455,7 +499,7 @@ const DesktopAppLanding: React.FC = () => {
                   }}
                 >
                   {lang.toUpperCase()}
-                </button>
+                </Link>
               );
             })}
           </div>
@@ -469,6 +513,12 @@ const DesktopAppLanding: React.FC = () => {
         {/* ── Hero ── */}
         <section className="mt-6 grid items-center gap-12 lg:grid-cols-2 lg:gap-14">
           <div>
+            <motion.div className="mb-5 flex flex-wrap gap-1.5" {...fadeUp(0.04)}>
+              {PLATFORM_CHIPS.map(({ label, color }) => (
+                <span key={label} className="dal-chip" style={{ color }}>{label}</span>
+              ))}
+            </motion.div>
+
             <motion.h1
               className="dal-display"
               style={{
@@ -544,6 +594,41 @@ const DesktopAppLanding: React.FC = () => {
             </button>
           </motion.div>
         </section>
+
+        {/* ── Video ── */}
+        <motion.section
+          className="dal-glass-card mt-16 grid items-center gap-5 sm:grid-cols-[minmax(0,280px)_1fr] sm:gap-6"
+          {...fadeUpView(0)}
+        >
+          <div className="dal-image-frame overflow-hidden p-1.5">
+            <iframe
+              src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_ID}`}
+              title={t('desktop_app_landing.video.iframe_title')}
+              loading="lazy"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="block aspect-video w-full rounded-[10px]"
+              style={{ border: 0 }}
+            />
+          </div>
+          <div>
+            <span
+              className="dal-chip"
+              style={{ background: 'var(--info-soft)', borderColor: 'var(--info-line)', color: 'var(--info)' }}
+            >
+              YOUTUBE
+            </span>
+            <h2 className="dal-h3 mt-3">
+              {t('desktop_app_landing.video.title_1')}
+              <span className="dal-accent">{t('desktop_app_landing.video.title_accent')}</span>
+              {t('desktop_app_landing.video.title_2')}
+            </h2>
+            <p className="mt-2 text-sm" style={{ color: 'var(--ink-3)', lineHeight: 1.75 }}>
+              {t('desktop_app_landing.video.description')}
+            </p>
+          </div>
+        </motion.section>
 
         {/* ── Current Features ── */}
         <motion.section className="mt-22" {...fadeUpView(0)}>
@@ -850,6 +935,29 @@ const DesktopAppLanding: React.FC = () => {
                 </a>
               </motion.div>
             </div>
+          </div>
+        </motion.section>
+
+        {/* ── FAQ ── */}
+        <motion.section className="mb-16" {...fadeUpView(0)}>
+          <motion.h2 className="dal-h2" {...fadeUpView(0.08)}>
+            {t('desktop_app_landing.faq.title_1')}
+            <span className="dal-accent">{t('desktop_app_landing.faq.title_accent')}</span>
+            {t('desktop_app_landing.faq.title_2')}
+          </motion.h2>
+
+          <div className="mt-8 flex flex-col gap-3">
+            {faqItems.map(({ q, a }, i) => (
+              <motion.details key={q} className="dal-glass-card dal-faq" {...fadeUpView(i * 0.05)}>
+                <summary>
+                  <h3 className="text-[15px] font-semibold leading-snug" style={{ color: 'var(--ink)' }}>{q}</h3>
+                  <span className="dal-faq-icon" aria-hidden="true"><FontAwesomeIcon icon={faPlus} /></span>
+                </summary>
+                <p className="px-6 pb-5 text-sm" style={{ color: 'var(--ink-2)', lineHeight: 1.75, maxWidth: '72ch' }}>
+                  {a}
+                </p>
+              </motion.details>
+            ))}
           </div>
         </motion.section>
 

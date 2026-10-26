@@ -10,7 +10,7 @@ interface NoticeUpdateProps {
 }
 
 const NoticeUpdate: React.FC<NoticeUpdateProps> = ({ onClose }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const NoticeUpdate: React.FC<NoticeUpdateProps> = ({ onClose }) => {
 
   const handleLearnMore = () => {
     onClose();
-    navigate('/desktop-app');
+    navigate(i18n.language.startsWith('pt') ? '/desktop-app' : '/en/desktop-app');
   };
 
   return (

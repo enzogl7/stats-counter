@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://stats-counter-alpha.vercel.app/sitemap.xml
+Sitemap: https://www.statscounter.pro/sitemap.xml

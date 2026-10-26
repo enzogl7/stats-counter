@@ -6,7 +6,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 const DesktopAppBanner: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <div className="mx-auto mb-5 w-full max-w-3xl">
@@ -100,7 +100,7 @@ const DesktopAppBanner: React.FC = () => {
 
           <div className="relative z-10">
             <Link
-            to="/desktop-app"
+            to={i18n.language.startsWith('pt') ? '/desktop-app' : '/en/desktop-app'}
             className="relative z-10 inline-flex items-center justify-center gap-1.5 rounded-full border border-blue-300/30 bg-blue-500/10 px-3.5 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-100 transition hover:border-sky-200/55 hover:bg-blue-500/15 hover:text-white"
             >
               <span className="relative z-10">{t('desktop_app_notice.learn_more')}</span>

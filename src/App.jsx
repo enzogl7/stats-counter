@@ -90,6 +90,7 @@ function App() {
         }
       />
       <Route path="/desktop-app" element={<DesktopAppLanding />} />
+      <Route path="/en/desktop-app" element={<DesktopAppLanding />} />
       <Route path="/widget/:id" element={<WidgetViewer />} />
     </Routes>
   );

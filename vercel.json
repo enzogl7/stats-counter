@@ -1,5 +1,7 @@
 {
   "rewrites": [
+    { "source": "/desktop-app", "destination": "/desktop-app.html" },
+    { "source": "/en/desktop-app", "destination": "/en/desktop-app.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
