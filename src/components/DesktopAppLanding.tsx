@@ -20,6 +20,7 @@ import personalizationEn from '../assets/personalizacao-en.png';
 import personalizationPt from '../assets/personalizacao-pt.png';
 import trophiesText2 from '../assets/trophies-text-2.png';
 import steamBannerGif from '../assets/steam-banner.gif';
+import steamBannerEditor from '../assets/steam-banner-editor.png';
 import gtaviEn from '../assets/gtavi-en.jpeg';
 import gtaviPt from '../assets/gtavi-pt.jpeg';
 import Footer from './Footer';
@@ -384,8 +385,11 @@ const DesktopAppLanding: React.FC = () => {
       description: t('desktop_app_landing.current_features.steam_banner_description'),
       chip: 'STEAM',
       isNew: true,
-      image: steamBannerGif,
-      alt: t('desktop_app_landing.current_features.steam_banner_alt')
+      images: [steamBannerGif, steamBannerEditor],
+      alts: [
+        t('desktop_app_landing.current_features.steam_banner_alt'),
+        t('desktop_app_landing.current_features.steam_banner_alt_2'),
+      ],
     }
   ];
 
