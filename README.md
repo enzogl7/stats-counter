@@ -65,6 +65,7 @@ Na versão web (grátis), você atualiza o contador com um clique ou atalho de t
 | Contador de conquistas automático (Steam) | ❌ | ✅ |
 | Contador de conquistas automático (RetroAchievements) | ❌ | ✅ |
 | Banner de conquista Steam no OBS | ❌ | ✅ |
+| Card de perfil PSN no OBS | ❌ | ✅ |
 | Bot de chat Twitch e Kick (`!mortes`, `!trofeus`) | ❌ | ✅ |
 | Preço | Grátis | Licença vitalícia |
 
@@ -79,10 +80,11 @@ O **StatsCounter Desktop** é um **contador de troféus automático para OBS**, 
 - **Rastreador automático de troféus PS5 e PS4 (PSN):** escolha o jogo e cada troféu de bronze, prata, ouro ou platina entra no widget sozinho.
 - **Contador de conquistas Steam:** acompanha as conquistas de qualquer jogo da biblioteca.
 - **Banner de conquista Steam no OBS:** um banner animado e 100% editável aparece na live a cada conquista desbloqueada.
+- **Card de perfil PSN no OBS:** avatar, nível com anel de progresso, troféus por tipo, número de jogos e o jogo atual, atualizando sozinho e com animação a cada troféu e subida de nível.
 - **RetroAchievements:** conquistas de jogos retrô e emuladores no mesmo contador.
 - **Bot de chat Twitch e Kick:** avisa no chat quando o contador de mortes ou troféus sobe, e responde a `!mortes` e `!trofeus` com a contagem atual. Mensagens e comandos personalizáveis.
 - **Hotkeys globais:** conte mortes sem tirar a mão do controle, com o jogo em tela cheia e o app minimizado.
-- **Cronômetro de troféus:** tempo entre um troféu e outro e data da última conquista no widget.
+- **Cronômetro e último troféu:** tempo entre um troféu e outro, data da última conquista e nome do último troféu com a raridade no widget; cronômetro também no contador de mortes e animação especial ao chegar em 100%.
 - **Personalização total:** fonte, cores, sombra, posição, imagens ou GIFs próprios como ícone e estilo do texto (fração, barra de progresso ou porcentagem).
 - Atualizações automáticas do app.
 
@@ -164,6 +166,7 @@ In the free web version, you update the counter with a click or a keyboard short
 | Automatic achievement counter (Steam) | ❌ | ✅ |
 | Automatic achievement counter (RetroAchievements) | ❌ | ✅ |
 | Steam achievement banner in OBS | ❌ | ✅ |
+| PSN profile card in OBS | ❌ | ✅ |
 | Twitch and Kick chat bot (`!deaths`, `!trophies`) | ❌ | ✅ |
 | Price | Free | Lifetime license |
 
@@ -178,10 +181,11 @@ In the free web version, you update the counter with a click or a keyboard short
 - **Automatic PS5 and PS4 trophy tracker (PSN):** pick the game and every bronze, silver, gold or platinum trophy lands in the widget on its own.
 - **Steam achievement counter:** tracks achievements for any game in your library.
 - **Steam achievement banner in OBS:** a fully editable animated banner shows up on stream every time you unlock an achievement.
+- **PSN profile card in OBS:** avatar, level with a progress ring, trophies by type, game count and current game, updating and animating on its own with every trophy and level-up.
 - **RetroAchievements:** retro and emulator achievements in the same counter.
 - **Twitch and Kick chat bot:** posts in chat when your death or trophy counter goes up, and replies to `!deaths` and `!trophies` with the current count. Messages and commands are customizable.
 - **Global hotkeys:** count deaths without letting go of the controller, with the game fullscreen and the app minimized.
-- **Trophy timer:** time between trophies and date of the last one, right in the widget.
+- **Timer and latest trophy:** time between trophies, date of the last one and the latest trophy name with its rarity, right in the widget; a timer on the death counter too and a special animation when you hit 100%.
 - **Full customization:** font, colors, shadow, position, your own images or GIFs as icons, and text style (fraction, progress bar or percentage).
 - Automatic app updates.
 

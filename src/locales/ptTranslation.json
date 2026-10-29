@@ -102,8 +102,6 @@
   "new_badge": "NOVO",
   "desktop_app_landing": {
     "back_home": "Voltar para a página inicial",
-    "badge": "Desktop App disponível",
-    "title": "Menos limitações do navegador. Mais controle real da sua live.",
     "title_1": "Contador de troféus ",
     "title_accent": "automático",
     "title_2": " para OBS.",
@@ -111,7 +109,7 @@
     "seo": {
       "title": "Contador de Troféus Automático para OBS | PSN, Steam e RetroAchievements",
       "description": "App para Windows e Linux que sincroniza com PSN (PS5 e PS4), Steam e RetroAchievements e atualiza sozinho o contador de troféus e conquistas da sua live no OBS.",
-      "keywords": "contador de troféus automático, trophy tracker OBS, rastreador de troféus PS5, contador de troféus PSN OBS, contador de conquistas Steam OBS, banner de conquista Steam OBS, RetroAchievements OBS, contador de platina OBS, stats counter desktop"
+      "keywords": "contador de troféus automático, trophy tracker OBS, rastreador de troféus PS5, contador de troféus PSN OBS, contador de conquistas Steam OBS, banner de conquista Steam OBS, card de perfil PSN OBS, RetroAchievements OBS, contador de platina OBS, stats counter desktop"
     },
     "video": {
       "title_1": "Veja ",
@@ -155,11 +153,6 @@
         }
       ]
     },
-    "download_windows": "Baixar pra Windows",
-    "download_linux": "Baixar pra Linux",
-    "version_meta": "v0.4.2 · 12 ABR · ~28MB",
-    "beta_badge": "Em constante evolução",
-    "beta_description": "O app desktop já entrega vantagens reais no dia a dia. E por ser uma base desktop, ele abre espaço para receber novas features e muito mais personalização nos widgets.",
     "access_title": "Como funciona o acesso",
     "access_description": "O acesso ao app desktop é liberado para apoiadores que contribuírem com um dos valores abaixo.",
     "support_br_label": "Brasil",
@@ -176,7 +169,6 @@
     "email_title": "Já apoiou e ainda não recebeu a chave?",
     "email_description": "Se você já apoiou o projeto antes do lançamento do app desktop e ainda não recebeu a sua chave de ativação e o link de download, envie um e-mail com o comprovante para o endereço abaixo.",
     "current_features": {
-      "badge": "O que já existe no beta",
       "section_title_1": "Recursos que ",
       "section_title_accent": "só",
       "section_title_2": " rodam fora do browser.",
@@ -190,17 +182,20 @@
       "steam_sync_description": "Conecte sua conta da Steam para acompanhar as conquistas de qualquer jogo e manter o contador atualizado automaticamente enquanto o app estiver rodando em segundo plano.",
       "retroachievements_sync_title": "Sincronização com o RetroAchievements",
       "retroachievements_sync_description": "Conecte sua conta do RetroAchievements para acompanhar as conquistas retrô e manter o contador atualizado automaticamente enquanto o app estiver rodando em segundo plano.",
-      "timer_title": "Cronômetro no widget de troféus",
-      "timer_description": "Veja quanto tempo você levou entre um troféu e outro e ainda exiba a data da última conquista direto no widget.",
-      "timer_screenshot_alt": "Captura do app desktop mostrando o cronômetro no widget de troféus",
+      "timer_title": "Cronômetro e último troféu no widget",
+      "timer_description": "Veja quanto tempo você levou entre um troféu e outro, a data da última conquista e o nome do último troféu desbloqueado, com a raridade, direto no widget. O contador de mortes também tem cronômetro, com o horário da última morte. E quando você chega em 100%, o contador ganha uma animação especial de conclusão.",
+      "timer_screenshot_alt": "Captura do app desktop mostrando o cronômetro e o último troféu no widget",
       "customization_title": "Personalização total do contador",
       "customization_description": "Agora você pode personalizar 100% o contador, com fonte, sombra, cor, tamanho da fonte, posicionamento do contador, tamanho do ícone, posicionamento e muito mais. Você também pode enviar suas próprias imagens ou GIFs como ícone de troféu e de morte, e escolher o estilo do texto do contador de troféus: inline (padrão), fração, barra de progresso ou porcentagem.",
       "customization_screenshot_alt": "Captura do app desktop mostrando as opções de personalização completa do contador",
       "customization_screenshot_alt_2": "Captura do app desktop mostrando o texto do contador de troféus em formato de fração",
       "steam_banner_title": "Banner de conquista Steam",
       "steam_banner_alt": "GIF do app desktop mostrando o banner de conquista Steam aparecendo no OBS",
-      "steam_banner_description": "Chega de notificação sem graça. O banner é sincronizado com a sua conta Steam e funciona com qualquer jogo da sua biblioteca: toda vez que você ganhar uma conquista, um banner animado entra na sua live pra mostrar pro chat o que você acabou de desbloquear, com som e animação do seu jeito. E o banner é 100% editável: mude fundo, opacidade, desfoque, bordas, sombra, fonte, cores e tamanhos dos textos, ícone e cores de cada nível de troféu, direção de entrada e tempo na tela pra deixar ele exatamente do jeito que você quiser.",
+      "steam_banner_description": "Toda vez que você ganhar uma conquista, um banner animado entra na live mostrando o que você desbloqueou. Ele é sincronizado com a sua conta Steam, funciona com qualquer jogo da biblioteca e é 100% editável: fundo, cores, fontes, som, animação de entrada e tempo na tela.",
       "steam_banner_alt_2": "Captura do app desktop mostrando as opções de edição do banner de conquista Steam",
+      "psn_profile_alt": "GIF do app desktop mostrando o card de perfil PSN no OBS",
+      "psn_profile_title": "Card de perfil PSN",
+      "psn_profile_description": "Mostre seu perfil da PlayStation na live: nível, total de troféus por tipo, número de jogos e o jogo que você está jogando agora. O card é sincronizado com a sua conta PSN e se atualiza sozinho a cada troféu que você ganhar.",
       "twitch_title": "Reações do chat da Twitch e Kick em tempo real",
       "twitch_description": "Conecte sua conta da Twitch ou da Kick ao bot do StatsCounter e ele envia uma mensagem no chat toda vez que seu contador de morte ou troféu aumentar. Escolha quais widgets disparam o aviso e personalize as mensagens do jeito que quiser. As mesmas funcionalidades nas duas plataformas.",
       "twitch_demo_hint": "Apenas uma prévia interativa — nada aqui é salvo ou enviado para a Twitch. Clique no + de qualquer contador para ver a mensagem aparecer no chat.",
@@ -217,14 +212,6 @@
       "twitch_demo_command_trophies_response": "🏆 Troféus atuais: {{earned}}/{{total}}",
       "twitch_demo_ambient_names": ["xX_Sombra_Xx", "pixelqueen", "gg_facil", "sniper_do_mal", "retrofan", "LurkerBob", "cor_da_noite", "ChaosGremlin", "musgo_e_pixels", "tempestade_quieta"],
       "twitch_demo_ambient_messages": ["VAMOOOO", "pog", "clipa isso", "gg", "jogada insana", "W stream", "quantas mortes já foram?", "kkkkkk", "primeira vez aqui, setup top", "W", "e ai chat", "não acredito", "clutch"]
-    },
-    "future": {
-      "badge": "Mais espaço para evoluir",
-      "description": "Por estar fora das limitações do navegador, o app desktop permite pensar em uma experiência mais completa, mais flexível e muito mais personalizável.",
-      "foundation_title": "Mais liberdade técnica",
-      "foundation_description": "O ambiente desktop permite construir recursos que seriam limitados ou menos confortáveis na versão web.",
-      "customization_title": "Mais personalização de widgets",
-      "customization_description": "A ideia é expandir as possibilidades visuais e funcionais dos widgets com muito mais liberdade do que no navegador."
     },
     "gta_theme": {
       "countdown_title": "Nos vemos em Vice City em:",

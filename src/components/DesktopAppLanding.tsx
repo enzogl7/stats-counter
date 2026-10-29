@@ -21,6 +21,7 @@ import personalizationPt from '../assets/personalizacao-pt.png';
 import trophiesText2 from '../assets/trophies-text-2.png';
 import steamBannerGif from '../assets/steam-banner.gif';
 import steamBannerEditor from '../assets/steam-banner-editor.png';
+import psnProfileCardGif from '../assets/psn-profile-card.gif';
 import gtaviEn from '../assets/gtavi-en.jpeg';
 import gtaviPt from '../assets/gtavi-pt.jpeg';
 import Footer from './Footer';
@@ -49,7 +50,7 @@ const FeatureCardImages: React.FC<{
           onClick={() => onPreview(images[idx], alts[idx])}
           className="dal-preview-btn block w-full overflow-hidden rounded-[10px]"
         >
-          <img src={images[idx]} alt={alts[idx]} className="w-full rounded-[10px] object-cover" />
+          <img src={images[idx]} alt={alts[idx]} loading="lazy" className="w-full rounded-[10px] object-cover" />
         </button>
 
         {images.length > 1 && (
@@ -427,12 +428,20 @@ const DesktopAppLanding: React.FC = () => {
       title: t('desktop_app_landing.current_features.steam_banner_title'),
       description: t('desktop_app_landing.current_features.steam_banner_description'),
       chip: 'STEAM',
-      isNew: true,
       images: [steamBannerGif, steamBannerEditor],
       alts: [
         t('desktop_app_landing.current_features.steam_banner_alt'),
         t('desktop_app_landing.current_features.steam_banner_alt_2'),
       ],
+    },
+    {
+      index: '07',
+      title: t('desktop_app_landing.current_features.psn_profile_title'),
+      description: t('desktop_app_landing.current_features.psn_profile_description'),
+      chip: 'PSN',
+      isNew: true,
+      images: [psnProfileCardGif],
+      alts: [t('desktop_app_landing.current_features.psn_profile_alt')],
     }
   ];
 

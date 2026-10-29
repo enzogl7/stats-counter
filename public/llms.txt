@@ -14,8 +14,9 @@
 - [StatsCounter Desktop (pt-BR)](https://www.statscounter.pro/desktop-app) · [English](https://www.statscounter.pro/en/desktop-app)
 - Automatic trophy tracking: connect a PSN account (PS5 and PS4), Steam or RetroAchievements and the trophy/achievement counter updates on its own, even with the app minimized. No capture card or chat commands needed.
 - Steam achievement banner: animated, fully customizable banner shown on stream whenever an achievement unlocks, for any game in the Steam library.
+- PSN profile card: an OBS widget with the PlayStation profile (avatar, level with a progress ring, trophy totals by type, game count and the game being played now) that updates and animates on its own with every trophy and level-up.
 - Twitch and Kick chat bot: posts a message when the death or trophy counter goes up; viewers can type !deaths / !trophies (!mortes / !trofeus in Portuguese) to get the current count. Commands and messages are customizable.
-- Global hotkeys that work with the game fullscreen and the app minimized, a timer between trophies, and full widget customization (fonts, colors, custom images or GIFs as icons, fraction/progress bar/percentage display).
+- Global hotkeys that work with the game fullscreen and the app minimized, a timer between trophies (and since the last death on the death counter), the latest trophy name with its rarity, a 100% completion animation, and full widget customization (fonts, colors, custom images or GIFs as icons, fraction/progress bar/percentage display).
 - Access: lifetime license for supporters who contribute R$ 20 (Brazil, Mercado Pago) or US$ 20 (Buy Me a Coffee), including all future updates.
 
 ## Video

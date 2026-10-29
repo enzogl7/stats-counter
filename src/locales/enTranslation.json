@@ -102,8 +102,6 @@
   "new_badge": "NEW",
   "desktop_app_landing": {
     "back_home": "Back to home",
-    "badge": "Desktop app available",
-    "title": "Less browser limitation. More real control over your stream.",
     "title_1": "The ",
     "title_accent": "automatic",
     "title_2": " trophy counter for OBS.",
@@ -111,7 +109,7 @@
     "seo": {
       "title": "Automatic Trophy Counter for OBS | PSN, Steam & RetroAchievements",
       "description": "Windows and Linux app that syncs with PSN (PS5 and PS4), Steam and RetroAchievements and automatically updates the trophy and achievement counter on your OBS stream.",
-      "keywords": "automatic trophy counter, trophy tracker OBS, PS5 trophy tracker, PSN trophy counter OBS, Steam achievement counter OBS, Steam achievement banner OBS, RetroAchievements OBS, platinum tracker OBS, stats counter desktop"
+      "keywords": "automatic trophy counter, trophy tracker OBS, PS5 trophy tracker, PSN trophy counter OBS, Steam achievement counter OBS, Steam achievement banner OBS, PSN profile card OBS, RetroAchievements OBS, platinum tracker OBS, stats counter desktop"
     },
     "video": {
       "title_1": "See it ",
@@ -155,11 +153,6 @@
         }
       ]
     },
-    "download_windows": "Download for Windows",
-    "download_linux": "Download for Linux",
-    "version_meta": "v0.4.2 · APR 12 · ~28MB",
-    "beta_badge": "Actively improving",
-    "beta_description": "The desktop app already delivers clear day-to-day advantages. And because it runs on desktop, it opens the door to many more features and much deeper widget customization.",
     "access_title": "How access works",
     "access_description": "Desktop app access is unlocked for supporters who contribute at one of the levels below.",
     "support_br_label": "Brazil",
@@ -176,12 +169,9 @@
     "email_title": "Already supported but still missing your key?",
     "email_description": "If you supported the project before the desktop app launched and still have not received your activation key and download link, send an email with proof of payment to the address below.",
     "current_features": {
-      "badge": "What already exists in beta",
       "section_title_1": "Features that ",
       "section_title_accent": "only",
       "section_title_2": " run outside the browser.",
-      "title": "Right now it already gives you two clear advantages.",
-      "description": "No vague promises: these are the features that already make the desktop app worth considering today.",
       "hotkeys_title": "True global hotkeys",
       "hotkeys_description": "Your hotkeys keep working even while the app is minimized, without relying on the browser tab staying open.",
       "platform_sync_title": "PSN, Steam, and RetroAchievements sync",
@@ -192,17 +182,20 @@
       "steam_sync_description": "Connect your Steam account to track achievements from any game and keep the counter updated automatically while the app runs in the background.",
       "retroachievements_sync_title": "RetroAchievements sync",
       "retroachievements_sync_description": "Connect your RetroAchievements account to track retro achievements and keep the counter updated automatically while the app runs in the background.",
-      "timer_title": "Trophy widget timer",
-      "timer_description": "Track how long it took you to move from one trophy to the next and display the date of the latest trophy directly on the widget.",
-      "timer_screenshot_alt": "Desktop app screenshot showing the trophy widget timer",
+      "timer_title": "Timer and latest trophy on the widget",
+      "timer_description": "Track how long it took you to move from one trophy to the next, and show the date of your latest trophy and the name of the trophy you just unlocked, with its rarity, right on the widget. The death counter has a timer too, showing when your last death happened. And when you hit 100%, the counter plays a special completion animation.",
+      "timer_screenshot_alt": "Desktop app screenshot showing the timer and latest trophy on the widget",
       "customization_title": "Full counter customization",
       "customization_description": "You can now customize the counter completely, including font, shadow, color, font size, counter position, icon size, icon placement, and much more. You can also upload your own images or GIFs as the trophy and death icons, and choose the trophy counter text style: inline (default), fraction, progress bar, or percentage.",
       "customization_screenshot_alt": "Desktop app screenshot showing the full counter customization options",
       "customization_screenshot_alt_2": "Desktop app screenshot showing the trophy counter text in fraction format",
       "steam_banner_title": "Steam achievement banner",
       "steam_banner_alt": "Desktop app GIF showing the Steam achievement banner appearing in OBS",
-      "steam_banner_description": "No more dull notifications. The banner is synced with your Steam account and works with any game in your library: every time you unlock an achievement, an animated banner slides into your stream to show chat what you just earned, with the sound and animation you choose. And the banner is fully editable: change the background, opacity, blur, borders, shadow, font, text colors and sizes, trophy icon and tier colors, entry direction and time on screen to make it look exactly the way you want.",
+      "steam_banner_description": "Every time you unlock an achievement, an animated banner slides into your stream showing what you just earned. It is synced with your Steam account, works with any game in your library and is fully editable: background, colors, fonts, sound, entry animation and time on screen.",
       "steam_banner_alt_2": "Desktop app screenshot showing the Steam achievement banner editing options",
+      "psn_profile_alt": "Desktop app GIF showing the PSN profile card in OBS",
+      "psn_profile_title": "PSN profile card",
+      "psn_profile_description": "Show your PlayStation profile on stream: level, trophy totals by type, game count and the game you are playing right now. The card is synced with your PSN account and updates on its own with every trophy you earn.",
       "twitch_title": "Live Twitch & Kick chat reactions",
       "twitch_description": "Connect your Twitch or Kick account to the StatsCounter bot, and it posts a chat message every time your death or trophy counter goes up. Choose which widgets trigger it and write your own custom messages. Same features on both platforms.",
       "twitch_demo_hint": "Interactive preview only — nothing here is saved or sent to Twitch. Click + on either counter to see it show up in chat.",
@@ -219,15 +212,6 @@
       "twitch_demo_command_trophies_response": "🏆 Current trophies: {{earned}}/{{total}}",
       "twitch_demo_ambient_names": ["xX_Shadow_Xx", "pixelqueen", "gg_easy", "noscope99", "retrofan", "LurkerBob", "nightowl22", "ChaosGremlin", "moss_and_pixels", "quietstorm"],
       "twitch_demo_ambient_messages": ["LETS GOOOO", "pog", "clip that", "gg", "insane play", "W stream", "how many deaths so far?", "lmaooo", "first time here, nice setup", "W", "hi chat", "no way", "clutch"]
-    },
-    "future": {
-      "badge": "More room to evolve",
-      "title": "Desktop is not just a new version. It is the foundation for the next phase of the product.",
-      "description": "Because it is no longer constrained by the browser, the desktop app makes room for a more complete, more flexible, and much more customizable experience.",
-      "foundation_title": "More technical freedom",
-      "foundation_description": "The desktop environment makes it possible to build features that would be limited or less comfortable in the web version.",
-      "customization_title": "More widget customization",
-      "customization_description": "The goal is to expand both the visual and functional possibilities of the widgets with much more freedom than the browser allows."
     },
     "gta_theme": {
       "countdown_title": "See you in Vice City in:",

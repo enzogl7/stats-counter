@@ -48,7 +48,7 @@ const head = ({ url, htmlLang, price }, d) => {
           url,
           inLanguage: htmlLang,
           description: d.seo.description,
-          featureList: [f.psn_sync_title, f.steam_sync_title, f.retroachievements_sync_title, f.steam_banner_title, f.twitch_title, f.hotkeys_title, f.timer_title, f.customization_title],
+          featureList: [f.psn_sync_title, f.steam_sync_title, f.retroachievements_sync_title, f.steam_banner_title, f.psn_profile_title, f.twitch_title, f.hotkeys_title, f.timer_title, f.customization_title],
           offers: { '@type': 'Offer', price: price.value, priceCurrency: price.currency },
           creator: { '@type': 'Person', name: 'Enzo Lima' },
         },
@@ -89,6 +89,7 @@ const body = (d) => {
       ${section(f.timer_title, f.timer_description)}
       ${section(f.customization_title, f.customization_description)}
       ${section(f.steam_banner_title, f.steam_banner_description)}
+      ${section(f.psn_profile_title, f.psn_profile_description)}
       <h2>${esc(d.faq.title_1 + d.faq.title_accent + d.faq.title_2)}</h2>
       ${d.faq.items.map(({ q, a }) => section(q, a)).join('\n      ')}
       <h2>${esc(d.access_title)}</h2>
