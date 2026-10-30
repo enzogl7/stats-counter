@@ -26,6 +26,7 @@ import gtaviEn from '../assets/gtavi-en.jpeg';
 import gtaviPt from '../assets/gtavi-pt.jpeg';
 import Footer from './Footer';
 import TwitchChatDemoCard from './TwitchChatDemoCard';
+import HotkeysDemo from './HotkeysDemo';
 import NewBadge from './NewBadge';
 import StreamersCarousel from './StreamersCarousel';
 import { streamers } from './streamersData';
@@ -43,7 +44,7 @@ const FeatureCardImages: React.FC<{
   const next = () => setIdx((i) => (i + 1) % images.length);
 
   return (
-    <div className="dal-image-frame mt-5 overflow-hidden p-1.5">
+    <div className="dal-image-frame overflow-hidden p-1.5">
       <div className="relative">
         <button
           type="button"
@@ -400,7 +401,8 @@ const DesktopAppLanding: React.FC = () => {
       description: t('desktop_app_landing.current_features.hotkeys_description'),
       chip: 'GLOBAL',
       image: undefined as string | undefined,
-      alt: undefined as string | undefined
+      alt: undefined as string | undefined,
+      visual: <HotkeysDemo />,
     },
     {
       index: '04',
@@ -422,6 +424,7 @@ const DesktopAppLanding: React.FC = () => {
         t('desktop_app_landing.current_features.customization_screenshot_alt'),
         t('desktop_app_landing.current_features.customization_screenshot_alt_2'),
       ],
+      wide: true,
     },
     {
       index: '06',
@@ -433,6 +436,7 @@ const DesktopAppLanding: React.FC = () => {
         t('desktop_app_landing.current_features.steam_banner_alt'),
         t('desktop_app_landing.current_features.steam_banner_alt_2'),
       ],
+      wide: true,
     },
     {
       index: '07',
@@ -442,6 +446,7 @@ const DesktopAppLanding: React.FC = () => {
       isNew: true,
       images: [psnProfileCardGif],
       alts: [t('desktop_app_landing.current_features.psn_profile_alt')],
+      wide: true,
     }
   ];
 
@@ -650,11 +655,11 @@ const DesktopAppLanding: React.FC = () => {
             {t('desktop_app_landing.current_features.section_title_2')}
           </motion.h2>
 
-          <div className="mt-8 flex flex-col gap-4">
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
 
             {/* Platform Sync — full width, first card */}
             <motion.div
-              className="dal-glass-card"
+              className="dal-glass-card md:col-span-2"
               {...fadeUpView(0)}
               whileHover={{ y: -3, transition: { duration: 0.22, ease: EASE } }}
             >
@@ -697,53 +702,59 @@ const DesktopAppLanding: React.FC = () => {
               </div>
             </motion.div>
 
-            <TwitchChatDemoCard />
+            <div className="md:col-span-2">
+              <TwitchChatDemoCard />
+            </div>
 
             {currentFeatures.map((feature, i) => (
               <motion.div
                 key={feature.title}
-                className="dal-glass-card relative"
+                className={`dal-glass-card relative ${feature.wide ? 'md:col-span-2 md:grid md:grid-cols-[2fr_3fr] md:items-center md:gap-8' : 'flex flex-col'}`}
                 {...fadeUpView((i + 1) * 0.08)}
                 whileHover={{ y: -3, transition: { duration: 0.22, ease: EASE } }}
               >
                 {feature.isNew && <NewBadge />}
-                <div className="flex items-center justify-between gap-2">
-                  <span className="dal-mono text-[11px]" style={{ color: 'var(--ink-4)' }}>
-                    {feature.index}
-                  </span>
-                  {feature.chip && (
-                    <span
-                      className="dal-chip"
-                      style={{ background: 'var(--info-soft)', borderColor: 'var(--info-line)', color: 'var(--info)' }}
-                    >
-                      {feature.chip}
+                <div>
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="dal-mono text-[11px]" style={{ color: 'var(--ink-4)' }}>
+                      {feature.index}
                     </span>
-                  )}
+                    {feature.chip && (
+                      <span
+                        className="dal-chip"
+                        style={{ background: 'var(--info-soft)', borderColor: 'var(--info-line)', color: 'var(--info)' }}
+                      >
+                        {feature.chip}
+                      </span>
+                    )}
+                  </div>
+
+                  <h3 className="dal-h3 mt-4">{feature.title}</h3>
+
+                  <p className="mt-2.5 text-sm" style={{ color: 'var(--ink-2)', lineHeight: 1.75 }}>
+                    {feature.description}
+                  </p>
                 </div>
 
-                <h3 className="dal-h3 mt-4">{feature.title}</h3>
-
-                <p className="mt-2.5 text-sm" style={{ color: 'var(--ink-2)', lineHeight: 1.75 }}>
-                  {feature.description}
-                </p>
-
-                {feature.images ? (
-                  <FeatureCardImages
-                    images={feature.images}
-                    alts={feature.alts!}
-                    onPreview={openImagePreview}
-                  />
-                ) : feature.image && (
-                  <div className="dal-image-frame mt-5 overflow-hidden p-1.5">
-                    <button
-                      type="button"
-                      onClick={() => openImagePreview(feature.image!, feature.alt!)}
-                      className="dal-preview-btn block w-full overflow-hidden rounded-[10px]"
-                    >
-                      <img src={feature.image} alt={feature.alt} loading="lazy" className="w-full rounded-[10px] object-cover" />
-                    </button>
-                  </div>
-                )}
+                <div className={`empty:hidden ${feature.wide ? 'mt-5 md:mt-0' : 'mt-5 flex flex-1 flex-col justify-center'}`}>
+                  {feature.visual ?? (feature.images ? (
+                    <FeatureCardImages
+                      images={feature.images}
+                      alts={feature.alts!}
+                      onPreview={openImagePreview}
+                    />
+                  ) : feature.image && (
+                    <div className="dal-image-frame overflow-hidden p-1.5">
+                      <button
+                        type="button"
+                        onClick={() => openImagePreview(feature.image!, feature.alt!)}
+                        className="dal-preview-btn block w-full overflow-hidden rounded-[10px]"
+                      >
+                        <img src={feature.image} alt={feature.alt} loading="lazy" className="w-full rounded-[10px] object-cover" />
+                      </button>
+                    </div>
+                  ))}
+                </div>
               </motion.div>
             ))}
           </div>

@@ -174,6 +174,7 @@
       "section_title_2": " rodam fora do browser.",
       "hotkeys_title": "Hotkeys globais de verdade",
       "hotkeys_description": "As hotkeys continuam funcionando mesmo com o app minimizado e sem depender da aba do navegador ficar aberta.",
+      "hotkeys_demo_hint": "Aperte as setas do teclado ou clique nas teclas para testar.",
       "platform_sync_title": "Sincronização com PSN, Steam e RetroAchievements",
       "platform_sync_description": "Conecte sua conta da PSN, Steam ou RetroAchievements para monitorar troféus e conquistas e manter o contador atualizado automaticamente, mesmo com o app minimizado.",
       "psn_sync_title": "Sincronização com a PSN",
