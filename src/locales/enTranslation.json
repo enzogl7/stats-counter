@@ -214,6 +214,12 @@
       "twitch_demo_ambient_names": ["xX_Shadow_Xx", "pixelqueen", "gg_easy", "noscope99", "retrofan", "LurkerBob", "nightowl22", "ChaosGremlin", "moss_and_pixels", "quietstorm"],
       "twitch_demo_ambient_messages": ["LETS GOOOO", "pog", "clip that", "gg", "insane play", "W stream", "how many deaths so far?", "lmaooo", "first time here, nice setup", "W", "hi chat", "no way", "clutch"]
     },
+    "game_themes": {
+      "title_1": "Themes that look like ",
+      "title_accent": "each game",
+      "description": "Game themes exist on the web version too, but in the app each one gets its own shape, frame and font: Elden Ring, Dark Souls, Bloodborne, Hollow Knight, Persona and more.",
+      "alt": "The desktop app's 11 game themes"
+    },
     "gta_theme": {
       "countdown_title": "See you in Vice City in:",
       "title_1": "Going for the platinum in ",

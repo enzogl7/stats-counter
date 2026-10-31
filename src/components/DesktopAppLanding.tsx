@@ -24,6 +24,7 @@ import steamBannerEditor from '../assets/steam-banner-editor.png';
 import psnProfileCardGif from '../assets/psn-profile-card.gif';
 import gtaviEn from '../assets/gtavi-en.jpeg';
 import gtaviPt from '../assets/gtavi-pt.jpeg';
+import gameThemes from '../assets/game-themes.jpg';
 import Footer from './Footer';
 import TwitchChatDemoCard from './TwitchChatDemoCard';
 import HotkeysDemo from './HotkeysDemo';
@@ -763,6 +764,31 @@ const DesktopAppLanding: React.FC = () => {
 
         {/* ── GTA VI theme ── */}
         <motion.section className="mt-22" {...fadeUpView(0)}>
+          <div className="dal-glass-card mb-4 grid items-center gap-8 md:grid-cols-[2fr_3fr]">
+            <div>
+              <h2 className="dal-h2">
+                {t('desktop_app_landing.game_themes.title_1')}
+                <span className="dal-accent">{t('desktop_app_landing.game_themes.title_accent')}</span>
+              </h2>
+              <p className="mt-3 text-base" style={{ color: 'var(--ink-2)', lineHeight: 1.75 }}>
+                {t('desktop_app_landing.game_themes.description')}
+              </p>
+            </div>
+            <div className="dal-image-frame p-1.5">
+              <button
+                type="button"
+                onClick={() => openImagePreview(gameThemes, t('desktop_app_landing.game_themes.alt'))}
+                className="dal-preview-btn block w-full overflow-hidden rounded-[10px]"
+              >
+                <img
+                  src={gameThemes}
+                  alt={t('desktop_app_landing.game_themes.alt')}
+                  loading="lazy"
+                  className="block w-full rounded-[10px] object-cover"
+                />
+              </button>
+            </div>
+          </div>
           <div className="dal-glass-card dal-gta-card grid items-center gap-8 md:grid-cols-2">
             <div>
               <h2 className="dal-h2">
