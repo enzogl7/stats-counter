@@ -11,7 +11,7 @@ const TROPHY_TOTAL = 5;
 const PRESS_COOLDOWN_MS = 250;
 const PRESS_ANIMATION_MS = 140;
 
-// Default app hotkeys, laid out as an arrow-key cluster
+// Illustrative hotkeys (the desktop app ships with none set), laid out as an arrow-key cluster
 const KEYS = [
   { code: 'ArrowUp', icon: faArrowUp, counter: 'deaths', delta: 1, col: 'col-start-2' },
   { code: 'ArrowLeft', icon: faArrowLeft, counter: 'trophies', delta: -1, col: 'col-start-1' },
