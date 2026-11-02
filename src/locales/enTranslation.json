@@ -136,6 +136,10 @@
           "a": "Yes. PSN sync tracks the trophies on your account, from both PS5 and PS4. For retro games and emulators, connect your RetroAchievements account."
         },
         {
+          "q": "Can I show on stream how many trophies are left to the platinum?",
+          "a": "Yes. The game trophies card shows one game's trophies split by type (bronze, silver, gold and platinum), with how many are left or how many you have earned, the completion percentage and the latest trophy. There is also the PSN profile card, with your level and trophy totals. Both update on their own with every trophy while the app and OBS are open."
+        },
+        {
           "q": "How do I count deaths on stream without letting go of the controller?",
           "a": "Set up global hotkeys in StatsCounter Desktop: they work even with your game in fullscreen and the app minimized, so every death hits your OBS counter with a single shortcut, without switching windows. Viewers can check the total anytime with !deaths."
         },

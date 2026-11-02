@@ -136,6 +136,10 @@
           "a": "Sim. A sincronização com a PSN acompanha os troféus da sua conta, de PS5 e PS4. Para jogos retrô e emuladores, conecte sua conta do RetroAchievements."
         },
         {
+          "q": "Dá para mostrar na live quantos troféus faltam para platinar?",
+          "a": "Sim. O card de troféus do jogo mostra os troféus de um jogo separados por tipo (bronze, prata, ouro e platina), com quanto falta ou quanto você já ganhou, a porcentagem concluída e o último troféu. Também tem o card de perfil PSN, com seu nível e o total de troféus. Os dois se atualizam sozinhos a cada troféu enquanto o app e o OBS estiverem abertos."
+        },
+        {
           "q": "Como contar mortes na live sem tirar a mão do controle?",
           "a": "Defina hotkeys globais no StatsCounter Desktop: elas funcionam mesmo com o jogo em tela cheia e o app minimizado, então cada morte entra no contador do OBS com um atalho, sem trocar de janela. Os espectadores conferem o total a qualquer momento com !mortes."
         },

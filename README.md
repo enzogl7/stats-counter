@@ -83,6 +83,7 @@ O **StatsCounter Desktop** é um **contador de troféus automático para OBS**, 
 - **Banner de conquista Steam no OBS:** um banner animado e 100% editável aparece na live a cada conquista desbloqueada.
 - **Card de perfil PSN no OBS:** avatar, nível com anel de progresso, troféus por tipo, número de jogos e o jogo atual, atualizando sozinho e com animação a cada troféu e subida de nível.
 - **Card de troféus do jogo (PSN) no OBS:** os troféus de um jogo separados por tipo, com quanto falta ou quanto já foi ganho, porcentagem concluída e último troféu com raridade, atualizando sozinho.
+- **Temas com a cara de cada jogo:** os mesmos temas de jogos da versão web, mas no app cada um tem formato, moldura e fonte próprios.
 - **RetroAchievements:** conquistas de jogos retrô e emuladores no mesmo contador.
 - **Bot de chat Twitch e Kick:** avisa no chat quando o contador de mortes ou troféus sobe, e responde a `!mortes` e `!trofeus` com a contagem atual. Mensagens e comandos personalizáveis.
 - **Hotkeys globais:** conte mortes sem tirar a mão do controle, com o jogo em tela cheia e o app minimizado.
@@ -186,6 +187,7 @@ In the free web version, you update the counter with a click or a keyboard short
 - **Steam achievement banner in OBS:** a fully editable animated banner shows up on stream every time you unlock an achievement.
 - **PSN profile card in OBS:** avatar, level with a progress ring, trophies by type, game count and current game, updating and animating on its own with every trophy and level-up.
 - **PSN game trophies card in OBS:** one game's trophies split by type, showing how many are left or earned, completion percentage and the latest trophy with its rarity, updating on its own.
+- **Themes that look like each game:** the same game themes as the web version, but in the app each one has its own shape, frame and font.
 - **RetroAchievements:** retro and emulator achievements in the same counter.
 - **Twitch and Kick chat bot:** posts in chat when your death or trophy counter goes up, and replies to `!deaths` and `!trophies` with the current count. Messages and commands are customizable.
 - **Global hotkeys:** count deaths without letting go of the controller, with the game fullscreen and the app minimized.
