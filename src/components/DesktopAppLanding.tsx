@@ -22,6 +22,8 @@ import trophiesText2 from '../assets/trophies-text-2.png';
 import steamBannerGif from '../assets/steam-banner.gif';
 import steamBannerEditor from '../assets/steam-banner-editor.png';
 import psnProfileCardGif from '../assets/psn-profile-card.gif';
+import psnGameCardPt from '../assets/psn-game-card-pt.jpg';
+import psnGameCardEn from '../assets/psn-game-card-en.jpg';
 import gtaviEn from '../assets/gtavi-en.jpeg';
 import gtaviPt from '../assets/gtavi-pt.jpeg';
 import gameThemes from '../assets/game-themes.jpg';
@@ -444,9 +446,18 @@ const DesktopAppLanding: React.FC = () => {
       title: t('desktop_app_landing.current_features.psn_profile_title'),
       description: t('desktop_app_landing.current_features.psn_profile_description'),
       chip: 'PSN',
-      isNew: true,
       images: [psnProfileCardGif],
       alts: [t('desktop_app_landing.current_features.psn_profile_alt')],
+      wide: true,
+    },
+    {
+      index: '08',
+      title: t('desktop_app_landing.current_features.psn_game_card_title'),
+      description: t('desktop_app_landing.current_features.psn_game_card_description'),
+      chip: 'PSN',
+      isNew: true,
+      images: [isPortuguese ? psnGameCardPt : psnGameCardEn],
+      alts: [t('desktop_app_landing.current_features.psn_game_card_alt')],
       wide: true,
     }
   ];

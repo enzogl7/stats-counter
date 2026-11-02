@@ -109,7 +109,7 @@
     "seo": {
       "title": "Automatic Trophy Counter for OBS | PSN, Steam & RetroAchievements",
       "description": "Windows and Linux app that syncs with PSN (PS5 and PS4), Steam and RetroAchievements and automatically updates the trophy and achievement counter on your OBS stream.",
-      "keywords": "automatic trophy counter, trophy tracker OBS, PS5 trophy tracker, PSN trophy counter OBS, Steam achievement counter OBS, Steam achievement banner OBS, PSN profile card OBS, RetroAchievements OBS, platinum tracker OBS, stats counter desktop"
+      "keywords": "automatic trophy counter, trophy tracker OBS, PS5 trophy tracker, PSN trophy counter OBS, Steam achievement counter OBS, Steam achievement banner OBS, PSN profile card OBS, PSN trophies left OBS, RetroAchievements OBS, platinum tracker OBS, stats counter desktop"
     },
     "video": {
       "title_1": "See it ",
@@ -197,6 +197,9 @@
       "psn_profile_alt": "Desktop app GIF showing the PSN profile card in OBS",
       "psn_profile_title": "PSN profile card",
       "psn_profile_description": "Show your PlayStation profile on stream: level, trophy totals by type, game count and the game you are playing right now. The card is synced with your PSN account and updates on its own with every trophy you earn.",
+      "psn_game_card_alt": "Game trophies card in OBS, with the game cover and trophies split by type",
+      "psn_game_card_title": "Game trophies card",
+      "psn_game_card_description": "Pick a game and show its trophies on stream split by type: bronze, silver, gold and platinum. See how many are left to the platinum or how many of each type you have earned, with the completion percentage and the latest trophy with its rarity. The card is synced with your PSN account and updates on its own with every trophy.",
       "twitch_title": "Live Twitch & Kick chat reactions",
       "twitch_description": "Connect your Twitch or Kick account to the StatsCounter bot, and it posts a chat message every time your death or trophy counter goes up. Choose which widgets trigger it and write your own custom messages. Same features on both platforms.",
       "twitch_demo_hint": "Interactive preview only — nothing here is saved or sent to Twitch. Click + on either counter to see it show up in chat.",

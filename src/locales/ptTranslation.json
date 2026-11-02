@@ -109,7 +109,7 @@
     "seo": {
       "title": "Contador de Troféus Automático para OBS | PSN, Steam e RetroAchievements",
       "description": "App para Windows e Linux que sincroniza com PSN (PS5 e PS4), Steam e RetroAchievements e atualiza sozinho o contador de troféus e conquistas da sua live no OBS.",
-      "keywords": "contador de troféus automático, trophy tracker OBS, rastreador de troféus PS5, contador de troféus PSN OBS, contador de conquistas Steam OBS, banner de conquista Steam OBS, card de perfil PSN OBS, RetroAchievements OBS, contador de platina OBS, stats counter desktop"
+      "keywords": "contador de troféus automático, trophy tracker OBS, rastreador de troféus PS5, contador de troféus PSN OBS, contador de conquistas Steam OBS, banner de conquista Steam OBS, card de perfil PSN OBS, troféus restantes PSN OBS, RetroAchievements OBS, contador de platina OBS, stats counter desktop"
     },
     "video": {
       "title_1": "Veja ",
@@ -197,6 +197,9 @@
       "psn_profile_alt": "GIF do app desktop mostrando o card de perfil PSN no OBS",
       "psn_profile_title": "Card de perfil PSN",
       "psn_profile_description": "Mostre seu perfil da PlayStation na live: nível, total de troféus por tipo, número de jogos e o jogo que você está jogando agora. O card é sincronizado com a sua conta PSN e se atualiza sozinho a cada troféu que você ganhar.",
+      "psn_game_card_alt": "Card de troféus do jogo no OBS, com a capa do jogo e os troféus separados por tipo",
+      "psn_game_card_title": "Card de troféus do jogo",
+      "psn_game_card_description": "Escolha um jogo e mostre na live os troféus dele separados por tipo: bronze, prata, ouro e platina. Veja quanto falta para platinar ou quanto você já ganhou de cada tipo, com a porcentagem concluída e o último troféu com a raridade. O card é sincronizado com a sua conta PSN e se atualiza sozinho a cada troféu.",
       "twitch_title": "Reações do chat da Twitch e Kick em tempo real",
       "twitch_description": "Conecte sua conta da Twitch ou da Kick ao bot do StatsCounter e ele envia uma mensagem no chat toda vez que seu contador de morte ou troféu aumentar. Escolha quais widgets disparam o aviso e personalize as mensagens do jeito que quiser. As mesmas funcionalidades nas duas plataformas.",
       "twitch_demo_hint": "Apenas uma prévia interativa — nada aqui é salvo ou enviado para a Twitch. Clique no + de qualquer contador para ver a mensagem aparecer no chat.",
