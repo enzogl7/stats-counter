@@ -88,7 +88,7 @@ O **StatsCounter Desktop** é um **contador de troféus automático para OBS**, 
 - **Bot de chat Twitch e Kick:** avisa no chat quando o contador de mortes ou troféus sobe, e responde a `!mortes` e `!trofeus` com a contagem atual. Mensagens e comandos personalizáveis.
 - **Hotkeys globais:** conte mortes sem tirar a mão do controle, com o jogo em tela cheia e o app minimizado.
 - **Cronômetro e último troféu:** tempo entre um troféu e outro, data da última conquista e nome do último troféu com a raridade no widget; cronômetro também no contador de mortes e animação especial ao chegar em 100%.
-- **Personalização total:** fonte, cores, sombra, posição, imagens ou GIFs próprios como ícone e estilo do texto (fração, barra de progresso ou porcentagem).
+- **Personalização total:** fonte (inclusive as instaladas no seu PC), cores, sombra, posição, imagens ou GIFs próprios como ícone e estilo do texto (fração, barra de progresso ou porcentagem).
 - Atualizações automáticas do app.
 
 📺 [Veja funcionando no YouTube](https://youtu.be/TAJ6pQCgb74)
@@ -192,7 +192,7 @@ In the free web version, you update the counter with a click or a keyboard short
 - **Twitch and Kick chat bot:** posts in chat when your death or trophy counter goes up, and replies to `!deaths` and `!trophies` with the current count. Messages and commands are customizable.
 - **Global hotkeys:** count deaths without letting go of the controller, with the game fullscreen and the app minimized.
 - **Timer and latest trophy:** time between trophies, date of the last one and the latest trophy name with its rarity, right in the widget; a timer on the death counter too and a special animation when you hit 100%.
-- **Full customization:** font, colors, shadow, position, your own images or GIFs as icons, and text style (fraction, progress bar or percentage).
+- **Full customization:** font (including the ones installed on your PC), colors, shadow, position, your own images or GIFs as icons, and text style (fraction, progress bar or percentage).
 - Automatic app updates.
 
 📺 [See it in action on YouTube](https://youtu.be/TAJ6pQCgb74) (Portuguese, English subtitles)

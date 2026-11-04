@@ -191,7 +191,7 @@
       "timer_description": "Veja quanto tempo você levou entre um troféu e outro, a data da última conquista e o nome do último troféu desbloqueado, com a raridade, direto no widget. O contador de mortes também tem cronômetro, com o horário da última morte. E quando você chega em 100%, o contador ganha uma animação especial de conclusão.",
       "timer_screenshot_alt": "Captura do app desktop mostrando o cronômetro e o último troféu no widget",
       "customization_title": "Personalização total do contador",
-      "customization_description": "Agora você pode personalizar 100% o contador, com fonte, sombra, cor, tamanho da fonte, posicionamento do contador, tamanho do ícone, posicionamento e muito mais. Você também pode enviar suas próprias imagens ou GIFs como ícone de troféu e de morte, e escolher o estilo do texto do contador de troféus: inline (padrão), fração, barra de progresso ou porcentagem.",
+      "customization_description": "Agora você pode personalizar 100% o contador, com fonte, sombra, cor, tamanho da fonte, posicionamento do contador, tamanho do ícone, posicionamento e muito mais. Além das fontes do app, dá para usar as instaladas no seu PC, com prévia no widget antes de escolher. Você também pode enviar suas próprias imagens ou GIFs como ícone de troféu e de morte, e escolher o estilo do texto do contador de troféus: inline (padrão), fração, barra de progresso ou porcentagem.",
       "customization_screenshot_alt": "Captura do app desktop mostrando as opções de personalização completa do contador",
       "customization_screenshot_alt_2": "Captura do app desktop mostrando o texto do contador de troféus em formato de fração",
       "steam_banner_title": "Banner de conquista Steam",

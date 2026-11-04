@@ -191,7 +191,7 @@
       "timer_description": "Track how long it took you to move from one trophy to the next, and show the date of your latest trophy and the name of the trophy you just unlocked, with its rarity, right on the widget. The death counter has a timer too, showing when your last death happened. And when you hit 100%, the counter plays a special completion animation.",
       "timer_screenshot_alt": "Desktop app screenshot showing the timer and latest trophy on the widget",
       "customization_title": "Full counter customization",
-      "customization_description": "You can now customize the counter completely, including font, shadow, color, font size, counter position, icon size, icon placement, and much more. You can also upload your own images or GIFs as the trophy and death icons, and choose the trophy counter text style: inline (default), fraction, progress bar, or percentage.",
+      "customization_description": "You can now customize the counter completely, including font, shadow, color, font size, counter position, icon size, icon placement, and much more. Besides the app's fonts, you can use the ones installed on your PC, with a live preview on the widget before you choose. You can also upload your own images or GIFs as the trophy and death icons, and choose the trophy counter text style: inline (default), fraction, progress bar, or percentage.",
       "customization_screenshot_alt": "Desktop app screenshot showing the full counter customization options",
       "customization_screenshot_alt_2": "Desktop app screenshot showing the trophy counter text in fraction format",
       "steam_banner_title": "Steam achievement banner",

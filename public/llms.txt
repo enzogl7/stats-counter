@@ -18,7 +18,7 @@
 - PSN game trophies card: an OBS widget for one chosen game showing its trophies split by type (bronze, silver, gold, platinum), either how many are left or earned/total per type, with the completion percentage, the game cover and the latest trophy with its rarity; it updates on its own with every trophy.
 - Game themes: the desktop app has the same game themes as the web version (Elden Ring, Dark Souls, Bloodborne, Hollow Knight, Persona and more), but each one gets its own shape, frame and font.
 - Twitch and Kick chat bot: posts a message when the death or trophy counter goes up; viewers can type !deaths / !trophies (!mortes / !trofeus in Portuguese) to get the current count. Commands and messages are customizable.
-- Global hotkeys that work with the game fullscreen and the app minimized, a timer between trophies (and since the last death on the death counter), the latest trophy name with its rarity, a 100% completion animation, and full widget customization (fonts, colors, custom images or GIFs as icons, fraction/progress bar/percentage display).
+- Global hotkeys that work with the game fullscreen and the app minimized, a timer between trophies (and since the last death on the death counter), the latest trophy name with its rarity, a 100% completion animation, and full widget customization (fonts, including the ones installed on the user's PC, colors, custom images or GIFs as icons, fraction/progress bar/percentage display).
 - Access: lifetime license for supporters who contribute R$ 20 (Brazil, Mercado Pago) or US$ 20 (Buy Me a Coffee), including all future updates.
 
 ## Video
