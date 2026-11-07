@@ -66,4 +66,9 @@ export const streamers: Streamer[] = [
     url: 'https://www.youtube.com/@vitao_platina',
     avatar: 'https://yt3.googleusercontent.com/Tr0URv1QFv8_0-iB4V7uXEHYoyTwR2Emo2Kgl6fmjOFg_dbh5hu8v0kVDCdi_La7rJ9EkbDQ8A=s160-c-k-c0x00ffffff-no-rj',
   },
+  {
+    name: 'oSecundario',
+    url: 'https://www.youtube.com/@oSecundario_',
+    avatar: 'https://yt3.googleusercontent.com/Bv64sqPHh2cflBMSe96WbZHELe-tgaQJfBCGh3BbJWh6aRmiv0Hznnefc3CiPUK9G_B9_KUHAEU=s160-c-k-c0x00ffffff-no-rj',
+  },
 ];
