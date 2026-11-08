@@ -244,6 +244,45 @@
       "section_title_2": " use StatsCounter.",
       "section_description": "A few of the creators using the counter live on their streams.",
       "contact_note": "Want your channel featured here? Get in touch at"
+    },
+    "changelog": {
+      "title_1": "An app that ",
+      "title_accent": "keeps",
+      "title_2": " getting better.",
+      "description": "Every version arrives through automatic updates at no extra cost. Many of these features started as requests from people who support the project.",
+      "supporter_badge": "Supporter request",
+      "latest_title": "Latest {{count}} updates",
+      "roadmap_title": "Coming next",
+      "roadmap_note": "Have an idea for the app? Send it to",
+      "versions": [
+        { "version": "1.7.1", "date": "2026-11-03", "items": [
+          { "text": "Fonts installed on your PC in the death and trophy widgets and in the Steam Banner, with search and preview.", "supporter": true },
+          { "text": "Saved widgets grouped by topic." }
+        ] },
+        { "version": "1.7.0", "date": "2026-11-02", "items": [
+          { "text": "Game trophy card (PSN): how many trophies of each type are left, live in OBS.", "supporter": true },
+          { "text": "Tabbed dashboard, with a tab for just the cards you use." },
+          { "text": "Trophy names in PS3, PS4 and PS Vita games, with rarity." }
+        ] },
+        { "version": "1.6.0", "date": "2026-10-31", "items": [
+          { "text": "All 11 game themes redesigned, with each game's shape, frame and font." },
+          { "text": "Dashboard cards now match the OBS widget." }
+        ] },
+        { "version": "1.5.5", "date": "2026-10-28", "items": [
+          { "text": "PSN profile card: avatar, level and trophies on stream, animated on every trophy." }
+        ] },
+        { "version": "1.5.4", "date": "2026-10-26", "items": [
+          { "text": "Full Steam Banner editor: font, colors, background, border, icon and entrance." }
+        ] },
+        { "version": "1.5.3", "date": "2026-10-21", "items": [
+          { "text": "Real-time Steam Banner, together with Steam's own notification." }
+        ] }
+      ],
+      "roadmap": [
+        { "text": "Steam Family games in sync and in the Steam Banner.", "supporter": true },
+        { "text": "Faster achievement detection in the counter, starting with Steam." },
+        { "text": "Xbox integration." }
+      ]
     }
   },
   "supporters": {

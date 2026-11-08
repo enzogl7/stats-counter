@@ -369,7 +369,23 @@ const PAGE_STYLES = `
   .dal-faq[open] .dal-faq-icon { transform: rotate(45deg); }
   .dal-faq[open] { border-color: var(--line-2); }
   .dal-streamer-card:hover .dal-streamer-name { color: var(--accent-text); }
+  .dal-changelog > li { position: relative; padding: 0 0 22px 22px; border-left: 1px solid var(--line-2); }
+  .dal-changelog > li::before {
+    content: ''; position: absolute; left: -4px; top: 7px; width: 7px; height: 7px;
+    border-radius: 999px; background: var(--accent); box-shadow: 0 0 10px var(--text-glow);
+  }
+  .dal-changelog > li:last-child { padding-bottom: 0; }
 `;
+
+type ChangelogItem = { text: string; supporter?: boolean };
+type ChangelogVersion = { version: string; date: string; items: ChangelogItem[] };
+type Changelog = {
+  title_1: string; title_accent: string; title_2: string; description: string;
+  supporter_badge: string; roadmap_title: string; roadmap_note: string;
+  versions: ChangelogVersion[]; roadmap: ChangelogItem[];
+};
+// ponytail: entries live in the locale JSON so scripts/desktop-pages.js reuses them for the static SEO copy.
+const CHANGELOG_VISIBLE = 6;
 
 const DesktopAppLanding: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -381,6 +397,35 @@ const DesktopAppLanding: React.FC = () => {
     if (!i18n.language.startsWith(routeLang)) i18n.changeLanguage(routeLang);
   }, [i18n, routeLang]);
   const faqItems = t('desktop_app_landing.faq.items', { returnObjects: true }) as { q: string; a: string }[];
+  const changelog = t('desktop_app_landing.changelog', { returnObjects: true }) as Changelog;
+  // timeZone UTC: the dates are calendar days, not instants (avoids showing the day before in Brazil).
+  const changelogDate = new Intl.DateTimeFormat(isPortuguese ? 'pt-BR' : 'en-US', {
+    day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC',
+  });
+  const renderChangelogItem = (item: ChangelogItem) => (
+    <li key={item.text} className="text-sm" style={{ color: 'var(--ink-2)', lineHeight: 1.7 }}>
+      {item.text}{' '}
+      {item.supporter && (
+        <span
+          className="dal-chip inline-block whitespace-nowrap align-middle"
+          style={{ background: 'var(--accent-soft)', borderColor: 'var(--line-accent)', color: 'var(--accent-text)' }}
+        >
+          {changelog.supporter_badge}
+        </span>
+      )}
+    </li>
+  );
+  const renderChangelogVersion = (v: ChangelogVersion) => (
+    <li key={v.version}>
+      <div className="flex flex-wrap items-baseline gap-x-3">
+        <span className="dal-mono text-sm font-bold" style={{ color: 'var(--ink)' }}>v{v.version}</span>
+        <time dateTime={v.date} className="dal-mono text-[11px]" style={{ color: 'var(--ink-4)' }}>
+          {changelogDate.format(new Date(v.date))}
+        </time>
+      </div>
+      <ul className="mt-2 flex flex-col gap-1.5">{v.items.map(renderChangelogItem)}</ul>
+    </li>
+  );
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
   const [zoomLevel, setZoomLevel] = useState(1);
 
@@ -875,6 +920,56 @@ const DesktopAppLanding: React.FC = () => {
               statscountersup@gmail.com
             </a>
           </motion.p>
+        </motion.section>
+
+        {/* ── Changelog + roadmap ── */}
+        <motion.section className="mb-16" {...fadeUpView(0)}>
+          <motion.h2 className="dal-h2" {...fadeUpView(0.08)}>
+            {changelog.title_1}
+            <span className="dal-accent">{changelog.title_accent}</span>
+            {changelog.title_2}
+          </motion.h2>
+          <motion.p
+            className="mt-3 max-w-[60ch] text-sm"
+            style={{ color: 'var(--ink-3)', lineHeight: 1.8 }}
+            {...fadeUpView(0.12)}
+          >
+            {changelog.description}
+          </motion.p>
+
+          <div className="mt-8 grid items-start gap-4 md:grid-cols-[3fr_2fr]">
+            <motion.div className="dal-glass-card" {...fadeUpView(0.16)}>
+              <span className="dal-chip" style={{ color: 'var(--info)', borderColor: 'var(--info-line)', background: 'var(--info-soft)' }}>
+                CHANGELOG
+              </span>
+              <h3 className="dal-h3 mt-4">
+                {t('desktop_app_landing.changelog.latest_title', { count: CHANGELOG_VISIBLE })}
+              </h3>
+              <ol className="dal-changelog mt-5">
+                {changelog.versions.slice(0, CHANGELOG_VISIBLE).map(renderChangelogVersion)}
+              </ol>
+            </motion.div>
+
+            <motion.div className="dal-glass-card" {...fadeUpView(0.22)}>
+              <span className="dal-chip" style={{ color: 'var(--info)', borderColor: 'var(--info-line)', background: 'var(--info-soft)' }}>
+                ROADMAP
+              </span>
+              <h3 className="dal-h3 mt-4">{changelog.roadmap_title}</h3>
+              <ul className="mt-3 flex list-disc flex-col gap-2.5 pl-5 marker:text-[var(--accent)]">
+                {changelog.roadmap.map(renderChangelogItem)}
+              </ul>
+              <p className="mt-5 text-xs" style={{ color: 'var(--ink-3)', lineHeight: 1.7 }}>
+                {changelog.roadmap_note}{' '}
+                <a
+                  href="mailto:statscountersup@gmail.com?subject=StatsCounter%20-%20Ideia"
+                  className="font-semibold underline-offset-2 hover:underline"
+                  style={{ color: 'var(--accent-text)' }}
+                >
+                  statscountersup@gmail.com
+                </a>
+              </p>
+            </motion.div>
+          </div>
         </motion.section>
 
         {/* ── Access ── */}

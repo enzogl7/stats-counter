@@ -244,6 +244,45 @@
       "section_title_2": " usam o StatsCounter.",
       "section_description": "Alguns dos criadores que usam o contador ao vivo nas suas lives.",
       "contact_note": "Quer ter seu canal aqui? Entre em contato pelo"
+    },
+    "changelog": {
+      "title_1": "Um app que ",
+      "title_accent": "não para",
+      "title_2": " de evoluir.",
+      "description": "Todas as versões chegam pela atualização automática, sem custo extra. Boa parte das novidades nasce de pedidos de quem apoia o projeto.",
+      "supporter_badge": "Pedido de apoiador",
+      "latest_title": "Últimas {{count}} atualizações",
+      "roadmap_title": "Vem por aí",
+      "roadmap_note": "Tem uma ideia para o app? Mande para",
+      "versions": [
+        { "version": "1.7.1", "date": "2026-11-03", "items": [
+          { "text": "Fontes instaladas no seu PC nos widgets de morte, de troféu e no Banner Steam, com busca e prévia.", "supporter": true },
+          { "text": "Widgets salvos separados por tópico." }
+        ] },
+        { "version": "1.7.0", "date": "2026-11-02", "items": [
+          { "text": "Card de troféus do jogo (PSN): quanto falta de cada tipo de troféu, ao vivo no OBS.", "supporter": true },
+          { "text": "Dashboard em abas, com uma aba só com os cards que você usa." },
+          { "text": "Nome do troféu em jogos de PS3, PS4 e PS Vita, com a raridade." }
+        ] },
+        { "version": "1.6.0", "date": "2026-10-31", "items": [
+          { "text": "Os 11 temas de jogos redesenhados, com formato, moldura e fonte de cada jogo." },
+          { "text": "Cards do dashboard iguais ao widget do OBS." }
+        ] },
+        { "version": "1.5.5", "date": "2026-10-28", "items": [
+          { "text": "Card de perfil PSN: avatar, nível e troféus na live, com animação a cada troféu." }
+        ] },
+        { "version": "1.5.4", "date": "2026-10-26", "items": [
+          { "text": "Editor completo do Banner Steam: fonte, cores, fundo, borda, ícone e entrada." }
+        ] },
+        { "version": "1.5.3", "date": "2026-10-21", "items": [
+          { "text": "Banner Steam em tempo real, junto com a notificação da Steam." }
+        ] }
+      ],
+      "roadmap": [
+        { "text": "Jogos da Família Steam na sincronização e no Banner Steam.", "supporter": true },
+        { "text": "Conquistas mais rápidas no contador, começando pela Steam." },
+        { "text": "Integração com o Xbox." }
+      ]
     }
   },
   "supporters": {

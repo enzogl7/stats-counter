@@ -92,6 +92,10 @@ const body = (d) => {
       ${section(f.psn_profile_title, f.psn_profile_description)}
       ${section(f.psn_game_card_title, f.psn_game_card_description)}
       ${section(d.game_themes.title_1 + d.game_themes.title_accent, d.game_themes.description)}
+      <h2>${esc(d.changelog.title_1 + d.changelog.title_accent + d.changelog.title_2)}</h2>
+      <p>${esc(d.changelog.description)}</p>
+      ${d.changelog.versions.slice(0, 6).map((v) => section(`v${v.version} (${v.date})`, v.items.map((i) => i.text).join(' '))).join('\n      ')}
+      ${section(d.changelog.roadmap_title, d.changelog.roadmap.map((i) => i.text).join(' '))}
       <h2>${esc(d.faq.title_1 + d.faq.title_accent + d.faq.title_2)}</h2>
       ${d.faq.items.map(({ q, a }) => section(q, a)).join('\n      ')}
       <h2>${esc(d.access_title)}</h2>
