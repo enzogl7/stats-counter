@@ -757,6 +757,16 @@ const DesktopAppLanding: React.FC = () => {
                   </p>
                 </div>
               </div>
+
+              <p
+                className="mt-3 rounded-xl px-4 py-3 text-sm"
+                style={{ color: 'var(--ink-2)', lineHeight: 1.7, background: 'rgba(102, 192, 244, 0.08)', borderLeft: '2px solid #66c0f4' }}
+              >
+                <span className="dal-mono mr-2 text-[10px] font-bold tracking-[0.14em]" style={{ color: '#66c0f4' }}>
+                  {t('desktop_app_landing.current_features.steam_sets_tag')}
+                </span>
+                {t('desktop_app_landing.current_features.steam_sets_description')}
+              </p>
             </motion.div>
 
             <div className="md:col-span-2">

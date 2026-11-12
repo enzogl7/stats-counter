@@ -79,8 +79,8 @@ O **StatsCounter Desktop** é um **contador de troféus automático para OBS**, 
 ## Recursos do Desktop
 
 - **Rastreador automático de troféus PS5 e PS4 (PSN):** escolha o jogo e cada troféu de bronze, prata, ouro ou platina entra no widget sozinho.
-- **Contador de conquistas Steam:** acompanha as conquistas de qualquer jogo da biblioteca.
-- **Banner de conquista Steam no OBS:** um banner animado e 100% editável aparece na live a cada conquista desbloqueada.
+- **Contador de conquistas Steam:** acompanha as conquistas de qualquer jogo da biblioteca, inclusive os da Família Steam, com suporte aos conjuntos de conquistas que a Steam liberou em 11/11/2026: o total é igual ao da Steam (DLC só conta depois da primeira conquista dela).
+- **Banner de conquista Steam no OBS:** um banner animado e 100% editável aparece na live a cada conquista desbloqueada, com o conjunto da conquista e aviso de conjunto completo.
 - **Card de perfil PSN no OBS:** avatar, nível com anel de progresso, troféus por tipo, número de jogos e o jogo atual, atualizando sozinho e com animação a cada troféu e subida de nível.
 - **Card de troféus do jogo (PSN) no OBS:** os troféus de um jogo separados por tipo, com quanto falta ou quanto já foi ganho, porcentagem concluída e último troféu com raridade, atualizando sozinho.
 - **Temas com a cara de cada jogo:** os mesmos temas de jogos da versão web, mas no app cada um tem formato, moldura e fonte próprios.
@@ -183,8 +183,8 @@ In the free web version, you update the counter with a click or a keyboard short
 ## Desktop Features
 
 - **Automatic PS5 and PS4 trophy tracker (PSN):** pick the game and every bronze, silver, gold or platinum trophy lands in the widget on its own.
-- **Steam achievement counter:** tracks achievements for any game in your library.
-- **Steam achievement banner in OBS:** a fully editable animated banner shows up on stream every time you unlock an achievement.
+- **Steam achievement counter:** tracks achievements for any game in your library, including Steam Family games, with support for the achievement sets Steam released on Nov 11, 2026: the total matches Steam (DLC only counts after your first achievement from it).
+- **Steam achievement banner in OBS:** a fully editable animated banner shows up on stream every time you unlock an achievement, with the achievement's set and a set complete alert.
 - **PSN profile card in OBS:** avatar, level with a progress ring, trophies by type, game count and current game, updating and animating on its own with every trophy and level-up.
 - **PSN game trophies card in OBS:** one game's trophies split by type, showing how many are left or earned, completion percentage and the latest trophy with its rarity, updating on its own.
 - **Themes that look like each game:** the same game themes as the web version, but in the app each one has its own shape, frame and font.

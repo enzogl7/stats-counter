@@ -109,7 +109,7 @@
     "seo": {
       "title": "Contador de Troféus Automático para OBS | PSN, Steam e RetroAchievements",
       "description": "App para Windows e Linux que sincroniza com PSN (PS5 e PS4), Steam e RetroAchievements e atualiza sozinho o contador de troféus e conquistas da sua live no OBS.",
-      "keywords": "contador de troféus automático, trophy tracker OBS, rastreador de troféus PS5, contador de troféus PSN OBS, contador de conquistas Steam OBS, banner de conquista Steam OBS, card de perfil PSN OBS, troféus restantes PSN OBS, RetroAchievements OBS, contador de platina OBS, stats counter desktop"
+      "keywords": "contador de troféus automático, trophy tracker OBS, rastreador de troféus PS5, contador de troféus PSN OBS, contador de conquistas Steam OBS, banner de conquista Steam OBS, card de perfil PSN OBS, troféus restantes PSN OBS, conjuntos de conquistas Steam OBS, RetroAchievements OBS, contador de platina OBS, stats counter desktop"
     },
     "video": {
       "title_1": "Veja ",
@@ -129,7 +129,11 @@
         },
         {
           "q": "Funciona com conquistas da Steam?",
-          "a": "Sim. Conecte sua conta da Steam para acompanhar as conquistas de qualquer jogo da sua biblioteca. Você também pode exibir na live um banner animado e 100% editável toda vez que desbloquear uma conquista."
+          "a": "Sim. Conecte sua conta da Steam para acompanhar as conquistas de qualquer jogo da sua biblioteca, inclusive os da Família Steam instalados no PC. Você também pode exibir na live um banner animado e 100% editável toda vez que desbloquear uma conquista."
+        },
+        {
+          "q": "O contador funciona com os conjuntos de conquistas da Steam?",
+          "a": "Sim. A Steam liberou os conjuntos de conquistas para todos em 11 de novembro de 2026, e o app já segue a mesma regra: o total do contador bate com o que a Steam mostra. As conquistas de uma DLC só entram depois que você ganha a primeira delas, e uma conquista arquivada (que ninguém pode mais ganhar) sai do total se você não a tem, então o 100% não fica travado por conteúdo que você não tem. No Banner Steam, a conquista mostra de qual conjunto ela é e avisa quando você completa um. Nem todo jogo tem conjuntos ainda, porque depende de cada desenvolvedor; nos outros, nada muda."
         },
         {
           "q": "Funciona com PS4 e jogos retrô?",
@@ -194,9 +198,11 @@
       "customization_description": "Agora você pode personalizar 100% o contador, com fonte, sombra, cor, tamanho da fonte, posicionamento do contador, tamanho do ícone, posicionamento e muito mais. Além das fontes do app, dá para usar as instaladas no seu PC, com prévia no widget antes de escolher. Você também pode enviar suas próprias imagens ou GIFs como ícone de troféu e de morte, e escolher o estilo do texto do contador de troféus: inline (padrão), fração, barra de progresso ou porcentagem.",
       "customization_screenshot_alt": "Captura do app desktop mostrando as opções de personalização completa do contador",
       "customization_screenshot_alt_2": "Captura do app desktop mostrando o texto do contador de troféus em formato de fração",
+      "steam_sets_tag": "NOVO",
+      "steam_sets_description": "A Steam liberou os conjuntos de conquistas para todos em 11 de novembro, e o app já segue: o total bate com o da Steam, e a DLC só conta depois da primeira conquista dela. Nem todo jogo tem conjuntos ainda; nos outros, nada muda.",
       "steam_banner_title": "Banner de conquista Steam",
       "steam_banner_alt": "GIF do app desktop mostrando o banner de conquista Steam aparecendo no OBS",
-      "steam_banner_description": "Toda vez que você ganhar uma conquista, um banner animado entra na live mostrando o que você desbloqueou. Ele é sincronizado com a sua conta Steam, funciona com qualquer jogo da biblioteca e é 100% editável: fundo, cores, fontes, som, animação de entrada e tempo na tela.",
+      "steam_banner_description": "Toda vez que você ganhar uma conquista, um banner animado entra na live mostrando o que você desbloqueou. Ele é sincronizado com a sua conta Steam, funciona com qualquer jogo da biblioteca e é 100% editável: fundo, cores, fontes, som, animação de entrada e tempo na tela. Nos jogos com conjuntos de conquistas (jogo base, DLC), o banner mostra de qual conjunto ela é e avisa quando você completa um.",
       "steam_banner_alt_2": "Captura do app desktop mostrando as opções de edição do banner de conquista Steam",
       "psn_profile_alt": "GIF do app desktop mostrando o card de perfil PSN no OBS",
       "psn_profile_title": "Card de perfil PSN",
@@ -255,6 +261,13 @@
       "roadmap_title": "Vem por aí",
       "roadmap_note": "Tem uma ideia para o app? Mande para",
       "versions": [
+        { "version": "1.7.2", "date": "2026-11-11", "items": [
+          { "text": "Conquistas da Steam contadas como na própria Steam: DLC só entra depois da primeira conquista dela e conquista arquivada não atrapalha o 100%." },
+          { "text": "Banner Steam mostra de qual conjunto é a conquista e avisa quando você completa um." },
+          { "text": "Jogos da Família Steam na lista do contador e do Banner Steam.", "supporter": true },
+          { "text": "Botão de voltar ao topo no dashboard.", "supporter": true },
+          { "text": "Banner Steam volta a aparecer na hora em jogos em que atrasava." }
+        ] },
         { "version": "1.7.1", "date": "2026-11-03", "items": [
           { "text": "Fontes instaladas no seu PC nos widgets de morte, de troféu e no Banner Steam, com busca e prévia.", "supporter": true },
           { "text": "Widgets salvos separados por tópico." }
@@ -273,13 +286,9 @@
         ] },
         { "version": "1.5.4", "date": "2026-10-26", "items": [
           { "text": "Editor completo do Banner Steam: fonte, cores, fundo, borda, ícone e entrada." }
-        ] },
-        { "version": "1.5.3", "date": "2026-10-21", "items": [
-          { "text": "Banner Steam em tempo real, junto com a notificação da Steam." }
         ] }
       ],
       "roadmap": [
-        { "text": "Jogos da Família Steam na sincronização e no Banner Steam.", "supporter": true },
         { "text": "Conquistas mais rápidas no contador, começando pela Steam." },
         { "text": "Integração com o Xbox." }
       ]

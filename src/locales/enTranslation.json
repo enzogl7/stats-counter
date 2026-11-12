@@ -109,7 +109,7 @@
     "seo": {
       "title": "Automatic Trophy Counter for OBS | PSN, Steam & RetroAchievements",
       "description": "Windows and Linux app that syncs with PSN (PS5 and PS4), Steam and RetroAchievements and automatically updates the trophy and achievement counter on your OBS stream.",
-      "keywords": "automatic trophy counter, trophy tracker OBS, PS5 trophy tracker, PSN trophy counter OBS, Steam achievement counter OBS, Steam achievement banner OBS, PSN profile card OBS, PSN trophies left OBS, RetroAchievements OBS, platinum tracker OBS, stats counter desktop"
+      "keywords": "automatic trophy counter, trophy tracker OBS, PS5 trophy tracker, PSN trophy counter OBS, Steam achievement counter OBS, Steam achievement banner OBS, PSN profile card OBS, PSN trophies left OBS, Steam achievement sets OBS, RetroAchievements OBS, platinum tracker OBS, stats counter desktop"
     },
     "video": {
       "title_1": "See it ",
@@ -129,7 +129,11 @@
         },
         {
           "q": "Does it work with Steam achievements?",
-          "a": "Yes. Connect your Steam account to track achievements for any game in your library. You can also show a fully editable animated banner on stream every time you unlock an achievement."
+          "a": "Yes. Connect your Steam account to track achievements for any game in your library, including Steam Family games installed on your PC. You can also show a fully editable animated banner on stream every time you unlock an achievement."
+        },
+        {
+          "q": "Does the counter work with Steam achievement sets?",
+          "a": "Yes. Steam released achievement sets to everyone on November 11, 2026, and the app already follows the same rule: the counter's total matches what Steam shows. A DLC's achievements only count after you earn your first one from it, and a retired achievement (one nobody can earn anymore) leaves the total if you don't have it, so your 100% is never blocked by content you don't own. On the Steam Banner, each achievement shows which set it belongs to, and you get an alert when you complete one. Not every game has sets yet, since it's up to each developer; for the rest, nothing changes."
         },
         {
           "q": "Does it work with PS4 and retro games?",
@@ -194,9 +198,11 @@
       "customization_description": "You can now customize the counter completely, including font, shadow, color, font size, counter position, icon size, icon placement, and much more. Besides the app's fonts, you can use the ones installed on your PC, with a live preview on the widget before you choose. You can also upload your own images or GIFs as the trophy and death icons, and choose the trophy counter text style: inline (default), fraction, progress bar, or percentage.",
       "customization_screenshot_alt": "Desktop app screenshot showing the full counter customization options",
       "customization_screenshot_alt_2": "Desktop app screenshot showing the trophy counter text in fraction format",
+      "steam_sets_tag": "NEW",
+      "steam_sets_description": "Steam released achievement sets to everyone on November 11, and the app already supports them: the total matches Steam's, and DLC only counts after your first achievement from it. Not every game has sets yet; for the rest, nothing changes.",
       "steam_banner_title": "Steam achievement banner",
       "steam_banner_alt": "Desktop app GIF showing the Steam achievement banner appearing in OBS",
-      "steam_banner_description": "Every time you unlock an achievement, an animated banner slides into your stream showing what you just earned. It is synced with your Steam account, works with any game in your library and is fully editable: background, colors, fonts, sound, entry animation and time on screen.",
+      "steam_banner_description": "Every time you unlock an achievement, an animated banner slides into your stream showing what you just earned. It is synced with your Steam account, works with any game in your library and is fully editable: background, colors, fonts, sound, entry animation and time on screen. In games with achievement sets (base game, DLC), the banner shows which set it belongs to and lets you know when you complete one.",
       "steam_banner_alt_2": "Desktop app screenshot showing the Steam achievement banner editing options",
       "psn_profile_alt": "Desktop app GIF showing the PSN profile card in OBS",
       "psn_profile_title": "PSN profile card",
@@ -255,6 +261,13 @@
       "roadmap_title": "Coming next",
       "roadmap_note": "Have an idea for the app? Send it to",
       "versions": [
+        { "version": "1.7.2", "date": "2026-11-11", "items": [
+          { "text": "Steam achievements counted just like Steam does: DLC only counts after your first achievement from it, and retired achievements no longer block 100%." },
+          { "text": "Steam Banner shows which set an achievement belongs to and lets you know when you complete one." },
+          { "text": "Steam Family games in the counter and Steam Banner game list.", "supporter": true },
+          { "text": "Back-to-top button on the dashboard.", "supporter": true },
+          { "text": "Steam Banner shows up right away again in games where it was delayed." }
+        ] },
         { "version": "1.7.1", "date": "2026-11-03", "items": [
           { "text": "Fonts installed on your PC in the death and trophy widgets and in the Steam Banner, with search and preview.", "supporter": true },
           { "text": "Saved widgets grouped by topic." }
@@ -273,13 +286,9 @@
         ] },
         { "version": "1.5.4", "date": "2026-10-26", "items": [
           { "text": "Full Steam Banner editor: font, colors, background, border, icon and entrance." }
-        ] },
-        { "version": "1.5.3", "date": "2026-10-21", "items": [
-          { "text": "Real-time Steam Banner, together with Steam's own notification." }
         ] }
       ],
       "roadmap": [
-        { "text": "Steam Family games in sync and in the Steam Banner.", "supporter": true },
         { "text": "Faster achievement detection in the counter, starting with Steam." },
         { "text": "Xbox integration." }
       ]

@@ -13,7 +13,7 @@
 
 - [StatsCounter Desktop (pt-BR)](https://www.statscounter.pro/desktop-app) · [English](https://www.statscounter.pro/en/desktop-app)
 - Automatic trophy tracking: connect a PSN account (PS5 and PS4), Steam or RetroAchievements and the trophy/achievement counter updates on its own, even with the app minimized. No capture card or chat commands needed.
-- Steam achievement banner: animated, fully customizable banner shown on stream whenever an achievement unlocks, for any game in the Steam library.
+- Steam achievement banner: animated, fully customizable banner shown on stream whenever an achievement unlocks, for any game in the Steam library (including Steam Family games); it shows which achievement set the achievement belongs to and a "set complete" alert. Supports Steam achievement sets (released by Steam to everyone on 2026-11-11): the achievement total matches what Steam shows; DLC achievements only count after the first one from that DLC is earned.
 - PSN profile card: an OBS widget with the PlayStation profile (avatar, level with a progress ring, trophy totals by type, game count and the game being played now) that updates and animates on its own with every trophy and level-up.
 - PSN game trophies card: an OBS widget for one chosen game showing its trophies split by type (bronze, silver, gold, platinum), either how many are left or earned/total per type, with the completion percentage, the game cover and the latest trophy with its rarity; it updates on its own with every trophy.
 - Game themes: the desktop app has the same game themes as the web version (Elden Ring, Dark Souls, Bloodborne, Hollow Knight, Persona and more), but each one gets its own shape, frame and font.

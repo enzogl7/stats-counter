@@ -82,7 +82,7 @@ const body = (d) => {
       <h2>${esc(f.platform_sync_title)}</h2>
       <p>${esc(f.platform_sync_description)}</p>
       ${section(f.psn_sync_title, f.psn_sync_description)}
-      ${section(f.steam_sync_title, f.steam_sync_description)}
+      ${section(f.steam_sync_title, `${f.steam_sync_description} ${f.steam_sets_description}`)}
       ${section(f.retroachievements_sync_title, f.retroachievements_sync_description)}
       ${section(f.twitch_title, f.twitch_description)}
       ${section(f.hotkeys_title, f.hotkeys_description)}
