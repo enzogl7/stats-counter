@@ -289,6 +289,9 @@
         ] }
       ],
       "roadmap": [
+        { "text": "Gameplay Timer: tempo de jogo na live, com pausa geral e timers por DLC." },
+        { "text": "Modo caçador: o troféu que você está caçando na tela, com comemoração quando sair." },
+        { "text": "Novos comandos de chat de troféu na Twitch: !progresso, !ultimo e !sessao." },
         { "text": "Conquistas mais rápidas no contador, começando pela Steam." },
         { "text": "Integração com o Xbox." }
       ]

@@ -289,6 +289,9 @@
         ] }
       ],
       "roadmap": [
+        { "text": "Gameplay Timer: play time on stream, with pause all and per-DLC timers." },
+        { "text": "Hunter mode: the trophy you are hunting on screen, with a celebration when it pops." },
+        { "text": "New trophy chat commands on Twitch: !progresso, !ultimo and !sessao." },
         { "text": "Faster achievement detection in the counter, starting with Steam." },
         { "text": "Xbox integration." }
       ]
