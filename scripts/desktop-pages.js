@@ -43,7 +43,7 @@ const head = ({ url, htmlLang, price }, d) => {
         {
           '@type': 'SoftwareApplication',
           name: 'StatsCounter Desktop',
-          operatingSystem: 'Windows, Linux',
+          operatingSystem: 'Windows, Linux, macOS',
           applicationCategory: 'MultimediaApplication',
           url,
           inLanguage: htmlLang,
@@ -77,6 +77,7 @@ const body = (d) => {
   return `<div id="root"><main>
       <h1>${esc(d.title_1 + d.title_accent + d.title_2)}</h1>
       <p>${esc(d.description)}</p>
+      <p>${esc(d.works_with)}. ${esc(d.runs_on)}.</p>
       <h2>${esc(d.video.title_1 + d.video.title_accent + d.video.title_2)}</h2>
       <p><a href="https://www.youtube.com/watch?v=${VIDEO.id}">${esc(d.video.iframe_title)}</a></p>
       <h2>${esc(f.platform_sync_title)}</h2>

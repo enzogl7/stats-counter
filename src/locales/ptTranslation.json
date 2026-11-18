@@ -106,10 +106,12 @@
     "title_accent": "automático",
     "title_2": " para OBS.",
     "description": "Conecte sua conta da PSN, Steam ou RetroAchievements e o StatsCounter Desktop atualiza o contador da sua live sozinho a cada troféu ou conquista, mesmo com o app minimizado.",
+    "works_with": "Funciona no OBS, Streamlabs e TikTok Live Studio",
+    "runs_on": "Windows · Linux · macOS (Apple Silicon)",
     "seo": {
       "title": "Contador de Troféus Automático para OBS | PSN, Steam e RetroAchievements",
-      "description": "App para Windows e Linux que sincroniza com PSN (PS5 e PS4), Steam e RetroAchievements e atualiza sozinho o contador de troféus e conquistas da sua live no OBS.",
-      "keywords": "contador de troféus automático, trophy tracker OBS, rastreador de troféus PS5, contador de troféus PSN OBS, contador de conquistas Steam OBS, banner de conquista Steam OBS, card de perfil PSN OBS, troféus restantes PSN OBS, conjuntos de conquistas Steam OBS, RetroAchievements OBS, contador de platina OBS, stats counter desktop"
+      "description": "App para Windows, Linux e macOS que sincroniza com PSN (PS5 e PS4), Steam e RetroAchievements e atualiza sozinho o contador de troféus e conquistas da sua live no OBS e no TikTok Live Studio.",
+      "keywords": "contador de troféus automático, trophy tracker OBS, rastreador de troféus PS5, contador de troféus PSN OBS, contador de conquistas Steam OBS, banner de conquista Steam OBS, card de perfil PSN OBS, troféus restantes PSN OBS, conjuntos de conquistas Steam OBS, RetroAchievements OBS, contador de mortes TikTok Live Studio, contador de troféus TikTok Live Studio, contador de platina OBS, stats counter desktop"
     },
     "video": {
       "title_1": "Veja ",
@@ -148,8 +150,12 @@
           "a": "Defina hotkeys globais no StatsCounter Desktop: elas funcionam mesmo com o jogo em tela cheia e o app minimizado, então cada morte entra no contador do OBS com um atalho, sem trocar de janela. Os espectadores conferem o total a qualquer momento com !mortes."
         },
         {
+          "q": "Funciona no TikTok Live Studio?",
+          "a": "Sim. Desde a versão 1.7.3, todos os widgets funcionam no TikTok Live Studio: contadores de mortes e de troféus, Banner Steam, card de perfil PSN e card de troféus do jogo, com tema, som, animação e atualização ao vivo. Cada widget tem o botão \"Gerar URL para o TikTok Live Studio\": use essa URL no TikTok e a de sempre no OBS e no Streamlabs. Com muitas fontes na mesma cena, o Live Studio pode ficar lento e deixar de carregar alguns ícones; tirar algumas fontes resolve."
+        },
+        {
           "q": "Preciso deixar o navegador aberto?",
-          "a": "Não. O app roda no Windows e no Linux e continua sincronizando e respondendo às hotkeys globais mesmo minimizado."
+          "a": "Não. O app roda no Windows, no Linux e no macOS (Macs com Apple Silicon) e continua sincronizando e respondendo às hotkeys globais mesmo minimizado."
         },
         {
           "q": "Funciona com o chat da Twitch e da Kick?",
@@ -261,6 +267,9 @@
       "roadmap_title": "Vem por aí",
       "roadmap_note": "Tem uma ideia para o app? Mande para",
       "versions": [
+        { "version": "1.7.3", "date": "2026-11-17", "items": [
+          { "text": "Todos os widgets funcionam no TikTok Live Studio, com um botão de URL próprio para ele." }
+        ] },
         { "version": "1.7.2", "date": "2026-11-11", "items": [
           { "text": "Conquistas da Steam contadas como na própria Steam: DLC só entra depois da primeira conquista dela e conquista arquivada não atrapalha o 100%." },
           { "text": "Banner Steam mostra de qual conjunto é a conquista e avisa quando você completa um." },
@@ -283,9 +292,6 @@
         ] },
         { "version": "1.5.5", "date": "2026-10-28", "items": [
           { "text": "Card de perfil PSN: avatar, nível e troféus na live, com animação a cada troféu." }
-        ] },
-        { "version": "1.5.4", "date": "2026-10-26", "items": [
-          { "text": "Editor completo do Banner Steam: fonte, cores, fundo, borda, ícone e entrada." }
         ] }
       ],
       "roadmap": [
@@ -293,6 +299,7 @@
         { "text": "Modo caçador: o troféu que você está caçando na tela, com comemoração quando sair." },
         { "text": "Novos comandos de chat de troféu na Twitch: !progresso, !ultimo e !sessao." },
         { "text": "Conquistas mais rápidas no contador, começando pela Steam." },
+        { "text": "Cores do app personalizadas: escolha as cores da interface e monte o seu próprio tema." },
         { "text": "Integração com o Xbox." }
       ]
     }

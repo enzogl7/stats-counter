@@ -106,10 +106,12 @@
     "title_accent": "automatic",
     "title_2": " trophy counter for OBS.",
     "description": "Connect your PSN, Steam or RetroAchievements account and StatsCounter Desktop updates your stream's counter on its own with every trophy or achievement, even while minimized.",
+    "works_with": "Works in OBS, Streamlabs and TikTok Live Studio",
+    "runs_on": "Windows · Linux · macOS (Apple Silicon)",
     "seo": {
       "title": "Automatic Trophy Counter for OBS | PSN, Steam & RetroAchievements",
-      "description": "Windows and Linux app that syncs with PSN (PS5 and PS4), Steam and RetroAchievements and automatically updates the trophy and achievement counter on your OBS stream.",
-      "keywords": "automatic trophy counter, trophy tracker OBS, PS5 trophy tracker, PSN trophy counter OBS, Steam achievement counter OBS, Steam achievement banner OBS, PSN profile card OBS, PSN trophies left OBS, Steam achievement sets OBS, RetroAchievements OBS, platinum tracker OBS, stats counter desktop"
+      "description": "Windows, Linux and macOS app that syncs with PSN (PS5 and PS4), Steam and RetroAchievements and automatically updates the trophy and achievement counter on your stream in OBS and TikTok Live Studio.",
+      "keywords": "automatic trophy counter, trophy tracker OBS, PS5 trophy tracker, PSN trophy counter OBS, Steam achievement counter OBS, Steam achievement banner OBS, PSN profile card OBS, PSN trophies left OBS, Steam achievement sets OBS, RetroAchievements OBS, TikTok Live Studio death counter, TikTok Live Studio trophy counter, platinum tracker OBS, stats counter desktop"
     },
     "video": {
       "title_1": "See it ",
@@ -148,8 +150,12 @@
           "a": "Set up global hotkeys in StatsCounter Desktop: they work even with your game in fullscreen and the app minimized, so every death hits your OBS counter with a single shortcut, without switching windows. Viewers can check the total anytime with !deaths."
         },
         {
+          "q": "Does it work with TikTok Live Studio?",
+          "a": "Yes. Since version 1.7.3, every widget works in TikTok Live Studio: death and trophy counters, Steam Banner, PSN profile card and game trophy card, with themes, sounds, animations and live updates. Each widget has a \"Generate URL for TikTok Live Studio\" button: use that URL in TikTok and the usual one in OBS and Streamlabs. With many sources in the same scene, Live Studio can slow down and skip loading some icons; removing a few sources fixes it."
+        },
+        {
           "q": "Do I need to keep a browser open?",
-          "a": "No. The app runs on Windows and Linux and keeps syncing and responding to global hotkeys even while minimized."
+          "a": "No. The app runs on Windows, Linux and macOS (Apple Silicon Macs) and keeps syncing and responding to global hotkeys even while minimized."
         },
         {
           "q": "Does it work with Twitch and Kick chat?",
@@ -261,6 +267,9 @@
       "roadmap_title": "Coming next",
       "roadmap_note": "Have an idea for the app? Send it to",
       "versions": [
+        { "version": "1.7.3", "date": "2026-11-17", "items": [
+          { "text": "Every widget works in TikTok Live Studio, with its own URL button." }
+        ] },
         { "version": "1.7.2", "date": "2026-11-11", "items": [
           { "text": "Steam achievements counted just like Steam does: DLC only counts after your first achievement from it, and retired achievements no longer block 100%." },
           { "text": "Steam Banner shows which set an achievement belongs to and lets you know when you complete one." },
@@ -283,9 +292,6 @@
         ] },
         { "version": "1.5.5", "date": "2026-10-28", "items": [
           { "text": "PSN profile card: avatar, level and trophies on stream, animated on every trophy." }
-        ] },
-        { "version": "1.5.4", "date": "2026-10-26", "items": [
-          { "text": "Full Steam Banner editor: font, colors, background, border, icon and entrance." }
         ] }
       ],
       "roadmap": [
@@ -293,6 +299,7 @@
         { "text": "Hunter mode: the trophy you are hunting on screen, with a celebration when it pops." },
         { "text": "New trophy chat commands on Twitch: !progresso, !ultimo and !sessao." },
         { "text": "Faster achievement detection in the counter, starting with Steam." },
+        { "text": "Custom app colors: pick the interface colors and build your own theme." },
         { "text": "Xbox integration." }
       ]
     }

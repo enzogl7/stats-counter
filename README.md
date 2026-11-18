@@ -68,13 +68,14 @@ Na versão web (grátis), você atualiza o contador com um clique ou atalho de t
 | Card de perfil PSN no OBS | ❌ | ✅ |
 | Card de troféus do jogo (PSN) no OBS | ❌ | ✅ |
 | Bot de chat Twitch e Kick (`!mortes`, `!trofeus`) | ❌ | ✅ |
+| Widgets no TikTok Live Studio | ❌ | ✅ |
 | Preço | Grátis | Licença vitalícia |
 
 ---
 
 # StatsCounter Desktop
 
-O **StatsCounter Desktop** é um **contador de troféus automático para OBS**, para Windows e Linux. Conecte sua conta da PSN, Steam ou RetroAchievements e o contador da live atualiza sozinho a cada troféu ou conquista, mesmo com o app minimizado, sem placa de captura e sem comandos no chat.
+O **StatsCounter Desktop** é um **contador de troféus automático para OBS**, para Windows, Linux e macOS (Apple Silicon). Conecte sua conta da PSN, Steam ou RetroAchievements e o contador da live atualiza sozinho a cada troféu ou conquista, mesmo com o app minimizado, sem placa de captura e sem comandos no chat.
 
 ## Recursos do Desktop
 
@@ -86,6 +87,7 @@ O **StatsCounter Desktop** é um **contador de troféus automático para OBS**, 
 - **Temas com a cara de cada jogo:** os mesmos temas de jogos da versão web, mas no app cada um tem formato, moldura e fonte próprios.
 - **RetroAchievements:** conquistas de jogos retrô e emuladores no mesmo contador.
 - **Bot de chat Twitch e Kick:** avisa no chat quando o contador de mortes ou troféus sobe, e responde a `!mortes` e `!trofeus` com a contagem atual. Mensagens e comandos personalizáveis.
+- **TikTok Live Studio:** todos os widgets funcionam no TikTok Live Studio, com o botão "Gerar URL para o TikTok Live Studio" em cada widget.
 - **Hotkeys globais:** conte mortes sem tirar a mão do controle, com o jogo em tela cheia e o app minimizado.
 - **Cronômetro e último troféu:** tempo entre um troféu e outro, data da última conquista e nome do último troféu com a raridade no widget; cronômetro também no contador de mortes e animação especial ao chegar em 100%.
 - **Personalização total:** fonte (inclusive as instaladas no seu PC), cores, sombra, posição, imagens ou GIFs próprios como ícone e estilo do texto (fração, barra de progresso ou porcentagem).
@@ -172,13 +174,14 @@ In the free web version, you update the counter with a click or a keyboard short
 | PSN profile card in OBS | ❌ | ✅ |
 | PSN game trophies card in OBS | ❌ | ✅ |
 | Twitch and Kick chat bot (`!deaths`, `!trophies`) | ❌ | ✅ |
+| Widgets in TikTok Live Studio | ❌ | ✅ |
 | Price | Free | Lifetime license |
 
 ---
 
 # StatsCounter Desktop
 
-**StatsCounter Desktop** is an **automatic trophy counter for OBS**, for Windows and Linux. Connect your PSN, Steam or RetroAchievements account and your stream's counter updates on its own with every trophy or achievement, even while minimized, with no capture card and no chat commands.
+**StatsCounter Desktop** is an **automatic trophy counter for OBS**, for Windows, Linux and macOS (Apple Silicon). Connect your PSN, Steam or RetroAchievements account and your stream's counter updates on its own with every trophy or achievement, even while minimized, with no capture card and no chat commands.
 
 ## Desktop Features
 
@@ -190,6 +193,7 @@ In the free web version, you update the counter with a click or a keyboard short
 - **Themes that look like each game:** the same game themes as the web version, but in the app each one has its own shape, frame and font.
 - **RetroAchievements:** retro and emulator achievements in the same counter.
 - **Twitch and Kick chat bot:** posts in chat when your death or trophy counter goes up, and replies to `!deaths` and `!trophies` with the current count. Messages and commands are customizable.
+- **TikTok Live Studio:** every widget works in TikTok Live Studio, with a "Generate URL for TikTok Live Studio" button on each widget.
 - **Global hotkeys:** count deaths without letting go of the controller, with the game fullscreen and the app minimized.
 - **Timer and latest trophy:** time between trophies, date of the last one and the latest trophy name with its rarity, right in the widget; a timer on the death counter too and a special animation when you hit 100%.
 - **Full customization:** font (including the ones installed on your PC), colors, shadow, position, your own images or GIFs as icons, and text style (fraction, progress bar or percentage).

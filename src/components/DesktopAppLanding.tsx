@@ -628,6 +628,19 @@ const DesktopAppLanding: React.FC = () => {
                   : t('desktop_app_landing.support_global_cta')}
               </a>
             </motion.div>
+
+            <motion.ul
+              className="dal-mono mt-6 space-y-1.5 text-[11px]"
+              style={{ color: 'var(--ink-3)', letterSpacing: '0.04em' }}
+              {...fadeUp(0.4)}
+            >
+              {['works_with', 'runs_on'].map((key) => (
+                <li key={key} className="flex gap-2">
+                  <span style={{ color: 'var(--accent-text)' }}>▸</span>
+                  {t(`desktop_app_landing.${key}`)}
+                </li>
+              ))}
+            </motion.ul>
           </div>
 
           {/* macOS window frame */}
