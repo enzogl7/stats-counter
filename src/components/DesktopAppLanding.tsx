@@ -24,8 +24,8 @@ import steamBannerEditor from '../assets/steam-banner-editor.png';
 import psnProfileCardGif from '../assets/psn-profile-card.gif';
 import psnGameCardPt from '../assets/psn-game-card-pt.jpg';
 import psnGameCardEn from '../assets/psn-game-card-en.jpg';
-import gtaviEn from '../assets/gtavi-en.jpeg';
-import gtaviPt from '../assets/gtavi-pt.jpeg';
+import gameplayTimerPt from '../assets/gameplay-timer-pt.jpg';
+import gameplayTimerEn from '../assets/gameplay-timer-en.jpg';
 import gameThemes from '../assets/game-themes.jpg';
 import Footer from './Footer';
 import TwitchChatDemoCard from './TwitchChatDemoCard';
@@ -102,51 +102,6 @@ const PLATFORM_CHIPS = [
 ];
 
 const YOUTUBE_ID = 'TAJ6pQCgb74';
-
-// GTA VI launch — local midnight, same as the app's countdown.
-const GTA_LAUNCH = new Date(2026, 10, 19).getTime();
-
-const GtaCountdown: React.FC = () => {
-  const { t } = useTranslation();
-  const [now, setNow] = useState(Date.now());
-
-  useEffect(() => {
-    const id = setInterval(() => setNow(Date.now()), 1000);
-    return () => clearInterval(id);
-  }, []);
-
-  const sec = Math.floor(Math.max(0, GTA_LAUNCH - now) / 1000);
-  const units = [
-    { value: Math.floor(sec / 86400), label: t('desktop_app_landing.gta_theme.countdown_days') },
-    { value: Math.floor(sec / 3600) % 24, label: t('desktop_app_landing.gta_theme.countdown_hours') },
-    { value: Math.floor(sec / 60) % 60, label: t('desktop_app_landing.gta_theme.countdown_minutes') },
-    { value: sec % 60, label: t('desktop_app_landing.gta_theme.countdown_seconds') },
-  ];
-
-  return (
-    <div className="mt-5">
-      <p className="text-sm font-semibold" style={{ color: 'var(--ink-2)' }}>
-        {t('desktop_app_landing.gta_theme.countdown_title')}
-      </p>
-      <div className="mt-2.5 flex flex-wrap gap-2">
-        {units.map(({ value, label }) => (
-          <div
-            key={label}
-            className="flex min-w-15 flex-col items-center rounded-[10px] px-2.5 py-2"
-            style={{ background: 'var(--field)', border: '1px solid rgba(255, 79, 160, .3)' }}
-          >
-            <span className="dal-display text-[30px] leading-none tracking-[0.03em] text-white tabular-nums" style={{ textShadow: '0 0 14px rgba(255, 111, 177, .6)' }}>
-              {String(value).padStart(2, '0')}
-            </span>
-            <span className="dal-mono mt-1 text-[9px] font-bold uppercase tracking-[0.16em]" style={{ color: '#ff8cc4' }}>
-              {label}
-            </span>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 22 },
@@ -290,7 +245,6 @@ const PAGE_STYLES = `
     box-shadow: 0 0 40px var(--accent-soft);
     border-color: var(--line-2);
   }
-  .dal-gta-card:hover { box-shadow: 0 0 40px rgba(255, 79, 160, .12); }
   .dal-sub-card {
     border-radius: var(--radius-section);
     padding: 16px;
@@ -500,9 +454,18 @@ const DesktopAppLanding: React.FC = () => {
       title: t('desktop_app_landing.current_features.psn_game_card_title'),
       description: t('desktop_app_landing.current_features.psn_game_card_description'),
       chip: 'PSN',
-      isNew: true,
       images: [isPortuguese ? psnGameCardPt : psnGameCardEn],
       alts: [t('desktop_app_landing.current_features.psn_game_card_alt')],
+      wide: true,
+    },
+    {
+      index: '09',
+      title: t('desktop_app_landing.current_features.gameplay_timer_title'),
+      description: t('desktop_app_landing.current_features.gameplay_timer_description'),
+      chip: 'GLOBAL',
+      isNew: true,
+      images: [isPortuguese ? gameplayTimerPt : gameplayTimerEn],
+      alts: [t('desktop_app_landing.current_features.gameplay_timer_alt')],
       wide: true,
     }
   ];
@@ -841,9 +804,9 @@ const DesktopAppLanding: React.FC = () => {
 
         </motion.section>
 
-        {/* ── GTA VI theme ── */}
+        {/* ── Game themes ── */}
         <motion.section className="mt-22" {...fadeUpView(0)}>
-          <div className="dal-glass-card mb-4 grid items-center gap-8 md:grid-cols-[2fr_3fr]">
+          <div className="dal-glass-card grid items-center gap-8 md:grid-cols-[2fr_3fr]">
             <div>
               <h2 className="dal-h2">
                 {t('desktop_app_landing.game_themes.title_1')}
@@ -864,42 +827,6 @@ const DesktopAppLanding: React.FC = () => {
                   alt={t('desktop_app_landing.game_themes.alt')}
                   loading="lazy"
                   className="block w-full rounded-[10px] object-cover"
-                />
-              </button>
-            </div>
-          </div>
-          <div className="dal-glass-card dal-gta-card grid items-center gap-8 md:grid-cols-2">
-            <div>
-              <h2 className="dal-h2">
-                {t('desktop_app_landing.gta_theme.title_1')}
-                <span
-                  style={{
-                    fontFamily: "'Yellowtail', cursive",
-                    background: 'linear-gradient(90deg, #ff4fa0, #ffa25a 70%, #ffd27a)',
-                    WebkitBackgroundClip: 'text',
-                    backgroundClip: 'text',
-                    color: 'transparent',
-                    paddingRight: '.12em',
-                  }}
-                >
-                  {t('desktop_app_landing.gta_theme.title_accent')}
-                </span>
-              </h2>
-              <p className="mt-3 text-base" style={{ color: 'var(--ink-2)', lineHeight: 1.75 }}>
-                {t('desktop_app_landing.gta_theme.description')}
-              </p>
-              <GtaCountdown />
-            </div>
-            <div className="dal-image-frame p-1.5">
-              <button
-                type="button"
-                onClick={() => openImagePreview(isPortuguese ? gtaviPt : gtaviEn, t('desktop_app_landing.gta_theme.screenshot_alt'))}
-                className="dal-preview-btn block w-full overflow-hidden rounded-[10px]"
-              >
-                <img
-                  src={isPortuguese ? gtaviPt : gtaviEn}
-                  alt={t('desktop_app_landing.gta_theme.screenshot_alt')}
-                  className="dal-crop-top block w-full object-cover"
                 />
               </button>
             </div>

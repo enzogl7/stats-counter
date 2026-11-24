@@ -92,7 +92,7 @@
     "title": "O app desktop do StatsCounter chegou",
     "description": "Agora você pode levar o StatsCounter para o desktop e usar hotkeys mesmo com o app minimizado ou enquanto estiver em outra janela.",
     "complement": "Além da praticidade no controle da live, essa nova versão também abre espaço para recursos avançados como personalização total do widget e muitas outras novidades.",
-    "banner_text": "O app desktop chegou: hotkeys globais, personalização total e sincronização direta com PSN, Steam, RetroAchievements, Twitch e Kick.",
+    "banner_text": "Novo no app desktop: Gameplay Timer, o seu tempo de jogo na live. Além de hotkeys globais, personalização total e sincronização direta com PSN, Steam, RetroAchievements, Twitch e Kick.",
     "highlight_hotkeys": "Hotkeys funcionando mesmo com o app minimizado e com você em outra janela.",
     "highlight_focus": "Mais praticidade para controlar tudo sem depender do navegador aberto.",
     "highlight_features": "Uma base desktop pronta para receber customização completa do widget e diversos novos recursos.",
@@ -111,7 +111,7 @@
     "seo": {
       "title": "Contador de Troféus Automático para OBS | PSN, Steam e RetroAchievements",
       "description": "App para Windows, Linux e macOS que sincroniza com PSN (PS5 e PS4), Steam e RetroAchievements e atualiza sozinho o contador de troféus e conquistas da sua live no OBS e no TikTok Live Studio.",
-      "keywords": "contador de troféus automático, trophy tracker OBS, rastreador de troféus PS5, contador de troféus PSN OBS, contador de conquistas Steam OBS, banner de conquista Steam OBS, card de perfil PSN OBS, troféus restantes PSN OBS, conjuntos de conquistas Steam OBS, RetroAchievements OBS, contador de mortes TikTok Live Studio, contador de troféus TikTok Live Studio, contador de platina OBS, stats counter desktop"
+      "keywords": "contador de troféus automático, trophy tracker OBS, rastreador de troféus PS5, contador de troféus PSN OBS, contador de conquistas Steam OBS, banner de conquista Steam OBS, card de perfil PSN OBS, troféus restantes PSN OBS, conjuntos de conquistas Steam OBS, RetroAchievements OBS, contador de mortes TikTok Live Studio, contador de troféus TikTok Live Studio, contador de platina OBS, gameplay timer OBS, cronômetro de tempo de jogo OBS, stats counter desktop"
     },
     "video": {
       "title_1": "Veja ",
@@ -150,8 +150,12 @@
           "a": "Defina hotkeys globais no StatsCounter Desktop: elas funcionam mesmo com o jogo em tela cheia e o app minimizado, então cada morte entra no contador do OBS com um atalho, sem trocar de janela. Os espectadores conferem o total a qualquer momento com !mortes."
         },
         {
+          "q": "Dá para mostrar na live quanto tempo eu já joguei um jogo?",
+          "a": "Sim. O Gameplay Timer mostra no OBS o tempo total de jogo, com o nome do jogo e um objetivo, se você quiser. Você inicia e pausa pelo app ou por um atalho global, informa as horas que já tinha jogado e pode ter um timer por jogo. Ele só conta com o app aberto: pausa sozinho quando você fecha o app ou o PC entra em suspensão, e na próxima live é só clicar em Retomar."
+        },
+        {
           "q": "Funciona no TikTok Live Studio?",
-          "a": "Sim. Desde a versão 1.7.3, todos os widgets funcionam no TikTok Live Studio: contadores de mortes e de troféus, Banner Steam, card de perfil PSN e card de troféus do jogo, com tema, som, animação e atualização ao vivo. Cada widget tem o botão \"Gerar URL para o TikTok Live Studio\": use essa URL no TikTok e a de sempre no OBS e no Streamlabs. Com muitas fontes na mesma cena, o Live Studio pode ficar lento e deixar de carregar alguns ícones; tirar algumas fontes resolve."
+          "a": "Sim. Desde a versão 1.7.3, todos os widgets funcionam no TikTok Live Studio: contadores de mortes e de troféus, Banner Steam, card de perfil PSN, card de troféus do jogo e Gameplay Timer, com tema, som, animação e atualização ao vivo. Cada widget tem o botão \"Gerar URL para o TikTok Live Studio\": use essa URL no TikTok e a de sempre no OBS e no Streamlabs. Com muitas fontes na mesma cena, o Live Studio pode ficar lento e deixar de carregar alguns ícones; tirar algumas fontes resolve."
         },
         {
           "q": "Preciso deixar o navegador aberto?",
@@ -216,6 +220,9 @@
       "psn_game_card_alt": "Card de troféus do jogo no OBS, com a capa do jogo e os troféus separados por tipo",
       "psn_game_card_title": "Card de troféus do jogo",
       "psn_game_card_description": "Escolha um jogo e mostre na live os troféus dele separados por tipo: bronze, prata, ouro e platina. Veja quanto falta para platinar ou quanto você já ganhou de cada tipo, com a porcentagem concluída e o último troféu com a raridade. O card é sincronizado com a sua conta PSN e se atualiza sozinho a cada troféu.",
+      "gameplay_timer_title": "Gameplay Timer",
+      "gameplay_timer_description": "Mostre na live quanto tempo você já jogou um jogo, com um objetivo se quiser (ex.: Platina). Você inicia e pausa pelo card ou por um atalho global, sem sair do jogo, e na live seguinte o timer continua de onde parou. Já tem horas no jogo? É só informar. São dois estilos, Simples e Compacto, com fonte, cores e sombra do seu jeito. E nada de tempo fantasma: ele pausa sozinho quando você fecha o app ou o PC entra em suspensão.",
+      "gameplay_timer_alt": "Gameplay Timer nos estilos Simples e Compacto, rodando e pausado, um deles com fonte e cores personalizadas",
       "twitch_title": "Reações do chat da Twitch e Kick em tempo real",
       "twitch_description": "Conecte sua conta da Twitch ou da Kick ao bot do StatsCounter e ele envia uma mensagem no chat toda vez que seu contador de morte ou troféu aumentar. Escolha quais widgets disparam o aviso e personalize as mensagens do jeito que quiser. As mesmas funcionalidades nas duas plataformas.",
       "twitch_demo_hint": "Apenas uma prévia interativa — nada aqui é salvo ou enviado para a Twitch. Clique no + de qualquer contador para ver a mensagem aparecer no chat.",
@@ -239,17 +246,6 @@
       "description": "Os temas de jogos também existem na versão web, mas no app cada um ganha formato, moldura e fonte próprios: Elden Ring, Dark Souls, Bloodborne, Hollow Knight, Persona e mais.",
       "alt": "Os 11 temas de jogos do app desktop"
     },
-    "gta_theme": {
-      "countdown_title": "Nos vemos em Vice City em:",
-      "title_1": "Vai platinar ",
-      "title_accent": "GTA 6?",
-      "description": "Nós já estamos no clima.",
-      "screenshot_alt": "Print do app com o tema GTA VI",
-      "countdown_days": "dias",
-      "countdown_hours": "horas",
-      "countdown_minutes": "min",
-      "countdown_seconds": "seg"
-    },
     "streamers": {
       "section_title_1": "Streamers que ",
       "section_title_accent": "já",
@@ -267,6 +263,9 @@
       "roadmap_title": "Vem por aí",
       "roadmap_note": "Tem uma ideia para o app? Mande para",
       "versions": [
+        { "version": "1.7.4", "date": "2026-11-23", "items": [
+          { "text": "Gameplay Timer: o tempo total de jogo na live, com iniciar e pausar por atalho e estilos Simples e Compacto." }
+        ] },
         { "version": "1.7.3", "date": "2026-11-17", "items": [
           { "text": "Todos os widgets funcionam no TikTok Live Studio, com um botão de URL próprio para ele." }
         ] },
@@ -289,13 +288,10 @@
         { "version": "1.6.0", "date": "2026-10-31", "items": [
           { "text": "Os 11 temas de jogos redesenhados, com formato, moldura e fonte de cada jogo." },
           { "text": "Cards do dashboard iguais ao widget do OBS." }
-        ] },
-        { "version": "1.5.5", "date": "2026-10-28", "items": [
-          { "text": "Card de perfil PSN: avatar, nível e troféus na live, com animação a cada troféu." }
         ] }
       ],
       "roadmap": [
-        { "text": "Gameplay Timer: tempo de jogo na live, com pausa geral e timers por DLC." },
+        { "text": "Pausa geral e timers por DLC no Gameplay Timer." },
         { "text": "Modo caçador: o troféu que você está caçando na tela, com comemoração quando sair." },
         { "text": "Novos comandos de chat de troféu na Twitch: !progresso, !ultimo e !sessao." },
         { "text": "Conquistas mais rápidas no contador, começando pela Steam." },

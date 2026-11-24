@@ -92,7 +92,7 @@
     "title": "The StatsCounter desktop app has arrived",
     "description": "You can now bring StatsCounter to the desktop and use hotkeys even while the app is minimized or while you are working in another window.",
     "complement": "Alongside more practical stream control, this release also opens the door for advanced features like full widget customization and many more additions.",
-    "banner_text": "The desktop app is here: global hotkeys, full customization, and direct sync with PSN, Steam, RetroAchievements, Twitch, and Kick.",
+    "banner_text": "New in the desktop app: Gameplay Timer, your play time on stream. Plus global hotkeys, full customization, and direct sync with PSN, Steam, RetroAchievements, Twitch, and Kick.",
     "highlight_hotkeys": "Hotkeys working even while the app is minimized and you are in another window.",
     "highlight_focus": "More practical control without depending on the browser staying open.",
     "highlight_features": "A desktop foundation ready for full widget customization and many more features.",
@@ -111,7 +111,7 @@
     "seo": {
       "title": "Automatic Trophy Counter for OBS | PSN, Steam & RetroAchievements",
       "description": "Windows, Linux and macOS app that syncs with PSN (PS5 and PS4), Steam and RetroAchievements and automatically updates the trophy and achievement counter on your stream in OBS and TikTok Live Studio.",
-      "keywords": "automatic trophy counter, trophy tracker OBS, PS5 trophy tracker, PSN trophy counter OBS, Steam achievement counter OBS, Steam achievement banner OBS, PSN profile card OBS, PSN trophies left OBS, Steam achievement sets OBS, RetroAchievements OBS, TikTok Live Studio death counter, TikTok Live Studio trophy counter, platinum tracker OBS, stats counter desktop"
+      "keywords": "automatic trophy counter, trophy tracker OBS, PS5 trophy tracker, PSN trophy counter OBS, Steam achievement counter OBS, Steam achievement banner OBS, PSN profile card OBS, PSN trophies left OBS, Steam achievement sets OBS, RetroAchievements OBS, TikTok Live Studio death counter, TikTok Live Studio trophy counter, platinum tracker OBS, gameplay timer OBS, play time timer OBS, stats counter desktop"
     },
     "video": {
       "title_1": "See it ",
@@ -150,8 +150,12 @@
           "a": "Set up global hotkeys in StatsCounter Desktop: they work even with your game in fullscreen and the app minimized, so every death hits your OBS counter with a single shortcut, without switching windows. Viewers can check the total anytime with !deaths."
         },
         {
+          "q": "Can I show on stream how long I've played a game?",
+          "a": "Yes. The Gameplay Timer shows your total play time in OBS, with the game name and an optional goal. Start and pause it from the app or with a global shortcut, enter the hours you had already played, and keep one timer per game. It only counts while the app is open: it pauses by itself when you close the app or your PC goes to sleep, and on your next stream you just click Resume."
+        },
+        {
           "q": "Does it work with TikTok Live Studio?",
-          "a": "Yes. Since version 1.7.3, every widget works in TikTok Live Studio: death and trophy counters, Steam Banner, PSN profile card and game trophy card, with themes, sounds, animations and live updates. Each widget has a \"Generate URL for TikTok Live Studio\" button: use that URL in TikTok and the usual one in OBS and Streamlabs. With many sources in the same scene, Live Studio can slow down and skip loading some icons; removing a few sources fixes it."
+          "a": "Yes. Since version 1.7.3, every widget works in TikTok Live Studio: death and trophy counters, Steam Banner, PSN profile card, game trophy card and Gameplay Timer, with themes, sounds, animations and live updates. Each widget has a \"Generate URL for TikTok Live Studio\" button: use that URL in TikTok and the usual one in OBS and Streamlabs. With many sources in the same scene, Live Studio can slow down and skip loading some icons; removing a few sources fixes it."
         },
         {
           "q": "Do I need to keep a browser open?",
@@ -216,6 +220,9 @@
       "psn_game_card_alt": "Game trophies card in OBS, with the game cover and trophies split by type",
       "psn_game_card_title": "Game trophies card",
       "psn_game_card_description": "Pick a game and show its trophies on stream split by type: bronze, silver, gold and platinum. See how many are left to the platinum or how many of each type you have earned, with the completion percentage and the latest trophy with its rarity. The card is synced with your PSN account and updates on its own with every trophy.",
+      "gameplay_timer_title": "Gameplay Timer",
+      "gameplay_timer_description": "Show on stream how long you've played a game, with a goal if you want (e.g., Platinum). Start and pause it from the card or with a global shortcut without leaving your game, and on your next stream the timer picks up where it left off. Already have hours in the game? Just enter them. Two styles, Simple and Compact, with the font, colors and shadow you like. And no ghost time: it pauses by itself when you close the app or your PC goes to sleep.",
+      "gameplay_timer_alt": "Gameplay Timer in the Simple and Compact styles, running and paused, one of them with a custom font and colors",
       "twitch_title": "Live Twitch & Kick chat reactions",
       "twitch_description": "Connect your Twitch or Kick account to the StatsCounter bot, and it posts a chat message every time your death or trophy counter goes up. Choose which widgets trigger it and write your own custom messages. Same features on both platforms.",
       "twitch_demo_hint": "Interactive preview only — nothing here is saved or sent to Twitch. Click + on either counter to see it show up in chat.",
@@ -239,17 +246,6 @@
       "description": "Game themes exist on the web version too, but in the app each one gets its own shape, frame and font: Elden Ring, Dark Souls, Bloodborne, Hollow Knight, Persona and more.",
       "alt": "The desktop app's 11 game themes"
     },
-    "gta_theme": {
-      "countdown_title": "See you in Vice City in:",
-      "title_1": "Going for the platinum in ",
-      "title_accent": "GTA 6?",
-      "description": "We're already in the mood.",
-      "screenshot_alt": "Screenshot of the app with the GTA VI theme",
-      "countdown_days": "days",
-      "countdown_hours": "hours",
-      "countdown_minutes": "min",
-      "countdown_seconds": "sec"
-    },
     "streamers": {
       "section_title_1": "Streamers who ",
       "section_title_accent": "already",
@@ -267,6 +263,9 @@
       "roadmap_title": "Coming next",
       "roadmap_note": "Have an idea for the app? Send it to",
       "versions": [
+        { "version": "1.7.4", "date": "2026-11-23", "items": [
+          { "text": "Gameplay Timer: your total play time on stream, with a start/pause shortcut and Simple and Compact styles." }
+        ] },
         { "version": "1.7.3", "date": "2026-11-17", "items": [
           { "text": "Every widget works in TikTok Live Studio, with its own URL button." }
         ] },
@@ -289,13 +288,10 @@
         { "version": "1.6.0", "date": "2026-10-31", "items": [
           { "text": "All 11 game themes redesigned, with each game's shape, frame and font." },
           { "text": "Dashboard cards now match the OBS widget." }
-        ] },
-        { "version": "1.5.5", "date": "2026-10-28", "items": [
-          { "text": "PSN profile card: avatar, level and trophies on stream, animated on every trophy." }
         ] }
       ],
       "roadmap": [
-        { "text": "Gameplay Timer: play time on stream, with pause all and per-DLC timers." },
+        { "text": "Pause all and per-DLC timers in the Gameplay Timer." },
         { "text": "Hunter mode: the trophy you are hunting on screen, with a celebration when it pops." },
         { "text": "New trophy chat commands on Twitch: !progresso, !ultimo and !sessao." },
         { "text": "Faster achievement detection in the counter, starting with Steam." },

@@ -48,7 +48,7 @@ const head = ({ url, htmlLang, price }, d) => {
           url,
           inLanguage: htmlLang,
           description: d.seo.description,
-          featureList: [f.psn_sync_title, f.steam_sync_title, f.retroachievements_sync_title, f.steam_banner_title, f.psn_profile_title, f.psn_game_card_title, d.game_themes.title_1 + d.game_themes.title_accent, f.twitch_title, f.hotkeys_title, f.timer_title, f.customization_title],
+          featureList: [f.psn_sync_title, f.steam_sync_title, f.retroachievements_sync_title, f.steam_banner_title, f.psn_profile_title, f.psn_game_card_title, f.gameplay_timer_title, d.game_themes.title_1 + d.game_themes.title_accent, f.twitch_title, f.hotkeys_title, f.timer_title, f.customization_title],
           offers: { '@type': 'Offer', price: price.value, priceCurrency: price.currency },
           creator: { '@type': 'Person', name: 'Enzo Lima' },
         },
@@ -92,6 +92,7 @@ const body = (d) => {
       ${section(f.steam_banner_title, f.steam_banner_description)}
       ${section(f.psn_profile_title, f.psn_profile_description)}
       ${section(f.psn_game_card_title, f.psn_game_card_description)}
+      ${section(f.gameplay_timer_title, f.gameplay_timer_description)}
       ${section(d.game_themes.title_1 + d.game_themes.title_accent, d.game_themes.description)}
       <h2>${esc(d.changelog.title_1 + d.changelog.title_accent + d.changelog.title_2)}</h2>
       <p>${esc(d.changelog.description)}</p>

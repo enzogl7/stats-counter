@@ -67,6 +67,7 @@ Na versão web (grátis), você atualiza o contador com um clique ou atalho de t
 | Banner de conquista Steam no OBS | ❌ | ✅ |
 | Card de perfil PSN no OBS | ❌ | ✅ |
 | Card de troféus do jogo (PSN) no OBS | ❌ | ✅ |
+| Gameplay Timer (tempo de jogo) no OBS | ❌ | ✅ |
 | Bot de chat Twitch e Kick (`!mortes`, `!trofeus`) | ❌ | ✅ |
 | Widgets no TikTok Live Studio | ❌ | ✅ |
 | Preço | Grátis | Licença vitalícia |
@@ -84,6 +85,7 @@ O **StatsCounter Desktop** é um **contador de troféus automático para OBS**, 
 - **Banner de conquista Steam no OBS:** um banner animado e 100% editável aparece na live a cada conquista desbloqueada, com o conjunto da conquista e aviso de conjunto completo.
 - **Card de perfil PSN no OBS:** avatar, nível com anel de progresso, troféus por tipo, número de jogos e o jogo atual, atualizando sozinho e com animação a cada troféu e subida de nível.
 - **Card de troféus do jogo (PSN) no OBS:** os troféus de um jogo separados por tipo, com quanto falta ou quanto já foi ganho, porcentagem concluída e último troféu com raridade, atualizando sozinho.
+- **Gameplay Timer no OBS:** o tempo total de jogo na live, com nome do jogo e objetivo, iniciar e pausar por atalho global, estilos Simples e Compacto e pausa automática ao fechar o app ou suspender o PC.
 - **Temas com a cara de cada jogo:** os mesmos temas de jogos da versão web, mas no app cada um tem formato, moldura e fonte próprios.
 - **RetroAchievements:** conquistas de jogos retrô e emuladores no mesmo contador.
 - **Bot de chat Twitch e Kick:** avisa no chat quando o contador de mortes ou troféus sobe, e responde a `!mortes` e `!trofeus` com a contagem atual. Mensagens e comandos personalizáveis.
@@ -173,6 +175,7 @@ In the free web version, you update the counter with a click or a keyboard short
 | Steam achievement banner in OBS | ❌ | ✅ |
 | PSN profile card in OBS | ❌ | ✅ |
 | PSN game trophies card in OBS | ❌ | ✅ |
+| Gameplay Timer (play time) in OBS | ❌ | ✅ |
 | Twitch and Kick chat bot (`!deaths`, `!trophies`) | ❌ | ✅ |
 | Widgets in TikTok Live Studio | ❌ | ✅ |
 | Price | Free | Lifetime license |
@@ -190,6 +193,7 @@ In the free web version, you update the counter with a click or a keyboard short
 - **Steam achievement banner in OBS:** a fully editable animated banner shows up on stream every time you unlock an achievement, with the achievement's set and a set complete alert.
 - **PSN profile card in OBS:** avatar, level with a progress ring, trophies by type, game count and current game, updating and animating on its own with every trophy and level-up.
 - **PSN game trophies card in OBS:** one game's trophies split by type, showing how many are left or earned, completion percentage and the latest trophy with its rarity, updating on its own.
+- **Gameplay Timer in OBS:** your total play time on stream, with the game name and a goal, start and pause with a global shortcut, Simple and Compact styles, and automatic pause when the app closes or the PC goes to sleep.
 - **Themes that look like each game:** the same game themes as the web version, but in the app each one has its own shape, frame and font.
 - **RetroAchievements:** retro and emulator achievements in the same counter.
 - **Twitch and Kick chat bot:** posts in chat when your death or trophy counter goes up, and replies to `!deaths` and `!trophies` with the current count. Messages and commands are customizable.
