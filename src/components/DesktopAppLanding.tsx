@@ -13,15 +13,15 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 import logoNova from '../assets/logo-nova.png';
-import desktopPrintEn from '../assets/print-desktop-en.png';
-import desktopPrintPt from '../assets/print-desktop-pt.png';
+import trophyTimerWidgetEn from '../assets/trophy-timer-widget-en.jpg';
+import trophyTimerWidgetPt from '../assets/trophy-timer-widget-pt.jpg';
 import desktopPrintFrame from '../assets/print-desktop-frame.jpeg';
-import personalizationEn from '../assets/personalizacao-en.png';
-import personalizationPt from '../assets/personalizacao-pt.png';
-import trophiesText2 from '../assets/trophies-text-2.png';
-import steamBannerGif from '../assets/steam-banner.gif';
+import customizationWidgets from '../assets/customization-widgets.jpg';
+import steamBannerPt from '../assets/steam-banner-pt.jpg';
+import steamBannerEn from '../assets/steam-banner-en.jpg';
 import steamBannerEditor from '../assets/steam-banner-editor.png';
-import psnProfileCardGif from '../assets/psn-profile-card.gif';
+import psnProfileCardPt from '../assets/psn-profile-card-pt.jpg';
+import psnProfileCardEn from '../assets/psn-profile-card-en.jpg';
 import psnGameCardPt from '../assets/psn-game-card-pt.jpg';
 import psnGameCardEn from '../assets/psn-game-card-en.jpg';
 import gameplayTimerPt from '../assets/gameplay-timer-pt.jpg';
@@ -411,7 +411,7 @@ const DesktopAppLanding: React.FC = () => {
       title: t('desktop_app_landing.current_features.timer_title'),
       description: t('desktop_app_landing.current_features.timer_description'),
       chip: undefined as string | undefined,
-      image: isPortuguese ? desktopPrintPt : desktopPrintEn,
+      image: isPortuguese ? trophyTimerWidgetPt : trophyTimerWidgetEn,
       alt: t('desktop_app_landing.current_features.timer_screenshot_alt')
     },
     {
@@ -421,11 +421,8 @@ const DesktopAppLanding: React.FC = () => {
       chip: undefined as string | undefined,
       image: undefined as string | undefined,
       alt: undefined as string | undefined,
-      images: [isPortuguese ? personalizationPt : personalizationEn, trophiesText2],
-      alts: [
-        t('desktop_app_landing.current_features.customization_screenshot_alt'),
-        t('desktop_app_landing.current_features.customization_screenshot_alt_2'),
-      ],
+      images: [customizationWidgets],
+      alts: [t('desktop_app_landing.current_features.customization_screenshot_alt')],
       wide: true,
     },
     {
@@ -433,7 +430,7 @@ const DesktopAppLanding: React.FC = () => {
       title: t('desktop_app_landing.current_features.steam_banner_title'),
       description: t('desktop_app_landing.current_features.steam_banner_description'),
       chip: 'STEAM',
-      images: [steamBannerGif, steamBannerEditor],
+      images: [isPortuguese ? steamBannerPt : steamBannerEn, steamBannerEditor],
       alts: [
         t('desktop_app_landing.current_features.steam_banner_alt'),
         t('desktop_app_landing.current_features.steam_banner_alt_2'),
@@ -445,7 +442,7 @@ const DesktopAppLanding: React.FC = () => {
       title: t('desktop_app_landing.current_features.psn_profile_title'),
       description: t('desktop_app_landing.current_features.psn_profile_description'),
       chip: 'PSN',
-      images: [psnProfileCardGif],
+      images: [isPortuguese ? psnProfileCardPt : psnProfileCardEn],
       alts: [t('desktop_app_landing.current_features.psn_profile_alt')],
       wide: true,
     },
